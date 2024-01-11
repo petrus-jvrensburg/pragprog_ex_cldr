@@ -1,0 +1,5 @@
+# Audience Statement
+
+This book is for developers looking to reach a diverse audience with a single codebase. If you're at a startup looking to grow beyond your first market, or at a large company looking to improve the _User Experience_ for a diverse client-base, then this book is for you.
+
+Some working knowledge of Elixir and Phoenix will help, but it is not a requirement. The code samples in this book are written in such a way that users who are completely new to the Elixir ecosystem will be able to follow along, using interactive notebooks to execute code locally with minimal effort. 

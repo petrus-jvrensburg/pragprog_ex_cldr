@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>. "$TM_SUPPORT_PATH/lib/webpreview.sh"
+html_header "PML Bundle Help" "Pragmatic Markup Language"
+
+Markdown.pl &lt;&lt;'EOF'
+by James Edward Gray II (*Updated by Mike Riley*)
+
+This is a hand-rolled bundle for PML created while working on the TextMate book.
+It's not perfect yet, but it's a good start and may give authors some ideas.
+
+To edit PML, I needed two major things:
+
+1.  Spend a few moments mastering the Insert Open/Close Tag (With Current Word)
+    command in the HTML bundle (⌃&lt;).  It's available everywhere, even though
+    it's in the HTML bundle.  This command is your tag generation Swiss Army
+    knife.  Note that there are multiple ways to use it:  type a tag name then
+    trigger or trigger then type a tag name, optionally with arguments.
+
+2.  The other must-have is a paragraph reformatting tool.  TextMate's ⌃Q needs a
+    little help here to only affect the right stuff, so I wrapped it in a macro
+    that manages a selection.
+
+To use my command, you have to write PML as I do, which means:
+
+    &lt;p&gt;
+      Content
+      goes
+      here...
+    &lt;/p&gt;
+
+I just type my paragraphs out naturally (with Soft Wrap on), then snap them into
+shape by triggering my macro with ⌃Q while my caret is anywhere inside the
+content.
+
+**Be warned**:  my solution isn't perfect.  It doesn't handle a paragraph that
+contains an embedded footnote paragraph, for example.  I fix those by hand.
+
+This bundle also includes a basic grammar and a preference that will add
+sections of the format:
+
+    &lt;sect1 id="sec.theTODOBundle"&gt;
+
+to TextMate's symbol list.
+
+The rest is pretty much just snippets for inserting the basics.  Some of these
+are probably tuned to the TextMate book and will need to be generalized.
+
+Authors are encouraged to add to this bundle for their specific needs.
+
+**2011/06/19**
+
+**The following modifications from the original release were made by Mike Riley**
+
+FIXED
+=====
+	! The &lt;classname&gt; tag for a Class name was changed to the PML 3.0 tag &lt;class&gt;
+	! A &lt;url&gt; wrapper was added to the &lt;footnote&gt; tag to denote most footnotes should only refer to URL's.
+
+**2011/05/03**
+
+ADDED
+=====
+	+ Added a blank PML template under File-&gt;New From Template-&gt;PML-&gt;Empty File
+	+ View as PDF (tab accelerator = Apple-R - think "Run")
+	+ View Chapter as PDF (tab accelerator = Apple+Shift-C - think "Chapter")
+	+ Build as EPUB (tab acceleartor = Apple-B - think epu"B")
+	+ Reorganized PML menu structure
+	+ New Empty File PML Template.
+	+ New Chapter File PML Template.
+	+ &lt;bookname cite="Author:Book"&gt; (tab accelerator = bookn, tab for author:book fields)
+	+ &lt;blockquote&gt;surrounds highlighted text&lt;/blockquote&gt;
+	+ &lt;code language="TAB"&gt; (tab accelerator = co)
+	+ &lt;code file="code/filename"/&gt; (tab accelerator = cof)
+	+ &lt;dl&gt;&lt;dt&gt;&lt;dd&gt; (tab accelerator = dl, tab for term, definition fields)
+	+ &lt;dt&gt;&lt;dd&gt;&lt;p&gt; (tab accelerator = dt)
+	+ &lt;ed&gt; (tab accelerator = ed)
+	+ &lt;example&gt;surrounds highlighted text&lt;example&gt; (tab accelerator = ex)
+	+ &lt;flag&gt; (tab accelerator = flag)
+	+ &lt;filename&gt; (tab acclerator = fil)
+	+ &lt;highlight&gt; (tab accelerator = hig)
+	+ &lt;permissions status="needed"&gt; (tab accelerator = perm)
+	+ &lt;ol&gt;&lt;li&gt; (tab accelerator = ol)
+	+ &lt;ul&gt;&lt;li&gt; (tab accelerator = ul)
+	+ &lt;li&gt;&lt;p&gt; (tab accelerator = li)
+	+ &lt;p&gt;&lt;/p&gt; (tab accelerator = p)
+	+ &lt;url&gt;surrounds highlighted text&lt;/url&gt; (tab accelerator = url)
+
+FIXED
+=====
+	! chapter/title macro to remove niutili dependency
+	! figure/imagedata macro to replace eps fileref with png
+	! replaced the inlinecode with the shorthand ic tag
+	! replaced the 'pref' tag with the updated 'ref' tag
+	! spurious &lt;/li&gt; in the &lt;dl&gt; tag (thanks for catching that, Andy!)
+
+REMOVED
+=======
+	- the deprecated &lt;stringinfile&gt; tag.
+	- check syntax (NOTE: this feature will be added once the PML toolchain 
+	  adds the ability to check the PML syntax of individual files)
+TODO
+====
+
+1.	Repair the broken &amp;lt;sect&amp;gt; tag.
+
+
+EOF
+
+html_footer</string>
+	<key>input</key>
+	<string>none</string>
+	<key>name</key>
+	<string>Help</string>
+	<key>output</key>
+	<string>showAsHTML</string>
+	<key>scope</key>
+	<string>text.xml.pragmatic</string>
+	<key>uuid</key>
+	<string>4633C312-96FB-4C3B-8CA2-ADA5819731D3</string>
+</dict>
+</plist>

@@ -1,0 +1,8 @@
+require 'rake/testtask'
+
+task :default => :test
+
+desc "Run all our tests"
+Rake::TestTask.new do |t|
+  t.test_files = FileList['test/test*.rb']
+end

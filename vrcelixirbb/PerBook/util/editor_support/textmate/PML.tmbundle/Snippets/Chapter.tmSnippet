@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;?xml version="1.0" encoding="UTF-8"?&gt;  &lt;!-- -*- xml -*- --&gt;
+&lt;!DOCTYPE chapter SYSTEM "local/xml/markup.dtd"&gt;
+&lt;chapter id="chp.${1:chapterTitle}"&gt;
+  &lt;title&gt;${2:Chapter Title}&lt;/title&gt;
+
+  &lt;!-- Created by  ${TM_FULLNAME} on ${TM_DATE}. --&gt;
+
+  &lt;p&gt;
+    ${0:Your book chapter goes here...}
+  &lt;/p&gt;
+&lt;/chapter&gt;
+</string>
+	<key>name</key>
+	<string>Chapter</string>
+	<key>scope</key>
+	<string>text.xml.pragmatic</string>
+	<key>tabTrigger</key>
+	<string>cha</string>
+	<key>uuid</key>
+	<string>B2C05BB2-5A79-4914-A659-1A0D87D070C6</string>
+</dict>
+</plist>

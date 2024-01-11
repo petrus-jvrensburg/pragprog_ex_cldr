@@ -1,0 +1,50 @@
+<project name="DOST" default="init" basedir=".">
+
+  <property name="rootdir" value="ppsvn/Bookshelf/titles/_M2"/>
+
+  <target name="init">
+    <record name="log.txt" action="start"/>
+    <loadfile property="dtd" srcfile="../${rootdir}/PerBook/util/xml/ppbook.dtd"/>
+
+    <xslt in="build.xml" out="out/element-support.xml"
+      style="xsl/pragprog/element-support.xsl" force="yes">
+      <param name="dtd" expression="${dtd}"/>
+      <param name="pdf-dir" expression="${rootdir}/PerBook/util/xml/"/>
+      <param name="common-dir" expression="${rootdir}/Common/xml/"/>
+      <param name="screen-xsl" expression="ppb2fo-screen.xsl"/>
+      <param name="paper-xsl" expression="ppb2fo-paper.xsl"/>
+      <param name="mobi-xsl" expression="ppb2mobi.xsl"/>
+      <param name="epub-xsl" expression="ppb2epub.xsl"/>
+    </xslt>
+    <antcall target="nonsupport"/>
+    <record name="log.txt" action="stop"/>
+  </target>
+
+  <target name="nonsupport">
+    <xslt in="out/element-support.xml" out="out/element-nonsupport.txt"
+      style="xsl/pragprog/element-nonsupport.xsl"/>
+ <antcall target="in-xsl-but-not-in-dtd"/>
+  </target>
+
+  <target name="in-xsl-but-not-in-dtd">
+    <xslt in="build.xml" out="out/xsl-supported-elements.xml"
+      style="xsl/pragprog/gather-xsl-supported-elements.xsl" force="yes">
+      <param name="pdf-dir" expression="${rootdir}/PerBook/util/xml/"/>
+      <param name="common-dir" expression="${rootdir}/Common/xml/"/>
+      <param name="screen-xsl" expression="ppb2fo-screen.xsl"/>
+      <param name="paper-xsl" expression="ppb2fo-paper.xsl"/>
+      <param name="mobi-xsl" expression="ppb2mobi.xsl"/>
+      <param name="epub-xsl" expression="ppb2epub.xsl"/>
+    </xslt>
+    <antcall target="compare-elements-to-schema"/>
+  </target>
+  
+  <target name="compare-elements-to-schema">
+    <xslt in="out/xsl-supported-elements.xml" out="out/elements-in-xsl-but-not-dtd.xml"
+      style="xsl/pragprog/compare-elements-to-schema.xsl" >
+      <param name="schema" expression="${rootdir}/PerBook/util/xml/ppbook.xsd"/>
+     </xslt>
+    
+  </target>
+
+</project>

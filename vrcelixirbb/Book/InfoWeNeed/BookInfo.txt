@@ -1,0 +1,181 @@
+Title: Elixir Beyond Borders
+
+Subtitle: A Developer's Guide to Internationalization in Elixir
+
+Author: Petrus Janse van Rensburg and Kip Cole
+
+Editor: Kelly Lee
+
+Signed date: 10/19/23
+
+First draft completion date: 15 March
+ 2024
+
+Page count: 165
+
+Series type: exPress
+
+
+************ THIS SECTION IS FOR INSTRUCTION ONLY - NOT CONTENT ************
+
+[The BookInfo file distills the content and benefits of the book into a few paragraphs. The description and text you enter here is the only thing that most of the world will ever see about your book.]
+
+[These next two items (Highlight Description and Product Description) make up your catalog description. For exPress titles, this text will be used on your book's home page and in our newsletters and releases. For all other titles, this text will be used on Amazon, Barnes & Noble, Ingram, and other data feeds, your book's home page, the press release, and as the back cover text. Address it to the reader, and be enthusiastic throughout.] 
+
+Start with a punchy paragraph to describe the book. Keep it lively and to the point: three to four sentences in length. Address it to the reader. The first sentence should give us an immediate idea of the benefit of the book. Again, don't just say this technology is great: let us know what we can do better than we could have done before.
+
+Next, give us some more details. Tell us why your book is different, better, exciting. Explain why we should care about your book and about the topic it covers. Imagine we know nothing about the topic of your book or its benefits. Explain it to us so that we can understand why it's cool. And tell us who the audience for the book is.]
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
+IMPORANT NOTE: For exPress titles, _do not_ complete the following sections:
+
+* Feature Points (4-5 points)
+* Key Selling Points (4-5 points)
+* Market Information (1 paragraph)
+* Competing Titles
+* Will Sell Like
+
+To make it easier, these sections are marked with the following text: 
+** Skip this section for exPress titles **
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
+
+**************** PLEASE DO NOT ADD CONTENT ABOVE THIS LINE ****************
+
+---------------------------------------------------------------- 
+Short Description (no more than 160 characters including spaces) 
+---------------------------------------------------------------- 
+
+Learn how you can leverage the Common Locale Data Repository in your Elixir applications, to internationalize UIs (i18n) and simplify your application logic.
+
+------------------------------------------------------ 
+Highlight Description (approx. 100 words, 1 paragraph) 
+------------------------------------------------------ 
+
+Elixir makes it easy to reach your users with beautiful interfaces. But adapting those interfaces to the needs of a diverse audience in a wide range of markets can be a challenge... Not anymore! In this book we'll show how you can go beyond _gettext_ and translations and adapt an your interfaces to the formatting conventions and units that your users are used to. By making use of the _ex_cldr_ suite of libraries, we can adapt our interfaces to the user's locale, while everaging the standards-based approach of the underlying dataset to clean up our application logic. 
+
+--------------------------------------- 
+Product Description (approx. 200 words) 
+--------------------------------------- 
+
+In this book, you'll get an overview of the Elixir's Internationalization and Localization ecosystem. We'll explore the most popular packages, see what they can do, and show how you can use them in your own projects.
+
+You'll learn the essentials for working with _locale_ strings on the web, and see how to translate static text in your codebase at compile-time using _gettext_. Then we'll dive into the fascinating _ex_cldr_ suite of libraries, which lets us work with variables in a structured way, formatting or converting them dynamically, at runtime, to suit a user's preferences.
+
+Many of these packages are based on the _Common Locale Data Repository (CLDR)_, which is published by the Unicode Consortium. We'll explore these packages together to see how we can leverage the structured, standards-based approach from the CLDR to clean up our own application logic. If your application deals with things like countries, currencies or units of measure, then you'll find this kind of thing very useful.
+
+Lastly, we'll look at managing translations for user-generated content. This kind of functionality can often add significant complexity to a codebase, but we'll show how the *ex_cldr_trans* library lets us push most of the logic to the database, keeping our own code nice and simple.
+
+
+--------------------------- 
+What You Need (1 paragraph) 
+--------------------------- 
+
+*ex_cldr* requires Elixir 1.11 or later
+
+
+--------------------------- 
+Feature Points (4-5 points) 
+--------------------------- 
+
+** Skip this section for exPress titles **
+
+[Used in conjunction with the Product Description, these bullet points
+should be short *benefits* the reader will receive from reading this
+book. What new skills will they possess? What problems can they now
+solve?]
+
+
+------------------------------- 
+Key Selling Points (4-5 points) 
+------------------------------- 
+
+** Skip this section for exPress titles **
+
+[Used to sell the book to bookstores. What will make this book sell
+well? Is it better than some other book? Is it unique in some way?
+Does it have a large or well-focused market?]
+
+
+-------------------------------- 
+Market Information (1 paragraph) 
+-------------------------------- 
+
+** Skip this section for exPress titles **
+
+[Who is this book for?  Programmers?  Managers?  TV maintenance specialists?]
+
+
+---------- 
+User Level 
+---------- 
+
+Intermediate
+
+
+---------------------------------- 
+Related Pragmatic Bookshelf Titles 
+---------------------------------- 
+
+Programming Phoenix LiveView
+
+Programming Phoenix 1.4
+
+
+---------------- 
+Competing Titles 
+---------------- 
+
+** Skip this section for exPress titles **
+
+[Other publishers' titles that compete with this one]
+
+
+-------------- 
+Will Sell Like 
+-------------- 
+
+** Skip this section for exPress titles **
+
+[Any related title whose sales would be comparable - title must be in print]
+
+
+-------------- 
+Categories 
+-------------- 
+
+Architecture, Design, and Testing
+Elixir, Phoenix, and OTP
+Popular Libraries and Frameworks
+Pragmatic ex​Press
+Web Development
+
+
+-------------------------------- 
+Author Bio (50-60 words maximum) 
+--------------------------------
+
+**Petrus Janse van Rensburg** is a full-stack Software Engineer from Cape Town, South Africa. He enjoys building software startups and has contributed to various open-source projects, mostly to help improve the quality of their documentation.
+
+You can find Petrus organising meetups at [https://elixirza.org](https://elixirza.org) or fixing typos on GitHub ([@petrus-jvrensburg](https://github.com/petrus-jvrensburg/)).
+
+**Kip Cole** is a prolific open-source contributor and one of the key figures in the Elixir ecosystem. He is the main author & maintainer of the *ex_cldr* suite of packages, as well as the popular *ex_money* package for working with currencies in Elixir.
+
+Kip hails from Australia, and you can find him pushing code on GitHub ([@kipcole9](https://github.com/kipcole9)), responding to queries on the Elixir Slack or generally being helpful on the Elixir forum.
+
+
+-------------------------------------------------- 
+Technology Background (for sales force and buyers) 
+-------------------------------------------------- 
+
+It can be very challenging to build software applications that cater for the needs of a diverse audience (e.g. with different languages and local formatting conventions). 
+
+But with Elixir, it's actually much easier than you'd expect, because of the excellent suite of Elixir packages that have been built around the Common Locale Data Repository, a large dataset compiled by the Unicode Consortium. 
+
+This book explains what those packages do and shows how Elixir developers can leverage them in their own applications to internationalize User Interfaces (i18n) and simplify their application logic.
+
+
+========================= Editor's use ===========================
+
+Comment: Not started yet.
+
+Status: Editorial

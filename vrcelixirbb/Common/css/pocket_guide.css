@@ -1,0 +1,52 @@
+blockquote.pg-partintro {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-size: smaller;
+  color: #377;
+}
+
+table.pg-task 
+{ 
+  border: 6px solid #6aa;
+  width: 100%;
+  padding: 0px;
+  margin-bottom: 1em;
+}
+
+table.pg-task td.pg-task-number
+{ 
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-size: smaller;
+  font-weight: bold;
+  text-align: center;
+  width: 10%;
+  background: #6aa;
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+table.pg-task .pg-task-name
+{ 
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-size: larger;
+  padding-top: 1ex;
+  padding-bottom: 1ex;
+  text-align: center;
+}
+
+table.pg-what-to-do
+{
+  border: 3px dotted #6aa;
+  width: 100%;
+  padding: 0px;
+  margin-bottom: 1em;
+}
+
+table.pg-what-to-do td.pg-what-to-do
+{
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-size: larger;
+  padding-top: 0.5ex;
+  padding-bottom: 0.5ex;
+  text-align: center;
+}

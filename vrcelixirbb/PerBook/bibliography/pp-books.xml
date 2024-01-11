@@ -1,0 +1,6635 @@
+<bibliography>
+  <book tag="pp:7apps">
+    <authors>
+      <author>
+        <given>Tony</given>
+        <family>Hillerson</family>
+      </author>
+    </authors>
+    <title>Seven Mobile Apps in Seven Weeks</title>
+    <isbn>9781680501483</isbn>
+    <year>2016</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:7lang">
+    <authors>
+      <author>
+        <given>Bruce Tate, Fred Daoud, Jack Moffitt, Erin Dees (formerly Ian</given>
+        <family>Dees)</family>
+      </author>
+    </authors>
+    <title>Seven More Languages in Seven Weeks</title>
+    <isbn>9781941222157</isbn>
+    <year>2014</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:7web">
+    <authors>
+      <author>
+        <given>Jack Moffitt, Fred</given>
+        <family>Daoud</family>
+      </author>
+    </authors>
+    <title>Seven Web Frameworks in Seven Weeks</title>
+    <isbn>9781937785635</isbn>
+    <year>2014</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:_M2">
+    <authors>
+      <author>
+        <given>Dave</given>
+        <family>Thomas</family>
+      </author>
+    </authors>
+    <title>Pragmatic Authors Guide, II</title>
+    <isbn>pending</isbn>
+    <year>2011</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:_WritersGuide">
+    <authors>
+      <author>
+        <given>Andy</given>
+        <family>Hunt</family>
+      </author>
+    </authors>
+    <title>Pragmatic Writer's Guide</title>
+    <isbn>pending</isbn>
+    <year>2011</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:_authinfo">
+    <authors>
+      <author>
+        <given>Dave</given>
+        <family>Thomas</family>
+      </author>
+      <author>
+        <given>the Pragmatic</given>
+        <family>Editors</family>
+      </author>
+    </authors>
+    <title>Pragmatic Author's Guide</title>
+    <isbn>9781934356692</isbn>
+    <year>2010</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:_eg">
+    <authors>
+      <author>
+        <given/>
+        <family>Editors</family>
+      </author>
+    </authors>
+    <title>Editor's Guide</title>
+    <isbn>pending</isbn>
+    <year>2020</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:_testdocker">
+    <authors>
+      <author>
+        <given>Brian</given>
+        <family>Hogan</family>
+      </author>
+    </authors>
+    <title>Test for Docker Based Builds</title>
+    <isbn>pending</isbn>
+    <year/>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:_training">
+    <authors>
+      <author>
+        <given>Mr. Famous</given>
+        <family>Author</family>
+      </author>
+    </authors>
+    <title>Training Title</title>
+    <isbn>pending</isbn>
+    <year>2019</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:a-actb2">
+    <authors>
+      <author>
+        <given>Antonio</given>
+        <family>Cangiano</family>
+      </author>
+    </authors>
+    <title>Technical Blogging, Second Edition (audio book)</title>
+    <isbn/>
+    <year>2020</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:a-fsfire">
+    <authors>
+      <author>
+        <given>Michael</given>
+        <family>Swaine</family>
+      </author>
+      <author>
+        <given>Paul Freiberger, narrated by Don</given>
+        <family>Azevedo</family>
+      </author>
+    </authors>
+    <title>Fire in the Valley (audio book)</title>
+    <isbn/>
+    <year>2016</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:a-jkthp">
+    <authors>
+      <author>
+        <given>Joe Kutner, narrated by Don</given>
+        <family>Azevedo</family>
+      </author>
+    </authors>
+    <title>The Healthy Programmer (audio book)</title>
+    <isbn/>
+    <year>2014</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:a-jragm">
+    <authors>
+      <author>
+        <given>Johanna</given>
+        <family>Rothman</family>
+      </author>
+    </authors>
+    <title>Create Your Successful Agile Project (audio book)</title>
+    <isbn/>
+    <year>2019</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:a-jsrw">
+    <authors>
+      <author>
+        <given>James</given>
+        <family>Stanier</family>
+      </author>
+    </authors>
+    <title>Effective Remote Work (audio book)</title>
+    <isbn/>
+    <year>2022</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:a-jtrap">
+    <authors>
+      <author>
+        <given>Jonathan Rasmusson, narrated by Don</given>
+        <family>Azevedo</family>
+      </author>
+    </authors>
+    <title>The Agile Samurai (audio book)</title>
+    <isbn/>
+    <year>2013</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:a-kcdc">
+    <authors>
+      <author>
+        <given>Ka Wai Cheung; narrated by Don</given>
+        <family>Azevedo</family>
+      </author>
+    </authors>
+    <title>The Developer's Code (audio book)</title>
+    <isbn/>
+    <year>2013</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:a-kkmanage">
+    <authors>
+      <author>
+        <given>Ken</given>
+        <family>Kousen</family>
+      </author>
+    </authors>
+    <title>Help Your Boss Help You (audio book)</title>
+    <isbn/>
+    <year>2022</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:a-liftoff">
+    <authors>
+      <author>
+        <given>Diana</given>
+        <family>Larsen</family>
+      </author>
+      <author>
+        <given>Ainsley</given>
+        <family>Nies</family>
+      </author>
+    </authors>
+    <title>Liftoff, Second Edition (audio book)</title>
+    <isbn/>
+    <year>2017</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:a-snfocus">
+    <authors>
+      <author>
+        <given>Staffan Nöteberg, narrated by Don</given>
+        <family>Azevedo</family>
+      </author>
+    </authors>
+    <title>Pomodoro Technique Illustrated (audio book)</title>
+    <isbn/>
+    <year>2012</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:a-tpp20">
+    <authors>
+      <author>
+        <given>David Thomas, Andrew</given>
+        <family>Hunt</family>
+      </author>
+    </authors>
+    <title>The Pragmatic Programmer, 20th Anniversary Edition</title>
+    <isbn/>
+    <year/>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:a-vbopens">
+    <authors>
+      <author>
+        <given>VM (Vicky)</given>
+        <family>Brasseur</family>
+      </author>
+    </authors>
+    <title>Forge Your Future with Open Source</title>
+    <isbn/>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:aapsql">
+    <authors>
+      <author>
+        <given>Andrew</given>
+        <family>Atkinson</family>
+      </author>
+    </authors>
+    <title>High Performance Rails on PostgreSQL</title>
+    <isbn>pending</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:abtest">
+    <authors>
+      <author>
+        <given>Leemay</given>
+        <family>Nassery</family>
+      </author>
+    </authors>
+    <title>Practical A/B Testing</title>
+    <isbn>9798888650080</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:abtestprac">
+    <authors>
+      <author>
+        <given>Leemay</given>
+        <family>Nassery</family>
+      </author>
+    </authors>
+    <title>A/B Testing Practices</title>
+    <isbn>pending</isbn>
+    <year>2024</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:achbd">
+    <authors>
+      <author>
+        <given>David Chelimsky, Dave Astels, Zach Dennis, Aslak Hellesøy, Bryan Helmkamp, Dan</given>
+        <family>North</family>
+      </author>
+    </authors>
+    <title>The RSpec Book (out of print)</title>
+    <isbn>9781934356371</isbn>
+    <year>2010</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:actb">
+    <authors>
+      <author>
+        <given>Antonio</given>
+        <family>Cangiano</family>
+      </author>
+    </authors>
+    <title>Technical Blogging (out of print)</title>
+    <isbn>9781934356883</isbn>
+    <year>2012</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:actb2">
+    <authors>
+      <author>
+        <given>Antonio</given>
+        <family>Cangiano</family>
+      </author>
+    </authors>
+    <title>Technical Blogging, Second Edition</title>
+    <isbn>9781680506471</isbn>
+    <year>2019</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:adios">
+    <authors>
+      <author>
+        <given>Chris</given>
+        <family>Adamson</family>
+      </author>
+      <author>
+        <given>Bill</given>
+        <family>Dudney</family>
+      </author>
+    </authors>
+    <title>iOS SDK Development (out of print)</title>
+    <isbn>9781934356944</isbn>
+    <year>2012</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:adios2">
+    <authors>
+      <author>
+        <given>Chris</given>
+        <family>Adamson</family>
+      </author>
+      <author>
+        <given>Janie</given>
+        <family>Clayton</family>
+      </author>
+    </authors>
+    <title>iOS 8 SDK Development (out of print)</title>
+    <isbn>9781941222645</isbn>
+    <year>2015</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:adios3">
+    <authors>
+      <author>
+        <given>Chris Adamson with Janie</given>
+        <family>Clayton</family>
+      </author>
+    </authors>
+    <title>iOS 9 SDK Development (out of print)</title>
+    <isbn>9781680501322</isbn>
+    <year>2016</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:adios4">
+    <authors>
+      <author>
+        <given>Chris Adamson with Janie</given>
+        <family>Clayton</family>
+      </author>
+    </authors>
+    <title>iOS 10 SDK Development (out of print)</title>
+    <isbn>9781680502107</isbn>
+    <year>2017</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:adrpo">
+    <authors>
+      <author>
+        <given>Alexander</given>
+        <family>Dymo</family>
+      </author>
+    </authors>
+    <title>Ruby Performance Optimization</title>
+    <isbn>9781680500691</isbn>
+    <year>2015</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:agcr">
+    <authors>
+      <author>
+        <given>Avdi</given>
+        <family>Grimm</family>
+      </author>
+    </authors>
+    <title>Confident Ruby</title>
+    <isbn>pending</isbn>
+    <year>2014</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:ager">
+    <authors>
+      <author>
+        <given>Avdi</given>
+        <family>Grimm</family>
+      </author>
+    </authors>
+    <title>Exceptional Ruby</title>
+    <isbn>9781937785512</isbn>
+    <year>2011</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:ahmine">
+    <authors>
+      <author>
+        <given>Andy</given>
+        <family>Hunt</family>
+      </author>
+    </authors>
+    <title>Learn to Program with Minecraft Plugins (out of print)</title>
+    <isbn>9781937785789</isbn>
+    <year>2014</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:ahmine2">
+    <authors>
+      <author>
+        <given>Andy</given>
+        <family>Hunt</family>
+      </author>
+    </authors>
+    <title>Learn to Program with Minecraft Plugins (2nd edition) (out of print)</title>
+    <isbn>9781941222942</isbn>
+    <year>2014</year>
+    <edition>2nd</edition>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:ahptl">
+    <authors>
+      <author>
+        <given>Andy</given>
+        <family>Hunt</family>
+      </author>
+    </authors>
+    <title>Pragmatic Thinking and Learning</title>
+    <isbn>9781934356050</isbn>
+    <year>2008</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:ahptl2">
+    <authors>
+      <author>
+        <given>Andy</given>
+        <family>Hunt</family>
+      </author>
+    </authors>
+    <title>Pragmatic Thinking and Learning 2nd ed</title>
+    <isbn>pending</isbn>
+    <year>2016</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:ajax">
+    <authors>
+      <author>
+        <given>Justin Gehtland, Ben</given>
+        <family>Galbraith,</family>
+      </author>
+      <author>
+        <given>Dion</given>
+        <family>Almaer</family>
+      </author>
+    </authors>
+    <title>Pragmatic Ajax (out of print)</title>
+    <isbn>9780976694083</isbn>
+    <year>2006</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:akbrain">
+    <authors>
+      <author>
+        <given>Anders Schau</given>
+        <family>Knatten</family>
+      </author>
+    </authors>
+    <title>C++ Brain Teasers</title>
+    <isbn>pending</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:algh">
+    <authors>
+      <author>
+        <given>Andy</given>
+        <family>Lester</family>
+      </author>
+    </authors>
+    <title>Land the Tech Job You Love</title>
+    <isbn>9781934356265</isbn>
+    <year>2009</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:alnpee">
+    <authors>
+      <author>
+        <given>Andrea</given>
+        <family>Leopardi</family>
+      </author>
+    </authors>
+    <title>Network Programming in Elixir and Erlang</title>
+    <isbn>pending</isbn>
+    <year>2024</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:amiphd">
+    <authors>
+      <author>
+        <given>Bill</given>
+        <family>Dudney</family>
+      </author>
+      <author>
+        <given>Chris</given>
+        <family>Adamson</family>
+      </author>
+    </authors>
+    <title>iPhone SDK Development (out of print)</title>
+    <isbn>9781934356258</isbn>
+    <year>2009</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:apapps">
+    <authors>
+      <author>
+        <given>Ashley</given>
+        <family>Peacock</family>
+      </author>
+    </authors>
+    <title>Building Complex Serverless Applications</title>
+    <isbn>pending</isbn>
+    <year>2024</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:apdiag">
+    <authors>
+      <author>
+        <given>Ashley</given>
+        <family>Peacock</family>
+      </author>
+    </authors>
+    <title>Creating Software with Modern Diagramming Techniques</title>
+    <isbn>9781680509830</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:atcrime">
+    <authors>
+      <author>
+        <given>Adam</given>
+        <family>Tornhill</family>
+      </author>
+    </authors>
+    <title>Your Code as a Crime Scene (out of print)</title>
+    <isbn>9781680500387</isbn>
+    <year>2015</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:atcrime2">
+    <authors>
+      <author>
+        <given>Adam</given>
+        <family>Tornhill</family>
+      </author>
+    </authors>
+    <title>Your Code as a Crime Scene, Second Edition</title>
+    <isbn>9798888650325</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:atevol">
+    <authors>
+      <author>
+        <given>Adam</given>
+        <family>Tornhill</family>
+      </author>
+    </authors>
+    <title>Software Design X-Rays</title>
+    <isbn>9781680502725</isbn>
+    <year>2018</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:auto">
+    <authors>
+      <author>
+        <given>Mike</given>
+        <family>Clark</family>
+      </author>
+    </authors>
+    <title>Pragmatic Project Automation (out of print)</title>
+    <isbn>9780974514031</isbn>
+    <year>2004</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:awpetal">
+    <authors>
+      <author>
+        <given>Allen</given>
+        <family>Wyma</family>
+      </author>
+    </authors>
+    <title>PETAL Stack</title>
+    <isbn>pending</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:bcosp">
+    <authors>
+      <author>
+        <given>Ben</given>
+        <family>Cotton</family>
+      </author>
+    </authors>
+    <title>Program Management for Open Source Projects</title>
+    <isbn>9781680509243</isbn>
+    <year>2022</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:bdcora">
+    <authors>
+      <author>
+        <given>Bill</given>
+        <family>Dudney</family>
+      </author>
+    </authors>
+    <title>Core Animation for Mac OS X and the iPhone (out of print)</title>
+    <isbn>9781934356104</isbn>
+    <year>2008</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:beamops">
+    <authors>
+      <author>
+        <given>Josep Giralt</given>
+        <family>D'Lacoste</family>
+      </author>
+      <author>
+        <given>Ellie</given>
+        <family>Fairholm</family>
+      </author>
+    </authors>
+    <title>BEAMOps</title>
+    <isbn>pending</isbn>
+    <year>2024</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:bhcldev">
+    <authors>
+      <author>
+        <given>Brian P.</given>
+        <family>Hogan</family>
+      </author>
+    </authors>
+    <title>Small, Sharp Software Tools</title>
+    <isbn>9781680502961</isbn>
+    <year>2019</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:bhgrunt">
+    <authors>
+      <author>
+        <given>Brian P.</given>
+        <family>Hogan</family>
+      </author>
+    </authors>
+    <title>Automate with Grunt</title>
+    <isbn>9781941222119</isbn>
+    <year>2014</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:bhgwad">
+    <authors>
+      <author>
+        <given>Brian P.</given>
+        <family>Hogan</family>
+      </author>
+    </authors>
+    <title>Web Design for Developers (out of print)</title>
+    <isbn>9781934356135</isbn>
+    <year>2009</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:bhh5">
+    <authors>
+      <author>
+        <given>Brian P.</given>
+        <family>Hogan</family>
+      </author>
+    </authors>
+    <title>HTML5 and CSS3 (out of print)</title>
+    <isbn>9781934356685</isbn>
+    <year>2010</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:bhh52e">
+    <authors>
+      <author>
+        <given>Brian P.</given>
+        <family>Hogan</family>
+      </author>
+    </authors>
+    <title>HTML5 and CSS3 (2nd edition) (out of print)</title>
+    <isbn>9781937785598</isbn>
+    <year>2013</year>
+    <edition>2nd</edition>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:bhhugo">
+    <authors>
+      <author>
+        <given>Brian P.</given>
+        <family>Hogan</family>
+      </author>
+    </authors>
+    <title>Build Websites with Hugo</title>
+    <isbn>9781680507263</isbn>
+    <year>2020</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:bhtmux">
+    <authors>
+      <author>
+        <given>Brian P.</given>
+        <family>Hogan</family>
+      </author>
+    </authors>
+    <title>tmux (out of print)</title>
+    <isbn>9781934356968</isbn>
+    <year>2012</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:bhtmux2">
+    <authors>
+      <author>
+        <given>Brian P.</given>
+        <family>Hogan</family>
+      </author>
+    </authors>
+    <title>tmux 2</title>
+    <isbn>9781680502213</isbn>
+    <year>2016</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:bhtmux3">
+    <authors>
+      <author>
+        <given>Brian P.</given>
+        <family>Hogan</family>
+      </author>
+    </authors>
+    <title>tmux3</title>
+    <isbn>pending</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:bhwb">
+    <authors>
+      <author>
+        <given>Brian P.</given>
+        <family>Hogan</family>
+      </author>
+    </authors>
+    <title>Exercises for Programmers</title>
+    <isbn>9781680501223</isbn>
+    <year>2015</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:bksap1">
+    <authors>
+      <author>
+        <given>Bill</given>
+        <family>Karwin</family>
+      </author>
+    </authors>
+    <title>SQL Antipatterns, Volume 1</title>
+    <isbn>9781680508987</isbn>
+    <year>2022</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:bksap2">
+    <authors>
+      <author>
+        <given>Bill</given>
+        <family>Karwin</family>
+      </author>
+    </authors>
+    <title>SQL Antipatterns Vol. II</title>
+    <isbn>pending</isbn>
+    <year>2021</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:bksqla">
+    <authors>
+      <author>
+        <given>Bill</given>
+        <family>Karwin</family>
+      </author>
+    </authors>
+    <title>SQL Antipatterns (out of print)</title>
+    <isbn>9781934356555</isbn>
+    <year>2010</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:bkviml">
+    <authors>
+      <author>
+        <given>Benjamin</given>
+        <family>Klein</family>
+      </author>
+    </authors>
+    <title>The VimL Primer (out of print)</title>
+    <isbn>9781680500400</isbn>
+    <year>2015</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:bmrc">
+    <authors>
+      <author>
+        <given>Brian</given>
+        <family>Marick</family>
+      </author>
+    </authors>
+    <title>Programming Cocoa with Ruby (out of print)</title>
+    <isbn>9781934356197</isbn>
+    <year>2009</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:bmsft">
+    <authors>
+      <author>
+        <given>Brian</given>
+        <family>Marick</family>
+      </author>
+    </authors>
+    <title>Everyday Scripting with Ruby (out of print)</title>
+    <isbn>9780977616619</isbn>
+    <year>2007</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:bopytest">
+    <authors>
+      <author>
+        <given>Brian</given>
+        <family>Okken</family>
+      </author>
+    </authors>
+    <title>Python Testing with pytest (out of print)</title>
+    <isbn>9781680502404</isbn>
+    <year>2017</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:bopytest2">
+    <authors>
+      <author>
+        <given>Brian</given>
+        <family>Okken</family>
+      </author>
+    </authors>
+    <title>Python Testing with pytest, Second Edition</title>
+    <isbn>9781680508604</isbn>
+    <year>2022</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:brapps">
+    <authors>
+      <author>
+        <given>Ben</given>
+        <family>Rady</family>
+      </author>
+    </authors>
+    <title>Serverless Single Page Apps</title>
+    <isbn>9781680501490</isbn>
+    <year>2016</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:brian">
+    <authors>
+      <author>
+        <given>Brian</given>
+        <family>MacDonald</family>
+      </author>
+    </authors>
+    <title>Dev Editing Documentation</title>
+    <isbn>pending</isbn>
+    <year>2019</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:btlang">
+    <authors>
+      <author>
+        <given>Bruce A.</given>
+        <family>Tate</family>
+      </author>
+    </authors>
+    <title>Seven Languages in Seven Weeks</title>
+    <isbn>9781934356593</isbn>
+    <year>2010</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:btloop">
+    <authors>
+      <author>
+        <given>Bruce</given>
+        <family>Tate</family>
+      </author>
+    </authors>
+    <title>Currently Away</title>
+    <isbn>9798888650271</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:btrubyclo">
+    <authors>
+      <author>
+        <given>Benjamin Tan Wei</given>
+        <family>Hao</family>
+      </author>
+    </authors>
+    <title>Mastering Ruby Closures (out of print)</title>
+    <isbn>9781680502619</isbn>
+    <year>2017</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:carubym">
+    <authors>
+      <author>
+        <given>Clay</given>
+        <family>Allsopp</family>
+      </author>
+    </authors>
+    <title>RubyMotion (out of print)</title>
+    <isbn>9781937785284</isbn>
+    <year>2012</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:catimers">
+    <authors>
+      <author>
+        <given>Cabe Force Satalic</given>
+        <family>Atwell</family>
+      </author>
+    </authors>
+    <title>Essential 555 IC</title>
+    <isbn>9781680507836</isbn>
+    <year>2021</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:caxcode">
+    <authors>
+      <author>
+        <given>Chris</given>
+        <family>Adamson</family>
+      </author>
+    </authors>
+    <title>Xcode Treasures</title>
+    <isbn>9781680505863</isbn>
+    <year>2018</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:cbdepra">
+    <authors>
+      <author>
+        <given>Tom</given>
+        <family>Copeland</family>
+      </author>
+      <author>
+        <given>Anthony</given>
+        <family>Burns</family>
+      </author>
+    </authors>
+    <title>Deploying Rails (out of print)</title>
+    <isbn>9781934356951</isbn>
+    <year>2012</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:cbrain">
+    <authors>
+      <author>
+        <given>Dan</given>
+        <family>Gookin</family>
+      </author>
+    </authors>
+    <title>C Brain Teasers</title>
+    <isbn>pending</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:cdc-elixir">
+    <authors>
+      <author>
+        <given>Ulisses</given>
+        <family>Almeida</family>
+      </author>
+    </authors>
+    <title>Learn Functional Programming with Elixir</title>
+    <isbn>9781680502459</isbn>
+    <year>2018</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:cdglisp">
+    <authors>
+      <author>
+        <given>Cees de</given>
+        <family>Groot</family>
+      </author>
+    </authors>
+    <title>The Genius of LISP</title>
+    <isbn>pending</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:cdirec">
+    <authors>
+      <author>
+        <given>Paul</given>
+        <family>Warren</family>
+      </author>
+      <author>
+        <given>Matt</given>
+        <family>Drance</family>
+      </author>
+    </authors>
+    <title>iOS Recipes (out of print)</title>
+    <isbn>9781934356746</isbn>
+    <year>2011</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:cehammers">
+    <authors>
+      <author>
+        <given>Coraline Ada</given>
+        <family>Ehmke</family>
+      </author>
+    </authors>
+    <title>We Just Build Hammers</title>
+    <isbn>pending</isbn>
+    <year>2024</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:cerailn">
+    <authors>
+      <author>
+        <given>Jeff</given>
+        <family>Cohen</family>
+      </author>
+      <author>
+        <given>Brian</given>
+        <family>Eng</family>
+      </author>
+    </authors>
+    <title>Rails for .NET Developers (out of print)</title>
+    <isbn>9781934356203</isbn>
+    <year>2008</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:cfar">
+    <authors>
+      <author>
+        <given>Stephen</given>
+        <family>Cawood</family>
+      </author>
+      <author>
+        <given>Mark</given>
+        <family>Fiala</family>
+      </author>
+    </authors>
+    <title>Augmented Reality (out of print)</title>
+    <isbn>9781934356036</isbn>
+    <year>2008</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:cfcar2">
+    <authors>
+      <author>
+        <given>Chad</given>
+        <family>Fowler</family>
+      </author>
+    </authors>
+    <title>The Passionate Programmer (2nd edition)</title>
+    <isbn>9781934356340</isbn>
+    <year>2009</year>
+    <edition>2nd</edition>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:cjclojure">
+    <authors>
+      <author>
+        <given>Colin</given>
+        <family>Jones</family>
+      </author>
+    </authors>
+    <title>Mastering Clojure Macros</title>
+    <isbn>9781941222225</isbn>
+    <year>2014</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:cmelixir">
+    <authors>
+      <author>
+        <given>Chris</given>
+        <family>McCord</family>
+      </author>
+    </authors>
+    <title>Metaprogramming Elixir</title>
+    <isbn>9781680500417</isbn>
+    <year>2015</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:cppsu">
+    <authors>
+      <author>
+        <given>Christophe</given>
+        <family>Porteneuve</family>
+      </author>
+    </authors>
+    <title>Prototype and script.aculo.us (out of print)</title>
+    <isbn>9781934356012</isbn>
+    <year>2007</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:cprpo">
+    <authors>
+      <author>
+        <given>Cristian</given>
+        <family>Planas</family>
+      </author>
+    </authors>
+    <title>Rails Performance Optimization</title>
+    <isbn>pending</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:cricloud">
+    <authors>
+      <author>
+        <given>Cesare</given>
+        <family>Rocchi</family>
+      </author>
+    </authors>
+    <title>iCloud for Developers (out of print)</title>
+    <isbn>9781937785604</isbn>
+    <year>2013</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:crystal">
+    <authors>
+      <author>
+        <given>Ivo</given>
+        <family>Balbaert</family>
+      </author>
+      <author>
+        <given>Simon St.</given>
+        <family>Laurent</family>
+      </author>
+    </authors>
+    <title>Programming Crystal</title>
+    <isbn>9781680502862</isbn>
+    <year>2019</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:crystal2">
+    <authors>
+      <author>
+        <given>Simon</given>
+        <family>St.Laurent</family>
+      </author>
+    </authors>
+    <title>Programming Crystal, Second Edition</title>
+    <isbn>pending</isbn>
+    <year>2022</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:csdart">
+    <authors>
+      <author>
+        <given>Chris</given>
+        <family>Strom</family>
+      </author>
+    </authors>
+    <title>Dart for Hipsters (out of print)</title>
+    <isbn>9781937785031</isbn>
+    <year>2012</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:csdart1">
+    <authors>
+      <author>
+        <given>Chris</given>
+        <family>Strom</family>
+      </author>
+    </authors>
+    <title>Dart 1 for Everyone (out of print)</title>
+    <isbn>9781941222256</isbn>
+    <year>2014</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:csjava">
+    <authors>
+      <author>
+        <given>Chris</given>
+        <family>Strom</family>
+      </author>
+    </authors>
+    <title>3D Game Programming for Kids (out of print)</title>
+    <isbn>9781937785444</isbn>
+    <year>2013</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:csjava2">
+    <authors>
+      <author>
+        <given>Chris</given>
+        <family>Strom</family>
+      </author>
+    </authors>
+    <title>3D Game Programming for Kids, Second Edition</title>
+    <isbn>9781680502701</isbn>
+    <year>2018</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:csrust">
+    <authors>
+      <author>
+        <given>Claude</given>
+        <family>Seidman</family>
+      </author>
+    </authors>
+    <title>Writing a Complier in Rust</title>
+    <isbn>pending</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:csspdy">
+    <authors>
+      <author>
+        <given>Chris</given>
+        <family>Strom</family>
+      </author>
+    </authors>
+    <title>The SPDY Book (out of print)</title>
+    <isbn>pending</isbn>
+    <year>2011</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:ctelec">
+    <authors>
+      <author>
+        <given>Caleb</given>
+        <family>Tennis</family>
+      </author>
+    </authors>
+    <title>A Peek at Computer Electronics (out of print)</title>
+    <isbn>9780977616688</isbn>
+    <year>2007</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:ctrubyqt">
+    <authors>
+      <author>
+        <given>Caleb</given>
+        <family>Tennis</family>
+      </author>
+    </authors>
+    <title>Rapid GUI Development with QtRuby (out of print)</title>
+    <isbn>friday</isbn>
+    <year>2005</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:cwalexa">
+    <authors>
+      <author>
+        <given>Craig</given>
+        <family>Walls</family>
+      </author>
+    </authors>
+    <title>Build Talking Apps for Alexa</title>
+    <isbn>9781680507256</isbn>
+    <year>2022</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:cwosg">
+    <authors>
+      <author>
+        <given>Craig</given>
+        <family>Walls</family>
+      </author>
+    </authors>
+    <title>Modular Java (out of print)</title>
+    <isbn>9781934356401</isbn>
+    <year>2009</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:czflutr">
+    <authors>
+      <author>
+        <given>Carmine</given>
+        <family>Zaccagnino</family>
+      </author>
+    </authors>
+    <title>Programming Flutter</title>
+    <isbn>9781680506952</isbn>
+    <year>2020</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:czflutr2">
+    <authors>
+      <author>
+        <given>Carmine</given>
+        <family>Zaccagnino</family>
+      </author>
+    </authors>
+    <title>Programming Flutter, Second Edition</title>
+    <isbn>pending</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:d-cmrest">
+    <authors>
+      <author>
+        <given>Christina</given>
+        <family>Moulton</family>
+      </author>
+    </authors>
+    <title>iOS Apps with REST APIs</title>
+    <isbn>pending</isbn>
+    <year>2016</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:d-dbback">
+    <authors>
+      <author>
+        <given>Derick</given>
+        <family>Bailey</family>
+      </author>
+      <author>
+        <given>Jerome</given>
+        <family>Gravel-Niquet</family>
+      </author>
+    </authors>
+    <title>Building Backbone Plugins (out of print)</title>
+    <isbn>pending</isbn>
+    <year>2014</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:d-dcrails">
+    <authors>
+      <author>
+        <given>David Bryant</given>
+        <family>Copeland</family>
+      </author>
+    </authors>
+    <title>Sustainable Web Development with Ruby on Rails</title>
+    <isbn>pending</isbn>
+    <year>2022</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:d-devops">
+    <authors>
+      <author>
+        <given>Danilo</given>
+        <family>Sato</family>
+      </author>
+    </authors>
+    <title>DevOps in Practice</title>
+    <isbn>pending</isbn>
+    <year>2014</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:d-dsasync">
+    <authors>
+      <author>
+        <given>Daniel H</given>
+        <family>Steinberg</family>
+      </author>
+    </authors>
+    <title>The Curious Case of the Async Cafe</title>
+    <isbn>9781944994044</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:d-dsbackm">
+    <authors>
+      <author>
+        <given>David</given>
+        <family>Sulc</family>
+      </author>
+    </authors>
+    <title>Backbone Marionette (out of print)</title>
+    <isbn>pending</isbn>
+    <year>2013</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:d-dscombine">
+    <authors>
+      <author>
+        <given>Daniel H</given>
+        <family>Steinberg</family>
+      </author>
+    </authors>
+    <title>A Combine Kickstart</title>
+    <isbn>9781944994020</isbn>
+    <year>2021</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:d-dsfpkick">
+    <authors>
+      <author>
+        <given>Daniel H</given>
+        <family>Steinberg</family>
+      </author>
+    </authors>
+    <title>A Functional Programming Kickstart</title>
+    <isbn>9781944994013</isbn>
+    <year>2020</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:d-dsswift">
+    <authors>
+      <author>
+        <given>Daniel H</given>
+        <family>Steinberg</family>
+      </author>
+    </authors>
+    <title>A Swift Kickstart, Second Edition (out of print)</title>
+    <isbn>9780983066989</isbn>
+    <year>2017</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:d-dsswift2">
+    <authors>
+      <author>
+        <given>Daniel H</given>
+        <family>Steinberg</family>
+      </author>
+    </authors>
+    <title>A Swift Kickstart, Second Edition</title>
+    <isbn>9780983066989</isbn>
+    <year>2020</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:d-dsswiftui">
+    <authors>
+      <author>
+        <given>Daniel H</given>
+        <family>Steinberg</family>
+      </author>
+    </authors>
+    <title>A SwiftUI Kickstart</title>
+    <isbn>9781944994006</isbn>
+    <year>2020</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:d-gobrain">
+    <authors>
+      <author>
+        <given>Miki</given>
+        <family>Tebeka</family>
+      </author>
+    </authors>
+    <title>Go Brain Teasers</title>
+    <isbn>9781680508994</isbn>
+    <year>2021</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:d-jmexpress">
+    <authors>
+      <author>
+        <given>Jonathan Lee</given>
+        <family>Martin</family>
+      </author>
+    </authors>
+    <title>Functional Design Patterns for Express.js</title>
+    <isbn>9781074005306</isbn>
+    <year>2019</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:d-jrlean">
+    <authors>
+      <author>
+        <given>Johanna</given>
+        <family>Rothman</family>
+      </author>
+    </authors>
+    <title>Agile and Lean Program Management</title>
+    <isbn>pending</isbn>
+    <year>2016</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:d-jrnfwriter">
+    <authors>
+      <author>
+        <given>Johanna</given>
+        <family>Rothman</family>
+      </author>
+    </authors>
+    <title>Free Your Inner Nonfiction Writer</title>
+    <isbn>pending</isbn>
+    <year>2022</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:d-jrorgan">
+    <authors>
+      <author>
+        <given>Johanna</given>
+        <family>Rothman</family>
+      </author>
+    </authors>
+    <title>Practical Ways to Lead an Innovative Organization</title>
+    <isbn>9781943487189</isbn>
+    <year>2021</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:d-jrothers">
+    <authors>
+      <author>
+        <given>Johanna</given>
+        <family>Rothman</family>
+      </author>
+    </authors>
+    <title>Practical Ways to Lead &amp; Serve (Manage) Others</title>
+    <isbn>9781943487158</isbn>
+    <year>2021</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:d-jrpredict">
+    <authors>
+      <author>
+        <given>Johanna</given>
+        <family>Rothman</family>
+      </author>
+    </authors>
+    <title>Predicting the Unpredictable</title>
+    <isbn>9781680501421</isbn>
+    <year>2015</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:d-jryourself">
+    <authors>
+      <author>
+        <given>Johanna</given>
+        <family>Rothman</family>
+      </author>
+    </authors>
+    <title>Practical Ways to Manage Yourself</title>
+    <isbn>9781943487127</isbn>
+    <year>2021</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:d-kegrap">
+    <authors>
+      <author>
+        <given>Henning Koch &amp; Thomas</given>
+        <family>Eisenbarth</family>
+      </author>
+    </authors>
+    <title>Growing Rails Applications in Practice</title>
+    <isbn>pending</isbn>
+    <year>2014</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:d-mbcreq">
+    <authors>
+      <author>
+        <given>Marco</given>
+        <family>Behler</family>
+      </author>
+    </authors>
+    <title>Customer Requirements</title>
+    <isbn>pending</isbn>
+    <year>2015</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:d-pandas">
+    <authors>
+      <author>
+        <given>Miki</given>
+        <family>Tebeka</family>
+      </author>
+    </authors>
+    <title>Pandas Brain Teasers</title>
+    <isbn>9781680509014</isbn>
+    <year>2021</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:d-pybrain">
+    <authors>
+      <author>
+        <given>Miki</given>
+        <family>Tebeka</family>
+      </author>
+    </authors>
+    <title>Python Brain Teasers</title>
+    <isbn>9781680509007</isbn>
+    <year>2021</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:d-rkteams">
+    <authors>
+      <author>
+        <given>Johanna Rothman, Mark</given>
+        <family>Kilby</family>
+      </author>
+    </authors>
+    <title>From Chaos to Successful Distributed Agile Teams</title>
+    <isbn>9781943487110</isbn>
+    <year>2019</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:d-sgperfin">
+    <authors>
+      <author>
+        <given>Siddhant</given>
+        <family>Goel</family>
+      </author>
+    </authors>
+    <title>Tracking Personal Finances Using Python</title>
+    <isbn>9783982454320</isbn>
+    <year>2022</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:dblegacy">
+    <authors>
+      <author>
+        <given>David Scott</given>
+        <family>Bernstein</family>
+      </author>
+    </authors>
+    <title>Beyond Legacy Code</title>
+    <isbn>9781680500790</isbn>
+    <year>2015</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:dcbang">
+    <authors>
+      <author>
+        <given>David Bryant</given>
+        <family>Copeland</family>
+      </author>
+    </authors>
+    <title>Rails, Angular, Postgres, and Bootstrap (out of print)</title>
+    <isbn>9781680501261</isbn>
+    <year>2016</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:dcbang2">
+    <authors>
+      <author>
+        <given>David Bryant</given>
+        <family>Copeland</family>
+      </author>
+    </authors>
+    <title>Rails, Angular, Postgres, and Bootstrap, Second Edition</title>
+    <isbn>9781680502206</isbn>
+    <year>2017</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:dccar">
+    <authors>
+      <author>
+        <given>David Bryant</given>
+        <family>Copeland</family>
+      </author>
+    </authors>
+    <title>Build Awesome Command-Line Applications in Ruby (out of print)</title>
+    <isbn>9781934356913</isbn>
+    <year>2012</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:dccar2">
+    <authors>
+      <author>
+        <given>David</given>
+        <family>Copeland</family>
+      </author>
+    </authors>
+    <title>Build Awesome Command-Line Applications in Ruby 2 (out of print)</title>
+    <isbn>9781937785758</isbn>
+    <year>2013</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:dcsidekiq">
+    <authors>
+      <author>
+        <given>David Bryant</given>
+        <family>Copeland</family>
+      </author>
+    </authors>
+    <title>Ruby on Rails Background Jobs with Sidekiq</title>
+    <isbn>9798888650363</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:dhios">
+    <authors>
+      <author>
+        <given>Dominik</given>
+        <family>Hauser</family>
+      </author>
+    </authors>
+    <title>Build Location-Based Projects for iOS</title>
+    <isbn>9781680507812</isbn>
+    <year>2020</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:dhnako">
+    <authors>
+      <author>
+        <given>Dan</given>
+        <family>Haywood</family>
+      </author>
+    </authors>
+    <title>Domain-Driven Design Using Naked Objects (out of print)</title>
+    <isbn>9781934356449</isbn>
+    <year>2009</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:dhwcr">
+    <authors>
+      <author>
+        <given>Erin Dees (formerly Ian Dees), Matt Wynne, Aslak</given>
+        <family>Hellesoy</family>
+      </author>
+    </authors>
+    <title>Cucumber Recipes</title>
+    <isbn>9781937785017</isbn>
+    <year>2013</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:djkxsl">
+    <authors>
+      <author>
+        <given>David James</given>
+        <family>Kelly</family>
+      </author>
+    </authors>
+    <title>XSLT Jumpstarter (out of print)</title>
+    <isbn>9780913465035</isbn>
+    <year>2015</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:dkgrails">
+    <authors>
+      <author>
+        <given>Dave</given>
+        <family>Klein</family>
+      </author>
+    </authors>
+    <title>Grails (out of print)</title>
+    <isbn>9781934356463</isbn>
+    <year>2009</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:dkgrails2">
+    <authors>
+      <author>
+        <given>Dave</given>
+        <family>Klein</family>
+      </author>
+      <author>
+        <given>Ben</given>
+        <family>Klein</family>
+      </author>
+    </authors>
+    <title>Grails 2: A Quick-Start Guide (out of print)</title>
+    <isbn>9781937785772</isbn>
+    <year>2014</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:dlret">
+    <authors>
+      <author>
+        <given>Esther</given>
+        <family>Derby</family>
+      </author>
+      <author>
+        <given>Diana Larsen, Foreword by Ken</given>
+        <family>Schwaber</family>
+      </author>
+    </authors>
+    <title>Agile Retrospectives</title>
+    <isbn>9780977616640</isbn>
+    <year>2006</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:dlret2">
+    <authors>
+      <author>
+        <given>Esther Derby, Diana Larsen, David</given>
+        <family>Horowitz</family>
+      </author>
+    </authors>
+    <title>Agile Retrospectives, Second Edition</title>
+    <isbn>pending</isbn>
+    <year>2022</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:dmpython">
+    <authors>
+      <author>
+        <given>David</given>
+        <family>Muller</family>
+      </author>
+    </authors>
+    <title>Intuitive Python</title>
+    <isbn>9781680508239</isbn>
+    <year>2021</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:dnvim">
+    <authors>
+      <author>
+        <given>Drew</given>
+        <family>Neil</family>
+      </author>
+    </authors>
+    <title>Practical Vim (out of print)</title>
+    <isbn>9781934356982</isbn>
+    <year>2012</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:dnvim2">
+    <authors>
+      <author>
+        <given>Drew</given>
+        <family>Neil</family>
+      </author>
+    </authors>
+    <title>Practical Vim, Second Edition</title>
+    <isbn>9781680501278</isbn>
+    <year>2015</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:dpchat">
+    <authors>
+      <author>
+        <given>Daniel</given>
+        <family>Pritchett</family>
+      </author>
+    </authors>
+    <title>Build Chatbot Interactions</title>
+    <isbn>9781680506327</isbn>
+    <year>2019</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:dscpq">
+    <authors>
+      <author>
+        <given>Daniel H</given>
+        <family>Steinberg</family>
+      </author>
+    </authors>
+    <title>Cocoa Programming (out of print)</title>
+    <isbn>9781934356302</isbn>
+    <year>2010</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:dsproc">
+    <authors>
+      <author>
+        <given>Daniel</given>
+        <family>Sauter</family>
+      </author>
+    </authors>
+    <title>Rapid Android Development (out of print)</title>
+    <isbn>9781937785062</isbn>
+    <year>2013</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:dswdcloj">
+    <authors>
+      <author>
+        <given>Dmitri</given>
+        <family>Sotnikov</family>
+      </author>
+    </authors>
+    <title>Web Development with Clojure (out of print)</title>
+    <isbn>9781937785642</isbn>
+    <year>2014</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:dswdcloj2">
+    <authors>
+      <author>
+        <given>Dmitri</given>
+        <family>Sotnikov</family>
+      </author>
+    </authors>
+    <title>Web Development with Clojure, Second Edition (out of print)</title>
+    <isbn>9781680500820</isbn>
+    <year>2016</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:dswdcloj3">
+    <authors>
+      <author>
+        <given>Dmitri</given>
+        <family>Sotnikov</family>
+      </author>
+      <author>
+        <given>Scot</given>
+        <family>Brown</family>
+      </author>
+    </authors>
+    <title>Web Development with Clojure, Third Edition</title>
+    <isbn>9781680506822</isbn>
+    <year>2021</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:dtdso">
+    <authors>
+      <author>
+        <given>Doyle</given>
+        <family>Turner</family>
+      </author>
+    </authors>
+    <title>DevSecOps Unlocked</title>
+    <isbn>pending</isbn>
+    <year>2024</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:dttest">
+    <authors>
+      <author>
+        <given>Dave</given>
+        <family>Thomas</family>
+      </author>
+      <author>
+        <given>Fred</given>
+        <family>Smith</family>
+      </author>
+    </authors>
+    <title>A test Book</title>
+    <isbn>9780061914188</isbn>
+    <year>2012</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:dzcnapy">
+    <authors>
+      <author>
+        <given>Dmitry</given>
+        <family>Zinoviev</family>
+      </author>
+    </authors>
+    <title>Complex Network Analysis in Python</title>
+    <isbn>9781680502695</isbn>
+    <year>2018</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:dzmso">
+    <authors>
+      <author>
+        <given>Dmitry</given>
+        <family>Zinoviev</family>
+      </author>
+    </authors>
+    <title>Modeling, Simulation, and Optimization</title>
+    <isbn>pending</isbn>
+    <year>2022</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:dzpyds">
+    <authors>
+      <author>
+        <given>Dmitry</given>
+        <family>Zinoviev</family>
+      </author>
+    </authors>
+    <title>Data Science Essentials in Python</title>
+    <isbn>9781680501841</isbn>
+    <year>2016</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:dzpythonic">
+    <authors>
+      <author>
+        <given>Dmitry</given>
+        <family>Zinoviev</family>
+      </author>
+    </authors>
+    <title>Pythonic Programming</title>
+    <isbn>9781680508611</isbn>
+    <year>2021</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:dzreuse">
+    <authors>
+      <author>
+        <given>Dmitry</given>
+        <family>Zinoviev</family>
+      </author>
+    </authors>
+    <title>Resourceful Code Reuse</title>
+    <isbn>9781680508208</isbn>
+    <year>2021</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:dzseven">
+    <authors>
+      <author>
+        <given>Dmitry</given>
+        <family>Zinoviev</family>
+      </author>
+    </authors>
+    <title>Seven Forgotten Languages in Seven Weeks</title>
+    <isbn>pending</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:eband">
+    <authors>
+      <author>
+        <given>Ed</given>
+        <family>Burnette</family>
+      </author>
+    </authors>
+    <title>Hello, Android (out of print)</title>
+    <isbn>9781934356173</isbn>
+    <year>2008</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:eband2">
+    <authors>
+      <author>
+        <given>Ed</given>
+        <family>Burnette</family>
+      </author>
+    </authors>
+    <title>Hello, Android (2nd edition) (out of print)</title>
+    <isbn>9781934356494</isbn>
+    <year>2009</year>
+    <edition>2nd</edition>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:eband21">
+    <authors>
+      <author>
+        <given>Ed</given>
+        <family>Burnette</family>
+      </author>
+    </authors>
+    <title>Hello, Android 2.1</title>
+    <isbn>pending</isbn>
+    <year>2010</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:eband3">
+    <authors>
+      <author>
+        <given>Ed</given>
+        <family>Burnette</family>
+      </author>
+    </authors>
+    <title>Hello, Android (3rd edition) (out of print)</title>
+    <isbn>9781934356562</isbn>
+    <year>2010</year>
+    <edition>2rd</edition>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:eband4">
+    <authors>
+      <author>
+        <given>Ed</given>
+        <family>Burnette</family>
+      </author>
+    </authors>
+    <title>Hello, Android (4th edition)</title>
+    <isbn>9781680500370</isbn>
+    <year>2015</year>
+    <edition>4th</edition>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:ebdojo">
+    <authors>
+      <author>
+        <given>Emily</given>
+        <family>Bache</family>
+      </author>
+    </authors>
+    <title>The Coding Dojo Handbook (out of print)</title>
+    <isbn>pending</isbn>
+    <year>2013</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:ebgwt">
+    <authors>
+      <author>
+        <given>Ed</given>
+        <family>Burnette</family>
+      </author>
+    </authors>
+    <title>Google Web Toolkit (out of print)</title>
+    <isbn>friday</isbn>
+    <year>2006</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:ec101di">
+    <authors>
+      <author>
+        <given>Eewei</given>
+        <family>Chen</family>
+      </author>
+    </authors>
+    <title>101 Design Ingredients to Solve Big Tech Problems</title>
+    <isbn>9781937785321</isbn>
+    <year>2013</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:egmicro">
+    <authors>
+      <author>
+        <given>Ethan</given>
+        <family>Garofolo</family>
+      </author>
+    </authors>
+    <title>Practical Microservices</title>
+    <isbn>9781680506457</isbn>
+    <year>2020</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:ehxta">
+    <authors>
+      <author>
+        <given>Elisabeth</given>
+        <family>Hendrickson</family>
+      </author>
+    </authors>
+    <title>Explore It!</title>
+    <isbn>9781937785024</isbn>
+    <year>2013</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:elixir">
+    <authors>
+      <author>
+        <given>Dave</given>
+        <family>Thomas</family>
+      </author>
+    </authors>
+    <title>Programming Elixir (out of print)</title>
+    <isbn>9781937785581</isbn>
+    <year>2014</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:elixir12">
+    <authors>
+      <author>
+        <given>Dave</given>
+        <family>Thomas</family>
+      </author>
+    </authors>
+    <title>Programming Elixir 1.2 (out of print)</title>
+    <isbn>9781680501667</isbn>
+    <year>2016</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:elixir13">
+    <authors>
+      <author>
+        <given>Dave</given>
+        <family>Thomas</family>
+      </author>
+    </authors>
+    <title>Programming Elixir 1.3 (out of print)</title>
+    <isbn>9781680502008</isbn>
+    <year>2016</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:elixir16">
+    <authors>
+      <author>
+        <given>Dave</given>
+        <family>Thomas</family>
+      </author>
+    </authors>
+    <title>Programming Elixir 1.6</title>
+    <isbn>9781680502992</isbn>
+    <year>2018</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:erpgg">
+    <authors>
+      <author>
+        <given>Eric</given>
+        <family>Redmond</family>
+      </author>
+    </authors>
+    <title>Programming Google Glass (out of print)</title>
+    <isbn>9781937785796</isbn>
+    <year>2013</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:erpgg2">
+    <authors>
+      <author>
+        <given>Eric</given>
+        <family>Redmond</family>
+      </author>
+    </authors>
+    <title>Programming Google Glass (2nd edition) (out of print)</title>
+    <isbn>9781941222188</isbn>
+    <year>2015</year>
+    <edition>2nd</edition>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:es6tips">
+    <authors>
+      <author>
+        <given>Joe</given>
+        <family>Morgan</family>
+      </author>
+    </authors>
+    <title>Simplifying JavaScript</title>
+    <isbn>9781680502886</isbn>
+    <year>2018</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:esbrain">
+    <authors>
+      <author>
+        <given>Erica</given>
+        <family>Sadun</family>
+      </author>
+    </authors>
+    <title>Numerical Brain Teasers</title>
+    <isbn>9781680509748</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:esswift">
+    <authors>
+      <author>
+        <given>Erica</given>
+        <family>Sadun</family>
+      </author>
+    </authors>
+    <title>Swift Style (out of print)</title>
+    <isbn>9781680502350</isbn>
+    <year>2017</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:esswift2">
+    <authors>
+      <author>
+        <given>Erica</given>
+        <family>Sadun</family>
+      </author>
+    </authors>
+    <title>Swift Style, Second Edition</title>
+    <isbn>9781680506273</isbn>
+    <year>2019</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:fbmach">
+    <authors>
+      <author>
+        <given>Frances</given>
+        <family>Buontempo</family>
+      </author>
+    </authors>
+    <title>Genetic Algorithms and Machine Learning for Programmers</title>
+    <isbn>9781680506204</isbn>
+    <year>2019</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:fdstr">
+    <authors>
+      <author>
+        <given>Frederic</given>
+        <family>Daoud</family>
+      </author>
+    </authors>
+    <title>Stripes (out of print)</title>
+    <isbn>9781934356210</isbn>
+    <year>2008</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:fhproper">
+    <authors>
+      <author>
+        <given>Fred</given>
+        <family>Hebert</family>
+      </author>
+    </authors>
+    <title>Property-Based Testing with PropEr, Erlang, and Elixir</title>
+    <isbn>9781680506211</isbn>
+    <year>2019</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:fkajs">
+    <authors>
+      <author>
+        <given>Faraz K.</given>
+        <family>Kelhini</family>
+      </author>
+    </authors>
+    <title>Modern Asynchronous JavaScript</title>
+    <isbn>9781680509045</isbn>
+    <year>2021</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:fkjavascript">
+    <authors>
+      <author>
+        <given>Faraz K.</given>
+        <family>Kelhini</family>
+      </author>
+    </authors>
+    <title>Text Processing with JavaScript</title>
+    <isbn>9798888650332</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:fr_arr">
+    <authors>
+      <author>
+        <given>Mike</given>
+        <family>Clark</family>
+      </author>
+    </authors>
+    <title>Advanced Rails Recipes (out of print)</title>
+    <isbn>9780978739225</isbn>
+    <year>2008</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:fr_deploy">
+    <authors>
+      <author>
+        <given>Ezra Zygmuntowicz, Bruce</given>
+        <family>Tate,</family>
+      </author>
+      <author>
+        <given>Clinton</given>
+        <family>Begin</family>
+      </author>
+    </authors>
+    <title>Deploying Rails Applications (out of print)</title>
+    <isbn>9780978739201</isbn>
+    <year>2008</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:fr_eir">
+    <authors>
+      <author>
+        <given>Maik</given>
+        <family>Schmidt</family>
+      </author>
+    </authors>
+    <title>Enterprise Integration with Ruby (out of print)</title>
+    <isbn>9780976694069</isbn>
+    <year>2006</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:fr_j2r">
+    <authors>
+      <author>
+        <given>Bruce</given>
+        <family>Tate</family>
+      </author>
+    </authors>
+    <title>From Java To Ruby (out of print)</title>
+    <isbn>9780976694090</isbn>
+    <year>2006</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:fr_ltp">
+    <authors>
+      <author>
+        <given>Chris</given>
+        <family>Pine</family>
+      </author>
+    </authors>
+    <title>Learn to Program (out of print)</title>
+    <isbn>9780976694045</isbn>
+    <year>2006</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:fr_quiz">
+    <authors>
+      <author>
+        <given>James Edward Gray</given>
+        <family>II</family>
+      </author>
+    </authors>
+    <title>Best of Ruby Quiz (out of print)</title>
+    <isbn>9780976694076</isbn>
+    <year>2006</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:fr_r4j">
+    <authors>
+      <author>
+        <given>Stuart</given>
+        <family>Halloway</family>
+      </author>
+      <author>
+        <given>Justin</given>
+        <family>Gehtland</family>
+      </author>
+    </authors>
+    <title>Rails for Java Developers (out of print)</title>
+    <isbn>9780977616695</isbn>
+    <year>2007</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:fr_rr">
+    <authors>
+      <author>
+        <given>Chad</given>
+        <family>Fowler</family>
+      </author>
+    </authors>
+    <title>Rails Recipes (out of print)</title>
+    <isbn>9780977616602</isbn>
+    <year>2006</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:fr_secure">
+    <authors>
+      <author>
+        <given>Ben</given>
+        <family>Poweski</family>
+      </author>
+      <author>
+        <given>David</given>
+        <family>Raphael</family>
+      </author>
+    </authors>
+    <title>Security on Rails (out of print)</title>
+    <isbn>9781934356487</isbn>
+    <year>2009</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:fsfire">
+    <authors>
+      <author>
+        <given>Michael</given>
+        <family>Swaine</family>
+      </author>
+      <author>
+        <given>Paul</given>
+        <family>Freiberger</family>
+      </author>
+    </authors>
+    <title>Fire in the Valley</title>
+    <isbn>9781937785765</isbn>
+    <year>2014</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:fsfire4">
+    <authors>
+      <author>
+        <given>Mike</given>
+        <family>Swaine</family>
+      </author>
+    </authors>
+    <title>Fire in the Valley, Fourth Edition</title>
+    <isbn>pending</isbn>
+    <year>2024</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:fugue">
+    <authors>
+      <author>
+        <given>Josha</given>
+        <family>Stella</family>
+      </author>
+      <author>
+        <given>the Fugue</given>
+        <family>team</family>
+      </author>
+    </authors>
+    <title>Scalable Cloud Ops with Fugue</title>
+    <isbn>9781680502343</isbn>
+    <year>2017</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:fxruby">
+    <authors>
+      <author>
+        <given>Lyle</given>
+        <family>Johnson</family>
+      </author>
+    </authors>
+    <title>FXRuby (out of print)</title>
+    <isbn>9781934356074</isbn>
+    <year>2008</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:gdestimate">
+    <authors>
+      <author>
+        <given>George</given>
+        <family>Dinwiddie</family>
+      </author>
+    </authors>
+    <title>Software Estimation Without Guessing</title>
+    <isbn>9781680506983</isbn>
+    <year>2019</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:ggkube">
+    <authors>
+      <author>
+        <given>Gene</given>
+        <family>Gottimer</family>
+      </author>
+    </authors>
+    <title>Keeping Your Kubernetes Cluster Secure</title>
+    <isbn>pending</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:giftcard">
+    <authors>
+      <author>
+        <given/>
+        <family>Various</family>
+      </author>
+    </authors>
+    <title>Giftcard Purchase</title>
+    <isbn>pending</isbn>
+    <year>2015</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:godot">
+    <authors>
+      <author>
+        <given>Paris Buttfield-Addison, Jon Manning, Tim</given>
+        <family>Nugent</family>
+      </author>
+    </authors>
+    <title>Game Development with Godot</title>
+    <isbn>pending</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:gohome">
+    <authors>
+      <author>
+        <given>Mike</given>
+        <family>Riley</family>
+      </author>
+      <author>
+        <given>Ricardo</given>
+        <family>Gerardi</family>
+      </author>
+    </authors>
+    <title>Go Home</title>
+    <isbn>pending</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:gsdgis">
+    <authors>
+      <author>
+        <given>Gary E.</given>
+        <family>Sherman</family>
+      </author>
+    </authors>
+    <title>Desktop GIS (out of print)</title>
+    <isbn>9781934356067</isbn>
+    <year>2008</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:gutj">
+    <authors>
+      <author>
+        <given>Andrew</given>
+        <family>Hunt</family>
+      </author>
+      <author>
+        <given>David</given>
+        <family>Thomas</family>
+      </author>
+    </authors>
+    <title>Pragmatisch Programmieren</title>
+    <isbn>9783446228245</isbn>
+    <year>2006</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:gvcc">
+    <authors>
+      <author>
+        <given>David</given>
+        <family>Thomas</family>
+      </author>
+      <author>
+        <given>Andrew</given>
+        <family>Hunt</family>
+      </author>
+    </authors>
+    <title>Pragmatisch Programmieren</title>
+    <isbn>9783446228269</isbn>
+    <year>2006</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:gwd">
+    <authors>
+      <author>
+        <given>Greg</given>
+        <family>Wilson</family>
+      </author>
+    </authors>
+    <title>Data Crunching (out of print)</title>
+    <isbn>9780974514079</isbn>
+    <year>2005</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:gwpy">
+    <authors>
+      <author>
+        <given>Jennifer Campbell, Paul Gries, Jason Montojo, Greg</given>
+        <family>Wilson</family>
+      </author>
+    </authors>
+    <title>Practical Programming (out of print)</title>
+    <isbn>9781934356272</isbn>
+    <year>2009</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:gwpy2">
+    <authors>
+      <author>
+        <given>Paul Gries, Jennifer Campbell, Jason</given>
+        <family>Montojo</family>
+      </author>
+    </authors>
+    <title>Practical Programming (2nd edition)</title>
+    <isbn>9781937785451</isbn>
+    <year>2013</year>
+    <edition>2nd</edition>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:gwpy3">
+    <authors>
+      <author>
+        <given>Paul Gries, Jennifer Campbell, Jason</given>
+        <family>Montojo</family>
+      </author>
+    </authors>
+    <title>Practical Programming, Third Edition</title>
+    <isbn>9781680502688</isbn>
+    <year>2017</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:hklean">
+    <authors>
+      <author>
+        <given>Henrik</given>
+        <family>Kniberg</family>
+      </author>
+    </authors>
+    <title>Lean from the Trenches</title>
+    <isbn>9781934356852</isbn>
+    <year>2011</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:hwcuc">
+    <authors>
+      <author>
+        <given>Matt</given>
+        <family>Wynne</family>
+      </author>
+      <author>
+        <given>Aslak</given>
+        <family>Hellesøy</family>
+      </author>
+    </authors>
+    <title>The Cucumber Book (out of print)</title>
+    <isbn>9781934356807</isbn>
+    <year>2012</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:hwcuc2">
+    <authors>
+      <author>
+        <given>Matt</given>
+        <family>Wynne</family>
+      </author>
+      <author>
+        <given>Aslak Hellesøy, with Steve</given>
+        <family>Tooke</family>
+      </author>
+    </authors>
+    <title>The Cucumber Book, Second Edition</title>
+    <isbn>9781680502381</isbn>
+    <year>2017</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:hwmrust">
+    <authors>
+      <author>
+        <given>Herbert</given>
+        <family>Wolverson</family>
+      </author>
+    </authors>
+    <title>More Hands-on Rust</title>
+    <isbn>pending</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:hwrust">
+    <authors>
+      <author>
+        <given>Herbert</given>
+        <family>Wolverson</family>
+      </author>
+    </authors>
+    <title>Hands-on Rust</title>
+    <isbn>9781680508161</isbn>
+    <year>2021</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:hwrustbrain">
+    <authors>
+      <author>
+        <given>Herbert</given>
+        <family>Wolverson</family>
+      </author>
+    </authors>
+    <title>Rust Brain Teasers</title>
+    <isbn>9781680509175</isbn>
+    <year>2022</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:idgtr">
+    <authors>
+      <author>
+        <given>Ian</given>
+        <family>Dees</family>
+      </author>
+    </authors>
+    <title>Scripted GUI Testing with Ruby (out of print)</title>
+    <isbn>9781934356180</isbn>
+    <year>2008</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jaerlang">
+    <authors>
+      <author>
+        <given>Joe</given>
+        <family>Armstrong</family>
+      </author>
+    </authors>
+    <title>Programming Erlang (out of print)</title>
+    <isbn>9781934356005</isbn>
+    <year>2007</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jaerlang2">
+    <authors>
+      <author>
+        <given>Joe</given>
+        <family>Armstrong</family>
+      </author>
+    </authors>
+    <title>Programming Erlang (2nd edition)</title>
+    <isbn>9781937785536</isbn>
+    <year>2013</year>
+    <edition>2nd</edition>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:javacomp">
+    <authors>
+      <author>
+        <given>Simon Harrer, Jörg Lenhard, Linus</given>
+        <family>Dietz</family>
+      </author>
+    </authors>
+    <title>Java by Comparison</title>
+    <isbn>9781680502879</isbn>
+    <year>2018</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jbmaze">
+    <authors>
+      <author>
+        <given>Jamis</given>
+        <family>Buck</family>
+      </author>
+    </authors>
+    <title>Mazes for Programmers</title>
+    <isbn>9781680500554</isbn>
+    <year>2015</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jbtracer">
+    <authors>
+      <author>
+        <given>Jamis</given>
+        <family>Buck</family>
+      </author>
+    </authors>
+    <title>The Ray Tracer Challenge</title>
+    <isbn>9781680502718</isbn>
+    <year>2019</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jcdeg">
+    <authors>
+      <author>
+        <given>Josh</given>
+        <family>Carter</family>
+      </author>
+    </authors>
+    <title>New Programmer's Survival Manual</title>
+    <isbn>9781934356814</isbn>
+    <year>2011</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jcscrum">
+    <authors>
+      <author>
+        <given>Jeff Sutherland, James O.</given>
+        <family>Coplien,</family>
+      </author>
+      <author>
+        <given>The Scrum Patterns</given>
+        <family>Group</family>
+      </author>
+    </authors>
+    <title>A Scrum Book</title>
+    <isbn>9781680506716</isbn>
+    <year>2019</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jfelm">
+    <authors>
+      <author>
+        <given>Jeremy</given>
+        <family>Fairbank</family>
+      </author>
+    </authors>
+    <title>Programming Elm</title>
+    <isbn>9781680502855</isbn>
+    <year>2019</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jfpaypal">
+    <authors>
+      <author>
+        <given>Joe</given>
+        <family>Fair</family>
+      </author>
+    </authors>
+    <title>Payment Processing with Paypal and Ruby (out of print)</title>
+    <isbn>friday</isbn>
+    <year>2006</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jgade">
+    <authors>
+      <author>
+        <given>James W.</given>
+        <family>Grenning</family>
+      </author>
+    </authors>
+    <title>Test-Driven Development for Embedded C</title>
+    <isbn>9781934356623</isbn>
+    <year>2011</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jgotp">
+    <authors>
+      <author>
+        <given>James Edward Gray,</given>
+        <family>II</family>
+      </author>
+      <author>
+        <given>Bruce A.</given>
+        <family>Tate</family>
+      </author>
+    </authors>
+    <title>Designing Elixir Systems with OTP</title>
+    <isbn>9781680506617</isbn>
+    <year>2019</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jkdepj">
+    <authors>
+      <author>
+        <given>Joe</given>
+        <family>Kutner</family>
+      </author>
+    </authors>
+    <title>Deploying with JRuby (out of print)</title>
+    <isbn>9781934356975</isbn>
+    <year>2012</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jkdepj2">
+    <authors>
+      <author>
+        <given>Joe</given>
+        <family>Kutner</family>
+      </author>
+    </authors>
+    <title>Deploying with JRuby 9k (out of print)</title>
+    <isbn>9781680501698</isbn>
+    <year>2016</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jkrp">
+    <authors>
+      <author>
+        <given>Joe</given>
+        <family>Kutner</family>
+      </author>
+    </authors>
+    <title>Remote Pairing</title>
+    <isbn>9781937785741</isbn>
+    <year>2013</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jkthp">
+    <authors>
+      <author>
+        <given>Joe</given>
+        <family>Kutner</family>
+      </author>
+    </authors>
+    <title>The Healthy Programmer</title>
+    <isbn>9781937785314</isbn>
+    <year>2013</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jkwatch">
+    <authors>
+      <author>
+        <given>Jeff</given>
+        <family>Kelley</family>
+      </author>
+    </authors>
+    <title>Developing for Apple Watch (out of print)</title>
+    <isbn>9781680500684</isbn>
+    <year>2015</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jkwatch2">
+    <authors>
+      <author>
+        <given>Jeff</given>
+        <family>Kelley</family>
+      </author>
+    </authors>
+    <title>Developing for Apple Watch, Second Edition (out of print)</title>
+    <isbn>9781680501339</isbn>
+    <year>2016</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jmasp">
+    <authors>
+      <author>
+        <given>Jonathan</given>
+        <family>McCracken</family>
+      </author>
+    </authors>
+    <title>Test-Drive ASP.NET MVC (out of print)</title>
+    <isbn>9781934356531</isbn>
+    <year>2010</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jptios">
+    <authors>
+      <author>
+        <given>Jonathan</given>
+        <family>Penn</family>
+      </author>
+    </authors>
+    <title>Test iOS Apps with UI Automation (out of print)</title>
+    <isbn>9781937785529</isbn>
+    <year>2013</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jragile">
+    <authors>
+      <author>
+        <given>Jonathan</given>
+        <family>Rasmusson</family>
+      </author>
+    </authors>
+    <title>Competing with Unicorns</title>
+    <isbn>9781680507232</isbn>
+    <year>2020</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jragm">
+    <authors>
+      <author>
+        <given>Johanna</given>
+        <family>Rothman</family>
+      </author>
+    </authors>
+    <title>Create Your Successful Agile Project</title>
+    <isbn>9781680502602</isbn>
+    <year>2017</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jrgeeks">
+    <authors>
+      <author>
+        <given>Johanna</given>
+        <family>Rothman</family>
+      </author>
+    </authors>
+    <title>Hiring Geeks That Fit</title>
+    <isbn>9781680501407</isbn>
+    <year>2013</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jrlegios">
+    <authors>
+      <author>
+        <given>Jon</given>
+        <family>Reid</family>
+      </author>
+    </authors>
+    <title>iOS Unit Testing by Example</title>
+    <isbn>9781680506815</isbn>
+    <year>2020</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jrpm">
+    <authors>
+      <author>
+        <given>Johanna</given>
+        <family>Rothman</family>
+      </author>
+    </authors>
+    <title>Manage It!</title>
+    <isbn>9780978739249</isbn>
+    <year>2007</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jrport">
+    <authors>
+      <author>
+        <given>Johanna</given>
+        <family>Rothman</family>
+      </author>
+    </authors>
+    <title>Manage Your Project Portfolio (out of print)</title>
+    <isbn>9781934356296</isbn>
+    <year>2009</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jrport2">
+    <authors>
+      <author>
+        <given>Johanna</given>
+        <family>Rothman</family>
+      </author>
+    </authors>
+    <title>Manage Your Project Portfolio, Second Edition</title>
+    <isbn>9781680501759</isbn>
+    <year>2016</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jrsearch">
+    <authors>
+      <author>
+        <given>Johanna</given>
+        <family>Rothman</family>
+      </author>
+    </authors>
+    <title>Manage Your Job Search</title>
+    <isbn>9781680501414</isbn>
+    <year>2014</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jrtest">
+    <authors>
+      <author>
+        <given>Jonathan</given>
+        <family>Rasmusson</family>
+      </author>
+    </authors>
+    <title>The Way of the Web Tester</title>
+    <isbn>9781680501834</isbn>
+    <year>2016</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jruby">
+    <authors>
+      <author>
+        <given>Charles O Nutter, Thomas Enebo, Nick Sieger, Ola</given>
+        <family>Bini,</family>
+      </author>
+      <author>
+        <given>Ian</given>
+        <family>Dees</family>
+      </author>
+    </authors>
+    <title>Using JRuby (out of print)</title>
+    <isbn>9781934356654</isbn>
+    <year>2011</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jsaccess">
+    <authors>
+      <author>
+        <given>Jeremy</given>
+        <family>Sydik</family>
+      </author>
+    </authors>
+    <title>Design Accessible Web Sites (out of print)</title>
+    <isbn>9781934356029</isbn>
+    <year>2007</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jsengman">
+    <authors>
+      <author>
+        <given>James</given>
+        <family>Stanier</family>
+      </author>
+    </authors>
+    <title>Become an Effective Software Engineering Manager</title>
+    <isbn>9781680507249</isbn>
+    <year>2020</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jsrw">
+    <authors>
+      <author>
+        <given>James</given>
+        <family>Stanier</family>
+      </author>
+    </authors>
+    <title>Effective Remote Work</title>
+    <isbn>9781680509229</isbn>
+    <year>2022</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jstcp">
+    <authors>
+      <author>
+        <given>Jesse</given>
+        <family>Storimer</family>
+      </author>
+    </authors>
+    <title>Working with TCP Sockets (out of print)</title>
+    <isbn>pending</isbn>
+    <year>2013</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jsthreads">
+    <authors>
+      <author>
+        <given>Jesse</given>
+        <family>Storimer</family>
+      </author>
+    </authors>
+    <title>Working with Ruby Threads (out of print)</title>
+    <isbn>pending</isbn>
+    <year>2013</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jsunix">
+    <authors>
+      <author>
+        <given>Jesse</given>
+        <family>Storimer</family>
+      </author>
+    </authors>
+    <title>Working with Unix Processes (out of print)</title>
+    <isbn>pending</isbn>
+    <year>2012</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jtrap">
+    <authors>
+      <author>
+        <given>Jonathan</given>
+        <family>Rasmusson</family>
+      </author>
+    </authors>
+    <title>The Agile Samurai</title>
+    <isbn>9781934356586</isbn>
+    <year>2010</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jvrails">
+    <authors>
+      <author>
+        <given>José</given>
+        <family>Valim</family>
+      </author>
+    </authors>
+    <title>Crafting Rails Applications (out of print)</title>
+    <isbn>9781934356739</isbn>
+    <year>2011</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jvrails2">
+    <authors>
+      <author>
+        <given>José</given>
+        <family>Valim</family>
+      </author>
+    </authors>
+    <title>Crafting Rails 4 Applications</title>
+    <isbn>9781937785550</isbn>
+    <year>2013</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jwdsal">
+    <authors>
+      <author>
+        <given>Jay</given>
+        <family>Wengrow</family>
+      </author>
+    </authors>
+    <title>A Common-Sense Guide to Data Structures and Algorithms (out of print)</title>
+    <isbn>9781680502442</isbn>
+    <year>2017</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jwdsal2">
+    <authors>
+      <author>
+        <given>Jay</given>
+        <family>Wengrow</family>
+      </author>
+    </authors>
+    <title>A Common-Sense Guide to Data Structures and Algorithms, Second Edition</title>
+    <isbn>9781680507225</isbn>
+    <year>2020</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jwjava">
+    <authors>
+      <author>
+        <given>Jay</given>
+        <family>Wengrow</family>
+      </author>
+    </authors>
+    <title>A Common-Sense Guide to Data Structures and Algorithms, Java Edition</title>
+    <isbn>pending</isbn>
+    <year>2024</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jwjavascript">
+    <authors>
+      <author>
+        <given>Jay</given>
+        <family>Wengrow</family>
+      </author>
+    </authors>
+    <title>A Common-Sense Guide to Data Structures and Algorithms, JavaScript Edition</title>
+    <isbn>pending</isbn>
+    <year>2024</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jwnode">
+    <authors>
+      <author>
+        <given>Jim R.</given>
+        <family>Wilson</family>
+      </author>
+    </authors>
+    <title>Node.js the Right Way (out of print)</title>
+    <isbn>9781937785734</isbn>
+    <year>2013</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jwnode2">
+    <authors>
+      <author>
+        <given>Jim R.</given>
+        <family>Wilson</family>
+      </author>
+    </authors>
+    <title>Node.js 8 the Right Way</title>
+    <isbn>9781680501957</isbn>
+    <year>2017</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jwpython">
+    <authors>
+      <author>
+        <given>Jay</given>
+        <family>Wengrow</family>
+      </author>
+    </authors>
+    <title>A Common-Sense Guide to Data Structures and Algorithms in Python, Volume 1</title>
+    <isbn>9798888650356</isbn>
+    <year>2024</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jwpython2">
+    <authors>
+      <author>
+        <given>Jay</given>
+        <family>Wengrow</family>
+      </author>
+    </authors>
+    <title>A Common-Sense Guide to Data Structures and Algorithms, Volume II, Python Edition</title>
+    <isbn>pending</isbn>
+    <year>2024</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:kbogla">
+    <authors>
+      <author>
+        <given>Kevin</given>
+        <family>Brothaler</family>
+      </author>
+    </authors>
+    <title>OpenGL ES 2 for Android</title>
+    <isbn>9781937785345</isbn>
+    <year>2013</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:kcdc">
+    <authors>
+      <author>
+        <given>Ka Wai</given>
+        <family>Cheung</family>
+      </author>
+    </authors>
+    <title>The Developer's Code</title>
+    <isbn>9781934356791</isbn>
+    <year>2012</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:kdnodesec">
+    <authors>
+      <author>
+        <given>Karl</given>
+        <family>Düüna</family>
+      </author>
+    </authors>
+    <title>Secure Your Node.js Web Application</title>
+    <isbn>9781680500851</isbn>
+    <year>2016</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:khpes">
+    <authors>
+      <author>
+        <given>Kevin</given>
+        <family>Hoffman</family>
+      </author>
+    </authors>
+    <title>Practical Event Sourcing: From Theory to Practice</title>
+    <isbn>pending</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:khrust">
+    <authors>
+      <author>
+        <given>Kevin</given>
+        <family>Hoffman</family>
+      </author>
+    </authors>
+    <title>Programming WebAssembly with Rust</title>
+    <isbn>9781680506365</isbn>
+    <year>2019</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:kkmanage">
+    <authors>
+      <author>
+        <given>Ken</given>
+        <family>Kousen</family>
+      </author>
+    </authors>
+    <title>Help Your Boss Help You</title>
+    <isbn>9781680508222</isbn>
+    <year>2021</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:kpiod">
+    <authors>
+      <author>
+        <given>Ken</given>
+        <family>Pugh</family>
+      </author>
+    </authors>
+    <title>Interface Oriented Design (out of print)</title>
+    <isbn>9780976694052</isbn>
+    <year>2006</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:ksrtc">
+    <authors>
+      <author>
+        <given>Karl</given>
+        <family>Stolley</family>
+      </author>
+    </authors>
+    <title>Programming WebRTC</title>
+    <isbn>9781680509038</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:ktios">
+    <authors>
+      <author>
+        <given>Keir</given>
+        <family>Thomas</family>
+      </author>
+    </authors>
+    <title>iPad and iPhone Kung Fu (out of print)</title>
+    <isbn>9781937785727</isbn>
+    <year>2014</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:ktmack">
+    <authors>
+      <author>
+        <given>Keir</given>
+        <family>Thomas</family>
+      </author>
+    </authors>
+    <title>Mac Kung Fu (out of print)</title>
+    <isbn>9781934356821</isbn>
+    <year>2011</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:ktmack2">
+    <authors>
+      <author>
+        <given>Keir</given>
+        <family>Thomas</family>
+      </author>
+    </authors>
+    <title>Mac Kung Fu (2nd edition) (out of print)</title>
+    <isbn>9781937785079</isbn>
+    <year>2012</year>
+    <edition>2nd</edition>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:ktuk">
+    <authors>
+      <author>
+        <given>Keir</given>
+        <family>Thomas</family>
+      </author>
+    </authors>
+    <title>Ubuntu Kung Fu (out of print)</title>
+    <isbn>9781934356227</isbn>
+    <year>2008</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:lfreact">
+    <authors>
+      <author>
+        <given>Ludovico</given>
+        <family>Fischer</family>
+      </author>
+    </authors>
+    <title>React for Real</title>
+    <isbn>9781680502633</isbn>
+    <year>2017</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:lhelph">
+    <authors>
+      <author>
+        <given>Lance</given>
+        <family>Halvorsen</family>
+      </author>
+    </authors>
+    <title>Functional Web Development with Elixir, OTP, and Phoenix</title>
+    <isbn>9781680502435</isbn>
+    <year>2018</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:lhnerves">
+    <authors>
+      <author>
+        <given>Lance</given>
+        <family>Halvorsen</family>
+      </author>
+    </authors>
+    <title>Programming Nerves</title>
+    <isbn>pending</isbn>
+    <year>2020</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:liftoff">
+    <authors>
+      <author>
+        <given>Diana</given>
+        <family>Larsen</family>
+      </author>
+      <author>
+        <given>Ainsley</given>
+        <family>Nies</family>
+      </author>
+    </authors>
+    <title>Liftoff, Second Edition</title>
+    <isbn>9781680501636</isbn>
+    <year>2016</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:liveview">
+    <authors>
+      <author>
+        <given>Bruce A.</given>
+        <family>Tate</family>
+      </author>
+      <author>
+        <given>Sophie</given>
+        <family>DeBenedetto</family>
+      </author>
+    </authors>
+    <title>Programming Phoenix LiveView</title>
+    <isbn>9781680508215</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:lmelixir">
+    <authors>
+      <author>
+        <given>Andrea</given>
+        <family>Leopardi</family>
+      </author>
+      <author>
+        <given>Jeffrey</given>
+        <family>Matthias</family>
+      </author>
+    </authors>
+    <title>Testing Elixir</title>
+    <isbn>9781680507829</isbn>
+    <year>2021</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:lmmlops">
+    <authors>
+      <author>
+        <given>Lauren</given>
+        <family>Maffeo</family>
+      </author>
+    </authors>
+    <title>Designing Data Governance from the Ground Up</title>
+    <isbn>9781680509809</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:lmuse">
+    <authors>
+      <author>
+        <given>Lukas</given>
+        <family>Mathis</family>
+      </author>
+    </authors>
+    <title>Designed for Use (out of print)</title>
+    <isbn>9781934356753</isbn>
+    <year>2011</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:lmuse2">
+    <authors>
+      <author>
+        <given>Lukas</given>
+        <family>Mathis</family>
+      </author>
+    </authors>
+    <title>Designed for Use, Second Edition</title>
+    <isbn>9781680501605</isbn>
+    <year>2016</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:lotdd">
+    <authors>
+      <author>
+        <given>Jeff</given>
+        <family>Langr</family>
+      </author>
+    </authors>
+    <title>Modern C++ Programming with Test-Driven Development</title>
+    <isbn>9781937785482</isbn>
+    <year>2013</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:ltp2">
+    <authors>
+      <author>
+        <given>Chris</given>
+        <family>Pine</family>
+      </author>
+    </authors>
+    <title>Learn to Program (2nd edition) (out of print)</title>
+    <isbn>9781934356364</isbn>
+    <year>2009</year>
+    <edition>2nd</edition>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:ltp3">
+    <authors>
+      <author>
+        <given>Chris</given>
+        <family>Pine</family>
+      </author>
+    </authors>
+    <title>Learn to Program, Third Edition</title>
+    <isbn>9781680508178</isbn>
+    <year>2021</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:ltp3x">
+    <authors/>
+    <title>Learn to Program</title>
+    <isbn>pending</isbn>
+    <year>2021</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:maapis">
+    <authors>
+      <author>
+        <given>Mike</given>
+        <family>Amundsen</family>
+      </author>
+    </authors>
+    <title>Design and Build Great Web APIs</title>
+    <isbn>9781680506808</isbn>
+    <year>2020</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:maapis2">
+    <authors>
+      <author>
+        <given>Mike</given>
+        <family>Amundsen</family>
+      </author>
+    </authors>
+    <title>Design and Build Great Web APIs, Second Edition</title>
+    <isbn>pending</isbn>
+    <year>2024</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:mbfpp">
+    <authors>
+      <author>
+        <given>Michael</given>
+        <family>Bevilacqua-Linn</family>
+      </author>
+    </authors>
+    <title>Functional Programming Patterns in Scala and Clojure</title>
+    <isbn>9781937785475</isbn>
+    <year>2013</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:mcappe">
+    <authors>
+      <author>
+        <given>Mark C.</given>
+        <family>Chu-Carroll</family>
+      </author>
+    </authors>
+    <title>Code in the Cloud (out of print)</title>
+    <isbn>9781934356630</isbn>
+    <year>2011</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:mcmath">
+    <authors>
+      <author>
+        <given>Mark C.</given>
+        <family>Chu-Carroll</family>
+      </author>
+    </authors>
+    <title>Good Math</title>
+    <isbn>9781937785338</isbn>
+    <year>2013</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:memcd">
+    <authors>
+      <author>
+        <given>Josef</given>
+        <family>Finsel</family>
+      </author>
+    </authors>
+    <title>Using memcached (out of print)</title>
+    <isbn>friday</isbn>
+    <year>2008</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:metalk">
+    <authors>
+      <author>
+        <given>Mason</given>
+        <family>Egger</family>
+      </author>
+    </authors>
+    <title>Give Your First Tech Talk</title>
+    <isbn>pending</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:mfjetpack">
+    <authors>
+      <author>
+        <given>Michael</given>
+        <family>Fazio</family>
+      </author>
+    </authors>
+    <title>Kotlin and Android Development featuring Jetpack</title>
+    <isbn>9781680508154</isbn>
+    <year>2021</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:mjwti">
+    <authors>
+      <author>
+        <given>Chad</given>
+        <family>Fowler</family>
+      </author>
+    </authors>
+    <title>My Job Went to India (out of print)</title>
+    <isbn>9780976694014</isbn>
+    <year>2005</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:mkdsa">
+    <authors>
+      <author>
+        <given>Michael</given>
+        <family>Keeling</family>
+      </author>
+    </authors>
+    <title>Design It!</title>
+    <isbn>9781680502091</isbn>
+    <year>2017</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:mkelixir">
+    <authors>
+      <author>
+        <given>Ben</given>
+        <family>Marx</family>
+      </author>
+      <author>
+        <given>Chris</given>
+        <family>Keathley</family>
+      </author>
+    </authors>
+    <title>Distributed Systems with Elixir</title>
+    <isbn>pending</isbn>
+    <year>2020</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:mmclobrain">
+    <authors>
+      <author>
+        <given>Alex</given>
+        <family>Miller</family>
+      </author>
+      <author>
+        <given>Lorilyn Jordan</given>
+        <family>Miller</family>
+      </author>
+    </authors>
+    <title>Clojure Brain Teasers</title>
+    <isbn>pending</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:mmfacer">
+    <authors>
+      <author>
+        <given>Michael J.</given>
+        <family>Mangino</family>
+      </author>
+    </authors>
+    <title>Developing Facebook Platform Applications with Rails (out of print)</title>
+    <isbn>9781934356128</isbn>
+    <year>2008</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:mmteams">
+    <authors>
+      <author>
+        <given>Sandy</given>
+        <family>Mamoli</family>
+      </author>
+      <author>
+        <given>David</given>
+        <family>Mole</family>
+      </author>
+    </authors>
+    <title>Creating Great Teams</title>
+    <isbn>9781680501285</isbn>
+    <year>2015</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:mnee">
+    <authors>
+      <author>
+        <given>Michael T.</given>
+        <family>Nygard</family>
+      </author>
+    </authors>
+    <title>Release It! (out of print)</title>
+    <isbn>9780978739218</isbn>
+    <year>2007</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:mnee2">
+    <authors>
+      <author>
+        <given>Michael</given>
+        <family>Nygard</family>
+      </author>
+    </authors>
+    <title>Release It! Second Edition</title>
+    <isbn>9781680502398</isbn>
+    <year>2018</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:mockito">
+    <authors>
+      <author>
+        <given>Ken</given>
+        <family>Kousen</family>
+      </author>
+    </authors>
+    <title>Mockito Made Clear</title>
+    <isbn>9781680509670</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:modvim">
+    <authors>
+      <author>
+        <given>Drew</given>
+        <family>Neil</family>
+      </author>
+    </authors>
+    <title>Modern Vim</title>
+    <isbn>9781680502626</isbn>
+    <year>2018</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:mpmob">
+    <authors>
+      <author>
+        <given>Mark</given>
+        <family>Pearl</family>
+      </author>
+    </authors>
+    <title>Code with the Wisdom of the Crowd</title>
+    <isbn>9781680506150</isbn>
+    <year>2018</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:mrand">
+    <authors>
+      <author>
+        <given>Mike</given>
+        <family>Riley</family>
+      </author>
+    </authors>
+    <title>Developing Android on Android (out of print)</title>
+    <isbn>9781937785543</isbn>
+    <year>2013</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:mrhome">
+    <authors>
+      <author>
+        <given>Mike</given>
+        <family>Riley</family>
+      </author>
+    </authors>
+    <title>Programming Your Home (out of print)</title>
+    <isbn>9781934356906</isbn>
+    <year>2012</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:mrpc">
+    <authors>
+      <author>
+        <given>Mike</given>
+        <family>Riley</family>
+      </author>
+    </authors>
+    <title>Build an Awesome PC, 2014 Edition (out of print)</title>
+    <isbn>9781941222171</isbn>
+    <year>2014</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:mrpython">
+    <authors>
+      <author>
+        <given>Mike</given>
+        <family>Riley</family>
+      </author>
+    </authors>
+    <title>Portable Python Projects</title>
+    <isbn>9781680508598</isbn>
+    <year>2022</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:msard">
+    <authors>
+      <author>
+        <given>Maik</given>
+        <family>Schmidt</family>
+      </author>
+    </authors>
+    <title>Arduino (out of print)</title>
+    <isbn>9781934356661</isbn>
+    <year>2011</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:msard2">
+    <authors>
+      <author>
+        <given>Maik</given>
+        <family>Schmidt</family>
+      </author>
+    </authors>
+    <title>Arduino: A Quick-Start Guide, Second Edition</title>
+    <isbn>9781941222249</isbn>
+    <year>2015</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:msenr">
+    <authors>
+      <author>
+        <given>Maik</given>
+        <family>Schmidt</family>
+      </author>
+    </authors>
+    <title>Enterprise Recipes with Ruby and Rails (out of print)</title>
+    <isbn>9781934356234</isbn>
+    <year>2008</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:msgpkids">
+    <authors>
+      <author>
+        <given>Mark</given>
+        <family>Sobkowicz</family>
+      </author>
+    </authors>
+    <title>Learn Game Programming with Ruby (out of print)</title>
+    <isbn>9781680500738</isbn>
+    <year>2015</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:mskanban">
+    <authors>
+      <author>
+        <given>Mattias</given>
+        <family>Skarin</family>
+      </author>
+    </authors>
+    <title>Real-World Kanban</title>
+    <isbn>9781680500776</isbn>
+    <year>2015</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:msraspi">
+    <authors>
+      <author>
+        <given>Maik</given>
+        <family>Schmidt</family>
+      </author>
+    </authors>
+    <title>Raspberry Pi (out of print)</title>
+    <isbn>9781937785048</isbn>
+    <year>2012</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:msraspi2">
+    <authors>
+      <author>
+        <given>Maik</given>
+        <family>Schmidt</family>
+      </author>
+    </authors>
+    <title>Raspberry Pi: A Quick-Start Guide (2nd edition)</title>
+    <isbn>9781937785802</isbn>
+    <year>2014</year>
+    <edition>2nd</edition>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:mtgo">
+    <authors>
+      <author>
+        <given>Miki</given>
+        <family>Tebeka</family>
+      </author>
+    </authors>
+    <title>The Go Cookbook</title>
+    <isbn>9781680508468</isbn>
+    <year>2022</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:mwjsember">
+    <authors>
+      <author>
+        <given>Matthew</given>
+        <family>White</family>
+      </author>
+    </authors>
+    <title>Deliver Audacious Web Apps with Ember 2 (out of print)</title>
+    <isbn>9781680500783</isbn>
+    <year>2015</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:mzcd">
+    <authors>
+      <author>
+        <given>Marcus S.</given>
+        <family>Zarra</family>
+      </author>
+    </authors>
+    <title>Core Data (out of print)</title>
+    <isbn>9781934356326</isbn>
+    <year>2009</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:mzcd2">
+    <authors>
+      <author>
+        <given>Marcus S.</given>
+        <family>Zarra</family>
+      </author>
+    </authors>
+    <title>Core Data (2nd edition) (out of print)</title>
+    <isbn>9781937785086</isbn>
+    <year>2013</year>
+    <edition>2nd</edition>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:mzcd3">
+    <authors>
+      <author>
+        <given>Marcus S.</given>
+        <family>Zarra</family>
+      </author>
+    </authors>
+    <title>Core Data in Objective-C, Third Edition</title>
+    <isbn>9781680501230</isbn>
+    <year>2016</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:mzswift">
+    <authors>
+      <author>
+        <given>Marcus</given>
+        <family>Zarra</family>
+      </author>
+    </authors>
+    <title>Core Data in Swift</title>
+    <isbn>9781680501704</isbn>
+    <year>2016</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:nbapp">
+    <authors>
+      <author>
+        <given>Nathan</given>
+        <family>Barry</family>
+      </author>
+    </authors>
+    <title>The App Design Handbook (out of print)</title>
+    <isbn>pending</isbn>
+    <year>2013</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:ndphpr">
+    <authors>
+      <author>
+        <given>Derek</given>
+        <family>DeVries</family>
+      </author>
+      <author>
+        <given>Mike</given>
+        <family>Naberezny</family>
+      </author>
+    </authors>
+    <title>Rails for PHP Developers (out of print)</title>
+    <isbn>9781934356043</isbn>
+    <year>2008</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:nfjs06">
+    <authors>
+      <author>
+        <given>Neal Ford</given>
+        <family>(ed)</family>
+      </author>
+    </authors>
+    <title>No Fluff Just Stuff 2006 Anthology (out of print)</title>
+    <isbn>9780977616664</isbn>
+    <year>2006</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:nfjs07">
+    <authors>
+      <author>
+        <given>Neal Ford</given>
+        <family>(ed)</family>
+      </author>
+    </authors>
+    <title>No Fluff Just Stuff 2007 Anthology (out of print)</title>
+    <isbn>9780978739287</isbn>
+    <year>2007</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:nkout">
+    <authors>
+      <author>
+        <given>Nick</given>
+        <family>Krym</family>
+      </author>
+    </authors>
+    <title>Outsource It!</title>
+    <isbn>9781937785055</isbn>
+    <year>2013</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:nmquantum">
+    <authors>
+      <author>
+        <given>Nihal Mehta,</given>
+        <family>Ph.D.</family>
+      </author>
+    </authors>
+    <title>Quantum Computing</title>
+    <isbn>9781680507201</isbn>
+    <year>2020</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:nrclient">
+    <authors>
+      <author>
+        <given>Noel</given>
+        <family>Rappin</family>
+      </author>
+    </authors>
+    <title>Modern Front-End Development for Rails (out of print)</title>
+    <isbn>9781680507218</isbn>
+    <year>2021</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:nrclient2">
+    <authors>
+      <author>
+        <given>Noel</given>
+        <family>Rappin</family>
+      </author>
+    </authors>
+    <title>Modern Front-End Development for Rails, Second Edition</title>
+    <isbn>9781680509618</isbn>
+    <year>2022</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:nrtest">
+    <authors>
+      <author>
+        <given>Noel</given>
+        <family>Rappin</family>
+      </author>
+    </authors>
+    <title>Rails Test Prescriptions (out of print)</title>
+    <isbn>9781934356647</isbn>
+    <year>2011</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:nrtest2">
+    <authors>
+      <author>
+        <given>Noel</given>
+        <family>Rappin</family>
+      </author>
+    </authors>
+    <title>Rails 4 Test Prescriptions (out of print)</title>
+    <isbn>9781941222195</isbn>
+    <year>2014</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:nrtest3">
+    <authors>
+      <author>
+        <given>Noel</given>
+        <family>Rappin</family>
+      </author>
+    </authors>
+    <title>Rails 5 Test Prescriptions</title>
+    <isbn>9781680502503</isbn>
+    <year>2018</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:nrwebpay">
+    <authors>
+      <author>
+        <given>Noel</given>
+        <family>Rappin</family>
+      </author>
+    </authors>
+    <title>Take My Money (out of print)</title>
+    <isbn>9781680501995</isbn>
+    <year>2017</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:olag">
+    <authors>
+      <author>
+        <given>Jeff</given>
+        <family>Langr</family>
+      </author>
+      <author>
+        <given>Tim</given>
+        <family>Ottinger</family>
+      </author>
+    </authors>
+    <title>Agile in a Flash</title>
+    <isbn>9781934356715</isbn>
+    <year>2011</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:pad">
+    <authors>
+      <author>
+        <given>Venkat</given>
+        <family>Subramaniam</family>
+      </author>
+      <author>
+        <given>Andy</given>
+        <family>Hunt</family>
+      </author>
+    </authors>
+    <title>Practices of an Agile Developer</title>
+    <isbn>9780974514086</isbn>
+    <year>2006</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:passcrys">
+    <authors>
+      <author>
+        <given>Bruce</given>
+        <family>Tate</family>
+      </author>
+    </authors>
+    <title>Programmer Passport: Crystal</title>
+    <isbn>pending</isbn>
+    <year>2020</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:passelixir">
+    <authors>
+      <author>
+        <given>Bruce</given>
+        <family>Tate</family>
+      </author>
+    </authors>
+    <title>Programmer Passport: Elixir</title>
+    <isbn>9781680509625</isbn>
+    <year>2022</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:passflux">
+    <authors>
+      <author>
+        <given>Bruce A.</given>
+        <family>Tate</family>
+      </author>
+    </authors>
+    <title>Programmer Passport: Flux</title>
+    <isbn>pending</isbn>
+    <year>2021</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:passjulia">
+    <authors>
+      <author>
+        <given>Bruce</given>
+        <family>Tate</family>
+      </author>
+    </authors>
+    <title>Programmer Passport: Julia</title>
+    <isbn>pending</isbn>
+    <year>2020</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:passlive">
+    <authors>
+      <author>
+        <given>Bruce</given>
+        <family>Tate</family>
+      </author>
+    </authors>
+    <title>Programmer Passport: Liveview</title>
+    <isbn>pending</isbn>
+    <year>2020</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:passnerves">
+    <authors>
+      <author>
+        <given>Bruce</given>
+        <family>Tate</family>
+      </author>
+    </authors>
+    <title>Programmer Passport: Nerves</title>
+    <isbn>pending</isbn>
+    <year/>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:passotp">
+    <authors>
+      <author>
+        <given>Bruce</given>
+        <family>Tate</family>
+      </author>
+    </authors>
+    <title>Programmer Passport: OTP</title>
+    <isbn>9781680509687</isbn>
+    <year>2022</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:passpony">
+    <authors>
+      <author>
+        <given>Bruce</given>
+        <family>Tate</family>
+      </author>
+    </authors>
+    <title>Programmer Passport: Pony</title>
+    <isbn>pending</isbn>
+    <year>2020</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:passprol">
+    <authors>
+      <author>
+        <given>Bruce</given>
+        <family>Tate</family>
+      </author>
+    </authors>
+    <title>Programmer Passport: Prolog</title>
+    <isbn>9781680509359</isbn>
+    <year>2022</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:passweather">
+    <authors>
+      <author>
+        <given>Alexander Koutmos, Bruce A. Tate, Frank</given>
+        <family>Hunleth</family>
+      </author>
+    </authors>
+    <title>Build a Weather Station with Elixir and Nerves</title>
+    <isbn>9781680509021</isbn>
+    <year>2022</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:pb7con">
+    <authors>
+      <author>
+        <given>Paul</given>
+        <family>Butcher</family>
+      </author>
+    </authors>
+    <title>Seven Concurrency Models in Seven Weeks</title>
+    <isbn>9781937785659</isbn>
+    <year>2014</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:pbdp">
+    <authors>
+      <author>
+        <given>Paul</given>
+        <family>Butcher</family>
+      </author>
+    </authors>
+    <title>Debug It!</title>
+    <isbn>9781934356289</isbn>
+    <year>2009</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:pg_git">
+    <authors>
+      <author>
+        <given>Travis</given>
+        <family>Swicegood</family>
+      </author>
+    </authors>
+    <title>Pragmatic Guide to Git</title>
+    <isbn>9781934356722</isbn>
+    <year>2010</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:pg_js">
+    <authors>
+      <author>
+        <given>Christophe</given>
+        <family>Porteneuve</family>
+      </author>
+    </authors>
+    <title>Pragmatic Guide to JavaScript (out of print)</title>
+    <isbn>9781934356678</isbn>
+    <year>2010</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:pg_sass">
+    <authors>
+      <author>
+        <given>Hampton</given>
+        <family>Catlin</family>
+      </author>
+      <author>
+        <given>Michael Lintorn</given>
+        <family>Catlin</family>
+      </author>
+    </authors>
+    <title>Pragmatic Guide to Sass (out of print)</title>
+    <isbn>9781934356845</isbn>
+    <year>2011</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:pg_sass3">
+    <authors>
+      <author>
+        <given>Hampton Lintorn</given>
+        <family>Catlin</family>
+      </author>
+      <author>
+        <given>Michael Lintorn</given>
+        <family>Catlin</family>
+      </author>
+    </authors>
+    <title>Pragmatic Guide to Sass 3</title>
+    <isbn>9781680501766</isbn>
+    <year>2016</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:pg_svn">
+    <authors>
+      <author>
+        <given>Mike</given>
+        <family>Mason</family>
+      </author>
+    </authors>
+    <title>Pragmatic Guide to Subversion</title>
+    <isbn>9781934356616</isbn>
+    <year>2010</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:phoenix">
+    <authors>
+      <author>
+        <given>Chris McCord, Bruce</given>
+        <family>Tate,</family>
+      </author>
+      <author>
+        <given>José</given>
+        <family>Valim</family>
+      </author>
+    </authors>
+    <title>Programming Phoenix (out of print)</title>
+    <isbn>9781680501452</isbn>
+    <year>2016</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:phoenix14">
+    <authors>
+      <author>
+        <given>Chris McCord, Bruce</given>
+        <family>Tate</family>
+      </author>
+      <author>
+        <given>José</given>
+        <family>Valim</family>
+      </author>
+    </authors>
+    <title>Programming Phoenix 1.4</title>
+    <isbn>9781680502268</isbn>
+    <year>2019</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:pkretro">
+    <authors>
+      <author>
+        <given>Patrick</given>
+        <family>Kua</family>
+      </author>
+    </authors>
+    <title>The Retrospective Handbook (out of print)</title>
+    <isbn>pending</isbn>
+    <year>2013</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:pmlmath">
+    <authors>
+      <author>
+        <given>Sophie</given>
+        <family>DeBenedetto</family>
+      </author>
+      <author>
+        <given>Bruce A.</given>
+        <family>Tate</family>
+      </author>
+    </authors>
+    <title>Practical Machine Learning Math</title>
+    <isbn>pending</isbn>
+    <year>2022</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:ppanth">
+    <authors>
+      <author>
+        <given>Michael</given>
+        <family>Swaine</family>
+      </author>
+      <author>
+        <given>the PragPub</given>
+        <family>writers</family>
+      </author>
+    </authors>
+    <title>Functional Programming: A PragPub Anthology</title>
+    <isbn>9781680502336</isbn>
+    <year>2017</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:pplearn">
+    <authors>
+      <author>
+        <given>Paolo</given>
+        <family>Perrotta</family>
+      </author>
+    </authors>
+    <title>Programming Machine Learning</title>
+    <isbn>9781680506600</isbn>
+    <year>2020</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:ppmetr">
+    <authors>
+      <author>
+        <given>Paolo</given>
+        <family>Perrotta</family>
+      </author>
+    </authors>
+    <title>Metaprogramming Ruby (out of print)</title>
+    <isbn>9781934356470</isbn>
+    <year>2010</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:ppmetr2">
+    <authors>
+      <author>
+        <given>Paolo</given>
+        <family>Perrotta</family>
+      </author>
+    </authors>
+    <title>Metaprogramming Ruby 2</title>
+    <isbn>9781941222126</isbn>
+    <year>2014</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:prj">
+    <authors>
+      <author>
+        <given>Jared Richardson, Will Gwaltney,</given>
+        <family>Jr</family>
+      </author>
+    </authors>
+    <title>Ship It!</title>
+    <isbn>9780974514048</isbn>
+    <year>2005</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:pssprite">
+    <authors>
+      <author>
+        <given>Jonathan</given>
+        <family>Penn</family>
+      </author>
+      <author>
+        <given>Josh</given>
+        <family>Smith</family>
+      </author>
+    </authors>
+    <title>Build iOS Games with Sprite Kit (out of print)</title>
+    <isbn>9781941222102</isbn>
+    <year>2014</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:ptdream">
+    <authors>
+      <author>
+        <given>Portia</given>
+        <family>Tung</family>
+      </author>
+    </authors>
+    <title>The Dream Team Nightmare</title>
+    <isbn>9781937785710</isbn>
+    <year>2013</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:puphoe">
+    <authors>
+      <author>
+        <given>Peter</given>
+        <family>Ullrich</family>
+      </author>
+    </authors>
+    <title>Building Table Views with Phoenix LiveView</title>
+    <isbn>9781680509731</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:pwrdata">
+    <authors>
+      <author>
+        <given>Luc Perkins, Jim Wilson, Eric</given>
+        <family>Redmond</family>
+      </author>
+    </authors>
+    <title>Seven Databases in Seven Weeks, Second Edition</title>
+    <isbn>9781680502534</isbn>
+    <year>2018</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:pyregbrain">
+    <authors>
+      <author>
+        <given>Andy</given>
+        <family>Lester</family>
+      </author>
+    </authors>
+    <title>Python Regex Brain Teasers</title>
+    <isbn>pending</isbn>
+    <year>2022</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:qhreact">
+    <authors>
+      <author>
+        <given>Qiang</given>
+        <family>Hao</family>
+      </author>
+    </authors>
+    <title>Scalable React Development</title>
+    <isbn>pending</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:rails1">
+    <authors>
+      <author>
+        <given>Dave</given>
+        <family>Thomas</family>
+      </author>
+      <author>
+        <given>David Heinemeier Hansson with Leon Breedt, Mike Clark, Thomas</given>
+        <family>Fuchs,</family>
+      </author>
+      <author>
+        <given>Andreas</given>
+        <family>Schwarz</family>
+      </author>
+    </authors>
+    <title>Agile Web Development with Rails (out of print)</title>
+    <isbn>9780976694007</isbn>
+    <year>2005</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:rails2">
+    <authors>
+      <author>
+        <given>Dave</given>
+        <family>Thomas</family>
+      </author>
+      <author>
+        <given>David Heinemeier Hansson, with Leon Breedt, Mike Clark, James Duncan Davidson, Justin</given>
+        <family>Gehtland,</family>
+      </author>
+      <author>
+        <given>Andreas</given>
+        <family>Schwarz</family>
+      </author>
+    </authors>
+    <title>Agile Web Development with Rails (2nd edition) (out of print)</title>
+    <isbn>9780977616633</isbn>
+    <year>2006</year>
+    <edition>2nd</edition>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:rails3">
+    <authors>
+      <author>
+        <given>Sam Ruby, Dave Thomas, David Heinemeier Hansson, et</given>
+        <family>al</family>
+      </author>
+    </authors>
+    <title>Agile Web Development with Rails (3rd edition) (out of print)</title>
+    <isbn>9781934356166</isbn>
+    <year>2009</year>
+    <edition>2rd</edition>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:rails32">
+    <authors>
+      <author>
+        <given>Sam</given>
+        <family>Ruby</family>
+      </author>
+    </authors>
+    <title>Agile Web Development with Rails 3.2 (out of print)</title>
+    <isbn>9781934356548</isbn>
+    <year>2013</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:rails4">
+    <authors>
+      <author>
+        <given>Sam</given>
+        <family>Ruby</family>
+      </author>
+    </authors>
+    <title>Agile Web Development with Rails 4</title>
+    <isbn>9781937785567</isbn>
+    <year>2013</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:rails5">
+    <authors>
+      <author>
+        <given>Sam</given>
+        <family>Ruby</family>
+      </author>
+    </authors>
+    <title>Agile Web Development with Rails 5 (out of print)</title>
+    <isbn>9781680501711</isbn>
+    <year>2016</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:rails51">
+    <authors>
+      <author>
+        <given>Sam</given>
+        <family>Ruby</family>
+      </author>
+      <author>
+        <given>David Bryant</given>
+        <family>Copeland</family>
+      </author>
+    </authors>
+    <title>Agile Web Development with Rails 5.1</title>
+    <isbn>9781680502510</isbn>
+    <year>2017</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:rails6">
+    <authors>
+      <author>
+        <given>Sam</given>
+        <family>Ruby</family>
+      </author>
+      <author>
+        <given>David Bryant</given>
+        <family>Copeland</family>
+      </author>
+    </authors>
+    <title>Agile Web Development with Rails 6</title>
+    <isbn>9781680506709</isbn>
+    <year>2020</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:rails7">
+    <authors>
+      <author>
+        <given>Sam</given>
+        <family>Ruby</family>
+      </author>
+    </authors>
+    <title>Agile Web Development with Rails 7</title>
+    <isbn>9781680509298</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:rcctr">
+    <authors>
+      <author>
+        <given>Ben</given>
+        <family>Rady</family>
+      </author>
+      <author>
+        <given>Rod</given>
+        <family>Coffin</family>
+      </author>
+    </authors>
+    <title>Continuous Testing (out of print)</title>
+    <isbn>9781934356708</isbn>
+    <year>2011</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:rdbcd">
+    <authors>
+      <author>
+        <given>Johanna</given>
+        <family>Rothman</family>
+      </author>
+      <author>
+        <given>Esther</given>
+        <family>Derby</family>
+      </author>
+    </authors>
+    <title>Behind Closed Doors</title>
+    <isbn>9780976694021</isbn>
+    <year>2005</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:reasonml">
+    <authors>
+      <author>
+        <given>J. David</given>
+        <family>Eisenberg</family>
+      </author>
+    </authors>
+    <title>Web Development with ReasonML</title>
+    <isbn>9781680506334</isbn>
+    <year>2019</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:rgdojo">
+    <authors>
+      <author>
+        <given>Craig Riecke, Rawld Gill, Alex</given>
+        <family>Russell</family>
+      </author>
+    </authors>
+    <title>Mastering Dojo (out of print)</title>
+    <isbn>9781934356111</isbn>
+    <year>2008</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:rggo">
+    <authors>
+      <author>
+        <given>Ricardo</given>
+        <family>Gerardi</family>
+      </author>
+    </authors>
+    <title>Powerful Command-Line Applications in Go</title>
+    <isbn>9781680506969</isbn>
+    <year>2021</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:ridocker">
+    <authors>
+      <author>
+        <given>Rob</given>
+        <family>Isenberg</family>
+      </author>
+    </authors>
+    <title>Docker for Rails Developers</title>
+    <isbn>9781680502732</isbn>
+    <year>2019</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:riexen">
+    <authors>
+      <author>
+        <given>Ryan</given>
+        <family>Irelan</family>
+      </author>
+    </authors>
+    <title>ExpressionEngine 2 (out of print)</title>
+    <isbn>9781934356524</isbn>
+    <year>2010</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:rjnsd">
+    <authors>
+      <author>
+        <given>Ron</given>
+        <family>Jeffries</family>
+      </author>
+    </authors>
+    <title>The Nature of Software Development</title>
+    <isbn>9781941222379</isbn>
+    <year>2015</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:rkrxjs">
+    <authors>
+      <author>
+        <given>Randall</given>
+        <family>Koutnik</family>
+      </author>
+    </authors>
+    <title>Build Reactive Websites with RxJS</title>
+    <isbn>9781680502954</isbn>
+    <year>2018</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:rmtpruby">
+    <authors>
+      <author>
+        <given>Rob</given>
+        <family>Miller</family>
+      </author>
+    </authors>
+    <title>Text Processing with Ruby</title>
+    <isbn>9781680500707</isbn>
+    <year>2015</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:roclojure">
+    <authors>
+      <author>
+        <given>Russ</given>
+        <family>Olsen</family>
+      </author>
+    </authors>
+    <title>Getting Clojure</title>
+    <isbn>9781680503005</isbn>
+    <year>2018</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:rr2">
+    <authors>
+      <author>
+        <given>Chad</given>
+        <family>Fowler</family>
+      </author>
+    </authors>
+    <title>Rails Recipes (out of print)</title>
+    <isbn>9781934356777</isbn>
+    <year>2012</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:rrscrum">
+    <authors>
+      <author>
+        <given>Ryan</given>
+        <family>Ripley</family>
+      </author>
+      <author>
+        <given>Todd</given>
+        <family>Miller</family>
+      </author>
+    </authors>
+    <title>Fixing Your Scrum</title>
+    <isbn>9781680506976</isbn>
+    <year>2020</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:rshaskell">
+    <authors>
+      <author>
+        <given>Rebecca</given>
+        <family>Skinner</family>
+      </author>
+    </authors>
+    <title>Effective Haskell</title>
+    <isbn>9781680509342</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:rspec3">
+    <authors>
+      <author>
+        <given>Myron</given>
+        <family>Marston</family>
+      </author>
+      <author>
+        <given>Erin Dees (formerly Ian</given>
+        <family>Dees)</family>
+      </author>
+    </authors>
+    <title>Effective Testing with RSpec 3</title>
+    <isbn>9781680501988</isbn>
+    <year>2017</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:ruby">
+    <authors>
+      <author>
+        <given>Dave Thomas, with Chad</given>
+        <family>Fowler</family>
+      </author>
+      <author>
+        <given>Andy</given>
+        <family>Hunt</family>
+      </author>
+    </authors>
+    <title>Programming Ruby (2nd edition)</title>
+    <isbn>9780974514055</isbn>
+    <year>2004</year>
+    <edition>2nd</edition>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:ruby3">
+    <authors>
+      <author>
+        <given>Dave Thomas, with Chad</given>
+        <family>Fowler</family>
+      </author>
+      <author>
+        <given>Andy</given>
+        <family>Hunt</family>
+      </author>
+    </authors>
+    <title>Programming Ruby 1.9 (3rd edition) (out of print)</title>
+    <isbn>9781934356081</isbn>
+    <year>2009</year>
+    <edition>2rd</edition>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:ruby4">
+    <authors>
+      <author>
+        <given>Dave Thomas, with Chad</given>
+        <family>Fowler</family>
+      </author>
+      <author>
+        <given>Andy</given>
+        <family>Hunt</family>
+      </author>
+    </authors>
+    <title>Programming Ruby 1.9 &amp; 2.0 (4th edition)</title>
+    <isbn>9781937785499</isbn>
+    <year>2013</year>
+    <edition>4th</edition>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:ruby5">
+    <authors>
+      <author>
+        <given>Noel Rappin, with Dave</given>
+        <family>Thomas</family>
+      </author>
+    </authors>
+    <title>Programming Ruby 3.2 (5th Edition)</title>
+    <isbn>9781680509823</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:rwdata">
+    <authors>
+      <author>
+        <given>Eric</given>
+        <family>Redmond</family>
+      </author>
+      <author>
+        <given>Jim R.</given>
+        <family>Wilson</family>
+      </author>
+    </authors>
+    <title>Seven Databases in Seven Weeks (out of print)</title>
+    <isbn>9781934356920</isbn>
+    <year>2012</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:rwscala">
+    <authors>
+      <author>
+        <given>Richard</given>
+        <family>Whaling</family>
+      </author>
+    </authors>
+    <title>Modern Systems Programming with Scala Native</title>
+    <isbn>9781680506228</isbn>
+    <year>2020</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:rzsecur">
+    <authors>
+      <author>
+        <given>Roman</given>
+        <family>Zabicki</family>
+      </author>
+    </authors>
+    <title>Practical Security</title>
+    <isbn>9781680506341</isbn>
+    <year>2019</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:samplebook">
+    <authors>
+      <author>
+        <given>Super Efficient</given>
+        <family>Author</family>
+      </author>
+    </authors>
+    <title>Samples</title>
+    <isbn>pending</isbn>
+    <year>2022</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:sbelixir">
+    <authors>
+      <author>
+        <given>Stephen</given>
+        <family>Bussey</family>
+      </author>
+    </authors>
+    <title>From Ruby to Elixir</title>
+    <isbn>9798888650318</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:sbsockets">
+    <authors>
+      <author>
+        <given>Stephen</given>
+        <family>Bussey</family>
+      </author>
+    </authors>
+    <title>Real-Time Phoenix</title>
+    <isbn>9781680507195</isbn>
+    <year>2020</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:scwas">
+    <authors>
+      <author>
+        <given>Scott</given>
+        <family>Cosentino</family>
+      </author>
+    </authors>
+    <title>Web Application Security from the Ground Up</title>
+    <isbn>pending</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:sdcoach">
+    <authors>
+      <author>
+        <given>Rachel</given>
+        <family>Davies</family>
+      </author>
+      <author>
+        <given>Liz</given>
+        <family>Sedley</family>
+      </author>
+    </authors>
+    <title>Agile Coaching</title>
+    <isbn>9781934356432</isbn>
+    <year>2009</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:sdcorona">
+    <authors>
+      <author>
+        <given>Silvia</given>
+        <family>Domenech</family>
+      </author>
+    </authors>
+    <title>Create Mobile Games with Corona (out of print)</title>
+    <isbn>9781937785574</isbn>
+    <year>2013</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:sdgis">
+    <authors>
+      <author>
+        <given>Scott</given>
+        <family>Davis</family>
+      </author>
+    </authors>
+    <title>GIS for Web Developers (out of print)</title>
+    <isbn>9780974514093</isbn>
+    <year>2007</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:sdgmapi">
+    <authors>
+      <author>
+        <given>Scott</given>
+        <family>Davis</family>
+      </author>
+    </authors>
+    <title>Google Maps API (out of print)</title>
+    <isbn>friday</isbn>
+    <year>2005</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:sdgmapi2">
+    <authors>
+      <author>
+        <given>Scott</given>
+        <family>Davis</family>
+      </author>
+    </authors>
+    <title>Google Maps API (2nd edition) (out of print)</title>
+    <isbn>friday</isbn>
+    <year>2006</year>
+    <edition>2nd</edition>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:sdgrvr">
+    <authors>
+      <author>
+        <given>Scott</given>
+        <family>Davis</family>
+      </author>
+    </authors>
+    <title>Groovy Recipes (out of print)</title>
+    <isbn>9780978739294</isbn>
+    <year>2008</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:sfipad">
+    <authors>
+      <author>
+        <given>Daniel H</given>
+        <family>Steinberg</family>
+      </author>
+      <author>
+        <given>Eric T</given>
+        <family>Freeman</family>
+      </author>
+    </authors>
+    <title>iPad Programming (out of print)</title>
+    <isbn>9781934356579</isbn>
+    <year>2010</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:sgdpelixir">
+    <authors>
+      <author>
+        <given>Svilen</given>
+        <family>Gospodinov</family>
+      </author>
+    </authors>
+    <title>Concurrent Data Processing in Elixir</title>
+    <isbn>9781680508192</isbn>
+    <year>2021</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:shcloj">
+    <authors>
+      <author>
+        <given>Stuart</given>
+        <family>Halloway</family>
+      </author>
+    </authors>
+    <title>Programming Clojure (out of print)</title>
+    <isbn>9781934356333</isbn>
+    <year>2009</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:shcloj2">
+    <authors>
+      <author>
+        <given>Stuart</given>
+        <family>Halloway</family>
+      </author>
+      <author>
+        <given>Aaron</given>
+        <family>Bedra</family>
+      </author>
+    </authors>
+    <title>Programming Clojure (2nd edition) (out of print)</title>
+    <isbn>9781934356869</isbn>
+    <year>2012</year>
+    <edition>2nd</edition>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:shcloj3">
+    <authors>
+      <author>
+        <given>Alex Miller with Stuart</given>
+        <family>Halloway</family>
+      </author>
+      <author>
+        <given>Aaron</given>
+        <family>Bedra</family>
+      </author>
+    </authors>
+    <title>Programming Clojure, Third Edition</title>
+    <isbn>9781680502466</isbn>
+    <year>2018</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:sidruby">
+    <authors>
+      <author>
+        <given>Masatoshi Seki (Translated by Makoto</given>
+        <family>Inoue)</family>
+      </author>
+    </authors>
+    <title>The dRuby Book (out of print)</title>
+    <isbn>9781934356937</isbn>
+    <year>2012</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:sldeios">
+    <authors>
+      <author>
+        <given>Anita</given>
+        <family>Sarma</family>
+      </author>
+      <author>
+        <given>Georg</given>
+        <family>Link</family>
+      </author>
+    </authors>
+    <title>Diversity, Equity, and Inclusion (DEI) in Open Source</title>
+    <isbn>pending</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:smacss">
+    <authors>
+      <author>
+        <given>Jonathan</given>
+        <family>Snook</family>
+      </author>
+    </authors>
+    <title>Scalable and Modular Architecture for CSS (out of print)</title>
+    <isbn>9781937785505</isbn>
+    <year>2012</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:smelixir">
+    <authors>
+      <author>
+        <given>Sean</given>
+        <family>Moriarity</family>
+      </author>
+    </authors>
+    <title>Machine Learning Elixir</title>
+    <isbn>9798888650349</isbn>
+    <year>2022</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:smgaelixir">
+    <authors>
+      <author>
+        <given>Sean</given>
+        <family>Moriarity</family>
+      </author>
+    </authors>
+    <title>Genetic Algorithms in Elixir</title>
+    <isbn>9781680507942</isbn>
+    <year>2021</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:smreactjs">
+    <authors>
+      <author>
+        <given>Sergi</given>
+        <family>Mansilla</family>
+      </author>
+    </authors>
+    <title>Reactive Programming with RxJS (out of print)</title>
+    <isbn>9781680501292</isbn>
+    <year>2015</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:smreactjs5">
+    <authors>
+      <author>
+        <given>Sergi</given>
+        <family>Mansilla</family>
+      </author>
+    </authors>
+    <title>Reactive Programming with RxJS 5</title>
+    <isbn>9781680502473</isbn>
+    <year>2018</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:snfocus">
+    <authors>
+      <author>
+        <given>Staffan</given>
+        <family>Nöteberg</family>
+      </author>
+    </authors>
+    <title>Pomodoro Technique Illustrated</title>
+    <isbn>9781934356500</isbn>
+    <year>2009</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:srjcuc">
+    <authors>
+      <author>
+        <given>Seb Rose, Matt Wynne &amp; Aslak</given>
+        <family>Hellesøy</family>
+      </author>
+    </authors>
+    <title>The Cucumber for Java Book</title>
+    <isbn>9781941222294</isbn>
+    <year>2015</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:srjcuc2">
+    <authors>
+      <author>
+        <given>Seb Rose, Matt</given>
+        <family>Wynne</family>
+      </author>
+      <author>
+        <given>Aslak</given>
+        <family>Hellesøy</family>
+      </author>
+    </authors>
+    <title>The Cucumber for Java Book, Second Edition</title>
+    <isbn>pending</isbn>
+    <year>2022</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:stp-ascss">
+    <authors>
+      <author>
+        <given>Jonathan Snook, Steve Smith, Jina Bolton, Cameron</given>
+        <family>Adams,</family>
+      </author>
+      <author>
+        <given>David</given>
+        <family>Johnson</family>
+      </author>
+    </authors>
+    <title>The Art &amp; Science of CSS (out of print)</title>
+    <isbn>9780975841976</isbn>
+    <year>2007</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:stp-asjs">
+    <authors>
+      <author>
+        <given>James Edwards, Michael Mahemoff, Ara Pehlivanian, Cameron Adams, Dan Webb, Christian</given>
+        <family>Heilmann</family>
+      </author>
+      <author>
+        <given>Simon</given>
+        <family>Willison</family>
+      </author>
+    </authors>
+    <title>The Art &amp; Science of JavaScript (out of print)</title>
+    <isbn>9780980285840</isbn>
+    <year>2008</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:stp-cssant">
+    <authors>
+      <author>
+        <given>Rachel</given>
+        <family>Andrew</family>
+      </author>
+    </authors>
+    <title>The CSS Anthology (out of print)</title>
+    <isbn>9780975841983</isbn>
+    <year>2007</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:stp-csswrong">
+    <authors>
+      <author>
+        <given>Rachel Andrew &amp; Kevin</given>
+        <family>Yank</family>
+      </author>
+    </authors>
+    <title>Everything You Know About CSS is Wrong! (out of print)</title>
+    <isbn>9780980455229</isbn>
+    <year>2008</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:stp-pwebd">
+    <authors>
+      <author>
+        <given>Jason</given>
+        <family>Beaird</family>
+      </author>
+    </authors>
+    <title>The Principles of Beautiful Web Design (out of print)</title>
+    <isbn>9780975841969</isbn>
+    <year>2007</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:stp-smyjs">
+    <authors>
+      <author>
+        <given>Kevin Yank &amp; Cameron</given>
+        <family>Adams</family>
+      </author>
+    </authors>
+    <title>Simply JavaScript (out of print)</title>
+    <isbn>9780980285802</isbn>
+    <year>2007</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:stp-ucss">
+    <authors>
+      <author>
+        <given>Tommy Olsson, Paul</given>
+        <family>O’Brien</family>
+      </author>
+    </authors>
+    <title>The Ultimate CSS Reference (out of print)</title>
+    <isbn>9780980285857</isbn>
+    <year>2008</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:stp-uhtml">
+    <authors>
+      <author>
+        <given>Ian</given>
+        <family>Lloyd</family>
+      </author>
+    </authors>
+    <title>The Ultimate HTML Reference (out of print)</title>
+    <isbn>9780980285888</isbn>
+    <year>2008</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:svn">
+    <authors>
+      <author>
+        <given>Mike</given>
+        <family>Mason</family>
+      </author>
+    </authors>
+    <title>Pragmatic Version Control using Subversion (out of print)</title>
+    <isbn>9780974514062</isbn>
+    <year>2005</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:svn2">
+    <authors>
+      <author>
+        <given>Mike</given>
+        <family>Mason</family>
+      </author>
+    </authors>
+    <title>Pragmatic Version Control using Subversion (2nd edition) (out of print)</title>
+    <isbn>9780977616657</isbn>
+    <year>2006</year>
+    <edition>2nd</edition>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:swdddf">
+    <authors>
+      <author>
+        <given>Scott</given>
+        <family>Wlaschin</family>
+      </author>
+    </authors>
+    <title>Domain Modeling Made Functional</title>
+    <isbn>9781680502541</isbn>
+    <year>2018</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:swperl">
+    <authors>
+      <author>
+        <given/>
+        <family>chromatic</family>
+      </author>
+    </authors>
+    <title>Modern Perl, Fourth Edition</title>
+    <isbn>9781680500882</isbn>
+    <year>2015</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:tailwind">
+    <authors>
+      <author>
+        <given>Noel</given>
+        <family>Rappin</family>
+      </author>
+    </authors>
+    <title>Modern CSS with Tailwind (out of print)</title>
+    <isbn>9781680508185</isbn>
+    <year>2021</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:tailwind2">
+    <authors>
+      <author>
+        <given>Noel</given>
+        <family>Rappin</family>
+      </author>
+    </authors>
+    <title>Modern CSS with Tailwind, Second Edition</title>
+    <isbn>9781680509403</isbn>
+    <year>2022</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:tbajs">
+    <authors>
+      <author>
+        <given>Trevor</given>
+        <family>Burnham</family>
+      </author>
+    </authors>
+    <title>Async JavaScript</title>
+    <isbn>9781937785277</isbn>
+    <year>2012</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:tbcoffee">
+    <authors>
+      <author>
+        <given>Trevor</given>
+        <family>Burnham</family>
+      </author>
+    </authors>
+    <title>CoffeeScript (out of print)</title>
+    <isbn>9781934356784</isbn>
+    <year>2011</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:tbcoffee2">
+    <authors>
+      <author>
+        <given>Trevor</given>
+        <family>Burnham</family>
+      </author>
+    </authors>
+    <title>CoffeeScript</title>
+    <isbn>9781941222263</isbn>
+    <year>2015</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:tbreact">
+    <authors>
+      <author>
+        <given>Trevor</given>
+        <family>Burnham</family>
+      </author>
+    </authors>
+    <title>Test-Driven React</title>
+    <isbn>9781680506464</isbn>
+    <year>2019</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:tbreact2">
+    <authors>
+      <author>
+        <given>Trevor</given>
+        <family>Burnham</family>
+      </author>
+    </authors>
+    <title>Test-Driven React, Second Edition</title>
+    <isbn>pending</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:tcegcs">
+    <authors>
+      <author>
+        <given>Tammy</given>
+        <family>Coron</family>
+      </author>
+    </authors>
+    <title>Add External Game Controller Support with SpriteKit and Swift </title>
+    <isbn>pending</isbn>
+    <year>2021</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:tcswift">
+    <authors>
+      <author>
+        <given>Tammy</given>
+        <family>Coron</family>
+      </author>
+    </authors>
+    <title>Apple Game Frameworks and Technologies</title>
+    <isbn>9781680507843</isbn>
+    <year>2021</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:testing">
+    <authors>
+      <author>
+        <given/>
+        <family>testing</family>
+      </author>
+    </authors>
+    <title>testing</title>
+    <isbn>pending</isbn>
+    <year>2020</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:testscreencast">
+    <authors>
+      <author>
+        <given>dave</given>
+        <family>t</family>
+      </author>
+    </authors>
+    <title>test screencast</title>
+    <isbn/>
+    <year/>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:textmate">
+    <authors>
+      <author>
+        <given>James Edward Gray</given>
+        <family>II</family>
+      </author>
+    </authors>
+    <title>TextMate (out of print)</title>
+    <isbn>9780978739232</isbn>
+    <year>2007</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:thgraphs">
+    <authors>
+      <author>
+        <given>Tony</given>
+        <family>Hammond</family>
+      </author>
+    </authors>
+    <title>Exploring Graphs with Elixir</title>
+    <isbn>9781680508406</isbn>
+    <year>2022</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:thnerves">
+    <authors>
+      <author>
+        <given>Frank</given>
+        <family>Hunleth</family>
+      </author>
+      <author>
+        <given>Bruce A.</given>
+        <family>Tate</family>
+      </author>
+    </authors>
+    <title>Build a Binary Clock with Elixir and Nerves</title>
+    <isbn>9781680509236</isbn>
+    <year>2022</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:thsound">
+    <authors>
+      <author>
+        <given>Tony</given>
+        <family>Hillerson</family>
+      </author>
+    </authors>
+    <title>Programming Sound with Pure Data</title>
+    <isbn>9781937785666</isbn>
+    <year>2014</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:tibmac">
+    <authors>
+      <author>
+        <given>Tim</given>
+        <family>Isted</family>
+      </author>
+    </authors>
+    <title>Beginning Mac Programming (out of print)</title>
+    <isbn>9781934356517</isbn>
+    <year>2010</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:tjgo">
+    <authors>
+      <author>
+        <given>Travis</given>
+        <family>Jeffery</family>
+      </author>
+    </authors>
+    <title>Distributed Services with Go</title>
+    <isbn>9781680507607</isbn>
+    <year>2021</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:tjgoce">
+    <authors>
+      <author>
+        <given>Travis</given>
+        <family>Jeffery</family>
+      </author>
+    </authors>
+    <title>Distributed Services with Go</title>
+    <isbn>pending</isbn>
+    <year/>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:tpantlr">
+    <authors>
+      <author>
+        <given>Terence</given>
+        <family>Parr</family>
+      </author>
+    </authors>
+    <title>The Definitive ANTLR Reference (out of print)</title>
+    <isbn>9780978739256</isbn>
+    <year>2007</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:tpantlr2">
+    <authors>
+      <author>
+        <given>Terence</given>
+        <family>Parr</family>
+      </author>
+    </authors>
+    <title>The Definitive ANTLR 4 Reference</title>
+    <isbn>9781934356999</isbn>
+    <year>2013</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:tpdsl">
+    <authors>
+      <author>
+        <given>Terence</given>
+        <family>Parr</family>
+      </author>
+    </authors>
+    <title>Language Implementation Patterns</title>
+    <isbn>9781934356456</isbn>
+    <year>2009</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:tpp">
+    <authors>
+      <author>
+        <given>Andrew</given>
+        <family>Hunt</family>
+      </author>
+      <author>
+        <given>David</given>
+        <family>Thomas</family>
+      </author>
+    </authors>
+    <title>The Pragmatic Programmer (out of print)</title>
+    <isbn>9780201616224</isbn>
+    <year>1999</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:tpp-resell">
+    <authors>
+      <author>
+        <given>Andrew</given>
+        <family>Hunt</family>
+      </author>
+      <author>
+        <given>David</given>
+        <family>Thomas</family>
+      </author>
+    </authors>
+    <title>The Pragmatic Programmer (resell paper)</title>
+    <isbn>9780201616224</isbn>
+    <year>2012</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:tpp20">
+    <authors>
+      <author>
+        <given>David Thomas, Andrew</given>
+        <family>Hunt</family>
+      </author>
+    </authors>
+    <title>The Pragmatic Programmer, 20th Anniversary Edition</title>
+    <isbn>9780135957059</isbn>
+    <year>2019</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:trevan">
+    <authors>
+      <author>
+        <given>Terrence</given>
+        <family>Ryan</family>
+      </author>
+    </authors>
+    <title>Driving Technical Change</title>
+    <isbn>9781934356609</isbn>
+    <year>2010</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:tsgit">
+    <authors>
+      <author>
+        <given>Travis</given>
+        <family>Swicegood</family>
+      </author>
+    </authors>
+    <title>Pragmatic Version Control Using Git</title>
+    <isbn>9781934356159</isbn>
+    <year>2008</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:tvmelixir">
+    <authors>
+      <author>
+        <given>Ben Marx, José Valim, Bruce</given>
+        <family>Tate</family>
+      </author>
+    </authors>
+    <title>Adopting Elixir</title>
+    <isbn>9781680502527</isbn>
+    <year>2018</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:twa">
+    <authors>
+      <author>
+        <given/>
+        <family>ThoughtWorks</family>
+      </author>
+    </authors>
+    <title>ThoughtWorks Anthology (out of print)</title>
+    <isbn>9781934356142</isbn>
+    <year>2008</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:twa2">
+    <authors>
+      <author>
+        <given/>
+        <family>ThoughtWorks</family>
+      </author>
+    </authors>
+    <title>The ThoughtWorks Anthology, Volume 2 (out of print)</title>
+    <isbn>9781937785000</isbn>
+    <year>2012</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:uboop">
+    <authors>
+      <author>
+        <given>Uberto</given>
+        <family>Barbini</family>
+      </author>
+    </authors>
+    <title>From Objects to Functions</title>
+    <isbn>9781680508451</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:utc">
+    <authors>
+      <author>
+        <given>Andy</given>
+        <family>Hunt</family>
+      </author>
+      <author>
+        <given>Dave</given>
+        <family>Thomas</family>
+      </author>
+    </authors>
+    <title>Pragmatic Unit Testing in C# with NUnit (out of print)</title>
+    <isbn>9780974514024</isbn>
+    <year>2004</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:utc2">
+    <authors>
+      <author>
+        <given>Andy</given>
+        <family>Hunt</family>
+      </author>
+      <author>
+        <given>Dave Thomas with Matt</given>
+        <family>Hargett</family>
+      </author>
+    </authors>
+    <title>Pragmatic Unit Testing in C# with NUnit (2nd edition)</title>
+    <isbn>9780977616671</isbn>
+    <year>2007</year>
+    <edition>2nd</edition>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:utj">
+    <authors>
+      <author>
+        <given>Andy</given>
+        <family>Hunt</family>
+      </author>
+      <author>
+        <given>Dave</given>
+        <family>Thomas</family>
+      </author>
+    </authors>
+    <title>Pragmatic Unit Testing in Java with JUnit (out of print)</title>
+    <isbn>9780974514017</isbn>
+    <year>2003</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:utj2">
+    <authors>
+      <author>
+        <given>Jeff Langr, with Andy</given>
+        <family>Hunt</family>
+      </author>
+      <author>
+        <given>Dave</given>
+        <family>Thomas</family>
+      </author>
+    </authors>
+    <title>Pragmatic Unit Testing in Java 8 with JUnit</title>
+    <isbn>9781941222591</isbn>
+    <year>2015</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:utj3">
+    <authors>
+      <author>
+        <given>Jeff</given>
+        <family>Langr</family>
+      </author>
+    </authors>
+    <title>Pragmatic Unit Testing in Java with JUnit, Third Edition</title>
+    <isbn>pending</isbn>
+    <year>2024</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:v-aksinatra">
+    <authors>
+      <author>
+        <given>Adam</given>
+        <family>Keys</family>
+      </author>
+    </authors>
+    <title>Classy Web Development with Sinatra (out of print)</title>
+    <isbn/>
+    <year>2009</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:v-bdcora">
+    <authors>
+      <author>
+        <given>Bill</given>
+        <family>Dudney</family>
+      </author>
+    </authors>
+    <title>Creating a Compelling User Interface with Core Animation (out of print)</title>
+    <isbn/>
+    <year>2008</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:v-bdiphone">
+    <authors>
+      <author>
+        <given>Bill</given>
+        <family>Dudney</family>
+      </author>
+    </authors>
+    <title>Writing Your First iPhone Application</title>
+    <isbn/>
+    <year>2008</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:v-bdmapkit">
+    <authors>
+      <author>
+        <given>Bill</given>
+        <family>Dudney</family>
+      </author>
+    </authors>
+    <title>Using Map Kit (out of print)</title>
+    <isbn/>
+    <year>2009</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:v-bdobjc">
+    <authors>
+      <author>
+        <given>Bill</given>
+        <family>Dudney</family>
+      </author>
+    </authors>
+    <title>Coding in Objective-C 2.0 (out of print)</title>
+    <isbn/>
+    <year>2009</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:v-bhphnx">
+    <authors>
+      <author>
+        <given>Brian P.</given>
+        <family>Hogan</family>
+      </author>
+    </authors>
+    <title>Build Real-Time Web Apps with Phoenix (out of print)</title>
+    <isbn/>
+    <year>2016</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:v-d-cukevidj">
+    <authors>
+      <author>
+        <given>Julien Biezemans, Matt Wynne, Aslak</given>
+        <family>Hellesøy</family>
+      </author>
+    </authors>
+    <title>Cucumber School (Java)</title>
+    <isbn/>
+    <year>2015</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:v-d-cukevidr">
+    <authors>
+      <author>
+        <given>Julien Biezemans, Matt Wynne, Aslak</given>
+        <family>Hellesøy</family>
+      </author>
+    </authors>
+    <title>Cucumber School (Ruby)</title>
+    <isbn/>
+    <year>2015</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:v-dback">
+    <authors>
+      <author>
+        <given>Derick</given>
+        <family>Bailey</family>
+      </author>
+    </authors>
+    <title>Hands-on Backbone.js (out of print)</title>
+    <isbn/>
+    <year>2012</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:v-dhcag">
+    <authors>
+      <author>
+        <given>David</given>
+        <family>Hussman</family>
+      </author>
+    </authors>
+    <title>Cutting an Agile Groove (out of print)</title>
+    <isbn/>
+    <year>2011</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:v-dtrubyom">
+    <authors>
+      <author>
+        <given>Dave</given>
+        <family>Thomas</family>
+      </author>
+    </authors>
+    <title>The Ruby Object Model and Metaprogramming</title>
+    <isbn/>
+    <year>2008</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:v-jacloud">
+    <authors>
+      <author>
+        <given>Jesse</given>
+        <family>Anderson</family>
+      </author>
+    </authors>
+    <title>The Cloud and Amazon Web Services</title>
+    <isbn/>
+    <year>2012</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:v-jamapr">
+    <authors>
+      <author>
+        <given>Jesse</given>
+        <family>Anderson</family>
+      </author>
+    </authors>
+    <title>Processing Big Data with MapReduce</title>
+    <isbn/>
+    <year>2013</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:v-jwsceasy">
+    <authors>
+      <author>
+        <given>Jim</given>
+        <family>Weirich</family>
+      </author>
+    </authors>
+    <title>Source Control Made Easy (out of print)</title>
+    <isbn/>
+    <year>2009</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:v-kbtdd">
+    <authors>
+      <author>
+        <given>Kent</given>
+        <family>Beck</family>
+      </author>
+    </authors>
+    <title>Test Driven Development</title>
+    <isbn/>
+    <year>2010</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:v-kserl">
+    <authors>
+      <author>
+        <given>Kevin</given>
+        <family>Smith</family>
+      </author>
+    </authors>
+    <title>Erlang in Practice (out of print)</title>
+    <isbn/>
+    <year>2008</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:v-mcxcode">
+    <authors>
+      <author>
+        <given>Mike</given>
+        <family>Clark</family>
+      </author>
+    </authors>
+    <title>Becoming Productive in Xcode</title>
+    <isbn/>
+    <year>2009</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:v-mmfacer">
+    <authors>
+      <author>
+        <given>Mike</given>
+        <family>Mangino</family>
+      </author>
+    </authors>
+    <title>Rails Development for the Facebook Platform (out of print)</title>
+    <isbn/>
+    <year>2008</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:v-mrst2">
+    <authors>
+      <author>
+        <given>Mike</given>
+        <family>Riley</family>
+      </author>
+    </authors>
+    <title>Sublime Text 2</title>
+    <isbn/>
+    <year>2012</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:v-rbar">
+    <authors>
+      <author>
+        <given>Ryan</given>
+        <family>Bates</family>
+      </author>
+    </authors>
+    <title>Everyday Active Record</title>
+    <isbn/>
+    <year>2008</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:v-rbforms">
+    <authors>
+      <author>
+        <given>Ryan</given>
+        <family>Bates</family>
+      </author>
+    </authors>
+    <title>Mastering Rails Forms</title>
+    <isbn/>
+    <year>2009</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:v-rieet">
+    <authors>
+      <author>
+        <given>Ryan</given>
+        <family>Irelan</family>
+      </author>
+    </authors>
+    <title>ExpressionEngine Techniques (out of print)</title>
+    <isbn/>
+    <year>2010</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:v-riexp">
+    <authors>
+      <author>
+        <given>Ryan</given>
+        <family>Irelan</family>
+      </author>
+    </authors>
+    <title>Building a Dynamic Website with ExpressionEngine</title>
+    <isbn/>
+    <year>2008</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:v-roerlang">
+    <authors>
+      <author>
+        <given>Roberto</given>
+        <family>Ostinelli</family>
+      </author>
+    </authors>
+    <title>Modern Erlang for Beginners</title>
+    <isbn/>
+    <year>2018</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:v-scgithub">
+    <authors>
+      <author>
+        <given>Scott</given>
+        <family>Chacon</family>
+      </author>
+    </authors>
+    <title>Insider Guide to GitHub (out of print)</title>
+    <isbn/>
+    <year>2008</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:vbfoss">
+    <authors>
+      <author>
+        <given>VM (Vicky)</given>
+        <family>Brasseur</family>
+      </author>
+    </authors>
+    <title>FOSS + Biz</title>
+    <isbn>pending</isbn>
+    <year>2022</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:vbopens">
+    <authors>
+      <author>
+        <given>VM (Vicky)</given>
+        <family>Brasseur</family>
+      </author>
+    </authors>
+    <title>Forge Your Future with Open Source</title>
+    <isbn>9781680503012</isbn>
+    <year>2018</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:vcc">
+    <authors>
+      <author>
+        <given>Dave</given>
+        <family>Thomas</family>
+      </author>
+      <author>
+        <given>Andy</given>
+        <family>Hunt</family>
+      </author>
+    </authors>
+    <title>Pragmatic Version Control using CVS</title>
+    <isbn>9780974514000</isbn>
+    <year>2003</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:ves6">
+    <authors>
+      <author>
+        <given>Venkat</given>
+        <family>Subramaniam</family>
+      </author>
+    </authors>
+    <title>Rediscovering JavaScript</title>
+    <isbn>9781680505467</isbn>
+    <year>2018</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:vmclojeco">
+    <authors>
+      <author>
+        <given>Ben</given>
+        <family>Vandgrift</family>
+      </author>
+      <author>
+        <given>Alex</given>
+        <family>Miller</family>
+      </author>
+    </authors>
+    <title>Clojure Applied</title>
+    <isbn>9781680500745</isbn>
+    <year>2015</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:vscajava">
+    <authors>
+      <author>
+        <given>Venkat</given>
+        <family>Subramaniam</family>
+      </author>
+    </authors>
+    <title>Cruising Along with Java</title>
+    <isbn>9781680509816</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:vsdsl">
+    <authors>
+      <author>
+        <given>Venkat</given>
+        <family>Subramaniam</family>
+      </author>
+    </authors>
+    <title>Programming DSLs in Kotlin</title>
+    <isbn>9781680507935</isbn>
+    <year>2021</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:vsjava2e">
+    <authors>
+      <author>
+        <given>Venkat</given>
+        <family>Subramaniam</family>
+      </author>
+    </authors>
+    <title>Functional Programming in Java, Second Edition</title>
+    <isbn>9781680509793</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:vsjava8">
+    <authors>
+      <author>
+        <given>Venkat</given>
+        <family>Subramaniam</family>
+      </author>
+    </authors>
+    <title>Functional Programming in Java (out of print)</title>
+    <isbn>9781937785468</isbn>
+    <year>2014</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:vsjavas">
+    <authors>
+      <author>
+        <given>Venkat</given>
+        <family>Subramaniam</family>
+      </author>
+    </authors>
+    <title>Test-Driving JavaScript Applications</title>
+    <isbn>9781680501742</isbn>
+    <year>2016</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:vskotlin">
+    <authors>
+      <author>
+        <given>Venkat</given>
+        <family>Subramaniam</family>
+      </author>
+    </authors>
+    <title>Programming Kotlin</title>
+    <isbn>9781680506358</isbn>
+    <year>2019</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:vslg">
+    <authors>
+      <author>
+        <given>Venkat</given>
+        <family>Subramaniam</family>
+      </author>
+    </authors>
+    <title>Programming Groovy (out of print)</title>
+    <isbn>9781934356098</isbn>
+    <year>2008</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:vslg2">
+    <authors>
+      <author>
+        <given>Venkat</given>
+        <family>Subramaniam</family>
+      </author>
+    </authors>
+    <title>Programming Groovy 2</title>
+    <isbn>9781937785307</isbn>
+    <year>2013</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:vspcon">
+    <authors>
+      <author>
+        <given>Venkat</given>
+        <family>Subramaniam</family>
+      </author>
+    </authors>
+    <title>Programming Concurrency on the JVM</title>
+    <isbn>9781934356760</isbn>
+    <year>2011</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:vsscala">
+    <authors>
+      <author>
+        <given>Venkat</given>
+        <family>Subramaniam</family>
+      </author>
+    </authors>
+    <title>Programming Scala (out of print)</title>
+    <isbn>9781934356319</isbn>
+    <year>2009</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:vsscala2">
+    <authors>
+      <author>
+        <given>Venkat</given>
+        <family>Subramaniam</family>
+      </author>
+    </authors>
+    <title>Pragmatic Scala</title>
+    <isbn>9781680500547</isbn>
+    <year>2015</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:warv">
+    <authors>
+      <author>
+        <given>John</given>
+        <family>Athayde</family>
+      </author>
+      <author>
+        <given>Bruce</given>
+        <family>Williams</family>
+      </author>
+    </authors>
+    <title>The Rails View (out of print)</title>
+    <isbn>9781934356876</isbn>
+    <year>2012</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:wbdev">
+    <authors>
+      <author>
+        <given>Brian P. Hogan, Chris Warren, Mike Weber, Chris Johnson, Aaron</given>
+        <family>Godin</family>
+      </author>
+    </authors>
+    <title>Web Development Recipes (out of print)</title>
+    <isbn>9781934356838</isbn>
+    <year>2012</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:wbdev2">
+    <authors>
+      <author>
+        <given>Brian P. Hogan, Chris Warren, Mike</given>
+        <family>Weber,</family>
+      </author>
+      <author>
+        <given>Chris</given>
+        <family>Johnson</family>
+      </author>
+    </authors>
+    <title>Web Development Recipes 2nd Edition</title>
+    <isbn>9781680500561</isbn>
+    <year>2015</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:wdradio">
+    <authors>
+      <author>
+        <given>Wolfram</given>
+        <family>Donat</family>
+      </author>
+    </authors>
+    <title>Explore Software Defined Radio</title>
+    <isbn>9781680507591</isbn>
+    <year>2021</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:wmecto">
+    <authors>
+      <author>
+        <given>Darin</given>
+        <family>Wilson</family>
+      </author>
+      <author>
+        <given>Eric</given>
+        <family>Meadows-Jönsson</family>
+      </author>
+    </authors>
+    <title>Programming Ecto</title>
+    <isbn>9781680502824</isbn>
+    <year>2019</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:wwgraphql">
+    <authors>
+      <author>
+        <given>Bruce</given>
+        <family>Williams</family>
+      </author>
+      <author>
+        <given>Ben</given>
+        <family>Wilson</family>
+      </author>
+    </authors>
+    <title>Craft GraphQL APIs in Elixir with Absinthe</title>
+    <isbn>9781680502558</isbn>
+    <year>2018</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:xquery">
+    <authors>
+      <author>
+        <given>Ron</given>
+        <family>Hitchens</family>
+      </author>
+    </authors>
+    <title>Getting Started with XQuery (out of print)</title>
+    <isbn>friday</isbn>
+    <year>2008</year>
+    <publisher ref="pub.pp"/>
+  </book>
+</bibliography>

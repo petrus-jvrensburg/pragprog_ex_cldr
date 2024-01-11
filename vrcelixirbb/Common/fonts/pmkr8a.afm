@@ -1,0 +1,50 @@
+StartFontMetrics 2.0
+Comment Panose 0 0 0 0 0 0 0 0 0 0
+FullName MacKeyboard
+FontName MacKeyboard
+FamilyName MacKeyboard
+Weight Normal
+IsFixedPitch false
+ItalicAngle 0.00
+FontBBox 0 -211 1118 967
+Ascender 700
+Descender -200
+XHeight 500
+CapHeight 700
+UnderlinePosition -100
+UnderlineThickness 50
+EncodingScheme AdobeStandardEncoding
+StartCharMetrics 31
+C 32 ; WX 500 ; N space ; B 0 0 0 0 ;
+C 65 ; WX 1000 ; N A ; B 84 150 916 572 ;
+C 66 ; WX 1000 ; N B ; B 84 0 916 783 ;
+C 67 ; WX 795 ; N C ; B 108 382 687 723 ;
+C 68 ; WX 1000 ; N D ; B 121 -18 879 741 ;
+C 69 ; WX 1000 ; N E ; B 84 0 916 723 ;
+C 70 ; WX 1000 ; N F ; B 90 150 874 777 ;
+C 71 ; WX 1000 ; N G ; B 90 150 874 795 ;
+C 72 ; WX 1000 ; N H ; B 90 150 855 795 ;
+C 73 ; WX 795 ; N I ; B 108 382 687 723 ;
+C 74 ; WX 1214 ; N J ; B 84 0 1118 723 ;
+C 75 ; WX 1000 ; N K ; B 121 -18 879 741 ;
+C 76 ; WX 1000 ; N L ; B 84 -211 916 783 ;
+C 77 ; WX 1000 ; N M ; B 75 -18 925 967 ;
+C 78 ; WX 854 ; N N ; B 62 94 795 698 ;
+C 79 ; WX 1000 ; N O ; B 121 -18 879 741 ;
+C 97 ; WX 1000 ; N a ; B 84 150 916 572 ;
+C 98 ; WX 1000 ; N b ; B 84 0 916 783 ;
+C 99 ; WX 795 ; N c ; B 108 382 687 723 ;
+C 100 ; WX 1000 ; N d ; B 121 -18 879 741 ;
+C 101 ; WX 1000 ; N e ; B 84 0 916 723 ;
+C 102 ; WX 1000 ; N f ; B 90 150 874 777 ;
+C 103 ; WX 1000 ; N g ; B 90 150 874 795 ;
+C 104 ; WX 1000 ; N h ; B 90 150 855 795 ;
+C 105 ; WX 795 ; N i ; B 108 382 687 723 ;
+C 106 ; WX 1214 ; N j ; B 84 0 1118 723 ;
+C 107 ; WX 1000 ; N k ; B 121 -18 879 741 ;
+C 108 ; WX 1000 ; N l ; B 84 -211 916 783 ;
+C 109 ; WX 1000 ; N m ; B 75 -18 925 967 ;
+C 110 ; WX 854 ; N n ; B 62 94 795 698 ;
+C 111 ; WX 1000 ; N o ; B 121 -18 879 741 ;
+EndCharMetrics
+EndFontMetrics

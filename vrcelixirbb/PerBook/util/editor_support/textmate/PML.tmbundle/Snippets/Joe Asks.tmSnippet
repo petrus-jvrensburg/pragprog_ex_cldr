@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;joeasks id="sb.${1/^(\w+)|\W+/(?1:\l$1)/g}"&gt;
+	&lt;title&gt;${1:Developer Question}?&lt;/title&gt;
+	
+	&lt;p&gt;
+		$0
+	&lt;/p&gt;
+&lt;/joeasks&gt;</string>
+	<key>name</key>
+	<string>Joe Asks</string>
+	<key>scope</key>
+	<string>text.xml.pragmatic</string>
+	<key>tabTrigger</key>
+	<string>joe</string>
+	<key>uuid</key>
+	<string>389C0B69-E944-40A3-8344-397341E81EB6</string>
+</dict>
+</plist>

@@ -1,0 +1,21 @@
+# -*- ruby -*-
+desc "Install required Gems into jruby"
+task :install_gems do
+  sh "jruby/bin/jruby -S jruby/bin/bundle install"
+end
+
+desc "update rouge gem"
+task :update_rouge do
+  sh "jruby/bin/jruby -S jruby/bin/bundle update rouge"
+end
+
+# desc "Install a2png using the Cairo library"
+# task :build_a2png do
+#   sh "tar zxf a2png-0.1.5.tar.gz"
+#   Dir.chdir("a2png-0.1.5") do
+#     sh "./configure --with-cairo-prefix=/opt/local/"
+#     sh "make check"
+#     sh "sudo make install"
+#   end
+#   sh "rm -rf a2png-0.1.5"
+# end

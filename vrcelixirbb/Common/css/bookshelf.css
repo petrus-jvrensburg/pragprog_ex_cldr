@@ -1,0 +1,365 @@
+body {
+  margin-left: 1.5in;
+  margin-right: 0.5in;
+  font-family:  "Trebuchet MS", Verdana, Arial, sans-serif;
+}
+
+h1 {
+  color:     #555555;
+  font-size: 36pt;
+  font-weight: bold;
+  text-align: right;
+  margin-top:   1in;
+  margin-bottom: .5in;
+  padding-bottom: .2in;
+  border-width: 0px 0 4px 0;
+  border-style: none none solid none;
+  border-color: #888888;
+}
+
+h2 {
+ font-size: 22pt;
+ font-weight:  bold;
+ color:     #445555;
+ clear:  both;
+ margin-top:  30px;
+ margin-bottom: 0px;
+ line-height:  70%;
+}
+
+h3 {
+ font-size: 16pt;
+ font-weight:  bold;
+ color:     #225555;
+ clear:  both;
+ margin-top:  30px;
+ margin-bottom: 0px;
+ line-height:  70%;
+}
+
+p {
+    line-height: 150%;
+}
+
+.contribution {
+  font-size: smaller;
+  color:     #888;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.acronym {
+  font-weight:  bold;
+  font-variant: small-caps;
+  color:        #333333;
+}
+
+
+.author {
+  margin-top:  1em;
+  text-align:  right
+}
+
+.authorname {
+
+}
+
+.authoraffiliation {
+  font-style:  italic;
+}
+
+.authors {
+  margin-top:   3em;
+  font-size:   18;
+  color:       #666666;
+}
+
+
+.bibliography {
+  margin-top:   2em;
+  border-width: 2px 0 0 0;
+  border-style: solid none none none;
+  border-color: #888888;
+}
+
+.bookinfo {
+  margin-top:       2em;
+  margin-bottom:    4em;
+  padding:          3em;
+  border-width: 8px;
+  border-style: dotted;
+  border-color: #dddddd;
+}
+
+.booktitle {
+  font-weight:  bold;
+  font-size:    36;
+  text-align:   right;
+  color:        #777777;
+  border-width:     0 0 3px 0;
+  border-style: none none solid none;
+  border-color: #888888;
+}
+
+.booksubtitle {
+  font-weight:  bold;
+  font-size:    24;
+  text-align:   right;
+  color:        #777777;
+}
+
+
+.booksectname {
+  font-style: italic;
+}
+
+.cf {
+  font-family:  "Courier";
+}
+
+.classname {
+  font-family:  "Courier";
+}
+
+.processedcode {
+  line-height: 80%;
+  font-family: Courier;
+  position: relative;
+  left: -3em;
+}
+
+
+.codeprefix {
+    float: left;
+    clear: left;
+    width: 2em;
+    text-align: right;
+    font-weight: bold;
+    color: green;
+}
+
+.codeline {
+  margin: 0 0 0 3em;
+}
+
+.codecalloutnumber {
+  font-size:  70%;
+}
+
+
+.commandname {
+  font-family:  "Courier";
+}
+
+
+.parametername {
+  font-family:  "Courier";
+}
+
+.stringinfile {
+  font-style:  italic;
+}
+
+.dirname {
+  font-family:  "Courier";
+}
+
+.emph {
+  font-style: italic;
+}
+
+.epigraph {
+  width:         60%;
+  position:     relative;
+  left:         30%;
+  padding-top:   0px;
+  padding-top:   0px;
+  padding-left:  8px;
+  padding-right: 8px;
+  border-style:  solid;
+  text-align:    left;
+  border-width:  6px;
+  border-color:  #dddddd;
+  font-size:    small;
+  font-style:    italic;
+}
+
+.episign {
+  padding:       2px;
+  border-style:  solid;
+  text-align:    right;
+  border-width:  2px 0px 0px 0px;
+  border-color:  #dddddd;
+  font-size:    small;
+}
+
+.episignname {
+}
+.episigntitle {
+  font-style:    italic;
+}
+.episigndate {
+}
+
+
+.figure {
+  padding:       8px;
+  border-style:  dotted;
+  text-align:    center;
+  border-width:  6px;
+  border-color:  #dddddd;
+}
+
+
+.firstuseinline {
+  font-style:italic;
+}
+
+.firstusemargin {
+  position: absolute;
+  top:auto;
+  left:       1em;
+  font-style:italic;
+  font-size: x-small;
+  float:     left;
+  width:     1in;
+  text-align: right;
+}
+
+.flag {
+  color:    red;
+}
+
+.flagadvanced {
+  position: absolute;
+  top:auto;
+  text-align: right;
+  left:       1em;
+  float:     left;
+  width:     1in;
+}
+
+.footnotes {
+  margin-top:   2em;
+  border-width: 2px 0 0 0;
+  border-style: solid none none none;
+  border-color: #888888;
+}
+
+.keystroke {
+  font-family:  "Courier New";
+}
+
+.fileextension {
+  font-family:  "Courier New";
+}
+
+.filename {
+  font-family:  "Courier New";
+}
+
+.initials {
+  font-weight:  bold;
+  font-variant: small-caps;
+  color:        #333333;
+}
+
+
+.marginnote {
+  position: absolute;
+  top:auto;
+  left:       1em;
+  font-weight: bold;
+  font-size: x-small;
+  float:     left;
+  width:     1in;
+  text-align: right;
+  line-height: 100%;
+}
+
+.methodname {
+  font-family:  "Courier";
+}
+
+.missing {
+  position: absolute;
+  top:auto;
+  left:       1em;
+  font-weight: bold;
+  font-size: x-small;
+  float:     left;
+  width:     1in;
+  text-align: right;
+  line-height: 100%;
+}
+
+.prefacesignoff a {
+  margin-top: 6px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.prefacesignoffdate {
+  font-size: small;
+}
+
+
+.simpletable {
+  margin-top:    1em;
+  margin-bottom:  2em;
+  border-width: 3px 0 2px 0;
+  border-style: solid none solid none;
+  border-color: #888888;
+background: red;
+}
+
+.simpletable td, .simpletable th {
+  text-align: left;
+}
+
+.standin {
+   font-style:  italic;
+   font-weight: bold;
+   color:       #444444;
+}
+
+
+.tabletitle {
+  font-weight: bold;
+  padding:      2px;
+  border-width: 0px 0 2px 0;
+  border-style: none none solid none;
+  border-color: #888888;
+}
+
+.xmltag {
+  font-weight: bold;
+   color:       #444444;
+}
+
+.comment {
+  color:   #115511;
+  font-style: italic;
+}
+
+.kw {
+  color:  #111199;
+  font-weight: bold;
+}
+
+.string {
+  color:   #555511;
+  font-style: italic;
+}
+
+.copyright {
+
+   font-size: x-small;
+   color:       #335555;
+   background:  #aabbbb;
+   margin-top:  3em;
+   padding-top:  3px;
+   padding-bottom:  3px;
+   text-align:   center;
+   border-top:   1px #335555 solid;
+}

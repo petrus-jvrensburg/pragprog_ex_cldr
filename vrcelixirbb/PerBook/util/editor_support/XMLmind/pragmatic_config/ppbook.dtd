@@ -1,0 +1,959 @@
+<!ENTITY Delta  "&#916;">
+<!ENTITY Phi    "&#934;">
+<!ENTITY Sigma  "&#931;">
+<!ENTITY Uuml   "&#220;">
+<!ENTITY aacute "&#225;">
+<!ENTITY agrave "&#224;">
+<!ENTITY auml   "&#228;">
+<!ENTITY ccedil "&#231;">
+<!ENTITY iuml   "&#239;">
+<!ENTITY Ccaron "&#x0010C;" ><!--LATIN CAPITAL LETTER C WITH CARON -->
+<!ENTITY delta  "&#948;">
+<!ENTITY eacute "&#xe9;">   <!-- l/c e acute -->
+<!ENTITY hy    "&#xAD;" >
+<!ENTITY laquo  "&#171;">  <!-- left-pointing guillemet -->
+<!ENTITY ldots "..." >
+<!ENTITY lquot  "&#x201C;">   <!-- Left double quotation mark -->
+<!ENTITY alef   "&#x05d0;">   <!-- Hebrew alef -->
+<!ENTITY nbsp   "&#160;">    <!-- non-breaking space -->
+<!ENTITY oacute "&#243;">
+<!ENTITY oslash "&#248;">
+<!ENTITY plusmn "&#177;">  <!-- plus/minus -->
+<!ENTITY pound  "&#163;">  <!-- pound sign -->
+<!ENTITY raquo  "&#187;">  <!-- right-pointing guillemet -->
+<!ENTITY reg    "&#174;">  <!-- registered trademark -->
+<!ENTITY rquot	"&#x201D;"> <!-- Right double quotation mark -->
+<!ENTITY sigma  "&#963;">
+<!ENTITY sigmaf "&#962;">  <!-- final sigma (wiggle, not circle) -->
+<!ENTITY szlig  "&#223;">  <!--small sharp S -->
+<!ENTITY theta  "&#952;">
+<!ENTITY times  "&#215;">
+<!ENTITY uuml   "&#252;">
+<!ENTITY yen    "&#165;">
+<!ENTITY rarr   "&#8594;">
+
+<!-- Overridden by specific books... -->
+<!ENTITY % local.char.flow "">
+<!ENTITY % local.flow "">
+<!ENTITY % local.non.float.flow "">
+
+<!ENTITY % mainmatter
+	 "( chapter*
+          , appendix*
+	  , summary*
+	  )"
+	  >
+
+
+<!-- these flows are safe in floats (such as figures) -->
+<!ENTITY % ok.in.float.flow
+	 " p 
+         | ol
+         | ul
+	 | dl
+	 | programlisting
+         | code
+         | processedcode
+	 | simpletable
+	 | imagedata
+	 | layout
+	 %local.flow;
+         ">
+
+<!-- and these are safe only in the main body -->
+<!ENTITY % flow
+	 " %ok.in.float.flow;
+	 | missing
+         | ed
+         | author
+	 | bibliography
+	 | figure
+	 | floatfigure
+	 | livecodelist
+	 | margindefinition
+	 | sidebar
+	 | joeasks
+	 | story
+	 | webresources
+	 %local.non.float.flow;
+         ">
+
+
+<!ENTITY % char.flow
+	 "  #PCDATA
+	  | a
+	  | acronym
+	  | bookname
+	  | booksectname
+	  | cf
+	  | cite
+	  | classname
+	  | commandname
+	  | commandoption
+	  | constant
+	  | coref
+	  | cref
+	  | dirname
+	  | emph
+	  | fileextension
+	  | filename
+	  | firstuse
+	  | flagmaterial
+	  | footnote
+	  | fraction
+	  | indexterm
+	  | inlinecode
+	  | initials
+	  | keystroke
+	  | keyword
+	  | layout
+	  | ldots
+	  | margindefinition
+	  | marginnote
+	  | methodname
+	  | missing | ed | author
+	  | nohyphen
+          | raise
+	  | standin
+	  | string
+	  | stringinfile
+	  | tabletitle
+	  | variablename
+	  | pageref
+	  | pref
+	  | sqltable
+	  | sqlcolumn
+	  | url
+	  | xmlattr
+	  | xmlattrval
+	  | xmltag
+	  | xmltagpair
+	  | xref
+	  %local.char.flow;
+	  ">
+
+
+<!ENTITY % code-attributes
+	 ' id       ID    #IMPLIED
+	  file     CDATA #IMPLIED
+	  language CDATA #IMPLIED
+          indent   ( yes | no ) "yes"
+          number   ( yes | no ) "no"
+          showname ( yes | no ) "yes"
+	  display  ( yes | no ) "no"
+	  crossref ( yes | no ) "yes"
+	  cite      CDATA #IMPLIED
+	  livecode  CDATA #IMPLIED
+	  part      CDATA #IMPLIED
+	  start     CDATA #IMPLIED
+	  end       CDATA #IMPLIED
+	  end-exclude CDATA #IMPLIED
+          verbatim ( yes | no ) "no"
+          style ( normal | compact ) "normal"
+          '>					     
+
+<!-- cheat -->
+
+<!ELEMENT layout
+	  ( #PCDATA
+	  ) >
+<!--                             book -->
+
+<!ELEMENT book
+	  ( bookinfo
+	  , frontmatter
+	  , mainmatter
+	  ) >
+
+<!ELEMENT bookinfo
+	  ( booktitle
+	  , booksubtitle
+	  , booksubtitle2?
+	  , booktagline
+	  , authors
+	  , withauthors?
+	  , copyright?
+	  , isbn
+	  , printing
+	  , backsheet
+	  ) >
+
+<!ELEMENT booktagline
+	  ( %char.flow;
+	  )* >
+
+<!ELEMENT authors
+	  ( person
+	  )* >
+
+<!ELEMENT withauthors
+	  ( person
+	  )* >
+
+
+<!ELEMENT copyright
+	  ( copyrightholder
+	  , copyrightdate
+	  ) >
+
+<!ELEMENT copyrightholder
+	  ( #PCDATA
+	  )>
+
+<!ELEMENT copyrightdate
+	  ( #PCDATA
+	  )>
+
+
+<!ELEMENT isbn
+	  ( #PCDATA
+	  ) >
+
+
+<!ELEMENT printing
+	  ( printingnumber
+	  , printingdate
+	  )>
+
+<!ELEMENT printingnumber
+	  ( #PCDATA
+	  )* >
+
+<!ELEMENT printingdate
+	  ( #PCDATA
+	  )* >
+
+<!ELEMENT backsheet
+	  ( homepagename
+	  , homepageurl
+	  )>
+<!ELEMENT homepagename
+	  ( #PCDATA
+	  ) >
+
+<!ELEMENT homepageurl
+	  ( #PCDATA
+	  ) >
+
+<!ELEMENT booktitle
+	  ( %char.flow;
+	  )* >
+
+<!ELEMENT booksubtitle
+	  ( %char.flow;
+	  )* >
+
+<!ELEMENT booksubtitle2
+	  ( %char.flow;
+	  )* >
+
+<!ELEMENT frontmatter
+	  ( praisepage?
+	  ,  ( chapter )*
+	  ) >
+
+<!ELEMENT praisepage
+	  ( praisetitle
+	  , praiseentry*
+	  )>
+
+<!ELEMENT praisetitle
+	  ( %char.flow;
+	  | praisetitlebreak
+	  )* >
+
+<!ELEMENT praisetitlebreak
+	  EMPTY
+	  >
+
+<!ELEMENT praiseentry
+	  ( praise
+	  , person
+	  )>
+
+<!ELEMENT praise
+	  ( %flow;
+	  )* >
+
+<!ELEMENT person
+	  ( name
+	  , jobtitle?
+	  , affiliation?
+	  )>
+
+<!ELEMENT name
+	  ( %char.flow;
+	  )* >
+
+<!ELEMENT date
+	  ( %char.flow;
+	  )* >
+
+<!ELEMENT jobtitle
+	  ( %char.flow;
+	  )* >
+
+<!ELEMENT affiliation
+	  ( %char.flow;
+	  )* >
+
+<!ELEMENT epigraph
+	  ( name
+	  , title?
+	  , date?
+	  , epitext
+	  )>
+
+<!ELEMENT epitext
+	  ( %flow; 
+	  )*>
+
+<!ELEMENT mainmatter
+	  %mainmatter;
+	  >
+
+
+<!--                             chapter -->
+<!ELEMENT chapter
+	  ( indexterm*
+	  , title
+	  , toctitle?
+	  , epigraph?
+	  , ( %flow;
+	    | sect1
+	    | prefacesignoff
+	    )*
+          )
+	  >
+<!ATTLIST chapter
+	  id ID #IMPLIED
+	  intoc  ( yes | no ) 'yes'
+	  toc-on-new-page ( yes | no ) 'no'
+	  >
+
+<!--                             appendix -->
+<!ELEMENT appendix
+	  ( indexterm*
+	  , title
+	  , toctitle?
+	  , epigraph?
+	  , ( %flow;
+	    | sect1
+	    )*
+          )
+	  >
+<!ATTLIST appendix
+	  id ID #IMPLIED
+	  intoc  ( yes | no ) 'yes'
+	  >
+
+<!--                             summary -->
+<!ELEMENT summary
+	  ( indexterm*
+	  , title
+	  , toctitle?
+	  , ( %flow;
+	    | sect1
+	    | prefacesignoff
+	    )*
+          )
+	  >
+<!ATTLIST summary
+	  id ID #IMPLIED
+	  intoc  ( yes | no ) 'yes'
+	  >
+
+
+<!ELEMENT title
+          ( %char.flow;
+          )* >
+
+<!ELEMENT toctitle
+          ( #PCDATA
+          )>
+
+<!ELEMENT sect1
+	  ( indexterm*
+	  , title
+          , toctitle?
+          , ( sect2 
+   	    | %flow;
+	    )*
+	  )>
+<!ATTLIST sect1
+	  id ID #IMPLIED
+	  intoc  ( yes | no ) 'yes'
+	  >
+
+<!ELEMENT sect2
+	  ( indexterm*
+	  , title
+	  , toctitle?
+	  , ( sect3 
+	    | %flow;
+	    )*
+	  )>
+<!ATTLIST sect2
+	  id ID #IMPLIED
+	  intoc  ( yes | no ) 'yes'
+	  >
+
+<!ELEMENT sect3
+	  ( indexterm*
+	  , title
+	  , toctitle?
+	  , ( sect4 
+	    | %flow;
+	    )*
+	  )>
+<!ATTLIST sect3
+	  id ID #IMPLIED
+	  intoc  ( yes | no ) 'yes'
+	  >
+
+<!ELEMENT sect4
+	  ( indexterm*
+	  , title
+	  , toctitle?
+	  , ( %flow;
+	    )*
+	  )>
+
+<!ATTLIST sect4
+	  id ID #IMPLIED
+	  intoc  ( yes | no ) 'yes'
+	  >
+
+<!ELEMENT prefacesignoff
+	  EMPTY
+	  >
+<!ATTLIST prefacesignoff
+	  name CDATA #REQUIRED
+	  date CDATA #REQUIRED
+	  email CDATA #REQUIRED
+	  >
+
+<!ELEMENT p
+	  ( %char.flow; )*>
+
+<!ATTLIST p
+	  id ID #IMPLIED
+	  >
+
+<!ELEMENT missing
+	  ( #PCDATA 
+	  )>
+
+<!ELEMENT ed
+          ( %char.flow;
+          )*>
+
+<!ELEMENT author
+          ( %char.flow;
+          )*>
+
+
+<!ELEMENT nohyphen
+	  ( #PCDATA
+	  )>
+
+<!ELEMENT raise
+	  ( %char.flow;
+	  )*>
+
+<!ATTLIST raise
+	  power CDATA #REQUIRED
+	  >
+
+
+<!ELEMENT standin
+	  ( #PCDATA 
+	  )>
+
+<!ELEMENT emph
+	  ( %char.flow;
+	  )*>
+
+<!ELEMENT a
+	  ( %char.flow;
+	  )* >
+
+<!ATTLIST a
+	  href CDATA #REQUIRED
+	  in-margin ( yes | no ) "no"
+	  >
+
+
+<!ELEMENT acronym
+	  ( #PCDATA
+	  )>
+
+<!ELEMENT booksectname
+	  ( #PCDATA
+	  )>
+
+<!ELEMENT bookname
+	  ( #PCDATA
+	  )>
+
+<!ATTLIST bookname
+	  cite CDATA #IMPLIED
+	  >
+
+
+<!ELEMENT constant
+	  ( #PCDATA
+	  )>
+
+<!ELEMENT firstuse
+	  ( %char.flow; 
+	  )*>
+
+<!ELEMENT fileextension
+	  ( #PCDATA
+	  )>
+
+<!ELEMENT fraction
+	  ( whole?
+	  , top
+	  , bottom
+	  )>
+
+<!ELEMENT whole
+	  ( %char.flow;
+	  )*>
+
+<!ELEMENT top
+	  ( %char.flow;
+	  )*>
+
+<!ELEMENT bottom
+	  ( %char.flow;
+	  )*>
+
+
+<!ELEMENT ldots
+	  EMPTY
+	  >
+
+<!ELEMENT filename
+	  ( #PCDATA
+	  )>
+
+<!ELEMENT initials
+	  ( #PCDATA
+	  )>
+
+<!ELEMENT inlinecode
+	  ( #PCDATA
+          | emph
+	  )*>
+
+<!ELEMENT keyword
+	  ( #PCDATA
+	  )>
+
+
+<!ELEMENT cf
+	  ( #PCDATA
+	  )>
+
+<!ELEMENT cite
+	  EMPTY
+	  >
+
+<!ATTLIST cite
+	  ref CDATA #REQUIRED
+	  >
+
+<!ELEMENT tabletitle
+	  ( %char.flow;
+	  )* >
+
+<!ELEMENT ul
+	  ( li+
+	  )>
+
+<!ATTLIST ul
+	  style ( compact | regular ) "regular"
+	  >
+
+<!ELEMENT ol
+	  ( li+
+	  )>
+
+<!ATTLIST ol
+	  style ( compact | regular ) "regular"
+	  >
+
+
+<!ELEMENT li
+	  ( %flow;
+	  )* >
+
+
+<!ELEMENT dl
+	  ( indexterm?
+	  , layout?
+	  , sidebar?
+	  , dt
+	  , dd
+	  )*>
+
+<!ELEMENT dt
+	  ( %char.flow;
+	  )* >
+
+<!ATTLIST dt
+	  newline ( yes | no ) "no"
+	  id ID #IMPLIED
+	  >
+
+<!ELEMENT dd
+	  ( %flow;
+	  )* >
+
+
+<!-- simple tables -->
+<!ELEMENT simpletable
+	  ( row 
+	  | tablerule
+	  )+ >
+<!ATTLIST simpletable
+	  colspec CDATA #REQUIRED
+>
+
+<!ELEMENT row
+	  ( col
+	  )+ >
+
+<!ELEMENT tablerule 
+          EMPTY >
+
+<!ELEMENT col
+	  ( %flow;
+	  )* >
+
+<!ELEMENT keystroke
+	  ( #PCDATA
+	  )>
+
+<!ELEMENT classname
+	  ( #PCDATA
+	  )>
+
+<!ELEMENT commandname
+	  ( %char.flow;
+	  )*>
+
+<!ELEMENT commandoption
+	  ( #PCDATA
+	  )>
+
+<!ELEMENT dirname
+	  ( #PCDATA
+	  )>
+
+<!ELEMENT footnote
+	  ( %flow;
+	  )* >
+
+<!ELEMENT methodname
+	  ( #PCDATA
+	  )>
+
+<!ATTLIST methodname
+	  args CDATA ""
+          idx  CDATA     #IMPLIED
+          idxunder CDATA #IMPLIED
+	  >
+
+<!ELEMENT sqlcolumn
+	  ( %char.flow;
+	  )*>
+<!ELEMENT sqltable
+	  ( %char.flow;
+	  )*>
+
+
+<!ELEMENT variablename
+	  ( #PCDATA
+	  )>
+
+<!ELEMENT indexterm
+	  ( i1?
+	  , i2? 
+	  )>
+<!ATTLIST indexterm
+	  id         ID               #IMPLIED
+	  startref   IDREF            #IMPLIED
+	  class      ( StartOfRange ) #IMPLIED
+	  location   ( primary | footnote | figure | table ) #IMPLIED
+	  >
+
+
+<!ELEMENT i1
+	  ( %char.flow;
+	  )*>
+<!ATTLIST i1
+	  sortas CDATA #IMPLIED
+	  >
+
+<!ELEMENT i2
+	  ( %char.flow;
+	  )*>
+<!ATTLIST i2
+	  sortas CDATA #IMPLIED
+	  >
+
+
+<!ELEMENT bibliography
+	  EMPTY
+	  >
+
+<!ELEMENT programlisting
+	  ( #PCDATA
+	  )>
+<!ATTLIST programlisting
+	  number ( yes | no ) "no"
+	  language ( java | shell ) #IMPLIED
+	  >
+
+<!ELEMENT figure
+	  ( indexterm*
+	  , title
+	  , toctitle?
+	  , ( %ok.in.float.flow;
+	    )*
+	  )>
+<!ATTLIST figure
+	  id ID #REQUIRED
+	  center ( yes | no ) 'no'
+	  width  ( text | full ) 'text'
+	  place  CDATA #IMPLIED
+	  >
+
+<!ELEMENT floatfigure
+	  ( indexterm*
+	  , title
+	  , toctitle?
+	  , ( %ok.in.float.flow;
+	    )*
+	  )>
+<!ATTLIST floatfigure
+	  id ID #REQUIRED
+	  width CDATA #REQUIRED
+	  >
+
+<!ELEMENT sidebar
+	  ( indexterm*
+	  , title
+	  , toctitle?
+	  , ( %ok.in.float.flow;
+	    )*
+	  )>
+<!ATTLIST sidebar
+	  id ID #IMPLIED
+	  >
+
+<!ELEMENT story
+	  ( title
+	  , person?
+	  , ( %flow;
+	    )*
+	  )>
+
+<!-- Lists of resources (normally in a resources appendix -->
+<!ELEMENT webresources
+	  ( webresource+
+	  ) >
+
+<!ELEMENT webresource
+	  ( resname
+	  , resurl
+	  , resattribution?
+	  , resdesc
+	  )>
+
+<!ELEMENT resname
+	  ( %char.flow;
+	  )*>
+
+<!ELEMENT resurl
+	  ( #PCDATA
+	  ) >
+
+<!ELEMENT resattribution
+	  ( %char.flow;
+	  )* >
+
+<!ELEMENT resdesc
+	  ( %flow;
+	  )*>
+
+<!ELEMENT string
+	  ( #PCDATA
+	  )>
+
+<!ELEMENT stringinfile
+	  ( #PCDATA
+	  )>
+
+
+<!ELEMENT joeasks
+	  ( indexterm*
+	  , title
+	  , toctitle?
+	  , ( %ok.in.float.flow;
+	    )*
+	  )>
+<!ATTLIST joeasks
+	  id ID #IMPLIED
+	  >
+
+<!ELEMENT imagedata EMPTY>
+<!ATTLIST imagedata
+	  width     CDATA #IMPLIED
+	  expandby  CDATA #IMPLIED
+	  fileref   CDATA #IMPLIED
+	  shift     CDATA #IMPLIED
+	  shift-sideways CDATA #IMPLIED
+	  >
+
+
+<!ELEMENT livecodelist
+	  ( lclentry
+	  )* >
+
+<!ELEMENT lclentry
+	  EMPTY
+	  >
+
+<!ATTLIST lclentry
+	  name CDATA #REQUIRED
+	  ref  CDATA #REQUIRED
+	  >
+
+<!ELEMENT processedcode
+	  ( codeline
+          | wtf 
+	  )*>
+
+<!ATTLIST processedcode
+	  %code-attributes;
+	  >
+
+<!-- this is included for folks who need to validate the source documents -->
+<!ELEMENT code
+	  ( #PCDATA
+	  )>
+<!ATTLIST code
+	  %code-attributes;
+	  >
+
+<!ELEMENT codeline
+	  ( #PCDATA
+	  | attribute
+	  | cokw
+	  | cocomment
+	  | costring
+	  )*>
+
+<!-- remove cline, co - unused? -->
+
+<!ATTLIST codeline
+	  prefix    CDATA #IMPLIED
+	  lineno    CDATA #IMPLIED
+	  calloutno CDATA #IMPLIED
+	  id        ID    #IMPLIED
+	  >
+
+<!ELEMENT attribute
+	  ( #PCDATA
+	  )>
+
+<!ELEMENT cokw
+	  ( #PCDATA
+	  )>
+
+<!ELEMENT cocomment
+	  ( #PCDATA
+	  )>
+
+<!ELEMENT costring
+	  ( #PCDATA
+	  )>
+
+
+<!ELEMENT cref EMPTY>
+<!ATTLIST cref
+	  linkend IDREF #REQUIRED
+	  >
+
+<!ELEMENT coref EMPTY>
+<!ATTLIST coref
+	  linkend IDREF #REQUIRED
+	  >
+
+<!ELEMENT flagmaterial EMPTY>
+<!ATTLIST flagmaterial
+          type ( advanced ) #REQUIRED
+	  >
+	  
+<!ELEMENT margindefinition
+	  ( %flow;
+	  )*>
+
+<!ATTLIST margindefinition
+	  term CDATA #REQUIRED
+	  >
+
+<!ELEMENT marginnote
+	  ( %flow;
+	  )*>
+
+<!ELEMENT url
+	  ( #PCDATA
+	  )>
+
+<!ELEMENT xmlattr
+	  ( #PCDATA
+	  )>
+
+<!ATTLIST xmlattr
+	  value CDATA #IMPLIED
+	  >
+
+<!ELEMENT xmlattrval
+	  ( #PCDATA
+	  )>
+
+<!ELEMENT xmltag
+	  ( #PCDATA
+	  )>
+
+<!ELEMENT xmltagpair
+	  ( #PCDATA
+	  )>
+<!ATTLIST xmltagpair
+	  name NMTOKEN #REQUIRED
+	  >
+
+
+<!ELEMENT xref EMPTY>
+<!ATTLIST xref
+	   linkend IDREF #REQUIRED
+	  >
+
+<!ELEMENT pageref EMPTY>
+<!ATTLIST pageref
+	   linkend IDREF #REQUIRED
+	  >
+	
+<!ELEMENT pref EMPTY>
+<!ATTLIST pref
+	   linkend IDREF #REQUIRED
+	  >
+	
+
+  

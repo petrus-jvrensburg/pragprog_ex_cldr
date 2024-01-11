@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;permission status="needed"&gt;${0:$TM_SELECTED_TEXT}&lt;/permission&gt;</string>
+	<key>name</key>
+	<string>Permission</string>
+	<key>scope</key>
+	<string>text.xml.pragmatic</string>
+	<key>tabTrigger</key>
+	<string>perm</string>
+	<key>uuid</key>
+	<string>64C5AD82-5A23-4FB5-B944-C8463FF379FA</string>
+</dict>
+</plist>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;footnote&gt;
+	&lt;p&gt;
+		&lt;url&gt;${0:Add your footnote URL here...}&lt;/url&gt;
+	&lt;/p&gt;
+&lt;/footnote&gt;</string>
+	<key>name</key>
+	<string>Footnote</string>
+	<key>scope</key>
+	<string>text.xml.pragmatic</string>
+	<key>tabTrigger</key>
+	<string>foo</string>
+	<key>uuid</key>
+	<string>FF61F582-0325-490D-8E67-550FC440460B</string>
+</dict>
+</plist>

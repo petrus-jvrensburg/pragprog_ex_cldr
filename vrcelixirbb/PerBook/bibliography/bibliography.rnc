@@ -1,0 +1,109 @@
+start = bibliography
+
+bibliography      = element bibliography   { publishers, entry* } 
+
+##
+# The publisher lookup table
+#
+publishers        = element publishers     { house* }
+house             = element house          { id, publisher-details }
+publisher-details = name, address?
+name              = element name           { text }
+address           = element address        { text }
+
+
+##
+# The individual bibliographic entries
+#
+
+entry    = (book | article | web)
+
+
+########### B O O K #############
+# 
+
+book     = element book { 
+	       tag,
+	       (
+                   authors    & 
+                   title      & 
+                   year       &
+                   isbn       &
+                   publisher  &
+                   edition?   &
+                   url?       & 
+	           doi?
+	       )
+           }
+
+
+
+########### A R T I C L E #############
+#
+
+article  = element article {
+	       tag,
+	       (
+	           authors        &
+	           title          &
+   	           in-journal     &
+		   publisher?     &
+	           year           &
+	           month?         &
+		   issn?          &
+	           page-range?    &
+	           url?           &
+  	           volume?        &
+	           number?        &
+	           doi?
+	       )
+	   }
+
+
+
+########### W E B #############
+#
+
+web      = element web  {
+	       tag,
+	       (
+	           authors        &
+	           title          &
+                   url            &
+	           year?          &
+                   month?
+	       )
+           }
+
+
+authors        = element authors       { ( author | organization)+ }
+author         = element author        { given, prefix? , family, suffix? }
+
+doi            = element doi           { text }
+edition        = element edition       { text  }
+in-journal     = element in-journal    { text  }
+family         = element family        { text  }
+given          = element given         { text  }
+isbn           = element isbn          { text  }
+issn           = element issn          { text  }
+month          = element month         { text  }
+number         = element number        { text  }
+organization   = element organization  { text  }
+page-range     = element page-range    { text  }
+prefix         = element prefix        { text  }
+publisher      = element publisher     { idref, empty }
+suffix         = element suffix        { text  }
+title          = element title         { text  }
+url            = element url           { text }
+volume         = element volume        { text  }
+year           = element year          { text  }
+
+
+##
+# Some useful, global, attributes
+#
+
+id                = attribute xml:id { xsd:ID }
+idref             = attribute ref    { xsd:IDREF }
+tag               = attribute tag    { text }
+

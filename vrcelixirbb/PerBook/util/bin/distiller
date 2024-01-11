@@ -1,0 +1,51 @@
+#!/bin/sh
+
+
+#
+# Invoke Acrobat Distiller synchronously from the command line
+#
+
+if [ $# -lt 2 ]
+then
+	echo "Usage: distiller [-profile] filename.ps"
+	echo "       Profile defaults to Standard"
+	exit 1
+fi
+
+opt=Standard
+
+case "$1" in
+	-*) 
+	   opt=`echo -e "$1" | sed 's/^-//'`
+	   shift
+	;;
+esac
+
+ps_name=$1
+name=`basename $1 .ps`
+name=`basename $name .eps`
+dir=`dirname $1`
+
+if [ "$dir" = "." ]
+then
+	dir=`pwd`
+	ps_name="$dir/$ps_name"
+fi
+
+if [ ! -r "$ps_name" ]
+then
+   echo "Cannot find file '$ps_name'" >&2
+   exit 1
+fi
+
+pdf_name="$dir/$name.pdf"
+
+src="sourcePath \"$ps_name\""
+dest="destinationPath \"$pdf_name\""
+settings="adobePDFSettingsPath \"$opt\""
+
+echo "tell application \"Acrobat Distiller 7.0\"
+Distill $src $dest $settings
+quit
+end tell" |osascript >/tmp/osastatus
+

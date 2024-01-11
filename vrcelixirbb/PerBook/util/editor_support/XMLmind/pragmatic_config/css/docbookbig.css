@@ -1,0 +1,18 @@
+@import url(file:docbook.css);
+
+para { 
+    margin-top: 1.33ex;
+    margin-bottom: 1.33ex;
+    margin-left: 0.5in;
+    margin-right: 0.5in;
+    font-size: 2.0em;
+}
+
+varlistentry > term {
+    font-size: 2.0em;
+    font-weight: bold;
+}
+
+footnote > para {
+    font-size: .83em;
+}

@@ -1,0 +1,810 @@
+#!/usr/bin/ruby
+
+DEFWIKIHOME="."
+
+require 'getoptlong'
+
+def debug(arg)
+  $stderr.puts "DEBUG: #{arg}" if $DEBUG
+end
+
+class String
+  def reeval(b = TOPLEVEL_BINDING)
+    eval(%Q{<<"END_REEVAL"\n} + self + "\nEND_REEVAL\n", b)
+  end
+end
+
+class BibNames
+
+  def load_bib_file(file_name)
+    token=""
+    title=""
+
+    intitle = false
+
+		begin
+    IO.foreach(file_name) do |line|
+      line.chomp!      
+      if intitle
+        if line =~ /\s*(.*)[\}|"]/
+          @db[token] += ' ' + $1
+          intitle = false
+        else
+          @db[token] += line
+        end
+        next
+      end
+      if line =~ /^@.*[\{|"]\s*(\S*)\s*,/
+        token=$1
+      end
+      if line =~  /[Tt]itle\s*=\s*[\{|"]\s*([^\}|"]*)[\}|"]*/
+        title=$1
+        @db[token] = title
+        #$stderr.puts "STORING: '#{token}' == '#{title}'"
+        intitle = !(line =~ /[\}|"]/)
+      end
+    end
+	rescue
+	end
+  end
+    
+  def initialize
+    @db = Hash.new
+    @used = Hash.new
+    load_bib_file("../PPStuff/bibliography/Bibliography.bib")
+    load_bib_file("Bibliography.bib")
+  end
+  
+  def [](token)
+    @used[token] = 1
+    result = @db[token]
+    $stderr.puts "ERROR: Couldn't find name for citation '#{token}'" if result.nil?
+    result
+  end
+  
+  def dump
+    @used.keys.sort.each do |k|
+      $stderr.puts k
+    end
+  end
+end
+
+class Wiki2Pml
+  
+  # List types
+  BULLETED = 1
+  NUMBERED = 2
+  CHECKED  = 3
+  LABELLED = 4
+ 
+#    /(http:\/\/\S+)[\s.";\<$]*?/        => ["<url>", "</url>" ], 
+
+  @@inline_transforms = {
+    # Regexp                          # start   # stop
+    /_([^_]+)_/                    => ["<emph>","</emph>"],
+    /\*([^\*]+)\*/                 => ["<bold>","</bold>"],
+    /\+([^\+]+)\+/                 => ["<cf>",  "</cf>"  ],
+    #/(http:\/\/[^\s";<\(\)]+)([\s\.";<$]+)/       => ["<url>", "</url>" ], 
+    /\s*MISSING:\s*(.*)/           => ["<author>", "</author>"],    
+    /\s*FOOTNOTE:\s*(.*)/          => ["<footnote><p>", "</p></footnote>"], 
+    /[Ll]-[Mm]ode/                    => ["&lmode;",""],
+    /[Rr]-[Mm]ode/                    => ["&rmode;",""],
+  }
+
+  @@single_transforms = {
+    # Regexp                          # start                # stop
+    /\s*HIGHLIGHT:\s*(.*)/         => ["\n<highlight><p>", "</p></highlight>"],
+    /\s*TIP:\s*(.*)/               => ["\n<tip><title>",   "</title></tip>"],
+    /\s*STOP:\s*(.*)/               => ["\n<stop><p>",   "</p></stop>"],
+    # PICTURE is handled below
+  }
+  
+  @@list_transforms = {
+                # Regexp             # start    #stop     #label
+    BULLETED => [/^\*\s+(.*)/,       "<ul>\n", "</ul>\n", nil],
+    NUMBERED => [/^\#\s+(.*)/,       "<ol>\n", "</ol>\n", nil],
+    CHECKED  => [/^\[\]\s+(.*)/,     "<ul>\n", "</ul>\n", 'label="&box;"'],  # use protect to pass in $2, etc from regexp
+    LABELLED => [/^\[([^\]]+)\]\s+(.*)/, "<dl>\n", "</dl>\n", true],
+  }
+  
+  
+  def initialize
+    @tag = Array.new
+    @li_stack = Array.new
+    @li_close_list = ""
+    @in_para = false
+    @in_block = false
+    @list_type = nil
+    @continuation_buffer = ""
+    @skip = false
+    @eat = false
+  end
+  
+  # Start of a new page
+  def wikipage=(name)
+    @wikipage=name
+    @new_wiki_page = true
+  end
+
+  def start
+    @@xml_header
+  end
+    
+  def end
+    ret = ""
+    if @in_para
+      ret += "</p>"
+    end
+    
+    if @in_block
+      debug "file ended in a list"
+		  @in_block = false
+      ret += @li_stack.pop
+      ret += @li_close_list
+    end
+    
+    debug "At end, tag contains #{@tag}"
+    while @tag.length > 0 
+      ret += @tag.pop + "\n"
+    end
+    ret
+  end
+  
+  def close_para
+    if @in_para
+      @in_para = false
+      return "</p>"
+    end
+    nil    
+  end
+  
+  # We have to save off URL expansions before doing all the character-based transforms, then restore them
+  def tag_url(s)
+    
+    @url_subs = []
+    count=0
+    
+    s.gsub!(/(http:\/\/[^\s";<\(\)]+)/) do |url|
+      pad=""
+      if url =~ /\.$/
+        url.chop!
+        pad="."
+      end
+      @url_subs[count] = " <url>#{url}</url>#{pad}"
+      #$stderr.puts "STORING #{@url_subs[count]} AS #{count}"
+      ret=count.chr
+      count +=1 
+      ret
+    end
+    s
+  end
+  
+  def re_tag_url(s)
+    count = 0
+    
+    s.gsub!(/[\000-\005]/) do |url|
+      ret = @url_subs[count]
+      #$stderr.puts "PUTTING BACK URL No. #{count} ''#{ret}''"
+      count += 1
+      ret
+    end
+  end
+  
+  # Modify line according to inline expansions
+  def format_inline(line)
+
+    tag_url(line) # Save off URL's
+    
+    # First, take care of simple symbol substitutions
+    line.gsub!(/\.\.\.\./, '.&ldots;')
+    line.gsub!(/\.\.\./, '&ldots;')
+    line.gsub!("``", "&lquot;")
+    line.gsub!("''", "&rquot;")
+    line.gsub!(/\(c\)/, '&#169;')
+    line.gsub!(/\(r\)/, '&#174;')
+    
+    if $HIDE_MISSINGS 
+      line.gsub!(/\s*MISSING:\s*(.*)/, '')
+    end
+
+    # Look through the table of transforms; see if a regexp matches
+    @@inline_transforms.each_key { |regexp|
+      line.gsub!(regexp) { |word|
+        # if it does, use the open and close tags as defined to wrap the word
+        tags = @@inline_transforms[regexp]
+        #$stderr.puts "===>#{$1}<===" if tags[0] == "<url>"
+        "#{tags[0]}#{$1}#{tags[1]}"
+      }
+    }
+    
+    re_tag_url(line) # Restore URL's, unadulterated
+    
+  end
+
+  # Search for single-line directives and modify line.  Return processing flag  
+  def format_single_line(line)
+    got_one = false
+    # Look through the table of transforms; see if a regexp matches
+    @@single_transforms.each_key { |regexp|
+      line.gsub!(regexp) { |word|
+        got_one = true
+        # if it does, use the open and close tags as defined to wrap the word
+        tags = @@single_transforms[regexp]
+        "#{tags[0]}#{$1}#{tags[1]}"
+      }
+    }   
+    
+    # Check for PICTURE specially, as it takes arguments
+    line.gsub!(/PICTURE:\s*(\S+)\s+\"([^\"]+)\"\s*(\d+in)*/) {
+      got_one = true
+      file=$1
+      label=$2
+      width=$3
+      id=file.sub(/\.eps/,'')
+      
+      width= "full" if width.nil? || width.length == 0
+      
+      "\n<figure id=\"fig.#{id}\" center=\"yes\">
+      <title>#{label}</title>
+      <imagedata fileref=\"images/eps/#{file}\"
+      width=\"#{width}\"/>
+</figure>\n"
+    }
+    
+    # Check for PICTUREIN specially, as it takes arguments
+    line.gsub!(/PICTUREIN:\s*(\S+)\s*(\d+)*[in]*/) {
+      got_one = true
+      file=$1
+      width="1in"
+      "\n<picin width=\"#{width}\" file=\"images/eps/#{file}\"/>\n"
+    }
+ 
+    # Check for PICTUREOUT specially, as it takes arguments
+    line.gsub!(/PICTUREOUT:\s*(\S+)\s*(\d+)*[in]*/) {
+      got_one = true
+      file=$1
+      width="1in"
+      "\n<picout width=\"#{width}\" file=\"images/eps/#{file}\"/>\n"
+    }
+    
+    # Check for PICTUREHERE specially, as it takes arguments
+    line.gsub!(/PICTUREHERE:\s*(\S+)\s*(\d+in)*/) {
+      got_one = true
+      file=$1
+      width=$2 || "full"
+      "<imagedata fileref=\"images/eps/#{file}\" width=\"#{width}\"/>"
+    }
+        
+    line.gsub!(/(CITE:\s*)([A-Za-z0-9\_\-\:]*)/) do |match| 
+      cite=$2
+      "<booksectname>#{$bib[cite]}</booksectname>&nbsp;<cite ref=\"#{cite}\"/>"
+    end
+       
+    return got_one 
+  end
+  
+  # 
+  # Process a list structure 
+  #
+  def handle_list(line, list_type, regexp, open, close,li_args = nil)
+    
+    return nil if !@list_type.nil? && @list_type != list_type  
+    got_one = nil
+    ret =""
+    case line 
+      
+    when regexp
+      got_one = true
+      if !@in_block
+        ret += open
+        @li_close_list = close
+      end 
+      ret += @li_stack.pop if @in_block
+      if $2.nil?
+        ret += "<li#{li_args ? " " + li_args : ''}><p>#{$+}"
+        @li_stack.push("\t</p></li>\n")
+      else
+        arg1 = $1
+        arg2 = $2
+        ret += "<dt bold=\"yes\" newline=\"yes\">#{arg1}</dt><dd><p>#{arg2}"
+        @li_stack.push("\t</p></dd>\n")
+      end      
+      @in_block = true
+      
+    when /^\s*$/
+      # Blank line
+      if @in_block
+        got_one = true
+        @in_block = false
+        ret += @li_stack.pop
+        ret += @li_close_list
+      end
+      
+    else
+      got_one = true if @in_block
+      ret += line
+    end
+    
+    line.replace(ret)
+    @list_type = nil if !@in_block
+    return got_one
+  end
+  
+  #
+  # Lists and other block-level items
+  #
+  def format_block(line)
+    @@list_transforms.each_pair do |type, arr|    
+      if handle_list(line, type, *arr)
+        @list_type = type
+        return true
+      end
+    end
+    nil
+  end
+  
+  #
+  #
+  #
+  def format_sectional(line)
+    return nil unless line =~ /^=/
+    
+    ret = ""
+    s = close_para
+    ret += s if !s.nil?
+    
+    case line
+    when /^=sidebar:\s*(.*)/
+      title=$1
+      ret += "<sidebar><title>#{title}</title>\n"
+      @tag.push("</sidebar>")
+    when /^=emailblock:/
+      ret += "<emailblock>\n"
+      @tag.push("</emailblock>")
+    when /^=quote:\s*(.*)/
+      title=$1
+      ret += "<quote><title>#{title}</title>\n"
+      @tag.push("</quote>")
+    when /^=epigraph:\s*(.*)/
+      title=$1
+      ret += "<epigraph><name>#{title}</name><epitext>"
+      @tag.push("</epitext></epigraph>")
+    when /^=$/
+      ret += @tag.pop
+
+    #when /^===\s*(.*)$/
+    #  title = $1
+    #  if @tag.last =~ /sect2|sect3|nextactions/
+    #    ret += @tag.pop
+    #  end
+    #  ret += "<sect3><title>#{title}</title>"
+    #  @tag.push("</sect3>")
+      
+    when /^==\s*(.*)$/
+      title = $1
+      if @tag.last =~ /sect2|nextactions/
+        ret += @tag.pop
+      end
+      ret += "<sect2><title>#{title}</title>"
+      @tag.push("</sect2>")
+      
+    when /^=\s*(.*)$/
+      title = $1
+      if @tag.last =~ /sect1/ || @tag.last =~ /sect2/ || @tag.last =~ /nextactions/
+        while @tag.length >0 do
+          ret += @tag.pop
+        end
+      end      
+      label=""
+      if @new_wiki_page
+        label=" id=\"#{@wikipage}\""
+        @new_wiki_page = false
+        @wikipage = nil
+      end
+      if title =~ /Next Action/i
+        ret += "<nextactions>"        
+        @tag.push("</nextactions>") 
+      else
+        ret += "<sect1#{label}><title>#{title}</title>"
+        @tag.push("</sect1>") 
+      end
+               
+    end
+    line.replace(ret)
+    ret
+  end
+
+  #
+  # Line-end continuations (backslash)
+  #
+  def process_continuations(line)
+    # gather together lines marked with a trailing backlash
+    if line =~ /\\\s*$/
+      line.sub!(/\\\s*$/,' ')
+      @continuation_buffer += line
+      return true
+    end  
+    # And use all of them as the line when we finally get to the end
+    if @continuation_buffer.length != 0
+      line.replace(@continuation_buffer + line)
+      @continuation_buffer = ""
+    end
+    false
+  end
+  
+  #
+  # Pure XML block pass-through and <cut>...</cut>
+  #
+  def format_pass_through(line)
+        
+    if line =~ /^<cut>/
+      line.replace("")
+      @eat = true
+      return true
+    end
+    
+    if line =~ /^<\/cut>/
+      line.replace("")
+      @eat = false
+      return true
+    end
+
+    if @eat
+      line.replace("")
+      return true
+    end
+  
+  if false
+    # Skip xml markup line  
+    if line =~ /^<\/.*>/
+      @skip = false
+      return line
+    elsif @skip || line =~ /^<.*>/
+      @skip = true
+      return line
+    end
+  end
+  
+    return nil
+  end
+  
+  #
+  # Convert a line of Wiki to PML, line by line
+  #
+  def convert(line)
+    
+    # Check for pass-through mode and commented-out sections
+    if format_pass_through(line)
+      return nil if @eat
+      return line
+    end
+    
+    if line =~ /ID:\s*(\S*)/
+      @para_id_text=" id=\"#{$1}\""
+      return nil
+    end
+    
+    # Continuation processing
+    if process_continuations(line)
+      return nil # Go back and get some more
+    end
+    
+    # Do the inline transforms.  These are transparent.
+    format_inline(line)
+    
+    # Do the single line transforms
+    return line if format_single_line(line)
+    
+    # Do the block transforms (lists, etc)
+    return line if format_block(line)
+    
+    # Do the sectional stuff
+    return line if format_sectional(line)
+    
+    # Do the paragraph switch
+    if line =~ /^\s*$/
+      ret = close_para
+      return ret if !ret.nil?
+    else
+      if !@in_para
+        @in_para = true
+        str="<p#{@para_id_text}>\n" + line
+        @para_id_text=""
+        return str
+      end
+    end
+    
+    return line
+  end
+  
+  @@xml_header = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><!-- -*- xml -*- --> 
+  <!DOCTYPE chapter SYSTEM \"local/xml/markup.dtd\">
+  <!--
+
+  * WARNING   WARNING   WARNING   WARNING
+  *
+  * This file is automatically generated
+  * DO NOT EDIT
+  *
+  * WARNING   WARNING   WARNING   WARNING
+  -->
+  "
+end
+
+# ----------------------------------------------------------------------
+
+class WikiBook
+
+	#
+	# Format is "title" WikiNode
+	#
+	def process_book_file
+
+		outf=File.new("includes.pml","w")
+
+		IO.readlines(@mapfile).each do |line|
+			next if line =~ /^#/
+			next if line =~ /^$/
+			arr = line.split
+			wikiword = arr[-1]
+			arr.delete_at(-1)
+			title=arr.join(' ')
+
+			# Build up arg string
+			args = ""
+			args += "--debug " if $DEBUG
+			args += "--wiki #{@wikihome} " if !@wikihome.nil?
+			args += "--imagedata #{$IMAGE_DATA_PATH} " if $IMAGE_DATA_PATH.length > 0
+			args += "-o #{wikiword}.pml -c #{title} #{wikiword} "
+
+			outf.puts "<pml:include file=\"#{wikiword}\"/>"
+			puts `wikibook #{args}`
+		end
+		outf.close
+		exit(0)
+	end
+
+	def output(arg)
+		@ofile.puts arg if !arg.nil?
+	end
+
+	def process(depth, wikipage)
+		in_it = false
+		fname = @wikihome + "/" + wikipage
+		$stderr.puts("\tProcessing " + wikipage)
+
+		if !File.exists?(fname)
+			raise "Couldn't open #{fname}, no such file or directory (check your spelling?)"
+		end
+
+    @markup.wikipage = wikipage if !@top_level
+    
+    @top_level = false
+    
+    @map << ' ' * (depth *2) + wikipage
+    
+    output "\n<!-- entering FILE: #{wikipage} -->\n"
+    
+		IO.readlines(fname).each do |line|
+		  
+		  line.chomp!
+		  
+		  if line =~ /^INCLUDE:\s*(\S+)/
+        process(1, $1)
+        return true
+      end
+      
+			if line =~ /^=text/
+				in_it = true 
+				next
+			end
+
+			if line =~ /^\s*LocalWords:/
+				in_it = false
+				next
+			end
+
+      # Generic cross reference to objects with names: chapters or sections
+			line.gsub!(/(SEE:\s+)([A-Z][a-z0-9]+[A-Z][a-z0-9]+[A-Za-z0-9]*)/) do |match|
+			  wikiword=$2
+				"<pref linkend=\"#{wikiword}\"/>"
+			end
+			
+			# Special cross reference to figures
+			line.gsub!(/(SEE:\s+)(fig.[A-Za-z_0-9]*)/) do |match|
+			  wikiword=$2
+				"<pref linkend=\"#{wikiword}\"/>"
+			end     
+			
+			# The idea is to use this with ID: to mark specific non-named additions for beta, etc.
+			line.gsub!(/(ONPAGE:\s+)([A-Z][a-z0-9]+[A-Z][a-z0-9]+[A-Za-z0-9]*)/) do |match|
+			  wikiword=$2
+				"<pageref linkend=\"#{wikiword}\"/>"
+			end
+
+			next if !in_it
+		  output @markup.convert(line)
+		end
+		output "\n<!-- leaving FILE: #{wikipage} -->\n"
+	end
+
+	def dump(depth, tuple)
+		return if tuple.nil?
+    process(depth, tuple[0])
+		tuple[1].each do |node|
+				dump(depth+1, node) 
+		end
+	end
+
+	def traverse(root)
+		return nil if @visited.has_key? root
+		return nil if root == "AllPages" # Skip this one
+		return nil if root == "WikiMap" # Skip this one
+		@visited[root] = 1
+
+		children = Array.new
+
+		start=false
+
+		#debug("Opening file #{@wikihome + "/" + root}")
+
+		begin
+		IO.foreach(@wikihome + "/" + root) do |line|
+			start = true if line =~ /^$/
+			next unless start
+
+			if line =~ /^\s*LocalWords:/ || line =~ /^=text/
+				start = false
+				break
+			end
+
+			line.scan(/([S|s]ee)*\s*([A-Z][a-z0-9]+[A-Z][a-z0-9]+[A-Za-z0-9]*)(?:\s+)/) do |seeref, wikiword|
+				if seeref.nil?
+				  wikiword.strip!
+				  debug("Traversing wiki word #{wikiword} from #{root}:/#{line}/ ")
+				  children << traverse(wikiword)
+				end
+			end
+
+		end
+		rescue
+			$stderr.puts "Warning: node #{root} does not exist"
+		end
+		@visited.delete(root)
+    [root, children]
+	end
+
+	def usage
+		$stderr.puts <<EOF
+
+Usage: wikibook [options] NodeList
+
+Options:
+
+--wiki dir       -w      Set wiki base directory
+--imagedata      -i      Set the input directory for image files
+--debug          -d      Set debug mode
+--help           -h      Show this help
+
+EOF
+		exit 1
+	end
+
+  def initialize()
+
+    opts = GetoptLong.new(
+    [ "--debug",     "-d",       GetoptLong::NO_ARGUMENT ],
+    [ "--wiki",      "-w",       GetoptLong::REQUIRED_ARGUMENT ],
+    [ "--imagedata", "-i",       GetoptLong::REQUIRED_ARGUMENT ],
+    [ "--help",      "-h", "-?", GetoptLong::NO_ARGUMENT ],
+    [ "--type",      "-t",       GetoptLong::REQUIRED_ARGUMENT ]
+    )
+
+    @do_graph = false
+    @xml_nodes = Hash.new
+    @xml_links = Array.new
+    @visited = Hash.new
+    @markup = Wiki2Pml.new
+    @map = Array.new
+    
+
+    @wikihome = DEFWIKIHOME
+    @ofile = $stdout
+    $IMAGE_DATA_PATH=""
+    $DEBUG=nil
+    
+    $HIDE_MISSINGS=!ENV['HIDE_MISSINGS'].nil?
+    $FOR_SCREEN = false
+
+    opts.each do |opt, arg|
+      case opt 
+      when "--debug"
+        $DEBUG=true
+      when "--wiki"
+        @wikihome = arg
+      when "--imagedata"
+        $IMAGE_DATA_PATH = arg
+      when "--type"
+        if arg !~ /BOOK/
+          $HIDE_MISSINGS = true
+        end
+        if arg =~ /SCREEN/
+          $FOR_SCREEN = true
+        end
+      when "--help"
+        usage()
+      end
+    end
+
+    usage if ARGV[0].nil?
+
+    page_list = ARGV[0]
+    
+    incf = File.new("includes.pml","w")
+    
+    $bib = BibNames.new
+
+    #
+    # Each wikiword entry in the BookList file 
+    #
+    first = false
+    hidden= false
+    IO.readlines(@wikihome + "/" + page_list).each do |line|
+
+      line.chomp!
+      
+      next if line =~ /^#{page_list}$/
+      next if line =~ /^\s*$/
+      next if line =~ /^#/
+      
+      line =~ /\s*(\S+)/
+      wikiword = $1
+
+      if line =~ /^\S+/
+        if !first
+          output @markup.end
+          output "</chapter>\n"
+          first = false
+          @ofile.close
+        end
+        @ofile = File.new("#{wikiword}.pml","w")
+        
+        output @markup.start
+        line =~ /\S+\s+(.*)/
+        title=$1
+				if title.nil?
+					$stderr.puts "Error: missing chapter title text for #{line}"
+					exit 1
+				end
+        hidden = title =~ /#\s+HIDE/ && $FOR_SCREEN
+        is_front = title =~ /#\s+FRONT/
+        title.gsub!(/#.*/,'')
+
+        output "<chapter id=\"#{wikiword}\"><title>" +
+        title + 
+        "</title>\n\n"
+        @top_level = true 
+        @markup = Wiki2Pml.new 
+        output "<p>Coming soon to a Beta near you...</p>" if hidden     
+        
+        incf.puts "<pml:include file=\"#{wikiword}\"/>" unless is_front
+      end  
+      if !hidden
+        process(1, wikiword) if line !~ /#\s+HIDE/
+      end
+    end
+    
+    output @markup.end
+    output "</chapter>\n"
+    @ofile.close
+    incf.close
+  end
+  
+end
+
+
+WikiBook.new() if __FILE__ == $0
+
+#$bib.dump
+
+# vi: ts=2:sw=2:softtabstop=2:filetype=ruby

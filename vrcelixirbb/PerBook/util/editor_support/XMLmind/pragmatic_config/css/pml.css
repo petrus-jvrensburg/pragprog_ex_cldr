@@ -1,0 +1,49 @@
+li, p, sect1, sect2, sect3, title, ul {
+	display:block;
+}
+
+title{
+	  font-size: 36pt;
+	  font-weight: bold;
+	  margin-top: 10 pt;
+	  margin-bottom: 10pt;
+	  color: #000000;
+}
+
+sect1>title{
+	  font-size: 24pt;
+	  font-weight: bold;
+	  margin-top:   10pt;
+	  margin-bottom: 10pt;
+	  color: #000000;
+}
+
+sect2>title{
+	  font-size: 18pt;
+	  font-weight: bold;
+	  margin-top:   10pt;
+	  margin-bottom: 10pt;
+	  color: #000000;
+}
+
+p, sect1>p {
+	color:     #000000;
+	margin-top: 0.75em;
+	  font-family:  Arial, Verdana, Arial, sans-serif;
+}
+
+li>p {
+	display: list-item;
+	color: #000000;
+	margin-top: 0.75em;
+	margin-left: 0.3in;
+	font-family:  Arial, Verdana, Arial, sans-serif;
+}
+emph {
+	color:     #000000;
+    margin-left: 1.5in;
+	  margin-right: 0.5in;
+	margin-bottom: 30pt;
+	  font-family:  Arial, Verdana, Arial, sans-serif;
+	font-style:italic;
+}

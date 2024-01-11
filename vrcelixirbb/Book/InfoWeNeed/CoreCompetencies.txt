@@ -1,0 +1,7 @@
+# Core Competencies
+
+Readers will learn how to:
+* Work with *locale* strings to keep track of user preferences.
+* Manage translations for UI components using *gettext*'s compile-time workflow.
+* Use the *ex_cldr* suite of libraries to handle formatting and conversion of variables at runtime.
+* Manage translations for user-generated content using the *ex_cldr_trans* library.

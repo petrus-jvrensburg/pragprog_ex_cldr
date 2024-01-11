@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>command</key>
+	<string>touch "$TM_NEW_FILE"</string>
+	<key>extension</key>
+	<string>pml</string>
+	<key>name</key>
+	<string>Empty File</string>
+	<key>scope</key>
+	<string>text.xml.pragmatic</string>
+	<key>uuid</key>
+	<string>7D0A3F93-981E-498E-B777-C8B904A4C765</string>
+</dict>
+</plist>

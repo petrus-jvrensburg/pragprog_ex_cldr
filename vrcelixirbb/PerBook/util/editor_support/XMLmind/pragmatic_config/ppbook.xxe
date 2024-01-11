@@ -1,0 +1,402 @@
+<?xml version='1.0' encoding='utf-8'?>
+<configuration name="PPBook"
+  xmlns="http://www.xmlmind.com/xmleditor/schema/configuration"
+  xmlns:cfg="http://www.xmlmind.com/xmleditor/schema/configuration">
+  <detect>
+    <or>
+      <fileNameExtension>pml</fileNameExtension>
+      <dtdSystemId>local/xml/markup.dtd</dtdSystemId>
+      <dtdPublicId>-//XMLMind//DTD PPBook//EN</dtdPublicId>
+    </or>
+  </detect>
+
+  <css name="PML Style" location="css/ppbook.css" />
+  <css name="PML Style Big Text" location="css/ppbookbig.css" />
+
+  <template name="PragProg Book Template" location="ppbook.pml" />
+  <template name="PragProg Chapter Template" location="ppchapter.pml" />
+  <template name="PragProg Appendix Template" location="ppappendix.pml" />
+
+  <!-- Bindings =========================================================== -->
+
+  <!-- Inside a p (and only inside a p), XXE attempts to behave 
+       like a word-processor. -->
+
+  <binding>
+    <keyPressed code="ENTER" />
+    <command name="xhtml.splitOrInsertNewLine" />
+  </binding>
+
+  <binding>
+    <keyPressed code="DELETE" />
+    <command name="xhtml.joinOrDeleteChar" />
+  </binding>
+
+  <binding>
+    <keyPressed code="BACK_SPACE" />
+    <command name="xhtml.joinOrDeleteChar" parameter="backwards" />
+  </binding>
+
+  <binding>
+	  <keyPressed code="BACK_QUOTE" modifiers="ctrl"/>
+      <command name="pml.lquot"/>
+  </binding>
+
+  <binding>
+	  <keyPressed code="QUOTE" modifiers="ctrl"/>
+      <command name="pml.rquot"/>
+  </binding>
+
+  <command name="pml.lquot">
+    <macro>
+		<sequence>
+			<command name="insertString" parameter="&#x201C;" />
+	</sequence>
+    </macro>
+</command>
+
+  <command name="pml.rquot">
+    <macro>
+		<sequence>
+			<command name="insertString" parameter="&#x201D;" />
+	</sequence>
+    </macro>
+</command>
+
+  <command name="xhtml.splitOrInsertNewLine">
+    <macro>
+      <choice>
+        <command name="insertControlChar" parameter="\n" />
+
+	<sequence>
+          <command name="selectNode" 
+	           parameter="ancestorOrSelf[implicitElement] p" />
+	  <command name="split" />
+	</sequence>
+      </choice>
+    </macro>
+  </command>
+
+  <command name="xhtml.joinOrDeleteChar">
+    <macro>
+      <choice>
+	<sequence>
+          <test 
+            expression="$dot/ancestor::p and not($selected) and not($mark)" />
+          <command name="deleteSelectionOrJoinOrDeleteChar" parameter="%0" />
+	</sequence>
+
+        <command name="deleteSelectionOrDeleteChar" parameter="%0" />
+      </choice>
+    </macro>
+  </command>
+
+  <!-- Easy way to add p, li, dt+dd -->
+
+  <binding>
+    <keyPressed code="ENTER" modifiers="mod" />
+    <command name="xhtml.appendSame" />
+  </binding>
+
+  <binding>
+    <keyPressed code="ENTER" modifiers="mod shift" />
+    <command name="xhtml.prependSame" />
+  </binding>
+
+  <command name="xhtml.appendSame">
+    <macro>
+      <choice>
+	<sequence>
+          <command name="selectNode" 
+	           parameter="ancestorOrSelf[implicitElement] p" />
+	  <command name="insertNode" parameter="sameElementAfter" />
+	</sequence>
+
+        <command name="xhtml.appendListItem" />
+      </choice>
+    </macro>
+  </command>
+
+  <command name="xhtml.prependSame">
+    <macro>
+      <choice>
+	<sequence>
+          <command name="selectNode" 
+	           parameter="ancestorOrSelf[implicitElement] p" />
+	  <command name="insertNode" parameter="sameElementBefore" />
+	</sequence>
+
+        <command name="xhtml.prependListItem" />
+      </choice>
+    </macro>
+  </command>
+
+  <command name="xhtml.appendListItem">
+    <macro undoable="true" label="Add li or dt+dd">
+      <sequence>
+        <command name="selectNode" 
+                 parameter="ancestorOrSelf[implicitElement] li dd dt" />
+
+        <choice>
+          <sequence>
+            <match context="$selected" pattern="li" />
+	    <command name="insertNode" parameter="sameElementAfter" />
+          </sequence>
+
+          <sequence>
+            <!-- Match dd|dt -->
+
+	    <!-- Assumes that a dt is followed by a dd. -->
+            <choice>
+              <match context="$selected" pattern="dd" />
+	      <command name="selectNode" parameter="nextSibling dd" />
+            </choice>
+
+	    <command name="insert" parameter="after dt" />
+	    <command name="insert" parameter="after dd" />
+	    <command name="selectNode" parameter="previousSibling" />
+          </sequence>
+        </choice>
+      </sequence>
+    </macro>
+  </command>
+
+  <command name="xhtml.prependListItem">
+    <macro undoable="true" label="Add li or dt+dd">
+      <sequence>
+        <command name="selectNode" 
+                 parameter="ancestorOrSelf[implicitElement] li dd dt" />
+
+        <choice>
+          <sequence>
+            <match context="$selected" pattern="li" />
+	    <command name="insertNode" parameter="sameElementBefore" />
+          </sequence>
+
+          <sequence>
+            <!-- Match dd|dt -->
+
+	    <!-- Assumes that a dt is followed by a dd. -->
+            <choice>
+              <match context="$selected" pattern="dt" />
+	      <command name="selectNode" parameter="previousSibling dt" />
+            </choice>
+
+	    <command name="insert" parameter="before dd" />
+	    <command name="insert" parameter="before dt" />
+          </sequence>
+        </choice>
+      </sequence>
+    </macro>
+  </command>
+
+  <!-- An easy way to insert a br -->
+
+  <binding>
+    <keyPressed code="ENTER" modifiers="shift" />
+    <command name="xhtml.insertLineBreak" />
+  </binding>
+
+  <command name="xhtml.insertLineBreak">
+    <macro undoable="true" label="Insert br">
+      <sequence>
+        <command name="insert" parameter="into br" />
+	<!-- harmless if macro fails starting from here -->
+        <command name="insertNode" parameter="textAfter" />
+        <command name="cancelSelection" />
+      </sequence>
+    </macro>
+  </command>
+
+  <!-- An easy way to specify the URL in <a href=""> -->
+
+  <binding>
+    <appEvent name="drop" />
+    <command name="xhtml.fileDrop" parameter="'%{value}'" />
+  </binding>
+
+  <command name="xhtml.fileDrop">
+    <macro>
+      <choice>
+        <sequence>
+          <match context="$clickedElement" pattern="a[@href]" />
+          <set variable="selectedElement" expression="$clickedElement" />
+
+          <set variable="dropped" context="$selectedElement"
+               expression="relativize-uri(uri-or-file-name('%0'))" />
+          <get expression="$dropped" />
+          <command name="putAttribute" parameter="href '%_'" />
+
+          <get expression="$dropped" />
+          <command name="status" parameter="href='%_'" />
+        </sequence>
+
+        <command name="XXE.open" parameter="%0" />
+      </choice>
+    </macro>
+  </command>
+
+  <!-- Element templates ================================================== -->
+
+  <elementTemplate name="sect1" selectable="override">
+      <sect1 xmlns="">
+	<title></title>
+	<p></p>
+      </sect1>
+  </elementTemplate>
+
+  <elementTemplate name="sect2" selectable="override">
+      <sect2 xmlns="">
+	<title></title>
+	<p></p>
+      </sect2>
+  </elementTemplate>
+
+  <elementTemplate name="sect3" selectable="override">
+      <sect3 xmlns="">
+	<title></title>
+	<p></p>
+      </sect3>
+  </elementTemplate>
+
+  <elementTemplate name="sect4" selectable="override">
+      <sect4 xmlns="">
+	<title></title>
+	<p></p>
+      </sect4>
+  </elementTemplate>
+
+  <elementTemplate name="sect5" selectable="override">
+      <sect5 xmlns="">
+	<title></title>
+	<p></p>
+      </sect5>
+  </elementTemplate>
+
+  <elementTemplate name="sidebar" selectable="override">
+	  <sidebar xmlns="">
+	<title></title>
+	<p></p>
+</sidebar>
+  </elementTemplate>
+
+  <elementTemplate name="joeasks" selectable="override">
+	  <joeasks xmlns="">
+	<title></title>
+	<p></p>
+</joeasks>
+  </elementTemplate>
+
+  <elementTemplate name="ul" selectable="override">
+      <ul xmlns="">
+		  <li>
+			  <p>
+		      </p>
+			  <p>
+		      </p>
+	      </li>
+      </ul>
+  </elementTemplate>
+
+  <elementTemplate name="li" selectable="override">
+      <li xmlns="">
+	    <p>
+		</p>
+	  </li>
+  </elementTemplate>
+
+  <elementTemplate name="footnote" selectable="override">
+      <footnote xmlns="">
+	<p></p>
+      </footnote>
+  </elementTemplate>
+
+  <elementTemplate name="marginnote" selectable="override">
+      <marginnote xmlns="">
+	<p></p>
+      </marginnote>
+  </elementTemplate>
+
+  <elementTemplate name="dt_dd" selectable="override">
+    <dl xmlns="">
+      <dt></dt>
+      <dd></dd>
+      <dt></dt>
+      <dd></dd>
+    </dl>
+  </elementTemplate>
+
+  <!-- This is a HTML 3.2 table -->
+
+  <elementTemplate name="simple" selectable="override">
+    <table xmlns="" border="1">
+      <tr>
+        <td></td><td></td>
+      </tr>
+      <tr>
+        <td></td><td></td>
+      </tr>
+    </table>
+  </elementTemplate>
+
+  <!-- These are HTML 4 table -->
+
+  <elementTemplate name="head_row">
+    <table xmlns="" frame="box" rules="all">
+      <thead align="center">
+	<tr>
+	  <th></th><th></th>
+	</tr>
+      </thead>
+      <tbody>
+	<tr>
+	  <td></td><td></td>
+	</tr>
+	<tr>
+	  <td></td><td></td>
+	</tr>
+      </tbody>
+    </table>
+  </elementTemplate>
+
+  <elementTemplate name="head_column">
+    <table xmlns="" frame="box" rules="all">
+      <col align="center" span="1" />
+      <tbody>
+	<tr>
+	  <th></th><td></td>
+	</tr>
+	<tr>
+	  <th></th><td></td>
+	</tr>
+	<tr>
+	  <th></th><td></td>
+	</tr>
+      </tbody>
+    </table>
+  </elementTemplate>
+
+  <elementTemplate name="head_row_column">
+    <table xmlns="" frame="box" rules="all">
+      <col align="center" span="1" />
+      <thead align="center">
+	<tr>
+	  <th></th><th></th>
+	</tr>
+      </thead>
+      <tbody>
+	<tr>
+	  <th></th><td></td>
+	</tr>
+	<tr>
+	  <th></th><td></td>
+	</tr>
+	<tr>
+	  <th></th><td></td>
+	</tr>
+      </tbody>
+    </table>
+  </elementTemplate>
+
+
+</configuration>

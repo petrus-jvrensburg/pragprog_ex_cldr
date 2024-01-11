@@ -1,0 +1,66 @@
+body { 
+  margin: 0 10% 0 20%;
+  font-family:  "Droid Sans", "Trebuchet MS", Verdana, Arial, sans-serif;
+}
+
+p { 
+  line-height: 150%;
+}
+
+h1 .chapter-number { 
+  margin-bottom: 2em;
+  color: #aabbbb !important;
+}
+
+h1.chapter-title .chapter-name, h2, h3 {
+  color: #446666 !important;                                 
+}
+  
+.codeline pre { 
+  font-size: 100% !important;
+  padding-bottom: 0.2em;
+}
+
+/* The box at the top of extracts */
+div.extract-header {
+  padding: 2em 2em; 
+  font-size: smaller;
+  color: #88aaaa;  
+ 
+}
+
+div.extract-header div.cover-image { 
+  float: right;
+  clear: both;                  
+}
+
+div.extract-header div.cover-image img { 
+  border: 2px #dddddd solid;
+  margin-left: 3em;
+}
+
+div.extract-header span.book-title {
+  font-style: italic;
+  font-weight: bold;
+}
+
+div.extract-header span.book-author {
+  font-weight: bold;
+}
+
+
+div.extract-header div.blurb {
+  background: url(../images/h1-underline.gif) repeat-x bottom;
+  padding-bottom: 0.5em;
+}
+
+div.extract-header div.ruler {
+  clear: both;
+}
+
+
+span.ed {
+  color: #262;
+  background: #dfd;
+  font-weight: bold;
+}

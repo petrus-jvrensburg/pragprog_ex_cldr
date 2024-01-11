@@ -1,0 +1,1196 @@
+/*** japanese ***
+@font-face {
+  font-family: Mincho;
+  font-weight: normal;
+  font-style:  normal;
+  src:         url(../fonts/mplus-1c-regular.ttf);
+}
+@font-face {
+  font-family: Mincho;
+  font-weight: normal;
+  font-style:  italic;
+  src:         url(../fonts/mplus-1c-regular.ttf);
+}
+@font-face {
+  font-family: Mincho;
+  font-weight: bold;
+  font-style:  normal;
+  src:         url(../fonts/mplus-1c-regular.ttf);
+}
+@font-face {
+  font-family: Mincho;
+  font-weight: bold;
+  font-style:  italic;
+  src:         url(../fonts/mplus-1c-regular.ttf);
+}
+*** japanese ***/
+/*** unicode ***
+@font-face {
+  font-family: Quivira;
+  font-weight: normal;
+  font-style:  italic;
+  src:         url(../fonts/Quivira.ttf);
+}
+@font-face {
+  font-family: Quivira;
+  font-weight: bold;
+  font-style:  normal;
+  src:         url(../fonts/Quivira.ttf);
+}
+@font-face {
+  font-family: Quivira;
+  font-weight: bold;
+  font-style:  italic;
+  src:         url(../fonts/Quivira.ttf);
+}
+@font-face {
+  font-family: Quivira;
+  font-weight: normal;
+  font-style:  normal;
+  src:         url(../fonts/Quivira.ttf);
+}
+*** unicode ***/
+
+@font-face {
+  font-family: UbuntuMono;
+  font-weight: normal;
+  font-style:  normal;
+  src:         url(../fonts/UbuntuMono-R.ttf);
+  }
+@font-face {
+  font-family: UbuntuMono;
+  font-weight: bold;
+  font-style:  normal;
+  src:         url(../fonts/UbuntuMono-B.ttf);
+  }
+@font-face {
+  font-family: UbuntuMono;
+  font-weight: normal;
+  font-style:  italic;
+  src:          url(../fonts/UbuntuMono-RI.ttf);
+  }
+@font-face {
+  font-family: UbuntuMono;
+  font-weight: bold;
+  font-style:  italic;
+  src:         url(../fonts/UbuntuMono-BI.ttf);
+}
+
+
+@font-face {
+  font-family: Ubuntu;
+  font-weight: normal;
+  font-style:  normal;
+  src:         url(../fonts/Ubuntu-M.ttf);
+  }
+@font-face {
+  font-family: Ubuntu;
+  font-weight: bold;
+  font-style:  normal;
+  src:         url(../fonts/Ubuntu-B.ttf);
+  }
+@font-face {
+  font-family: Ubuntu;
+  font-weight: normal;
+  font-style:  italic;
+  src:         url(../fonts/Ubuntu-MI.ttf);
+}
+@font-face {
+  font-family: Ubuntu;
+  font-weight: bold;
+  font-style:  italic;
+  src:         url(../fonts/Ubuntu-BI.ttf);
+}
+/* @font-face { */
+/* font-family: "DroidSerif",serif; */
+/* font-weight: normal; */
+/* font-style:  normal; */
+/* src:         url(../fonts/DroidSerif.woff); */
+/* } */
+/* @font-face { */
+/* font-family: "DroidSerif",serif; */
+/* font-weight: bold; */
+/* font-style:  normal; */
+/* src:         url(../fonts/DroidSerif-Bold.woff); */
+/* } */
+/* @font-face { */
+/* font-family: "DroidSerif",serif; */
+/* font-weight: normal; */
+/* font-style:  italic; */
+/* src:         url(../fonts/DroidSerif-Italic.woff); */
+/* } */
+/* @font-face { */
+/* font-family: "DroidSerif",serif; */
+/* font-weight: bold; */
+/* font-style:  italic; */
+/* src:         url(../fonts/DroidSerif-BoldItalic.woff); */
+/* } */
+
+/* "Trebuchet MS", Verdana, Arial, sans-serif*/
+
+
+body {
+  margin: 0pt 1em;
+  padding: 0pt;
+}
+
+
+tt, code, kbd, samp {
+  font-size: 80%;
+}
+
+h1.part-title {
+    text-align: center;
+}
+
+h1.part-title .part-number{
+  font-size: 80%;
+}
+
+
+.partintro {
+    border-top: 3px solid #aaaadd;
+    border-bottom: 3px solid #aaaadd;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-top:  2em;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-style: italic;
+}
+
+h1.chapter-title {
+  margin-top:   2em;
+  text-align: right;
+}
+
+h1.chapter-title .chapter-number {
+  color:     #335555;
+  font-weight: normal;
+  display: block;
+  font-size: 90%;
+}
+
+h1.chapter-title .chapter-name {
+  display: block;
+  color:     #555555;
+  font-size: 120%;
+  font-weight: bold;
+}
+
+h1.chapter-title:after {
+    display: block;
+    font-size: 3px;
+    background: url(../images/h1-underline.gif) repeat-x bottom;
+    overflow: none;
+    content: "\00a0";
+    clear: both;
+}
+
+h2 {
+ font-size: 140%;
+ font-weight:  bold;
+ text-align: left !important;
+ color:     #445;
+ margin-top:  1em;
+ margin-bottom: 1ex !important;
+}
+
+h3 {
+ font-size: 110%;
+ font-weight:  bold;
+ color:     #225555;
+ clear:  both;
+ margin-top:  1em;
+ margin-bottom: 1ex;
+}
+
+h4 {
+ font-size: 100%;
+ font-weight:  bold;
+ color:     #225555;
+ clear:  both;
+ margin-top:  0.8em;
+ margin-bottom: 0.8ex;
+}
+
+p {
+  line-height: 130%;
+  margin-top: 0pt;
+}
+
+.contribution {
+  font-size: smaller;
+  color:     #888;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.acronym {
+  font-weight:  bold;
+  font-variant: small-caps;
+  color:        #333333;
+}
+
+
+.author {
+  margin-top:  1em;
+  margin-bottom:  1em;
+  text-align:  right
+}
+
+.authorname {
+
+}
+
+.authoraffiliation {
+  font-style:  italic;
+}
+
+.authors {
+  margin-top:   3em;
+  font-size:   18pt;
+  color:       #666666;
+}
+
+/* authorq is the author asking the beta-book reader */
+div.authorq {
+  margin: 1em 0;
+  padding: 1em;
+  background: #dddddd;
+  font-size: smaller;
+}
+
+div.authorq .the-author-asks {
+  font-weight: bold;
+  display: inline;
+}
+
+.b {
+  font-weight: bold;
+}
+
+.bad-xref {
+  color: red;
+}
+
+dl.bibliography  {
+  margin-left: 0pt;
+}
+
+dl.bibliography dt {
+    float: left;
+    clear: left;
+    width: 4.75em;
+    text-align: left;
+    font-size: 90%;
+    font-weight: bold;
+}
+
+dl.bibliography dd {
+    margin-bottom: 8px;
+    margin-left: 5em;
+    padding: 0 0 0 0;
+  }
+
+dl.bibliography dd em {
+  color: #223388;
+  font-weight: bold;
+}
+
+.strike {
+    text-decoration: line-through;
+}
+
+.unused-bookinfo {
+  margin-top:       2em;
+  margin-bottom:    4em;
+  padding:          3em;
+  border-width: 8px;
+  border-style: dotted;
+  border-color: #dddddd;
+}
+
+.titlepage
+{
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+}
+
+.tp-title {
+  display: block;
+  margin-top: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color:        #555555;
+  border-width: 3px;
+  border-style: solid none;
+  border-color: #888888;
+}
+
+.tp-subtitle {
+  display: block;
+  margin-top: 10px;
+  color:        #777777;
+}
+
+.tp-authors
+{
+  display: block;
+  color: #777;
+  margin-top: 20px;
+}
+
+.tp-copyright
+{
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: x-small;
+  color: #463;
+
+}
+
+
+.tp-extracted-from {
+  font-size: 70%;
+  color:     #9999bb;
+}
+
+
+span.production {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+span.production:after {
+  content: ',';
+}
+
+span.production:last-child:after {
+  content: '';
+}
+
+
+div.tp-extract-explanation {
+  margin-top: 72pt;
+}
+
+div.tp-extract-explanation p {
+  font-size: 70%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.copyright-body {
+  font-family: "Ubuntu";
+  font-size: 70%;
+}
+
+
+
+.tp-docinfo
+{
+  margin-top: 30px;
+  font-size: small;
+  color: #777;
+}
+
+.booksectname {
+  font-style: italic;
+}
+
+/* these are inline code. We make them all include the cf class   font-weight: bold;  */
+
+.cf {
+  color: #229;
+  font-family: "Ubuntu";
+  font-size: 90%;
+}
+
+.ic {
+  hyphens: manual;
+}
+
+
+.jp {
+  font-family: Mincho;
+}
+
+.classname,
+.commandname,
+.commandoption,
+.constant,
+.dirname,
+.fileextension,
+.filename,
+.inlinecode,
+.keystroke,
+.keyword,
+.methodname,
+.parametername,
+.sqlcolumn,
+.sqltable,
+.string,
+.variablename,
+.xmlattrval {
+  hyphens: manual;
+}
+
+.stringinfile {
+  font-style:  italic;
+}
+
+/*
+ ** end of cf stuff
+ */
+
+
+.emph {
+  font-style: italic;
+}
+
+.wecover > p, .wecover ul {
+    margin: 0;
+}
+
+.epigraph {
+  float:         left;
+  width:         40%;
+  padding:       0.5em;
+  border-style:  solid;
+  text-align:    left;
+  border-width:  1px;
+  border-color:  #cee;
+  color:         #477;
+  background:    #f0f8f8;
+  font-size:     small;
+  font-style:    italic;
+  margin:        1em 2em 2em 0em;
+  border-radius: 1em;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+}
+
+.episign {
+  padding:       2px;
+  border-style:  solid;
+  text-align:    right;
+  border-width:  2px 0px 0px 0px;
+  border-color:  #dddddd;
+  font-size:    small;
+}
+
+.episignname {
+}
+.episigntitle {
+  font-style:    italic;
+}
+.episigndate {
+}
+
+.figure {
+  padding:       7px;
+  border-style:  dotted;
+  text-align:    center;
+  border-width:  3px;
+  border-color:  #dddddd;
+  margin-top:    1em;
+  margin-bottom: 1em;
+}
+
+.figurecaption {
+  font-weight:   bold;
+  text-align:    center
+}
+
+.figuresubcaption {
+  font-size: 75%;
+  color:     #888;
+}
+
+.firstuseinline {
+  font-style:italic;
+}
+
+.firstusemargin {
+  position: relative;
+  top:auto;
+  left:       1em;
+  font-style:italic;
+  font-size: x-small;
+  float:     left;
+  width:     1in;
+  text-align: right;
+}
+
+.flag {
+  color:    red;
+}
+
+.flagadvanced {
+  float: left;
+  margin-right: 1em;
+}
+
+.footnote {
+  font-size: smaller
+}
+
+.footnotes {
+  margin-top:   2em;
+  border-width: 2px 0 0 0;
+  border-style: solid none none none;
+  border-color: #add;
+  font-size: smaller;
+}
+
+.footnotes dt.footnote-number {
+    white-space: nowrap;
+    width: 1.5em;
+    float: left;
+    font-size: 90%;
+}
+
+.footnotes dd {
+    margin: 0 0 0 2em;
+}
+
+div.highlight {
+  border-top: 3px solid #acc;
+  border-bottom: 3px solid #acc;
+  width: 20%;
+  float: left;
+  margin-right: 2em;
+}
+
+div.highlight p {
+  margin-bottom: 0.2em;
+}
+
+.initials {
+  font-weight:  bold;
+  font-variant: small-caps;
+  color:        #333333;
+}
+
+
+.example {
+ border: 2px solid #88d;
+ background: #ccf;
+ padding-left: 1em;
+ padding-right: 1em;
+ margin-left: 0pt;
+ margin-right: 0pt;
+ margin-bottom: 1em;
+ border-radius: 15px;
+ -moz-border-radius: 15px;
+}
+
+.keyboard {
+  font-family:Quivira;
+}
+
+.keystroke {
+    font-family: Ubuntu;
+    font-size: 80%;
+    padding: 0.2em 0.3em 0.3em 0.3em;
+    background: #cee;
+    border: 1px solid #7dd;
+    color:  #448;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+img.inline {
+    position: relative;
+    top: 0.4em;
+    height: 1.2em;
+}
+
+.marginnote {
+  position: relative;
+  top:auto;
+  left:       1em;
+  font-weight: bold;
+  font-size: x-small;
+  float:     left;
+  width:     1in;
+  text-align: right;
+  line-height: 100%;
+}
+
+.nohyphen {
+  -webkit-hyphens:none;
+}
+
+.missing {
+  position: relative;
+  top:auto;
+  left:       1em;
+  font-weight: bold;
+  font-size: x-small;
+  float:     left;
+  width:     1in;
+  text-align: right;
+  line-height: 100%;
+}
+
+.prefacesignoff a {
+  font-weight: bold;
+ }
+
+.prefacesignoffemail {
+  font-family: courier, fixed, monospace;
+  font-size: small;
+}
+
+.prefacesignoffdate {
+  font-size: small;
+}
+
+span.shade-fg-white {
+  color: white;
+}
+span.shade-fg-black {
+  color: black;
+}
+span.shade-fg-red {
+  color: red;
+}
+span.shade-fg-green {
+  color: green;
+}
+span.shade-fg-yellow {
+  color: #D5D55A;
+}
+span.shade-fg-blue {
+  color: blue;
+}
+span.shade-fg-magenta {
+  color: magenta;
+}
+span.shade-fg-cyan {
+  color: #2FB3B9;
+}
+
+span.shade-fg-light {
+  color: rgb(220,220,180);
+}
+span.shade-fg-dark {
+  color: rgb(50,50,100);
+}
+
+span.shade-bg-white {
+  background-color: white;
+}
+span.shade-bg-black {
+  background-color: black;
+}
+span.shade-bg-red {
+  background-color: red;
+}
+span.shade-bg-green {
+  background-color: green;
+}
+span.shade-bg-yellow {
+  background-color: yellow;
+}
+span.shade-bg-blue {
+  background-color: blue;
+}
+span.shade-bg-magenta {
+  background-color: magenta;
+}
+span.shade-bg-cyan {
+  background-color: cyan;
+}
+span.shade-bg-light {
+  background-color: rgb(220,220,180);
+}
+span.shade-bg-dark {
+  background-color: rgb(50,50,100);
+}
+
+story {
+    padding: 0 2em;
+    border-left: 4px solid #add;
+    font-size: 90%;
+}
+
+table.processedcode {
+    margin: 0.7em 0px;
+    width: 100%;
+    table-layout: fixed;
+}
+
+table.shaded {
+  background-color: rgb(220,220,180);
+}
+
+.processedcode tr {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border: 0px none;
+}
+
+
+.processedcode tr td {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+
+
+.codeline, .codeinfo {
+  font-family: UbuntuMono;
+  line-height:1.2;
+  vertical-align: top;
+  white-space: pre-wrap;
+}
+
+.codeinfo {
+    color: #99c;
+    font-weight: bold;
+    font-size: 80%;
+    width: 1.5em;
+    padding-right: 0.5em;
+    text-align: right;
+}
+
+.codeline {
+    font-size: 90%;
+    width: 100%;
+}
+
+.codeline code {
+  font-family: UbuntuMono;
+}
+
+.codeline pre {
+  font-family: UbuntuMono;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: bold;
+}
+
+
+.codecalloutnumber {
+  font-size:  90%;
+}
+
+
+.livecodelozenge {
+    width: 100%;
+    background: #add;
+    border-bottom: 1px solid #8bb;
+    font-size: 90%;
+    font-family: Ubuntu;
+    padding: 0.3em 0.2em 0.3em 0.6em;
+}
+
+.livecodelozenge a {
+    text-decoration: none;
+    color:  #588;
+}
+
+.livecodelozenge a:hover {
+    color:  #366;
+}
+
+span.callout-number {
+  font-size: 90%;
+  color: green;
+}
+
+/*
+dl {
+}
+
+dl dt.force-newline {
+  clear: left;
+  width: 100%;
+  display: block;
+}
+
+dl dt {
+  float: left;
+  clear: left;
+  width: 3em;
+  display: block;
+}
+
+dl dd {
+  margin-left: 3.5em;
+  padding-left: 5px;
+  margin-bottom: 5px;
+}
+*/
+
+
+dl.calloutlist  {
+  margin-left: 0pt;
+}
+
+dl.calloutlist dt {
+    float: left;
+    clear: left;
+    width: 1em;
+    text-align: left;
+    font-size: 80%;
+}
+
+dl.calloutlist dd {
+    margin: 0 0 0 1.5em;
+    padding: 0 0 0 0;
+  }
+
+.simpletable {
+  margin-top:    1em;
+  margin-bottom:  2em;
+  border-collapse: collapse;
+}
+
+table.outerlines, table.hlines {
+  padding: 2px;
+  border: 2px solid #aaaadd;
+}
+
+th.outerlines, th.hlines {
+  border-bottom: 2px solid #aaaadd;
+  background: #ddddff;
+}
+
+.simpletable td, .simpletable th {
+  text-align: left;
+  vertical-align:      top;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+
+.simpletable p.last-para-in-cell {
+  margin-bottom: 0pt;
+}
+
+.simpletable tr.zebra {
+  background: #ddffdd;
+}
+
+.simpletable tr.line-on-top td {
+  border-top: 1px solid #aaaadd;
+}
+
+.standin {
+   font-style:  italic;
+   font-weight: bold;
+   color:       #444444;
+}
+
+table.arr-recipe
+{
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border: 6px solid #6aa;
+  width: 100%;
+  padding: 0px;
+}
+
+table.arr-recipe td.arr-recipe-number
+{
+  font-size: smaller;
+  font-weight: bold;
+  text-align: center;
+  width: 15%;
+  background: #6aa;
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+table.arr-recipe .arr-recipe-name
+{
+  font-size: larger;
+  padding-top: 1ex;
+  padding-left: 1em;
+  padding-bottom: 1ex;
+}
+
+.tabletitle {
+  font-weight: bold;
+  padding:      2px;
+  border-width: 0px 0 2px 0;
+  border-style: none none solid none;
+  border-color: #888888;
+}
+
+table.pg-what-to-do  {
+    width: 100%;
+}
+
+
+table.pg-task  {
+ font-size: 140%;
+ font-weight:  bold;
+ text-align: left !important;
+ color:     #445;
+ margin-top:  1em;
+ margin-bottom: 1ex !important;
+}
+
+td.pg-task-number {
+    background: #227;
+    color:      #cce;
+    font-size:  180%;
+    font-weight: bold;
+    padding: 0em 0.5em;
+    border-radius: 4px;
+    -webkit-border-radius: 8px;
+}
+
+td.pg-task-name {
+    color: #227;
+    padding: 0em 0.5em;
+    border:      3px solid #cce;
+    font-size:  120%;
+    font-weight: bold;
+    border-radius: 4px;
+    -webkit-border-radius: 8px;
+    width: 100%;
+}
+
+td.pg-what-to-do  {
+ font-size: 110%;
+ font-weight:  bold;
+ color:     #445;
+ padding:      2px;
+ text-align:    center;
+ border-style:  dotted;
+ border-width:  3px;
+ border-color:  #008000;
+ margin-top:    1em;
+ margin-bottom: 1em;}
+
+
+
+.xmltag {
+  /*font-weight: bold;
+   color:       #444444;*/
+}
+
+.comment {
+  color:   #115511;
+  font-style: italic;
+}
+
+.kw {
+  color:  #469;
+  font-weight: bold;
+}
+
+.coprompt {
+  color:  rgb(144, 17, 125);
+  font-weight: bold;
+}
+
+.string {
+  color:   #555511;
+  font-style: italic;
+}
+
+
+.sidebar {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding: 1em;
+  font-size: 90%;
+  font-family: sans, Mincho;
+  border: 3px solid #aaa;
+}
+
+.sidebar .sidebar-title {
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 1px solid #aaa
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+div.webresources .title {
+  font-weight: bold;
+  margin-bottom: 0pt;
+}
+
+div.webresources .url {
+  font-weight: bold;
+  margin-top: 0pt;
+  margin-bottom: 0pt;
+}
+
+div.webresources .desc {
+  margin-top: 0px;
+  margin-left: 2em;
+}
+
+div.webresources .desc p {
+  margin-top: 0px;
+}
+
+.xref-title {
+  font-style: italic;
+}
+
+div.xxxsays {
+  font-size: small;
+  margin: 1em 0;
+  padding: 1em;
+  border:  2px #aaaaaa solid;
+}
+
+div.xxxsays .heading {
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+  border-bottom:  2px #aaaaaa solid;
+}
+
+div.xxxsays .heading  .persons-picture {
+  float: left;
+  margin-right: 2em
+}
+
+div.xxxsays .heading  .label {
+  font-weight: bold;
+  color:       #999999;
+  margin-bottom: 0.2em;
+}
+
+div.xxxsays .heading  .title {
+  font-weight: bold;
+  font-size: larger;
+  color:       #555555;
+}
+
+
+.copyright {
+
+   font-size: x-small;
+   color:       #335555;
+   background:  #aabbbb;
+   margin-top:  3em;
+   padding-top:  3px;
+   padding-bottom:  3px;
+   text-align:   center;
+   border-top:   1px #335555 solid;
+}
+
+
+div.backmatter-cover {
+    float: left;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+hr.backmatter-end {
+    clear: both;
+}
+
+
+ul.praise {
+  list-style: none;
+}
+
+.praisename {
+    font-weight: bold;
+}
+
+.dedication-text {
+  margin-top:  3em;
+  font-style: italic;
+  text-align: center;
+}
+
+.dedication-name {
+  margin-top:  0.5em;
+  text-align: right;
+}
+
+
+
+.banner {
+    page-break-after: always;
+    break-after: always;
+    text-align: center;
+    margin-top: 20%;
+    font-style: italic;
+}
+
+.banner title {
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+}
+
+
+.table-of-contents  h1 {
+    width: 100%;
+    margin: 1em 0;
+    padding: 0.5em 0em;
+    text-align: center;
+    font-weight: bold;
+    font-size: 170%;
+    color: #888;
+    border-top: 4px solid #777;
+    border-bottom: 2px solid #555;
+}
+
+.table-of-contents ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.table-of-contents li.toc-part > a {
+    display: inline-block;
+    width: 100%;
+    margin-top: 1em;
+    padding: 0.5em 0em;
+    text-align: center;
+    font-weight: bold;
+    font-size: 150%;
+    border-top: 2px solid #888;
+    border-bottom: 2px solid #888;
+}
+
+.table-of-contents li.toc-chap {
+
+}
+
+.table-of-contents li.toc-chap > a {
+    display: inline-block;
+    font-weight: bold;
+    font-size:   120%;
+    margin-top:  1em;
+}
+
+.table-of-contents li.toc-sect  {
+    margin-left: 4em;
+}
+
+.table-of-contents li.toc-sect > a {
+    display: inline-block;
+    margin-top: 0.4em;
+}
+
+.table-of-contents  a > .toc-secnum {
+    display: inline-block;
+    width: 2em;
+    text-decoration: none;
+}
+
+
+div.cover-image {
+  float: left;
+  margin-right: 1em;
+}

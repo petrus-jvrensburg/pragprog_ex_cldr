@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<license issuer="RenderX" issued="2011-03-28" update-expires="2012-03-14">
+   <licensee>
+      <person>Dave Thomas (dave@pragprog.com)</person>
+      <person>{1 RenderX XEP 4x Server CPU Single-Core License}</person>
+      <person>{15 concurrent remote and internal authors}</person>
+      <organization>Pragmatic Programmers, LLC</organization>
+   </licensee>
+   <product name="XEP">
+      <limit name="server">1</limit>
+   </product>
+   <product name="DevKit">
+      <limit name="full">1</limit>
+   </product>
+<signature>iQBVAgUATZDAN/z8zkdesEfDAQHCBgIAi+qyPVTewRuiln/n8fkKaY+mUHoEI4Yf
+lMEMX2YdfPSaDn5FVq/zsKGEnNAKgzWXsoITha/2rlzZ89Ib9VDxBg===LGd1</signature></license>

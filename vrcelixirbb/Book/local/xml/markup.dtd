@@ -1,0 +1,9 @@
+<!-- add extra entities here -->
+
+
+<!-- load standard PPBook -->
+<!ENTITY % PPBookDTD SYSTEM "../../../PerBook/util/xml/ppbook.dtd">
+%PPBookDTD;
+
+<!-- add extra elements here -->
+

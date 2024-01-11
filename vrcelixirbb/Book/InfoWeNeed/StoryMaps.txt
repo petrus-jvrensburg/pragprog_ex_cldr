@@ -1,0 +1,39 @@
+# Story Maps
+
+EXAMPLE BELOW
+
+## Getting Ready
+
+Why do I want to read this?
+: You want to read this chapter if you're new to Unity---or returning after a hiatus---and need help getting started.
+
+What will I learn?
+: You will learn how to set up your development environment and a demo scene for use with this book. As you work through this chapter, you'll quickly learn the concepts needed to understand the exercises in this book, including how to create a new project and how to work with GameObjects, Components, Materials, Prefabs, and the Unity coordinate system.
+
+What will I be able to do that I couldn't do before?
+: You will be able to set up Unity Hub, create a project, and set up a demo scene. You'll also be able to navigate the Unity interface and recognize the hierarchy of a simple Unity project.
+
+Where are we going next, and how does this fit in?
+: With your development environment setup, and your demo scene ready to go, it's time to get into the heart of this book and start responding to user input.
+
+
+## Chapter Two
+
+Why do I want to read this?
+: 
+
+What will I learn?
+: 
+
+What will I be able to do that I couldn't do before?
+: 
+
+Where are we going next, and how does this fit in?
+: 
+
+
+
+
+
+
+

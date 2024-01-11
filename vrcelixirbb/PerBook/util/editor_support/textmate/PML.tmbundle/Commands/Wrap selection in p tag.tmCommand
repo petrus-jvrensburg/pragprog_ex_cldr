@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>saveActiveFile</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+# Transforms the selected lines of text such as this:
+#
+# 	A free floating paragraph not wrapped in &lt;p&gt; tags.
+#
+# to this:
+#
+#    &lt;p&gt;
+#      A free floating paragraph not wrapped in &lt;p&gt; tags.
+#    &lt;/p&gt;
+#
+# It preserves whatever level of indentation the text was at.
+#
+original_selection = ENV['TM_SELECTED_TEXT']
+
+indentation_depth = original_selection.split("\n").map {|line| line[/^\s*/].size}.max 
+indent            = ' ' * indentation_depth
+selection_with_indentation_trimmed = original_selection.split("\n").map do |line| 
+line.sub(/^\s*/, '')
+end
+
+puts "#{indent}&lt;p&gt;"
+selection_with_indentation_trimmed.each do |line|
+  puts "#{indent}  #{line}"
+end
+# We don't want a trailing newline so we just print here
+print "#{indent}&lt;/p&gt;"</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string>@P</string>
+	<key>name</key>
+	<string>Wrap selection in p tag</string>
+	<key>output</key>
+	<string>replaceSelectedText</string>
+	<key>scope</key>
+	<string>text.xml.pragmatic</string>
+	<key>uuid</key>
+	<string>CEA683EE-44E2-410A-BA96-55CBBA065986</string>
+</dict>
+</plist>

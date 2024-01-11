@@ -1,0 +1,10 @@
+#!/bin/sh
+
+JRUBY_BIN=../Common/ThirdPartyTools/jruby-1.7.22/bin/
+PATH=$JRUBY_BIN:$PATH
+JRUBY_OPTS=--1.8
+
+unset GEM_HOME
+unset GEM_PATH
+
+$JRUBY_BIN/jruby -S $JRUBY_BIN/rake $*

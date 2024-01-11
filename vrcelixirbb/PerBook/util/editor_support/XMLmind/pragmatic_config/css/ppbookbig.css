@@ -1,0 +1,15 @@
+@import url(file:ppbook.css);
+
+p { 
+    margin-top: 1.33ex;
+    margin-bottom: 1.33ex;
+    margin-left: 0.5in;
+    margin-right: 0.5in;
+    font-size: 1.5em;
+}
+
+footnote > p,
+marginnote > p
+{
+    font-size: .9em;
+}

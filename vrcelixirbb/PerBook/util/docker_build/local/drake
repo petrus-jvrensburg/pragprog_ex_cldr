@@ -1,0 +1,23 @@
+#!/bin/sh
+
+if [ -z "$PP_DOCKER_CONTEXT" ]; then
+  # not running in docker
+
+  # bookinfo needs to be in this folder.
+  cp ../bookinfo.pml bookinfo.pml
+  docker run --rm -it -v $(pwd):/home/runner/Book ppbookshelf/bookbuilder ./build "$@"
+  # remove the bookinfo.pml file from the Book folder.
+  rm bookinfo.pml
+else
+  JRUBY_BIN=../Common/ThirdPartyTools/jruby-1.7.22/bin
+  # JRUBY_BIN=../Common/ThirdPartyTools/jruby-9.1.15.0/bin
+
+  JRUBY_OPTS=--1.8
+  PATH=$JRUBY_BIN:$PATH
+
+  unset GEM_HOME
+  unset GEM_PATH
+
+  $JRUBY_BIN/jruby -S $JRUBY_BIN/rake $*
+fi
+

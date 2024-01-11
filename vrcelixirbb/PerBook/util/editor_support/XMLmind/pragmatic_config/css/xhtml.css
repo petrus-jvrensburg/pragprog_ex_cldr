@@ -1,0 +1,350 @@
+/* 
+ * A CSS stylesheet for XHTML 1.0
+ *
+ * If you improve it, please send me (hussein@xmlmind.com) a copy.
+ */
+
+address, 
+applet,
+blockquote, 
+body, 
+dd,
+dir, 
+div, 
+dl, 
+dt, 
+fieldset, 
+form, 
+frame, 
+frameset, 
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+head, 
+hr,
+html, 
+iframe,
+li,
+link,
+menu,
+meta, 
+noframes,
+object, 
+ol, 
+p, 
+pre,
+title, 
+ul { 
+    display: block;
+}
+
+table { 
+    display: table;
+    border: 1 outset gray;
+    margin-top: 1.33ex;
+    margin-bottom: 1.33ex;
+}
+caption { 
+    display: table-caption;
+    font-style: italic;
+    text-align: center;
+    margin-left: 2ex;
+    margin-right: 2ex;
+    margin-top: 2;
+    margin-bottom: 2;
+}
+colgroup { 
+    display: table-column-group;
+}
+col { 
+    display: table-column;
+}
+thead, tbody, tfoot { 
+    display: table-row-group;
+    text-align: eval(attr(align));
+}
+tr { 
+    display: table-row;
+    text-align: eval(attr(align));
+}
+td, th { 
+    display: table-cell;
+    text-align: eval(attr(align));
+    vertical-align: eval(attr(valign));
+    row-span: eval(attr(rowspan));
+    column-span: eval(attr(colspan));    
+    border: 1 inset gray;
+    padding: 2;
+}
+th {
+    font-weight: bold;
+}
+
+meta { 
+    text-align: center;
+}
+meta:before {
+    content: "meta "; 
+    color: olive; 
+}
+meta[name]:before { 
+    content: "meta name=" attr(name) " content=" attr(content); 
+    color: olive; 
+}
+meta[http-equiv]:before { 
+    content: "meta http-equiv=" attr(http-equiv) " content=" attr(content); 
+    color: olive;
+}
+
+link { 
+    text-align: center;
+}
+link:before { 
+    content: "link "; 
+    color: olive; 
+}
+link[rel]:before { 
+    content: "link rel=" attr(rel) " href=" attr(href); 
+    color: olive;
+}
+
+title { 
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+    color: maroon;
+    margin-top: .67ex;
+    margin-bottom: .67ex;
+}
+
+h1, h2, h3, h4, h5, h6 { 
+    font-weight: bold;
+    color: maroon;
+}
+h1 { 
+    font-size: 1.5em;
+    margin-top: .83ex;
+    margin-bottom: .83ex;
+}
+h2 { 
+    font-size: 1.17em;
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+}
+h3, h4, h5, h6 { 
+    margin-top: 1.33ex;
+    margin-bottom: 1.33ex;
+}
+
+/*
+ * Block styles
+ */
+
+p { 
+    margin-top: 1.33ex;
+    margin-bottom: 1.33ex;
+}
+
+ul, 
+dir, 
+menu { 
+    margin-left: 2ex;
+    margin-top: 1.33ex;
+    margin-bottom: 1.33ex;
+}
+ul > li,
+dir > li,
+menu > li {
+    margin-left: 2.5ex;
+}
+ul > li:before {
+    display: marker;
+    content: disc;
+}
+dir > li:before,
+menu > li:before {
+    display: marker;
+    content: icon(right);
+}
+ul > li ul > li:before {
+    display: marker;
+    content: square;
+}
+ul > li ul > li ul > li:before {
+    display: marker;
+    content: icon(diamond);
+}
+ul > li ul > li ul > li ul > li:before {
+    display: marker;
+    content: circle;
+}
+
+ol { 
+    margin-left: 2ex;
+    margin-top: 1.33ex;
+    margin-bottom: 1.33ex;
+}
+ol > li {
+    margin-left: 6ex;
+}
+ol > li:before {
+    display: marker;
+    content: counter(n, decimal);
+    font-weight: bold;
+}
+ol[style~=lower-alpha] > li:before,
+ol[type=a] > li:before {
+    display: marker;
+    content: counter(n, lower-alpha);
+}
+ol[style~=upper-alpha] > li:before,
+ol[type=A] > li:before {
+    display: marker;
+    content: counter(n, upper-alpha);
+}
+ol[style~=lower-roman] > li:before,
+ol[type=i] > li:before {
+    display: marker;
+    content: counter(n, lower-roman);
+}
+ol[style~=upper-roman] > li:before,
+ol[type=I] > li:before {
+    display: marker;
+    content: counter(n, upper-roman);
+}
+
+ol ul, ul ol, ul ul, ol ol { 
+    margin-top: 0; 
+    margin-bottom: 0; 
+}
+
+dl {
+    margin-left: 2ex;
+    margin-top: 1.33ex;
+    margin-bottom: 1.33ex;
+}
+dt {
+    font-weight: bold; 
+}
+dd { 
+    margin-left: 4ex;
+}
+
+/*
+ * Displayed block styles
+ */
+
+pre { 
+    white-space: pre;
+    background-color: #E0E0E0;
+    border: thin solid gray;
+    font-family: monospace;
+    font-size: .83em;
+    margin-top: 1.33ex;
+    margin-bottom: 1.33ex;
+}
+
+blockquote { 
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 1.33ex;
+    margin-bottom: 1.33ex;
+}
+
+hr { 
+    content: icon(invisible) icon(invisible);
+    border: 2 inset gray;
+}
+
+/* Wrap <div class="center"> around some blocks to center them. */
+.center { 
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; 
+}
+
+/*
+ * Inline styles
+ */
+
+b, 
+strong { 
+    font-weight: bold; 
+}
+
+i, 
+em, 
+cite, 
+var, 
+address { 
+    font-style: italic; 
+}
+
+tt, 
+kbd, 
+code, 
+samp { 
+    font-family: monospace;
+    font-size: .83em; 
+}
+
+a[href] { 
+    color: navy;
+    text-decoration: underline;
+}
+a[name]:after { 
+    content: icon(right-target); 
+    color: olive;
+    vertical-align: text-top;
+}
+
+big { 
+    font-size: 1.17em;
+}
+small { 
+    font-size: .83em;
+}
+
+sub, 
+sup { 
+    font-size: .83em;
+}
+sub { 
+    vertical-align: sub;
+}
+sup { 
+    vertical-align: super;
+}
+
+s, 
+strike, 
+del {
+    text-decoration: line-through;
+}
+
+u, 
+ins { 
+    text-decoration: underline;
+}
+
+abbr, 
+acronym { 
+    background-color: yellow;
+}
+
+br:before { 
+    content: "\A"; 
+    color: olive;
+}
+
+/* 
+ *  Showing a 400x200 thumbnail is sufficient. 
+ *  If you don't like that, replace the content property by a more traditional:
+ *  content: image(attr(src), attr(width), attr(height));
+ */
+img {
+    content: image(attr(src), -400, -200);
+}

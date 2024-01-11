@@ -1,0 +1,102 @@
+ /* Style Definitions */
+
+
+p
+{
+    margin-top: 0.5em;
+    text-indent: 0em
+}
+
+img.border
+{
+   border: 1px solid gray;
+}
+
+img.inline {
+    max-height: 1.2em;
+    height:     1.2em;
+    position: relative;
+    top: 0.4rem;
+}
+
+.pagebreak
+{
+    page-break-before: always;
+}
+
+.leave-gap
+{
+    width: 0px;
+    margin-bottom: 100px;
+}
+
+.centered
+{
+    text-align: center;
+}
+
+.right
+{
+    text-align: right;
+}
+
+.bottom
+{
+    vertical-align: text-bottom;
+}
+
+.tablehead
+{
+    text-align: center;
+    font-weight: bold
+}
+
+.xsmall {
+    font-size: 50%;
+}
+
+.part-title
+{
+    text-align: center;
+    margin-top: 10%;
+}
+
+.partintro
+{
+    margin-top: 2em;
+    font-style: italic;
+}
+
+.backmatter-cover
+{
+    margin-top: 2em;
+}
+
+.background
+{
+  background-color:#cccccc;
+}
+
+.codewrap {
+	white-space: pre;           /* CSS 2.0 */
+	white-space: pre-wrap;      /* CSS 2.1 */
+	white-space: pre-line;      /* CSS 3.0 */
+}
+
+.keyboard {
+  font-family:courier, fixed, monospace;
+}
+
+HR 
+{
+    width: 20%;
+}
+H1 {margin-top: 1em}
+H2 {margin-top: 1em; font-size: 150%; margin-bottom: 0em; padding: 0em}
+H3 {margin-top: 1em}
+H4 {margin-top: 1em}
+
+
+.strike {
+    text-decoration: line-through;
+}

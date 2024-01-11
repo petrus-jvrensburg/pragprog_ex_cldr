@@ -1,0 +1,101 @@
+
+book,
+title,
+frontmatter,
+mainmatter,
+chapter,
+bookinfo,
+li, p, sect1, sect2, sect3, title, ul {
+	display:block;
+}
+
+p {
+	  font-family:  Arial, Verdana, Arial, sans-serif;
+    margin-top: 1.33ex;
+    margin-bottom: 1.33ex;
+    margin-left: 0.5in;
+    margin-right: 0.5in;
+}
+
+chapter > title,
+preface > title,
+dedication > title,
+appendix > title,
+bibliography > title,
+index > title,
+glossary > title {
+    font-size: 2em;
+    font-weight: bold;
+    color: blue;
+    margin-top: .67ex;
+    margin-bottom: .67ex;
+}
+
+book > bookinfo > booktitle {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    font-size: 3.0em;
+    margin-top: .83ex;
+    margin-bottom: .83ex;
+}
+
+book > bookinfo > booksubtitle {
+    text-align: center;
+    color: blue;
+    font-weight: bold;
+    font-size: 2.0em;
+    margin-top: .83ex;
+    margin-bottom: .83ex;
+}
+
+
+/*
+title{
+	  font-size: 36pt;
+	  font-weight: bold;
+	  margin-top: 10 pt;
+	  margin-bottom: 10pt;
+	  color: #000000;
+}
+*/
+
+sect1>title{
+	  font-size: 24pt;
+	  font-weight: bold;
+	  margin-top:   10pt;
+	  margin-bottom: 10pt;
+	  color: #000000;
+}
+
+sect2>title{
+	  font-size: 18pt;
+	  font-weight: bold;
+	  margin-top:   10pt;
+	  margin-bottom: 10pt;
+	  color: #000000;
+}
+
+/*
+p, sect1>p {
+	color:     #000000;
+	margin-top: 0.75em;
+	  font-family:  Arial, Verdana, Arial, sans-serif;
+}
+*/
+
+li>p {
+	display: list-item;
+	color: #000000;
+	margin-top: 0.75em;
+	margin-left: 0.3in;
+	font-family:  Arial, Verdana, Arial, sans-serif;
+}
+emph {
+	color:     #000000;
+    margin-left: 1.5in;
+	  margin-right: 0.5in;
+	margin-bottom: 30pt;
+	  font-family:  Arial, Verdana, Arial, sans-serif;
+	font-style:italic;
+}

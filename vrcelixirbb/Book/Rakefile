@@ -1,0 +1,18 @@
+NAME="vrcelixirbb"
+
+CODE_IGNORE_LIST = "README"
+
+# What format ebooks can we generate
+EBOOKS = [ :pdf, :epub, :mobi ]
+
+EXTRA_BIBLIOGRAPHIES = "local/bibliography/local-articles.xml"
+EXTRA_BIBLIOGRAPHIES = "local/bibliography/local-bib.xml"
+
+require "../PerBook/util/rake/main.rb"
+
+Preprocessor.add_internal("Aside")
+Preprocessor.add_internal("markdown", "Markdown")
+
+# Preprocessor.add_local("Lorem")
+
+

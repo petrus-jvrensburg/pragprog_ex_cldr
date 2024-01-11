@@ -1,0 +1,1994 @@
+<!--  <kseq><koption/>E</kseq> A</p> | Alt-0225 |  Cm A ' -->
+<!ENTITY   aacute    "&#225;">    <!-- <kseq><koption/>E</kseq> A $ Alt-0225 $ Cm A ' -->
+<!ENTITY   Aacute    "&#193;">    <!--  <kseq><koption/>E</kseq> <kseq> <kshift/>A</kseq> $ Alt-0193 $ Cm Shift-A ' -->
+<!ENTITY   acirc     "&#226;">    <!-- <kseq><koption/>I</kseq> A $ Alt-0226 $ Cm A ^ -->
+<!ENTITY   Acirc     "&#194;">    <!-- <kseq><koption/>I</kseq> <kseq><kshift/>A</kseq> $ Alt-0194 $ Cm Shift-A ^-->
+<!ENTITY   acute     "&#180;">    <!-- <kseq><koption/>E</kseq><kseq><koption/><kshift/>E</kseq> $ Alt-0180 $ Cm ' ' -->
+<!ENTITY   aelig     "&#230;">    <!-- <kseq><koption/>"</kseq> $ Alt-0230 $ Cm A E -->
+<!ENTITY   AElig     "&#198;">    <!-- <kseq><koption/><kshift/>"</kseq> $ Alt-0198 $ Cm Shift-A Shift-E -->
+<!ENTITY   agrave    "&#224;">    <!-- <kseq><koption/>`</kseq> A $ Alt-0224 $ Cm A ` -->
+<!ENTITY   Agrave    "&#192;">    <!-- <kseq><koption/>`</kseq> <kseq><kshift/>A</kseq> $ Alt-0192 $ Cm Shift-A ` -->
+<!ENTITY   alefsym   "&#x2135;" > <!-- Hebrew alef character -->
+<!ENTITY   alpha     "&#x3b1;">   <!-- Greek lowercase alpha -->
+<!ENTITY   and       "&#x2227;">  <!-- logical and -->
+<!ENTITY   aring     "&#229;">    <!-- <kseq><koption/>A</kseq> $ Alt-0229 $ Cm A *-->
+<!ENTITY   Aring     "&#197;">    <!-- <kseq><koption/><kshift/>A</kseq> $ Alt-0197 $ Cm Shift-A * -->
+<!ENTITY   atilde    "&#227;">    <!-- <kseq><koption/>N</kseq> A $ Alt-0227 $ Cm A ~  -->
+<!ENTITY   Atilde    "&#195;">    <!-- <kseq><koption/>N</kseq> <kseq><kshift/>A</kseq> $ Alt-0195 $ Cm Shift-A ~ -->
+<!ENTITY   auml      "&#228;">    <!-- <kseq><koption/>U</kseq> A $ Alt-0228 $ Cm A " -->
+<!ENTITY   Auml      "&#196;">    <!-- <kseq><koption/>U</kseq> <kseq><kshift/>A</kseq> $ Alt-0196 $ Cm Shift-A " -->
+<!ENTITY   beta      "&#x3b2;">   <!-- Greek lowercase beta -->
+<!ENTITY   brokenbar "&#166;">    <!-- | $ Alt-0166 $ Cm ^ / -->
+<!ENTITY   bslash    "&#92;">     <!-- \ $ Alt-92 $ Cm &lt; / -->
+<!ENTITY   cap       "&#x2229;">  <!-- intersect -->
+<!ENTITY   ccedil    "&#231;">    <!-- <kseq><koption/>C</kseq> $ Alt-0231 $ Cm C , -->
+<!ENTITY   Ccedil    "&#199;">    <!-- <kseq><koption/><kshift/>C</kseq> $ Alt-0199 $ Cm Shift-C , -->
+<!ENTITY   cedil     "&#184;">    <!-- <kseq><koption/><kshift/>Z</kseq> $ Alt-0184 $ Cm , , -->
+<!ENTITY   cent      "&#162;">    <!-- <kseq><koption/>4</kseq> $ Alt-0162 $ Cm C | -->
+<!ENTITY   checkmark "&#x2713;">  <!-- check mark -->
+<!ENTITY   copyright "&#169;">    <!-- <kseq><koption/>G</kseq> $ Alt-0169 $ Cm 0 C -->
+<!ENTITY   cup       "&#x222a;">  <!-- union -->
+<!ENTITY   currency  "&#164;">    <!--   $ Alt-0164 $ Cm 0 X -->
+<!ENTITY   deg       "&#176;">    <!-- <kseq><koption/><kshift/>8</kseq> $ Alt-0176 $ Cm O O -->
+<!ENTITY   delta     "&#x3b4;">   <!-- Greek lowercase delta -->
+<!ENTITY   divide    "&#247;">    <!-- <kseq><koption/>/</kseq> $ Alt-246 $ Cm : - -->
+<!ENTITY   dotlessi  "&#305;">    <!-- <kseq><koption/><kshift/>B</kseq> $  $ Cm I . -->
+<!ENTITY   eacute    "&#233;">    <!-- <kseq><koption/>E</kseq> E $ Alt-0233 $ Cm E ' -->
+<!ENTITY   Eacute    "&#201;">    <!-- <kseq><koption/>E</kseq> <kseq><kshift/>E $ </kseq> $ Alt-0201 $ Cm Shift-E ' -->
+<!ENTITY   ecirc     "&#234;">    <!-- <kseq><koption/>I</kseq> E $ Alt-0234 $ Cm E ^ -->
+<!ENTITY   Ecirc     "&#202;">    <!-- <kseq><koption/>I</kseq> <kseq><kshift/>E</kseq> $ Alt-0202 $ Cm Shift-E ^ -->
+<!ENTITY   egrave    "&#232;">    <!-- <kseq><koption/>`</kseq> E $ Alt-0232 $ Cm E ` -->
+<!ENTITY   Egrave    "&#200;">    <!-- <kseq><koption/>`</kseq> <kseq><kshift/>E</kseq> $ Alt-0200 $ Cm Shift-E ` -->
+<!ENTITY   ellipsis  "&#8230;">   <!-- <kseq><koption/>;</kseq> $ Alt-0133 $ Cm . . -->
+<!ENTITY   emdash    "&#8212;">   <!-- <kseq><koption/><kshift/>-</kseq> $ Alt-0151 $ Cm - - - -->
+<!ENTITY   endash    "&#8211;">   <!-- <kseq><koption/>-</kseq> $ Alt-0150 $ Cm - - . -->
+<!ENTITY   empty     "&#x2205;">  <!-- empty -->
+<!ENTITY   epsilon   "&#x3b5;">   <!-- Greek lowercase epsilon -->
+<!ENTITY   eth       "&#240;">    <!-- <kseq><koption/><kshift/>4</kseq> $ Alt-0240 $ Cm D H< -->
+<!ENTITY   ETH       "&#208;">    <!-- <kseq><koption/><kshift/>3</kseq> $ Alt-0208 $ Cm Shift-D Shift-H -->
+<!ENTITY   euml      "&#235;">    <!-- <kseq><koption/>U</kseq> E $ Alt-0235 $ Cm E " -->
+<!ENTITY   Euml      "&#203;">    <!-- <kseq><koption/>U</kseq> <kseq><kshift/>E</kseq> $ Alt-0203 $ Cm Shift-E " -->
+<!ENTITY   exists    "&#x2203;">  <!-- exists -->
+<!ENTITY   forall    "&#x2200;">  <!-- forall -->
+<!ENTITY   frac12    "&#189;">    <!-- <kseq><koption/><kshift/>P</kseq> $ Alt-0189 $ Cm 1 2 -->
+<!ENTITY   frac14    "&#188;">    <!-- <kseq><koption/>P</kseq> $ Alt-0188 $ Cm 1 4 -->
+<!ENTITY   frac34    "&#190;">    <!-- <kseq><koption/>,</kseq> $ Alt-0190 $ Cm 3 4 -->
+<!ENTITY   gamma     "&#x3b3;">   <!-- Greek lowercase gamma -->
+<!ENTITY   ge        "&#8805;">   <!-- <kseq><koption/>&gt;</kseq> $  $ Cm &gt; = -->
+<!ENTITY   grave     "&#96;">     <!-- <kseq><koption/><kshift/>`</kseq> $ ` $ ` -->
+<!ENTITY   hArr      "&#x21D4;">  <!-- double-stemmed, double-headed arrow -->
+<!ENTITY   hellip    "&#8230;">   <!-- <kseq><koption/>;</kseq> $ Alt-0133 $ Cm . . -->
+<!ENTITY   hy        "&#xAD;" >   <!-- - $ - $ - -->
+<!ENTITY   iacute    "&#237;">    <!-- <kseq><koption/>E</kseq> I $ Alt-0237 $ Cm I ' -->
+<!ENTITY   Iacute    "&#205;">    <!-- <kseq><koption/>E</kseq> <kseq><kshift/>I</kseq> $ Alt-0205 $ Cm Shift-I ' -->
+<!ENTITY   icirc     "&#238;">    <!-- <kseq><koption/>I</kseq> I $ Alt-0238 $ Cm I ^ -->
+<!ENTITY   Icirc     "&#206;">    <!-- <kseq><koption/>I</kseq> I $ Alt-0206 $ Cm Shift-I ^-->
+<!ENTITY   iexcl     "&#161;">    <!-- <kseq><koption/>1</kseq> $ Alt-0161 $ Cm ! ! -->
+<!ENTITY   igrave    "&#236;">    <!-- <kseq><koption/>I</kseq> I $ Alt-0206 $ Cm Shift-I ^ -->
+<!ENTITY   Igrave    "&#204;">    <!-- <kseq><koption/>`</kseq> I $ Alt-0236 $ Cm I ` -->
+<!ENTITY   iquest    "&#191;">    <!-- <kseq><koption/><kshift/>?</kseq> $ Alt-0191 $ Cm ? ? -->
+<!ENTITY   isin      "&#x2208;">  <!-- member of -->
+<!ENTITY   iuml      "&#239;">    <!-- <kseq><koption/>U</kseq> I $ Alt-0239 $ Cm I " -->
+<!ENTITY   Iuml      "&#207;">    <!-- <kseq>koption/>U</kseq> <kseq><kshift/>I</kseq> $ Alt-0196 $ Cm Shift-I " -->
+<!ENTITY   lambda    "&#x3bb;">   <!-- lambda -->
+<!ENTITY   langle    "&#x27e8;">   <!-- left angle bracket -->
+<!ENTITY   laquo     "&#171;">    <!-- <kseq><koption/>\</kseq> $ Alt-0171 $ Cm &lt; &lt; -->
+<!ENTITY   larr      "&#8592;">   <!-- left arrow -->
+<!ENTITY   ldots     "&#8230;">   <!-- <kseq><koption/>;</kseq> $ Alt-0133 $ Cm . . -->
+<!ENTITY   le        "&#8804;">   <!-- <kseq><koption/>&lt;</kseq> $  $ Cm &lt; = -->
+<!ENTITY   lquot     "&#x201C;">  <!-- <kseq><koption/>[</kseq> $ Alt-0147 $ Cm &lt; -->
+<!ENTITY   lsquo     "&#x2018;">  <!-- <kseq><koption/>]</kseq> $ Alt-0145 $ Cm &lt; ' -->
+<!ENTITY   macr      "&#175;">    <!-- <kseq><koption/><kshift/>,</kseq> $ Alt-0175 $ Cm ^ - -->
+<!ENTITY   mdash     "&#x2014;">  <!-- <kseq><koption/><kshift/>- </kseq> $ Alt-0151 $ Cm - - - -->
+<!ENTITY   micro     "&#181;">    <!-- <kseq><koption/>M</kseq> $ Alt-0181 $ Cm / U -->
+<!ENTITY   middot    "&#183;">    <!-- <kseq><koption/><kshift/>9</kseq> $ Alt-0183 $ Cm ^ . -->
+<!ENTITY   nbsp      "&#160;">    <!--  <kseq><koption/>Spacebar</kseq> $ Alt-0160 $ Cm  -->
+<!ENTITY   ndash     "&#x2013;">  <!-- <kseq><koption/>- </kseq> $ Alt-0150 $ Cm - - -->
+<!ENTITY   ne        "&#8800;">   <!-- <kseq><koption/>=</kseq> $   $ Cm Spacebar Spacebar --> <!-- not equal -->
+<!ENTITY   not       "&#172;">    <!-- <kseq><koption/>L</kseq> $ Alt-0172 $ Cm , - -->
+<!ENTITY   ntilde    "&#241;">    <!-- <kseq><koption/>N</kseq> N $ Alt-0241 $ Cm N ~ -->
+<!ENTITY   Ntilde    "&#209;">    <!-- <kseq><koption/>N</kseq> <kseq><kshift/>N</kseq> $ Alt-0209 $ Cm Shift-N ~ -->
+<!ENTITY   oacute    "&#243;">    <!-- <kseq><koption/>E</kseq> O $ Alt-0243 $ Cm O ' -->
+<!ENTITY   Oacute    "&#211;">    <!-- <kseq><koption/>E</kseq> <kseq><kshift/>O</kseq> $ Alt-0211 $ Cm Shift-O ' -->
+<!ENTITY   ocirc     "&#244;">    <!-- <kseq><koption/>I</kseq> O $ Alt-0244 $ Cm O ^ -->
+<!ENTITY   Ocirc     "&#212;">    <!-- <kseq><koption/>I</kseq> <kseq><kshift/>O</kseq> $ Alt-0212 $ Cm Shift-O ^ -->
+<!ENTITY   ograve    "&#242;">    <!-- <kseq><koption/>`</kseq> O $ Alt-0242 $ Cm O ` -->
+<!ENTITY   Ograve    "&#210;">    <!-- <kseq><koption/>`</kseq> <kseq><kshift/>O</kseq> $ Alt-0210 $ Cm Shift-O ` -->
+<!ENTITY   ohm       "&#x2126;">  <!-- uppercase Omega -->
+<!ENTITY   omega     "&#x3c9;" >  <!-- lowercase omega -->
+<!ENTITY   or        "&#x2228;">  <!-- logical or -->
+<!ENTITY   ordf      "&#170;">    <!-- <kseq><koption/>9</kseq> $ Alt-0170 $ Cm A _ -->
+<!ENTITY   ordm      "&#186;">    <!-- <kseq><koption/>0</kseq> $ Alt-0186 $ Cm O _ -->
+<!ENTITY   oslash    "&#248;">    <!-- <kseq><koption/>O</kseq> $ Alt-0248 $ Cm O / -->
+<!ENTITY   Oslash    "&#216;">    <!-- <kseq><koption/><kshift/>O</kseq> $ Alt-0216 $ Cm Shift-O / -->
+<!ENTITY   otilde    "&#245;">    <!-- <kseq><koption/>N O</kseq> $ Alt-0245 $ Cm O ~ -->
+<!ENTITY   Otilde    "&#213;">    <!-- <kseq><koption/>N</kseq> <kseq><kshift/>O</kseq> $ Alt-0213 $ Cm Shift-O ~ -->
+<!ENTITY   ouml      "&#246;">    <!-- <kseq><koption/>U</kseq> O $ Alt-0246 $ Cm O " -->
+<!ENTITY   Ouml      "&#214;">    <!-- <kseq><koption/>U</kseq> <kseq><kshift/>O</kseq> $ Alt-0214 $ Cm Shift-O " -->
+<!ENTITY   para      "&#182;">    <!-- <kseq><koption/>7</kseq> $ Alt-0182 $ Cm ! P -->
+<!ENTITY   part      "&#8706;">   <!-- <kseq><koption/>D</kseq> $  $  -->
+<!ENTITY   phi       "&#x3c6;">   <!-- $  $ -->
+<!ENTITY   Phi       "&#x3d5;">   <!--  $ $  -->
+<!ENTITY   pi        "&#x03C0;">  <!--  $  $  -->
+<!ENTITY   plusmn    "&#177;">    <!-- $ Alt-0177 $ Cm + - -->
+<!ENTITY   pound     "&#163;">    <!-- $ Alt-0163 $ Cm = L -->
+<!ENTITY   rangle    "&#x27e9;">   <!-- right angle bracket -->
+<!ENTITY   raquo     "&#187;">    <!-- <kseq><koption/><kshift/>\</kseq> $ Alt-0187 $ Cm &gt; &gt; -->
+<!ENTITY   rarr      "&#8594;">   <!-- right arrow -->
+<!ENTITY   rArr      "&#x21d2;">  <!-- right double-stemmed arrow -->
+<!ENTITY   reg       "&#174;">    <!-- <kseq><koption/>R</kseq> $ Alt-0174 $ Cm O R -->
+<!ENTITY   rquot     "&#x201D;">  <!-- <kseq><koption/><kshift/>[xs</kseq> $ Alt-0148 $ Cm &gt; " -->
+<!ENTITY   rsquo     "&#x2019;">  <!-- <kseq><koption/><kshift/>]</kseq> $ Alt-0148 $ Cm &gt; " -->
+<!ENTITY   sapos     "&#x0027;">  <!-- ' or <kseq><koption/><kshift/>E</kseq> $ Alt-39 $ Cm &gt; ' -->
+<!ENTITY   section   "&#167;">    <!-- <kseq><koption/>6</kseq> $ Alt-0167 $ Cm O S -->
+<!ENTITY   squot     "&#x0022;">  <!-- <kseq><kshift/>"</kseq> $ Alt-34 $ " -->
+<!ENTITY   sum       "&#8721;">   <!-- <kseq><koption/>W</kseq> $  $  -->
+<!ENTITY   sup1      "&#185;">    <!-- <kseq><kcontrol/><kcommand/><kshift/>=-1</kseq> $ Alt-0185 $ Cm S 1 -->
+<!ENTITY   sup2      "&#178;">    <!-- <kseq><kcontrol/><kcommand/><kshift/>=-2</kseq> $ Alt-253 $ Cm S 2 -->
+<!ENTITY   sup3      "&#179;">    <!-- <kseq><kcontrol/><kcommand/><kshift/>=-3</kseq> $ Alt-0179 $ Cm S 3 -->
+<!ENTITY   szlig     "&#223;">    <!-- <kseq><koption/>S</kseq> $ Alt-225 $ Cm S S -->
+<!ENTITY   tau       "&#x3c4;">   <!--Greek lowercase tau-->
+<!ENTITY   thorn     "&#254;">    <!-- <kseq><koption/>s-<kshift/>5</kseq> $ Alt-0254 $ Cm T H -->
+<!ENTITY   THORN     "&#222;">    <!-- <kseq><koption/>s-<kshift/>6</kseq> $ Alt-0222 $ Cm Shift-T Shift-H -->
+<!ENTITY   tilde     "&#126;">    <!-- ~ $ ~ $ Cm ~ <nobreak>Spacebar</nobreak> -->
+<!ENTITY   times     "&#215;">    <!-- <kseq><koption/><kshift/>V</kseq> $ Alt-0215 $ Cm X X -->
+<!ENTITY   uacute    "&#250;">    <!-- <kseq><koption/>E</kseq> U $ Alt-0250 $ Cm U ' -->
+<!ENTITY   Uacute    "&#218;">    <!-- <kseq><koption/>E</kseq> <kseq><kshift/>U</kseq> $ Alt-0218 $ Cm Shift-U ' -->
+<!ENTITY   ucirc     "&#251;">    <!-- <kseq><koption/>I</kseq> U $ Alt-0251 $ Cm U ^ -->
+<!ENTITY   Ucirc     "&#219;">    <!-- <kseq><koption/>I</kseq> <kseq><kshift/>U</kseq> $ Alt-0219 $ Cm Shift-U ^ -->
+<!ENTITY   ugrave    "&#249;">    <!-- <kseq><koption/>`</kseq> U $ Alt-0248 $ Cm U ` -->
+<!ENTITY   Ugrave    "&#217;">    <!-- <kseq><koption/>`</kseq> <kseq><kshift/>U</kseq> $ Alt-0217 $ Cm Shift-U ` -->
+<!ENTITY   uml       "&#168;">    <!-- <kseq><koption/><kshift/>U</kseq> $ Alt-0168 $ Cm " " -->
+<!ENTITY   uuml      "&#252;">    <!-- <kseq><koption/>U</kseq> U $ Alt-0252 $ Cm U " -->
+<!ENTITY   Uuml      "&#220;">    <!-- <kseq><koption/>U</kseq> <kseq><kshift/>U</kseq> $ Alt-0220 $ Cm Shift-U " -->
+<!ENTITY   yacute    "&#253;">    <!-- <kseq><koption/><kshift/>7</kseq> $ Alt-0253 $ Cm Y ' -->
+<!ENTITY   Yacute    "&#221;">    <!-- <kseq><koption/>T</kseq> $ Alt-0221 $ Cm Shift-Y ' -->
+<!ENTITY   yen       "&#165;">    <!-- <kseq><koption/>Y</kseq> $ Alt-0165 $ Cm Y = -->
+<!ENTITY   yuml      "&#255;">    <!-- <kseq><koption/>U</kseq> Y $ Alt-0255 $ Cm Y " -->
+
+                                  <!-- non-standard entities -->
+
+<!ENTITY mapsto      "&#8594;">   <!-- -->
+<!ENTITY backtick    "&#9998;">   <!-- -->
+<!ENTITY asym        "&#8776;">   <!-- -->
+
+
+<!-- Overridden by specific books... -->
+<!ENTITY % local.char.flow "">
+<!ENTITY % local.ic.flow "">
+<!ENTITY % local.codeline.flow "">
+<!ENTITY % local.flow "">
+<!ENTITY % local.non.float.flow "">
+<!ENTITY % local.codeline "">
+<!ENTITY % local.option.list "">
+
+<!-- Added recipe -->
+<!ENTITY % mainmatter
+         "( ( chapter | appendix | part | layout | if | index | recipe | extract | task | bibsection )*
+          )"
+          >
+
+<!ENTITY % partcontents
+         " chapter
+         | appendix
+         | layout
+         | if
+         | recipe
+         | task
+         | extract
+         ">
+
+<!-- Not for general consumption, boys and girls -->
+
+<!ENTITY % pragprog.only.flow
+         "
+         | pagebreak
+          ">
+
+<!-- these flows are safe in floats (such as figures) -->
+<!ENTITY % ok.in.float.flow
+         "
+           blockquote
+         | calloutlist
+         | code
+         | dl
+         | example
+         | i
+         | if
+         | imagedata
+         | interact
+         | layout
+         | page-params
+         | processedcode
+         | ruby
+         | ol
+         | p
+         | ul
+         %local.flow;
+         ">
+<!-- these flows are safe in floats (such as figures) -->
+
+<!-- and these are safe only in the main body -->
+<!-- moved table out of figure so both have their own numbering sequence. -->
+<!ENTITY % flow.without.ppextract
+         " %ok.in.float.flow;
+         | author
+         | authorq
+         | bibliography
+         | ce
+         | clear
+         | dialog
+         | ed
+         | figure
+         | flag
+         | index-listing
+         | joeasks
+         | missing
+         | permissions
+         | said
+         | sidebar
+         | story
+         | storymap
+         | table
+         | task
+         | tip
+         | webresources
+         %local.non.float.flow;
+         %pragprog.only.flow;
+         ">
+
+<!ENTITY % flow
+         " %flow.without.ppextract;
+          | extract
+         ">
+
+<!-- Created second set of entities to disable the use of tables in col. -->
+<!ENTITY % ok.in.float.flow.col
+         "
+           blockquote
+         | calloutlist
+         | code
+         | dl
+         | example
+         | i
+         | if
+         | imagedata
+         | interact
+         | layout
+         | page-params
+         | processedcode
+         | ruby
+         | ol
+         | p
+         | ul
+         %local.flow;
+   ">
+<!ENTITY % flow.without.ppextract.col
+         "
+           %ok.in.float.flow.col;
+           | author
+           | authorq
+           | bibliography
+           | ce
+           | dialog
+           | ed
+           | figure
+           | flag
+           | index-listing
+           | joeasks
+           | missing
+           | permissions
+           | said
+           | sidebar
+           | story
+           | task
+           | tip
+           %local.non.float.flow;
+           %pragprog.only.flow;
+   ">
+<!ENTITY % flow.col
+         "
+           %flow.without.ppextract.col;
+           | extract
+           | table
+   ">
+
+
+<!ENTITY % mac.keys
+         " | kcontrol
+           | kshift
+           | kcommand
+           | koption
+           | kesc
+           | ktab
+           | kreturn
+           | kenter
+           | kdelete
+           | kup
+           | kdown
+           | kleft
+           | kright
+           | kseq
+
+           | kreturn2
+           | klinebreak
+           | kcapslock
+           | kapple
+           | kpower
+           | kbacktab
+           | kpageup
+           | kpagedown
+           | khome
+           | kend
+           | kforwarddelete
+           | khelp
+
+           | vspace
+
+           | F1
+           | F2
+           | F3
+           | F4
+           | F5
+           | F6
+           | F7
+           | F8
+           | F9
+           | F10
+           | F11
+           | F12
+           ">
+
+<!ENTITY % char.flow
+         "  #PCDATA
+          | acronym
+          | author
+          | authorq
+          | bookname
+          | articlename
+          | booksectname
+          | ce
+          | class
+          | code
+          | commandname
+          | commandoption
+          | constant
+          | coref
+          | cref
+          | dir
+          | dont-use-embolden
+          | ed
+          | elide
+          | emph
+          | eof
+          | fileextension
+          | filename
+          | firstuse
+          | flag
+          | footnote
+          | fraction
+          | highlight
+          | hz
+          | i
+          | il
+          | initials
+          | inlinecode
+          | inlineimage
+          | ic
+          | keystroke
+          | keyword
+          | layout
+          | if
+          | if-inline
+          | lispmethod
+          | lower
+          | marginnote
+          | method
+          | missing
+          | nobreak
+          | permissions
+          | newline
+          | nohyphen
+          | objcmethod
+          | pdf
+          | raise
+          | ref
+          | shade
+          | sqlcolumn
+          | sqltable
+          | sqrt
+          | standin
+          | strike
+          | string
+          | titleref
+          | underline
+          | url
+          | variable
+          | vector
+          | xmlattr
+          | xmlattrval
+          | xmltag
+          | xmltagpair
+          | xref
+          %mac.keys;
+          %local.char.flow;
+          ">
+
+<!ENTITY % someone-asks-contents
+        '(  i*
+          , title
+          , ( %ok.in.float.flow;
+              | table
+            )*
+          )'
+>
+
+<!ENTITY % code-attributes
+         ' id          ID    #IMPLIED
+          end          CDATA #IMPLIED
+          end-exclude  CDATA #IMPLIED
+          file         CDATA #IMPLIED
+          language     CDATA #IMPLIED
+          livecode     CDATA #IMPLIED
+          part         CDATA #IMPLIED
+          size         CDATA #IMPLIED
+          start        CDATA #IMPLIED
+          url          CDATA #IMPLIED
+          add-id       ( yes | no ) "yes"
+          forcenumber  ( yes | no ) "no"
+          highlight    ( yes | no ) "yes"
+          showname     CDATA "yes"
+          style        ( normal | shaded ) "normal"
+          verbatim     ( yes | no ) "no"
+          '>
+
+<!-- cheat -->
+
+<!ELEMENT layout
+          ( #PCDATA
+          | kern
+          )* >
+
+<!ELEMENT kern
+          ( #PCDATA
+          ) >
+<!ATTLIST kern
+          right CDATA #IMPLIED
+          left CDATA #IMPLIED
+          >
+
+<!ELEMENT dont-use-embolden
+          ( %char.flow; )*
+          >
+
+<!ELEMENT if
+          ( newline | %flow; | chapter )*
+          >
+<!ATTLIST if
+          target  ( pdf | epub | mobi ) #REQUIRED
+          >
+
+<!ELEMENT pdf
+          ( %char.flow; )*
+          >
+
+<!ELEMENT if-inline
+          ( %char.flow; )*
+          >
+<!ATTLIST if-inline
+          target  ( pdf | epub | mobi ) #REQUIRED
+                hyphenate ( yes | no ) "no"
+          >
+
+<!ELEMENT nobreak
+          ( %char.flow; )*
+          >
+
+
+<!--                             book -->
+
+<!ELEMENT book
+          ( options?
+          , bookinfo
+          , frontmatter
+          , mainmatter
+          , backmatter?
+          ) >
+
+<!ELEMENT options
+    (recipetitle?
+    , tasktitle?
+    , tablestyle?
+    , recipesect1?
+    , recipepadding?
+    , omitmethodparens?
+    , omitchapnums?
+    , omitcoupon?
+    %local.option.list;
+    )>
+
+ <!ELEMENT recipetitle EMPTY>
+ <!ATTLIST recipetitle
+     name  CDATA #REQUIRED
+     width CDATA #IMPLIED
+     >
+
+ <!ELEMENT tasktitle EMPTY>
+ <!ATTLIST tasktitle
+     name  CDATA #REQUIRED
+     >
+
+<!ELEMENT tablestyle EMPTY>
+<!ATTLIST tablestyle
+    style ( outerlines | hlines ) #IMPLIED
+    >
+
+<!ELEMENT recipesect1 EMPTY>
+<!ATTLIST recipesect1
+    numbered ( yes | no ) #IMPLIED
+    >
+
+<!ELEMENT recipepadding EMPTY>
+<!ATTLIST recipepadding
+    padded ( yes | no ) #IMPLIED
+    >
+
+<!ELEMENT omitmethodparens EMPTY>
+
+<!ELEMENT omitchapnums EMPTY>
+
+<!ELEMENT omitcoupon EMPTY>
+
+<!ELEMENT bookinfo
+         ( booktitle
+          , booksubtitle
+          , authors
+          , withauthors?
+          , copyright?
+          , isbn13
+          , isbn13-hardcover?
+          , printing
+          , production-info?
+          ) >
+<!ATTLIST bookinfo
+         code              CDATA        #REQUIRED
+         in-beta           ( yes | no ) "no"
+         production-status ( initial-development
+                            | passed-me-review
+                            | passed-pub-review
+                            | in-beta
+                            | first-draft-complete
+                            | final-draft-complete
+                            | indexing
+                            | first-copy-edit
+                            | author-review
+                            | second-copy-edit
+                            | layout
+                            | at-printer
+                            | in-print
+                            )               "initial-development"
+
+         booktype          ( book | pguide | airport) "book"
+         chapter-start     ( recto | verso ) "recto"
+>
+
+<!ELEMENT authors
+	  ( person
+	  )* >
+<!ELEMENT withauthors
+	  ( person
+	  )* >
+
+
+<!ELEMENT copyright
+	  ( copyrightholder
+	  , copyrightdate
+	  ) >
+
+<!ELEMENT copyrightholder
+	  ( #PCDATA
+	  )>
+
+<!ELEMENT copyrightdate
+	  ( #PCDATA
+	  )>
+
+
+<!ELEMENT isbn13
+	  ( #PCDATA
+	  ) >
+
+<!ELEMENT isbn13-hardcover
+	  ( #PCDATA
+	  ) >
+
+<!ELEMENT printing
+	  ( printingnumber
+	  , printingdate
+	  )>
+
+<!ELEMENT printingnumber
+	  ( #PCDATA
+	  )* >
+
+<!ELEMENT printingdate
+	  ( #PCDATA
+	  )* >
+
+<!ELEMENT production-info
+          ( publisher
+          | ceo
+          | coo
+          | vpoperations
+          | executiveeditor
+          | managingeditor
+          | supervisingeditor
+          | series-editor
+          | editor
+          | copyeditor
+          | indexer
+          | typesetter
+          | producer
+          | rights
+          | support
+          | founders
+          )* >
+
+<!ELEMENT editor
+          ( #PCDATA
+          ) >
+
+<!ELEMENT ceo
+          ( #PCDATA
+          ) >
+
+<!ELEMENT coo
+          ( #PCDATA
+          ) >
+
+<!ELEMENT founders
+          ( #PCDATA
+          ) >
+
+<!ELEMENT publisher
+          ( #PCDATA
+          ) >
+
+<!ELEMENT vpoperations
+          ( #PCDATA
+          ) >
+
+<!ELEMENT executiveeditor
+          ( #PCDATA
+          ) >
+
+<!ELEMENT managingeditor
+          ( #PCDATA
+          ) >
+
+<!ELEMENT supervisingeditor
+          ( #PCDATA
+          ) >
+
+<!ELEMENT series-editor
+          ( #PCDATA
+          ) >
+
+<!ELEMENT indexer
+          ( #PCDATA
+          ) >
+
+<!ELEMENT copyeditor
+          ( #PCDATA
+          ) >
+
+<!ELEMENT typesetter
+          ( #PCDATA
+          ) >
+
+<!ELEMENT producer
+          ( #PCDATA
+          ) >
+
+<!ELEMENT rights
+          ( #PCDATA
+          ) >
+
+<!ELEMENT support
+          ( #PCDATA
+          ) >
+
+<!ELEMENT booktitle
+	  ( %char.flow;
+	  )* >
+
+<!ATTLIST booktitle
+	  size (normal | small | smaller | smallest ) "normal"
+    >
+
+<!ELEMENT booksubtitle
+	  ( %char.flow;
+	  )* >
+
+<!ATTLIST booksubtitle
+	  size (normal | small | smaller | smallest ) "normal"
+    >
+
+<!ELEMENT frontmatter
+	  (  dedication*,
+            ( layout |  praisepage  | chapter | extract )*
+	  ) >
+
+<!ELEMENT praisepage
+	  ( praisetitle
+	  , (praiseentry
+	  | pagebreak
+	  )*
+	  )>
+
+<!ELEMENT praisetitle
+	  ( %char.flow;
+	  )* >
+
+
+<!ELEMENT praiseentry
+	  ( praise
+	  , person
+	  )>
+
+<!ELEMENT praise
+	  ( %flow;
+	    | sect1
+	  )* >
+
+<!ELEMENT person
+	  ( name
+	  , jobtitle?
+	  , affiliation?
+	  )>
+
+<!ELEMENT name
+	  ( %char.flow;
+	  )* >
+
+<!ELEMENT date
+	  ( %char.flow;
+	  )* >
+
+<!ELEMENT jobtitle
+	  ( %char.flow;
+	  )* >
+
+<!ELEMENT affiliation
+	  ( %char.flow;
+	  )* >
+
+<!ELEMENT dedication
+          ( ( %flow; )*,
+	    name?
+          )>
+<!ELEMENT epigraph
+	  ( name
+	  , title?
+	  , date?
+	  , epitext
+	  )>
+
+<!ELEMENT epitext
+	  ( %flow;
+	  )*>
+
+<!ELEMENT wecover
+          ( %flow;
+          )*>
+
+<!ELEMENT banner
+          ( imagedata
+          , title?
+          )>
+<!ATTLIST banner
+          vertical-adjust CDATA #IMPLIED
+          >
+
+<!ELEMENT mainmatter
+	  %mainmatter;
+	  >
+
+<!ELEMENT part
+	  ( epigraph?
+          , title
+	  , (partintro | long-partintro)?
+	  , ( %partcontents;
+            )+
+	  ) >
+
+<!ATTLIST part
+          id ID #IMPLIED
+          toc-on-new-page ( yes | no ) "no"
+	  >
+
+<!ELEMENT partintro
+	  ( %flow;
+	  )* >
+
+<!ATTLIST partintro
+	  width  ( normal | wide ) "normal"
+          >
+
+<!ELEMENT long-partintro
+	  ( %flow;
+	  )* >
+
+<!ELEMENT sqrt
+	  ( #PCDATA
+          | fraction
+	  )*>
+
+<!ELEMENT vector
+	  ( #PCDATA
+	  )>
+
+<!-- Added backmatter and related elements. -->
+<!ELEMENT backmatter
+	 ( ( ads?
+   | coupon? )*
+	 , backpage
+	 )>
+<!ELEMENT backpage
+  ( %char.flow; | sect1 )*
+  >
+<!ELEMENT coupon
+  ( title?
+  , ( %flow;
+    )*
+  )>
+<!ELEMENT ads
+  ( adpage*
+  )>
+<!ELEMENT adpage
+  ( title?
+  , ( %flow;
+    )*
+  )>
+ <!-- comma-separated list of book codes -->
+<!ATTLIST adpage
+  codes CDATA        #IMPLIED
+  titlesize (normal | small | smaller | smallest) "normal"
+  twoline (yes | no) "no"
+  >
+
+ <!ELEMENT ad
+  ( bookcode
+  , booktitle
+  , booksubtitle?
+  , author-list
+  , isbn13
+  , pagecount
+  , price
+  , blurb
+  )>
+
+<!ELEMENT blurb
+  (
+    (%flow;)*
+  )>
+
+<!ELEMENT bookcode
+  ( #PCDATA
+  )>
+<!ELEMENT author-list
+  ( #PCDATA
+  )>
+<!ELEMENT pagecount
+  ( #PCDATA
+  )>
+<!ELEMENT price
+  ( #PCDATA
+  )>
+
+<!-- chapter -->
+<!-- Added recipe -->
+<!ELEMENT chapter
+	  ( i*
+	  , extract?
+	  , title
+	  , wecover?
+	  , epigraph?
+	  , banner?
+	  , ( %flow;
+	    | sect1
+	    | recipe
+	    | extract
+            | prefacesignoff
+	    )*
+          )
+	  >
+<!ATTLIST chapter
+	  id ID #IMPLIED
+	  intoc  ( yes | no ) 'yes'
+	  toc-on-new-page ( yes | no ) 'no'
+	  version CDATA #IMPLIED
+	  stubout  ( yes | no ) 'no'
+	  ad  ( yes | no ) 'no'
+	  solo  ( yes | no ) 'no'
+    line  ( no | yes ) 'yes'
+	  >
+<!--                             appendix -->
+<!ELEMENT appendix
+	  ( i*
+	  , title
+	  , wecover?
+	  , epigraph?
+	  , ( %flow;
+	    | sect1
+	    )*
+          )
+	  >
+<!ATTLIST appendix
+	  id ID #IMPLIED
+	  intoc  ( yes | no ) 'yes'
+	  version CDATA #IMPLIED
+	  stubout  ( yes | no ) 'no'
+          solo  ( yes | no ) 'no'
+	  line  ( yes | no ) 'yes'
+	  >
+
+<!ELEMENT title
+          ( %char.flow;
+          | p
+          )* >
+<!ATTLIST title
+          omit-number ( yes | no ) 'no'
+          >
+
+<!-- only for tables -->
+<!ELEMENT subtitle
+          ( %flow;
+          )* >
+
+<!ELEMENT bibsection
+	  ( i*
+	  , title
+          , ( sect1
+   	    | %flow;
+	    )*
+	  )>
+<!ATTLIST bibsection
+	  id ID #IMPLIED
+	  intoc  ( yes | no ) 'yes'
+	  >
+
+<!ELEMENT sect1
+	  ( i*
+	  , title
+          , ( sect2
+   	    | %flow;
+            | prefacesignoff
+	    )*
+	  )>
+<!ATTLIST sect1
+	  id ID #IMPLIED
+	  intoc  ( yes | no ) 'yes'
+	  >
+
+<!ELEMENT sect2
+	  ( i*
+	  , title
+	  , ( sect3
+	    | %flow;
+	    )*
+	  )>
+<!ATTLIST sect2
+	  id ID #IMPLIED
+	  intoc  ( yes | no ) 'yes'
+	  >
+
+<!ELEMENT sect3
+	  ( i*
+	  , title
+	  , ( sect4
+	    | %flow;
+	    )*
+	  )>
+<!ATTLIST sect3
+	  id ID #IMPLIED
+	  intoc  ( yes | no ) 'yes'
+	  >
+
+<!ELEMENT sect4
+	  ( i*
+	  , title
+	  , ( %flow;
+	    )*
+	  )>
+
+<!ATTLIST sect4
+	  id ID #IMPLIED
+	  intoc  ( yes | no ) 'yes'
+	  >
+
+<!-- Added recipe element.   -->
+<!ELEMENT recipe
+	  ( i*
+	  , title
+	  , epigraph?
+    , ( sect2 |%flow;
+      )*
+    )>
+<!ATTLIST recipe
+	  id ID #IMPLIED
+	  intoc  ( yes | no ) 'yes'
+	  break  (yes|no) 'yes'
+	  style  (boxed|lined) 'boxed'
+          stubout ( yes | no ) #IMPLIED
+	  line  ( yes | no ) 'yes'
+ 	  >
+
+<!-- Added tip element -->
+<!ELEMENT tip
+	  ( i*
+	  , title
+    )>
+<!ATTLIST tip
+	  id ID #IMPLIED
+	  intoc  ( yes | no ) 'no'
+          add-number ( yes | no ) 'yes'
+	  line  ( yes | no ) 'yes'
+	  >
+
+<!ELEMENT prefacesignoff
+          ( %char.flow; )*
+	  >
+<!ATTLIST prefacesignoff
+	  name CDATA #REQUIRED
+	  date CDATA #IMPLIED
+	  title CDATA #IMPLIED
+	  location CDATA #IMPLIED
+	  email CDATA #IMPLIED
+	  >
+
+<!ELEMENT p
+	  ( %char.flow; | pagebreak )*>
+
+<!ATTLIST p
+	  id ID #IMPLIED
+	  size ( normal | small | visibly-small ) 'normal'
+          space-after ( normal | none ) 'normal'
+          float ( left | right ) #IMPLIED
+          clear ( left | right | both ) #IMPLIED
+          width CDATA '50%'
+          >
+<!ELEMENT clear
+          EMPTY>
+
+<!ELEMENT missing
+	  ( #PCDATA
+	  )>
+
+<!ELEMENT permissions
+	  ( #PCDATA
+	  )>
+
+<!ATTLIST permissions
+	  status  ( needed | requested | obtained ) 'needed'
+	  >
+
+<!ELEMENT ed
+	  ( %char.flow;
+	  )*>
+<!ATTLIST ed
+          handled ( yes | no) 'no'
+          >
+
+<!ELEMENT ce
+	  ( %char.flow;
+	  )*>
+<!ATTLIST ce
+          handled ( yes | no) 'no'
+          >
+
+<!ELEMENT author
+	  ( %char.flow;
+	  )*>
+<!ATTLIST author
+          handled ( yes | no) 'no'
+          >
+
+<!ELEMENT authorq
+	  ( %char.flow;
+	  )*>
+<!ATTLIST authorq
+          handled ( yes | no) 'no'
+          >
+
+<!ELEMENT elide
+	  ( #PCDATA
+	  | cokw
+	  | cocomment
+	  | coprompt
+    | costring
+    | cotag
+	  | elide
+	  | standin
+	  | shade
+	  | cobold
+	  %local.codeline.flow;
+	  )*>
+
+<!ELEMENT flag
+	  ( %char.flow;
+	  )*>
+
+<!ELEMENT nohyphen
+	  ( #PCDATA
+	  )>
+
+<!ELEMENT newline
+	  EMPTY
+	  >
+
+<!ELEMENT raise
+	  ( %char.flow;
+	  )*>
+
+<!ATTLIST raise
+	  power CDATA #REQUIRED
+	  >
+
+
+<!ELEMENT lower
+	  ( %char.flow;
+	  )*>
+
+<!ATTLIST lower
+	  subscript CDATA #REQUIRED
+	  >
+
+
+<!ENTITY % shadeargs " black | red | green | yellow | blue | magenta | cyan | white | light | dark " >
+
+<!ELEMENT shade
+	( %char.flow;
+	  )*>
+
+<!ATTLIST shade
+	  fg (%shadeargs;) 'black'
+	  bg (%shadeargs;) 'white'
+        >
+
+<!ELEMENT standin
+	  ( #PCDATA
+	  )>
+
+<!ELEMENT strike
+	  ( %char.flow;
+	  )*>
+
+<!ELEMENT emph
+	  ( %char.flow;
+	  )*>
+
+<!ELEMENT acronym
+	  ( #PCDATA
+	  )>
+
+<!ELEMENT booksectname
+	  ( %char.flow;
+	  )*>
+
+<!ELEMENT bookname
+	  ( #PCDATA
+	  )>
+
+<!ATTLIST bookname
+	  cite CDATA #IMPLIED
+	  >
+
+<!ELEMENT articlename
+	  ( #PCDATA
+	  )>
+
+<!ATTLIST articlename
+	  cite CDATA #IMPLIED
+	  >
+
+<!ELEMENT constant
+	  ( #PCDATA
+	  )>
+
+<!ELEMENT firstuse
+	  ( %char.flow;
+	  )*>
+
+<!ELEMENT fileextension
+	  ( #PCDATA
+	  )>
+
+<!ELEMENT fraction
+	  ( whole?
+	  , top
+	  , bottom
+	  )>
+
+<!ELEMENT whole
+	  ( %char.flow;
+	  )*>
+
+<!ELEMENT top
+	  ( %char.flow;
+	  )*>
+
+<!ELEMENT bottom
+	  ( %char.flow;
+	  )*>
+
+
+<!ELEMENT filename
+	  ( #PCDATA
+	  )>
+
+<!ELEMENT hz
+    (  %char.flow;
+    )*>
+
+<!ATTLIST hz
+    points CDATA #REQUIRED
+>
+
+<!ELEMENT initials
+	  ( #PCDATA
+	  )>
+
+<!ELEMENT inlinecode
+	  ( #PCDATA
+    | emph
+	  | layout
+	  %local.ic.flow;
+	  )*>
+
+<!ELEMENT ic
+	  ( #PCDATA
+          | emph
+	  | layout
+	  %local.ic.flow;
+	  )*>
+
+<!ELEMENT keyword
+	  ( #PCDATA
+	  )>
+
+
+<!ELEMENT cite
+	  EMPTY
+	  >
+
+<!ATTLIST cite
+	  ref CDATA #REQUIRED
+	  >
+
+<!ELEMENT il
+	  ( %char.flow; )*>
+
+<!ELEMENT ul
+	  ( li+
+	  )>
+
+<!ATTLIST ul
+	  style ( compact | regular ) "regular"
+	  >
+
+<!ELEMENT ol
+	  ( li+
+	  )>
+
+<!ATTLIST ol
+          style ( compact | regular ) "regular"
+          start CDATA                 "1"
+	  >
+
+
+<!ELEMENT li
+	  ( %flow;
+	  )* >
+
+<!ATTLIST li
+	  label CDATA #IMPLIED
+	  >
+
+<!ELEMENT calloutlist
+	  ( callout*
+	  )>
+<!ELEMENT callout
+	  ( %flow;
+	  )* >
+<!ATTLIST callout
+    id ID #IMPLIED
+	  linkend CDATA #IMPLIED
+	  >
+
+<!ELEMENT dl
+	  (  i*
+	  , layout?
+	  , dt+
+	  , dd+
+	  )*>
+<!ATTLIST dl
+	  style ( bold | italic | plain ) "italic"
+	  >
+<!ELEMENT dt
+	  ( %char.flow;
+	  )* >
+
+<!ATTLIST dt
+	  newline ( yes | no ) "no"
+	  bold ( yes | no ) "no"
+	  id ID #IMPLIED
+	  >
+
+<!ELEMENT dd
+	  ( %flow;
+	  )* >
+
+
+
+<!ELEMENT keystroke
+	  ( #PCDATA
+	    %mac.keys;
+	   )* >
+
+<!ELEMENT class
+	  ( #PCDATA
+	  )>
+
+<!ELEMENT commandname
+	  ( %char.flow;
+	  )*>
+
+<!ELEMENT commandoption
+	  ( #PCDATA
+	  )>
+
+<!ELEMENT dir
+	  ( #PCDATA
+	  )>
+
+<!ELEMENT footnote
+	  ( %flow;
+	  )* >
+
+<!ELEMENT method
+	  ( #PCDATA
+	  )>
+
+<!ATTLIST method
+	  args CDATA     #IMPLIED
+	  >
+
+<!ELEMENT objcmethod
+	  ( #PCDATA
+	  )>
+
+<!ATTLIST objcmethod
+	  args CDATA     #IMPLIED
+	  >
+
+<!ELEMENT lispmethod
+	  ( #PCDATA
+	  )>
+
+<!ATTLIST lispmethod
+	  args CDATA #IMPLIED
+	  >
+
+<!ELEMENT sqlcolumn
+	  ( %char.flow;
+	  )*>
+<!ELEMENT sqltable
+	  ( %char.flow;
+	  )*>
+
+
+<!ELEMENT variable
+	  ( #PCDATA
+	  )>
+
+
+<!ELEMENT bibliography
+	  EMPTY
+	  >
+
+<!ELEMENT extract
+    EMPTY
+>
+
+<!ATTLIST extract
+    id    ID #IMPLIED
+    idref IDREF #IMPLIED
+    title CDATA #IMPLIED
+>
+
+<!-- allow books with tables in images to build. While this is
+     deprecated, it's needed for older books like rails4 -->
+<!ELEMENT figure
+	  ( i*
+	  , title?
+    , table?
+    , imagedata?
+	  , ( %ok.in.float.flow;
+	    | missing
+	    )*
+	  )>
+<!ATTLIST figure
+          id ID #IMPLIED
+	  center ( yes | no ) 'no'
+	  width  CDATA #IMPLIED
+          place  (top | inline | runaround-left | runaround-right ) 'inline'
+          clear (left | right | both) #IMPLIED
+	  >
+
+<!ELEMENT sidebar
+	  ( i*
+	  , title
+	  , ( %ok.in.float.flow;
+            | table
+            )*
+	  )>
+<!ATTLIST sidebar
+	  id ID #IMPLIED
+	  place  (top | inline ) 'inline'
+	  >
+
+<!ELEMENT dialog
+	  ( said-by
+	  )*
+	  >
+<!ATTLIST dialog
+	  id ID #IMPLIED
+	  >
+
+<!ELEMENT said-by
+	  ( %flow;
+	  )* >
+<!ATTLIST said-by
+	  name CDATA #REQUIRED
+	  >
+
+
+<!ELEMENT story
+	  ( title
+	  , person?
+	  , ( %flow;
+	    )*
+	  )>
+
+<!ATTLIST story
+	  id ID #IMPLIED
+	  >
+
+<!ELEMENT storymap
+	  ( %flow;
+	  )*
+    >
+
+<!ELEMENT string
+	  ( #PCDATA
+	  )>
+
+<!ELEMENT highlight
+    ( #PCDATA
+    | %flow;
+    )* >
+
+<!ELEMENT joeasks
+	  %someone-asks-contents;
+	  >
+
+<!ATTLIST joeasks
+	  id ID #IMPLIED
+	  place  (top | inline ) 'inline'
+	  >
+
+<!ELEMENT said
+	  %someone-asks-contents;
+	  >
+
+<!ATTLIST said
+	  by CDATA #REQUIRED
+	  id ID #IMPLIED
+	  place  (top | inline ) 'inline'
+	  >
+
+<!ELEMENT marginnote
+	  ( %flow;
+	  )* >
+
+<!ELEMENT blockquote
+	  ( %flow;
+          )*>
+<!ATTLIST blockquote
+          said-by CDATA #IMPLIED
+          >
+
+
+<!ELEMENT example
+	  ( %flow;
+	  )*>
+
+<!ELEMENT imagedata EMPTY>
+<!ATTLIST imagedata
+	  id        ID    #IMPLIED
+          width     CDATA #IMPLIED
+          holder-width CDATA #IMPLIED
+          fileref   CDATA #IMPLIED
+	  align    ( left | center | right ) 'center'
+	  type (any | screencap) 'any'
+	  border (yes | no) 'no'
+	  >
+
+<!ELEMENT inlineimage EMPTY>
+<!ATTLIST inlineimage
+          fileref         CDATA #IMPLIED
+          baseline-shift  CDATA #IMPLIED
+          scale           CDATA #IMPLIED
+          border (yes | no) 'no'
+	  >
+
+<!--
+<!ELEMENT processedcode
+	  ( codeline
+	  )*>
+-->
+
+
+<!ELEMENT processedcode
+	  ( codeline
+	      %local.codeline;
+	  )+>
+
+<!ATTLIST processedcode
+	  %code-attributes;
+	  >
+
+<!-- this is included for folks who need to validate the source documents -->
+<!ELEMENT code
+	  ( #PCDATA
+	  )>
+<!ATTLIST code
+	  %code-attributes;
+	  >
+
+<!ELEMENT interact
+	  ( #PCDATA
+	  )>
+<!ATTLIST interact
+	  %code-attributes;
+	  >
+
+<!-- this is included for folks who need to validate the source documents -->
+<!ELEMENT ruby
+	  ( #PCDATA
+	  )>
+<!ATTLIST ruby
+	  %code-attributes;
+	  >
+
+<!ELEMENT label
+   EMPTY
+   >
+ <!ATTLIST label
+    id ID #IMPLIED
+    >
+
+<!ENTITY % code.content
+   " #PCDATA
+   | cokw
+   | cocomment
+   | coprompt
+   | costring
+   | cotag
+   | elide
+   | standin
+   | shade
+   | cobold
+   | eof
+   | return
+   ">
+
+<!ELEMENT codeline
+	  ( %code.content;
+	  | label
+	  | callout
+	  %local.codeline.flow;
+	  )*>
+
+<!-- remove cline, co - unused? -->
+
+<!ATTLIST codeline
+	  prefix    CDATA #IMPLIED
+	  lineno    CDATA #IMPLIED
+	  calloutno CDATA #IMPLIED
+	  id        ID    #IMPLIED
+	  highlight ( yes | no ) "no"
+	  blank     ( yes )      #IMPLIED
+	  toolong   ( yes )      #IMPLIED
+	  >
+
+
+<!ELEMENT cokw
+	  ( %code.content;
+ 	    %local.codeline.flow;
+    )*>
+
+<!ELEMENT eof EMPTY >
+
+<!ELEMENT cobold
+	  ( %code.content;
+	  )*>
+
+<!ELEMENT cocomment
+	  ( %code.content;
+ 	  %local.codeline.flow;
+	  )*>
+
+<!ELEMENT coprompt
+	  ( %code.content;
+	  )*>
+
+<!ELEMENT costring
+	  ( %code.content;
+ 	  )*>
+
+<!ELEMENT cotag
+          ( #PCDATA
+          )*>
+
+<!ELEMENT cref EMPTY>
+<!ATTLIST cref
+	  linkend IDREF #REQUIRED
+	  >
+
+<!ELEMENT coref EMPTY>
+<!ATTLIST coref
+	  linkend IDREF #REQUIRED
+	  >
+
+<!ELEMENT underline
+	  ( #PCDATA
+	  )>
+
+<!ELEMENT url
+	  ( #PCDATA
+	  )>
+<!ATTLIST url
+    protocol CDATA #IMPLIED
+    assume-valid (yes) #IMPLIED
+>
+
+<!ELEMENT xmlattr
+	  ( #PCDATA
+	  )>
+
+<!ATTLIST xmlattr
+	  value CDATA #IMPLIED
+	  >
+
+<!ELEMENT xmlattrval
+	  ( #PCDATA
+	  )>
+
+<!ELEMENT xmltag
+	  ( #PCDATA
+	  )>
+
+<!ATTLIST xmltag
+          attrs CDATA #IMPLIED
+          close (yes) #IMPLIED
+	  >
+
+
+<!ELEMENT xmltagpair
+	  ( #PCDATA
+          | xmltag
+          | xmltagpair
+	  )* >
+<!ATTLIST xmltagpair
+	  name NMTOKEN #REQUIRED
+          attrs CDATA #IMPLIED
+          >
+
+
+<!ELEMENT titleref EMPTY>
+<!ATTLIST titleref
+	  linkend IDREF #REQUIRED
+	  >
+
+<!ELEMENT xref
+	  ( %char.flow; )*>
+
+<!ATTLIST xref
+	  linkend IDREF #REQUIRED
+    thispage (yes | no) "no"
+	  >
+
+<!ELEMENT ref EMPTY>
+<!ATTLIST ref
+	   linkend IDREF #REQUIRED
+	   thispage (yes | no) "no"
+	  >
+
+
+
+<!--
+      T A B L E S
+ -->
+
+<!ENTITY % common-column-attributes "
+         font-weight (normal | bold )          #IMPLIED
+         font-size   CDATA                     #IMPLIED
+         font-family (normal | sans | mono )   #IMPLIED
+         align       (left | center | right | justify )  #IMPLIED
+         valign      (top  | middle | bottom ) #IMPLIED
+         ">
+
+
+<!ELEMENT table
+	  ( i*
+          , title?
+          , subtitle?
+	  , colspec*
+	  , thead?
+	  , ( row )+
+	  )>
+<!ATTLIST table
+	  decoration ( zebra ) #IMPLIED
+	  style ( no-lines | outerlines | hlines ) #IMPLIED
+	  dlist (yes | no ) "no"
+	  inline (yes | no ) "yes"
+	  id    ID #IMPLIED
+	  >
+
+<!ELEMENT colspec EMPTY>
+<!ATTLIST colspec
+	  col  (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17) #REQUIRED
+	  width CDATA #IMPLIED
+	  %common-column-attributes;
+	  >
+
+<!ELEMENT thead
+	  (
+	   ( col )+
+	  )>
+
+<!ELEMENT row
+	  ( col
+	  )+ >
+
+<!ELEMENT col
+	  (  #PCDATA
+          | %flow.col;
+	  )*
+	  >
+
+<!ATTLIST col
+	  span CDATA #IMPLIED
+	  %common-column-attributes;
+	  >
+
+
+
+<!-- Indexing -->
+
+
+<!ELEMENT i
+            ( %char.flow;
+            | ii
+	    )*
+           >
+
+<!ATTLIST i
+	  id         ID               #IMPLIED
+	  sortas CDATA #IMPLIED
+
+	  start-range  CDATA          #IMPLIED
+	  end-range    CDATA          #IMPLIED
+
+	  key          CDATA          #IMPLIED
+	  see          IDREF          #IMPLIED
+	  see-text     CDATA          #IMPLIED
+	  >
+
+<!ELEMENT ii
+	  ( %char.flow;
+          | iii
+	  )*>
+<!ATTLIST ii
+	  sortas CDATA #IMPLIED
+	  >
+
+<!ELEMENT iii
+	  ( %char.flow;
+	  )*>
+<!ATTLIST iii
+	  sortas CDATA #IMPLIED
+	  >
+
+<!-- and the index listing -->
+
+<!ELEMENT index
+	  ( index-listing
+	  ) >
+
+<!ELEMENT index-listing
+	  ( alpha-head
+	  )* >
+
+<!ELEMENT alpha-head
+	  ( i-entry
+	  )* >
+<!ATTLIST alpha-head
+	  heading  CDATA #REQUIRED
+	  >
+
+<!ELEMENT i-entry
+	  ( %char.flow;
+	  | i-see-list
+	  | ii-entry
+	  )* >
+<!ATTLIST i-entry
+	  key-ref CDATA #IMPLIED
+	  >
+
+<!ELEMENT ii-entry
+	  ( %char.flow;
+	  | i-see-list
+	  | iii-entry
+	  )* >
+<!ATTLIST ii-entry
+	  key-ref CDATA #IMPLIED
+	  >
+
+<!ELEMENT iii-entry
+	  ( %char.flow;
+	  | i-see-list
+	  )* >
+<!ATTLIST iii-entry
+	  key-ref CDATA #IMPLIED
+	  >
+
+<!ELEMENT i-see-list
+	  ( i-see
+	  )* >
+
+<!ELEMENT i-see
+	  EMPTY
+	  >
+<!ATTLIST i-see
+	  see IDREF #IMPLIED
+	  see-text CDATA #IMPLIED
+	  >
+
+<!-- Mac keyboard stuff -->
+
+<!ELEMENT kcontrol EMPTY>
+<!ELEMENT kshift   EMPTY>
+<!ELEMENT kcommand EMPTY>
+<!ELEMENT koption  EMPTY>
+<!ELEMENT kesc     EMPTY>
+<!ELEMENT ktab     EMPTY>
+<!ELEMENT kreturn  EMPTY>
+<!ELEMENT kenter   EMPTY>
+<!ELEMENT kup      EMPTY>
+<!ELEMENT kdown    EMPTY>
+<!ELEMENT kleft    EMPTY>
+<!ELEMENT kright   EMPTY>
+<!ELEMENT kdelete  EMPTY>
+
+<!ELEMENT kreturn2       EMPTY>
+<!ELEMENT klinebreak     EMPTY>
+<!ELEMENT kcapslock      EMPTY>
+<!ELEMENT kapple         EMPTY>
+<!ELEMENT kpower         EMPTY>
+<!ELEMENT kbacktab       EMPTY>
+<!ELEMENT kpageup        EMPTY>
+<!ELEMENT kpagedown      EMPTY>
+<!ELEMENT khome          EMPTY>
+<!ELEMENT kend           EMPTY>
+<!ELEMENT kforwarddelete EMPTY>
+<!ELEMENT khelp          EMPTY>
+
+<!ELEMENT vspace         EMPTY>
+
+
+<!ELEMENT F1   EMPTY>
+<!ELEMENT F2   EMPTY>
+<!ELEMENT F3   EMPTY>
+<!ELEMENT F4   EMPTY>
+<!ELEMENT F5   EMPTY>
+<!ELEMENT F6   EMPTY>
+<!ELEMENT F7   EMPTY>
+<!ELEMENT F8   EMPTY>
+<!ELEMENT F9   EMPTY>
+<!ELEMENT F10  EMPTY>
+<!ELEMENT F11  EMPTY>
+<!ELEMENT F12  EMPTY>
+
+<!ELEMENT kseq
+	  (
+	    %char.flow;
+          )* >
+
+<!-- General new additions -->
+<!-- For webresources (from legacy) markup -->
+
+<!ELEMENT webresources
+	  (webresource)*
+	  >
+
+<!ELEMENT webresource
+	  (resname,
+	  resurl,
+	  resdesc
+	  )>
+
+<!ELEMENT resname
+	  (
+	    %char.flow;
+          )* >
+
+<!ELEMENT resurl
+	  ( #PCDATA
+	  )>
+<!ATTLIST resurl
+    newline   ( yes | no ) "no"
+    >
+
+<!ELEMENT resdesc
+	  ( %flow;
+	  )*>
+
+
+
+
+<!-- for Pragmatic Guide books -->
+<!ELEMENT task
+	  ( title
+	  , (
+             ( what-to-do,   why-it-works )
+            |
+             ( why-it-works, what-to-do   )
+            |
+             ( %flow; | sect2 )*
+            )
+	  )>
+<!ATTLIST task
+          id ID #IMPLIED
+          intoc ( yes | no ) #IMPLIED
+	  >
+
+<!ELEMENT what-to-do
+          (
+            ( step
+            | %flow;
+            )*
+          , related-tasks?
+          )
+          >
+
+<!ELEMENT step
+          ( i*
+          , title
+          , ( %flow; )*
+          )
+           >
+
+<!ELEMENT related-tasks
+          ( li )*
+          >
+
+<!ELEMENT why-it-works
+          ( %flow; )* >
+
+
+<!-- for praprog debugging -->
+<!ELEMENT page-params EMPTY>
+<!ELEMENT pagebreak EMPTY>

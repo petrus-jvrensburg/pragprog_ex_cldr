@@ -1,0 +1,6 @@
+desc "Compile the PML Validator"
+task :compile => "PMLValidator.class"
+
+file "PMLValidator.class" => "PMLValidator.java" do
+  sh "javac PMLValidator.java", :verbose => true
+end

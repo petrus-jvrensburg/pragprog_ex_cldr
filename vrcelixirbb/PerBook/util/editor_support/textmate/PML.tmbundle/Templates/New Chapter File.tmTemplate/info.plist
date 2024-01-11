@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>command</key>
+	<string>if [[ ! -f "$TM_NEW_FILE" ]]; then
+   TM_DATE=`date +%Y-%m-%d` \
+   perl -pe 's/\$\{([^}]*)\}/$ENV{$1}/g' \
+      &lt; chaptertemplate.pml &gt; "$TM_NEW_FILE"
+fi</string>
+	<key>extension</key>
+	<string>pml</string>
+	<key>name</key>
+	<string>New Chapter File</string>
+	<key>uuid</key>
+	<string>FE5002D5-BB83-4FB9-B72F-6F74012576EA</string>
+</dict>
+</plist>

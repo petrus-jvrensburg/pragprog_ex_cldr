@@ -1,0 +1,21 @@
+# Read a .pml file, looking for code blocks (these are <code>, <ruby>, <interact> and <result>)
+#
+# IF a block has a file= attribute, read the given file.
+#
+# If only a part of the code is wanted (because part= or start=end= attributes are present)
+# remove the rest
+#
+# Then substitute back a highlighted version of the code
+#
+# Options to the code tags are
+#
+# file="name"::
+#    read the source from the given file
+#
+# part="xxx"::
+#    only include parts of the source between START:xxx and END:xxx
+#
+# verbatim::
+#    don't honor <label> and <callout> tags in comments, ignore START_HIGHLIGHT, and pass
+#    <![CDATA[ tags through
+#

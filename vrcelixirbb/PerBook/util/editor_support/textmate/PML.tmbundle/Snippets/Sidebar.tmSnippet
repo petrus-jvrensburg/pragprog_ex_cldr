@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;sidebar id="sb.${1/^(\w+)|\W+/(?1:\l$1)/g}"&gt;
+	&lt;title&gt;${1:Sidebar Title}&lt;/title&gt;
+	
+	&lt;p&gt;
+		$0
+	&lt;/p&gt;
+&lt;/sidebar&gt;</string>
+	<key>name</key>
+	<string>Sidebar</string>
+	<key>scope</key>
+	<string>text.xml.pragmatic</string>
+	<key>tabTrigger</key>
+	<string>sid</string>
+	<key>uuid</key>
+	<string>B4A9D8C8-1E8C-413C-89E0-837C4853DDC3</string>
+</dict>
+</plist>

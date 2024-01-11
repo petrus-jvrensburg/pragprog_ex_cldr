@@ -1,0 +1,21 @@
+# -*- coding: utf-8 mode: ruby -*-
+
+TOOLS = File.expand_path("../util/third_party", Dir.pwd)
+JING  = "java -jar #{TOOLS}/jing-20091111/bin/jing.jar"
+
+desc "Validate the bibliography"
+task :validate do
+  sh "#{JING} -c bibliography.rnc bibliography.xml"
+end
+
+desc "Update pragprog titles"
+task :update_pragprog => :fetch_products do
+  ruby "update_from_pip.rb >pp-books.xml"
+end
+
+desc "Fetch the updated product list. (Use update_pragprog, not this)"
+task :fetch_products do
+  sh "curl -u ${API_USER}:${API_PW} 'https://admin.pragprog.com/api/products.xml?category=include_hidden' >products.xml"
+end
+
+task :default => :validate

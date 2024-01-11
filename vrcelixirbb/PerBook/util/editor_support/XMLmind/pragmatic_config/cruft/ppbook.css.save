@@ -1,0 +1,56 @@
+book,
+frontmatter,
+mainmatter,
+chapter,
+bookinfo,
+p {
+    display: block;
+}
+
+XXbookinfo {
+	display: tree;
+}
+
+p {
+    margin-top: 1.33ex;
+    margin-bottom: 1.33ex;
+    margin-left: 0.5in;
+    margin-right: 0.5in;
+}
+
+chapter > title,
+preface > title,
+dedication > title,
+appendix > title,
+bibliography > title,
+index > title,
+glossary > title {
+    font-size: 2em;
+    font-weight: bold;
+    color: blue;
+    margin-top: .67ex;
+    margin-bottom: .67ex;
+}
+
+book > bookinfo {
+	border: 1px;
+}
+
+book > bookinfo > booktitle {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    font-size: 3.0em;
+    margin-top: .83ex;
+    margin-bottom: .83ex;
+}
+
+book > bookinfo > booksubtitle {
+    text-align: center;
+    color: blue;
+    font-weight: bold;
+    font-size: 2.0em;
+    margin-top: .83ex;
+    margin-bottom: .83ex;
+}
+

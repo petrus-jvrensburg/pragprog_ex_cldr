@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;missing&gt;${0:$TM_SELECTED_TEXT}&lt;/missing&gt;</string>
+	<key>name</key>
+	<string>Missing</string>
+	<key>scope</key>
+	<string>text.xml.pragmatic</string>
+	<key>tabTrigger</key>
+	<string>mis</string>
+	<key>uuid</key>
+	<string>396997C2-2A5E-411F-A582-A542FDF988A0</string>
+</dict>
+</plist>
