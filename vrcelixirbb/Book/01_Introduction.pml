@@ -5,7 +5,7 @@
 <storymap>
 <markdown>
 Why do I want to read this?
-: Because you're uncertain about these internationalization libraries that you've heard about, or how they work. You want to get a quick feel for them before committing to reading a book.
+: Because you're uncertain about these internationalization libraries that you've heard about, or how they work. You want to get a quick feel for them before committing to reading a book
 
 What will I learn?
 : How to run ex_cldr libraries locally, in an interactive notebook, to solve interresting problems that you have likely encoutered in your own applications.
