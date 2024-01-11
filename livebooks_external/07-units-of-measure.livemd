@@ -1,0 +1,47 @@
+# 7. units of measure
+
+```elixir
+# Install dependencies
+Mix.install([
+  :ex_cldr,
+  :ex_cldr_numbers,
+  :ex_cldr_units,
+  :jason
+])
+
+# Define a backend module
+defmodule DemoApp.Backend do
+  use Cldr,
+    locales: ["en", "de", "ja"],
+    default_locale: "en",
+    providers: [Cldr.Number, Cldr.Unit, Cldr.List],
+    json_library: Jason
+end
+
+# Set an app-wide default backend
+Application.put_env(:ex_cldr, :default_backend, DemoApp.Backend)
+
+DemoApp.Backend.put_locale("en-US")
+
+:ok
+```
+
+## Section
+
+```elixir
+Cldr.Unit.to_string!(1, unit: :foot, locale: "en")
+```
+
+```elixir
+Cldr.Unit.to_string!(10, unit: :foot, locale: "ja")
+```
+
+```elixir
+Cldr.Unit.to_string!(10, unit: :foot, locale: "de")
+```
+
+```elixir
+Cldr.Unit.new!(10, :foot)
+|> Cldr.Unit.localize(locale: "de")
+|> Cldr.to_string()
+```

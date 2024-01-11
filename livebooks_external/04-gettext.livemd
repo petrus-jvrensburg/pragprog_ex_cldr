@@ -1,0 +1,129 @@
+<!-- livebook:{"persist_outputs":true} -->
+
+# 4. Using gettext for translation
+
+```elixir
+Mix.install([
+  :gettext
+])
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+Resolving Hex dependencies...
+Resolution completed in 0.072s
+New:
+  expo 0.4.1
+  gettext 0.22.3
+* Getting gettext (Hex package)
+* Getting expo (Hex package)
+==> expo
+Compiling 2 files (.erl)
+Compiling 21 files (.ex)
+Generated expo app
+==> gettext
+Compiling 17 files (.ex)
+Generated gettext app
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+:ok
+```
+
+## Setup .po translation files
+
+The _gettext_ workflow relies heavily on the filesystem: Each supported locale must have a directory in a specific place. Inside of this directory, _gettext_ expects to find translation files (ending in .po), named for a particular _domain_ (usually 'default') that contain translation strings in a specific format.
+
+Here we generate a sample translation file for _gettext_, but usually, this will be done with 3rd-party tooling, like http://poedit.net/ or https://poeditor.com.
+
+```elixir
+# find the current directory, where the livebook is running
+{current_dir, _} = System.cmd("pwd", [])
+
+# create a new directory for French translation files
+System.cmd("mkdir", ["-p", "priv/gettext/fr_FR/LC_MESSAGES"])
+
+# create a new ".po" translation file
+sample_po_translation_file = """
+msgid "Here is one string to translate"
+msgstr "Voici une chaîne à traduire"
+
+msgid "404 error"
+msgstr "erreur 404"
+"""
+
+{:ok, file} = File.open("priv/gettext/fr_FR/LC_MESSAGES/default.po", [:write, :utf8])
+IO.write(file, sample_po_translation_file)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+:ok
+```
+
+Once the translation files are in place, they are parsed and baked into your application by _gettext_ at compile-time. Below, we define a new _gettext_ 'backend' module, which triggers compilation.
+
+```elixir
+# define a gettext 'backend model'
+defmodule DemoApp.Gettext do
+  use Gettext, otp_app: :foo
+end
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+{:module, DemoApp.Gettext, <<70, 79, 82, 49, 0, 0, 47, ...>>, :ok}
+```
+
+## Translation functions
+
+TODO: explain these
+
+```elixir
+import DemoApp.Gettext
+
+Gettext.put_locale("fr_FR")
+
+# simple message
+gettext("Hello world")
+|> IO.inspect()
+
+gettext("404 error")
+|> IO.inspect()
+
+gettext("Here is one string to translate")
+|> IO.inspect()
+
+# plural message
+number_of_apples = 4
+
+ngettext("The apple is ripe", "The apples are ripe", number_of_apples)
+|> IO.inspect()
+
+# domain-based message
+dgettext("errors", "Here is an error message to translate")
+|> IO.inspect()
+
+:ok
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+"Hello world"
+"erreur 404"
+"Voici une chaîne à traduire"
+"The apples are ripe"
+"Here is an error message to translate"
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+:ok
+```

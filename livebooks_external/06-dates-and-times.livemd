@@ -1,0 +1,106 @@
+<!-- livebook:{"persist_outputs":true} -->
+
+# 6. Dates & times in CLDR
+
+```elixir
+# Install dependencies
+Mix.install([
+  :ex_cldr,
+  :ex_cldr_dates_times,
+  :jason
+])
+
+# Define a backend module
+defmodule DemoApp.Backend do
+  use Cldr,
+    locales: ["en", "en-GB", "es", "pt", "hi"],
+    default_locale: "en",
+    providers: [Cldr.Number, Cldr.Calendar, Cldr.DateTime],
+    json_library: Jason
+end
+
+# Set an app-wide default backend
+Application.put_env(:ex_cldr, :default_backend, DemoApp.Backend)
+
+DemoApp.Backend.put_locale("en-US")
+
+:ok
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+
+09:08:50.322 [info] Downloaded locale :"en-GB"
+Generating DemoApp.Backend for 6 locales named [:en, :"en-GB", :es, :hi, :pt, ...] with a default locale named :en
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+:ok
+```
+
+## TODO
+
+https://hexdocs.pm/ex_cldr_dates_times/readme.html
+
+```elixir
+Cldr.Date.to_string!(Date.utc_today(), format: :short, locale: "en")
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+"8/15/23"
+```
+
+```elixir
+Cldr.Date.to_string!(Date.utc_today(), format: :short, locale: "en-GB")
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+"15/08/2023"
+```
+
+```elixir
+Cldr.known_locale_names()
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+[:en, :es, :hi, :pt]
+```
+
+```elixir
+Cldr.Date.to_string!(~D[1985-12-21], format: :short)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+"12/21/85"
+```
+
+```elixir
+Cldr.Date.to_string!(~D[1985-12-21], format: :short, locale: :hi)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+"21/12/85"
+```
+
+```elixir
+Cldr.Date.to_string!(~D[1985-12-21], format: :short, locale: :pt)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+"21/12/1985"
+```

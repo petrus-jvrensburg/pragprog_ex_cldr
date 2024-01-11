@@ -1,0 +1,994 @@
+<!-- livebook:{"persist_outputs":true} -->
+
+# 2. CLDR - Languages, Territories, Populations
+
+```elixir
+# Install dependencies
+Mix.install([
+  :ex_cldr,
+  :ex_cldr_territories,
+  :ex_cldr_languages,
+  :ex_cldr_numbers,
+  :jason
+])
+
+# Define a backend module
+defmodule DemoApp.Cldr do
+  use Cldr,
+    locales: ["en"],
+    default_locale: "en",
+    providers: [Cldr.Number, Cldr.Territory, Cldr.Language],
+    json_library: Jason
+end
+
+# Set an app-wide default backend
+Application.put_env(:ex_cldr, :default_backend, DemoApp.Cldr)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+Generating DemoApp.Cldr for 2 locales named [:en, :und] with a default locale named :en
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+:ok
+```
+
+## Let's check that everything works
+
+```elixir
+Cldr.all_locale_names()
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+[:aa, :"aa-DJ", :"aa-ER", :ab, :af, :"af-NA", :agq, :ak, :am, :an, :ann, :apc, :ar, :"ar-AE",
+ :"ar-BH", :"ar-DJ", :"ar-DZ", :"ar-EG", :"ar-EH", :"ar-ER", :"ar-IL", :"ar-IQ", :"ar-JO", :"ar-KM",
+ :"ar-KW", :"ar-LB", :"ar-LY", :"ar-MA", :"ar-MR", :"ar-OM", :"ar-PS", :"ar-QA", :"ar-SA", :"ar-SD",
+ :"ar-SO", :"ar-SS", :"ar-SY", :"ar-TD", :"ar-TN", :"ar-YE", :arn, :as, :asa, :ast, :az, :"az-Arab",
+ :"az-Arab-IQ", :"az-Arab-TR", :"az-Cyrl", :"az-Latn", ...]
+```
+
+```elixir
+Cldr.all_locale_names()
+|> Enum.count()
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+693
+```
+
+In the setup section above, we defined a backend module for `ex_cldr` to use. It's differenct from the package itself, but has many of the same functions.
+
+```elixir
+Cldr == DemoApp.Cldr
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+false
+```
+
+```elixir
+Cldr.__info__(:functions)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+[
+  all_locale_names: 0,
+  available_locale_name?: 1,
+  default_backend: 0,
+  default_backend!: 0,
+  default_locale: 0,
+  default_locale: 1,
+  default_script: 0,
+  default_territory: 0,
+  default_territory: 1,
+  display_name: 1,
+  display_name: 2,
+  ellipsis: 1,
+  ellipsis: 2,
+  ellipsis: 3,
+  flag: 1,
+  get_locale: 0,
+  get_locale: 1,
+  install_locales: 1,
+  known_calendars: 0,
+  known_currencies: 0,
+  known_gettext_locale_name: 1,
+  known_gettext_locale_name: 2,
+  known_gettext_locale_name?: 1,
+  known_gettext_locale_name?: 2,
+  known_gettext_locale_names: 0,
+  known_gettext_locale_names: 1,
+  known_locale_name: 1,
+  known_locale_name: 2,
+  known_locale_name?: 1,
+  known_locale_name?: 2,
+  known_locale_names: 0,
+  known_locale_names: 1,
+  known_number_system_types: 0,
+  known_number_system_types: 1,
+  known_number_systems: 0,
+  known_rbnf_locale_name: 1,
+  known_rbnf_locale_name: 2,
+  known_rbnf_locale_name?: 1,
+  known_rbnf_locale_name?: 2,
+  known_rbnf_locale_names: 0,
+  known_rbnf_locale_names: 1,
+  known_territories: 0,
+  known_territory_subdivision_containment: 0,
+  known_territory_subdivisions: 0,
+  locale_and_backend_from: 1,
+  locale_and_backend_from: 2,
+  locale_name: 1,
+  maybe_log: 1,
+  put_default_backend: 1,
+  put_default_locale: 1,
+  ...
+]
+```
+
+```elixir
+Cldr.__info__(:functions)
+|> Enum.count()
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+92
+```
+
+```elixir
+DemoApp.Cldr.__info__(:functions)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+[
+  __cldr__: 1,
+  available_locale_name?: 1,
+  default_locale: 0,
+  default_territory: 0,
+  ellipsis: 1,
+  ellipsis: 2,
+  ellipsis_chars: 1,
+  get_locale: 0,
+  known_calendars: 0,
+  known_cldr_locale: 2,
+  known_cldr_territory: 1,
+  known_currencies: 0,
+  known_gettext_locale_name: 1,
+  known_gettext_locale_name?: 1,
+  known_gettext_locale_names: 0,
+  known_locale_name: 1,
+  known_locale_name?: 1,
+  known_locale_names: 0,
+  known_number_system_types: 0,
+  known_number_systems: 0,
+  known_rbnf_locale_name: 1,
+  known_rbnf_locale_name?: 1,
+  known_rbnf_locale_names: 0,
+  known_territories: 0,
+  lenient_parse_map: 2,
+  normalize_lenient_parse: 2,
+  normalize_lenient_parse: 3,
+  put_locale: 1,
+  quote: 1,
+  quote: 2,
+  unknown_locale_names: 0,
+  validate_calendar: 1,
+  validate_currency: 1,
+  validate_locale: 1,
+  validate_number_system: 1,
+  validate_number_system_type: 1,
+  validate_territory: 1,
+  with_locale: 2
+]
+```
+
+```elixir
+DemoApp.Cldr.__info__(:functions)
+|> Enum.count()
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+38
+```
+
+## What territory info is available?
+
+```elixir
+# CLDR defines a bunch of territories (including individual countries, regions, continents, etc.)
+
+known_territories = Cldr.known_territories()
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+[:"001", :"002", :"003", :"005", :"009", :"011", :"013", :"014", :"015", :"017", :"018", :"019",
+ :"021", :"029", :"030", :"034", :"035", :"039", :"053", :"054", :"057", :"061", :"142", :"143",
+ :"145", :"150", :"151", :"154", :"155", :"202", :"419", :AC, :AD, :AE, :AF, :AG, :AI, :AL, :AM,
+ :AO, :AQ, :AR, :AS, :AT, :AU, :AW, :AX, :AZ, :BA, :BB, ...]
+```
+
+```elixir
+# How many are there?
+
+Enum.count(known_territories)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+292
+```
+
+```elixir
+# Cldr.Territory.display_name/1 gives a bit more context
+
+known_territories
+|> Enum.each(fn territory_code ->
+  {:ok, name} = Cldr.Territory.display_name(territory_code)
+  IO.puts("#{territory_code}: #{name}")
+end)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+001: world
+002: Africa
+003: North America
+005: South America
+009: Oceania
+011: Western Africa
+013: Central America
+014: Eastern Africa
+015: Northern Africa
+017: Middle Africa
+018: Southern Africa
+019: Americas
+021: Northern America
+029: Caribbean
+030: Eastern Asia
+034: Southern Asia
+035: Southeast Asia
+039: Southern Europe
+053: Australasia
+054: Melanesia
+057: Micronesian Region
+061: Polynesia
+142: Asia
+143: Central Asia
+145: Western Asia
+150: Europe
+151: Eastern Europe
+154: Northern Europe
+155: Western Europe
+202: Sub-Saharan Africa
+419: Latin America
+AC: Ascension Island
+AD: Andorra
+AE: United Arab Emirates
+AF: Afghanistan
+AG: Antigua & Barbuda
+AI: Anguilla
+AL: Albania
+AM: Armenia
+AO: Angola
+AQ: Antarctica
+AR: Argentina
+AS: American Samoa
+AT: Austria
+AU: Australia
+AW: Aruba
+AX: Åland Islands
+AZ: Azerbaijan
+BA: Bosnia & Herzegovina
+BB: Barbados
+BD: Bangladesh
+BE: Belgium
+BF: Burkina Faso
+BG: Bulgaria
+BH: Bahrain
+BI: Burundi
+BJ: Benin
+BL: St. Barthélemy
+BM: Bermuda
+BN: Brunei
+BO: Bolivia
+BQ: Caribbean Netherlands
+BR: Brazil
+BS: Bahamas
+BT: Bhutan
+BV: Bouvet Island
+BW: Botswana
+BY: Belarus
+BZ: Belize
+CA: Canada
+CC: Cocos (Keeling) Islands
+CD: Congo - Kinshasa
+CF: Central African Republic
+CG: Congo - Brazzaville
+CH: Switzerland
+CI: Côte d’Ivoire
+CK: Cook Islands
+CL: Chile
+CM: Cameroon
+CN: China
+CO: Colombia
+CP: Clipperton Island
+CQ: Sark
+CR: Costa Rica
+CU: Cuba
+CV: Cape Verde
+CW: Curaçao
+CX: Christmas Island
+CY: Cyprus
+CZ: Czechia
+DE: Germany
+DG: Diego Garcia
+DJ: Djibouti
+DK: Denmark
+DM: Dominica
+DO: Dominican Republic
+DZ: Algeria
+EA: Ceuta & Melilla
+EC: Ecuador
+EE: Estonia
+EG: Egypt
+EH: Western Sahara
+ER: Eritrea
+ES: Spain
+ET: Ethiopia
+EU: European Union
+EZ: Eurozone
+FI: Finland
+FJ: Fiji
+FK: Falkland Islands
+FM: Micronesia
+FO: Faroe Islands
+FR: France
+GA: Gabon
+GB: United Kingdom
+GD: Grenada
+GE: Georgia
+GF: French Guiana
+GG: Guernsey
+GH: Ghana
+GI: Gibraltar
+GL: Greenland
+GM: Gambia
+GN: Guinea
+GP: Guadeloupe
+GQ: Equatorial Guinea
+GR: Greece
+GS: South Georgia & South Sandwich Islands
+GT: Guatemala
+GU: Guam
+GW: Guinea-Bissau
+GY: Guyana
+HK: Hong Kong SAR China
+HM: Heard & McDonald Islands
+HN: Honduras
+HR: Croatia
+HT: Haiti
+HU: Hungary
+IC: Canary Islands
+ID: Indonesia
+IE: Ireland
+IL: Israel
+IM: Isle of Man
+IN: India
+IO: British Indian Ocean Territory
+IQ: Iraq
+IR: Iran
+IS: Iceland
+IT: Italy
+JE: Jersey
+JM: Jamaica
+JO: Jordan
+JP: Japan
+KE: Kenya
+KG: Kyrgyzstan
+KH: Cambodia
+KI: Kiribati
+KM: Comoros
+KN: St. Kitts & Nevis
+KP: North Korea
+KR: South Korea
+KW: Kuwait
+KY: Cayman Islands
+KZ: Kazakhstan
+LA: Laos
+LB: Lebanon
+LC: St. Lucia
+LI: Liechtenstein
+LK: Sri Lanka
+LR: Liberia
+LS: Lesotho
+LT: Lithuania
+LU: Luxembourg
+LV: Latvia
+LY: Libya
+MA: Morocco
+MC: Monaco
+MD: Moldova
+ME: Montenegro
+MF: St. Martin
+MG: Madagascar
+MH: Marshall Islands
+MK: North Macedonia
+ML: Mali
+MM: Myanmar (Burma)
+MN: Mongolia
+MO: Macao SAR China
+MP: Northern Mariana Islands
+MQ: Martinique
+MR: Mauritania
+MS: Montserrat
+MT: Malta
+MU: Mauritius
+MV: Maldives
+MW: Malawi
+MX: Mexico
+MY: Malaysia
+MZ: Mozambique
+NA: Namibia
+NC: New Caledonia
+NE: Niger
+NF: Norfolk Island
+NG: Nigeria
+NI: Nicaragua
+NL: Netherlands
+NO: Norway
+NP: Nepal
+NR: Nauru
+NU: Niue
+NZ: New Zealand
+OM: Oman
+PA: Panama
+PE: Peru
+PF: French Polynesia
+PG: Papua New Guinea
+PH: Philippines
+PK: Pakistan
+PL: Poland
+PM: St. Pierre & Miquelon
+PN: Pitcairn Islands
+PR: Puerto Rico
+PS: Palestinian Territories
+PT: Portugal
+PW: Palau
+PY: Paraguay
+QA: Qatar
+QO: Outlying Oceania
+RE: Réunion
+RO: Romania
+RS: Serbia
+RU: Russia
+RW: Rwanda
+SA: Saudi Arabia
+SB: Solomon Islands
+SC: Seychelles
+SD: Sudan
+SE: Sweden
+SG: Singapore
+SH: St. Helena
+SI: Slovenia
+SJ: Svalbard & Jan Mayen
+SK: Slovakia
+SL: Sierra Leone
+SM: San Marino
+SN: Senegal
+SO: Somalia
+SR: Suriname
+SS: South Sudan
+ST: São Tomé & Príncipe
+SV: El Salvador
+SX: Sint Maarten
+SY: Syria
+SZ: Eswatini
+TA: Tristan da Cunha
+TC: Turks & Caicos Islands
+TD: Chad
+TF: French Southern Territories
+TG: Togo
+TH: Thailand
+TJ: Tajikistan
+TK: Tokelau
+TL: Timor-Leste
+TM: Turkmenistan
+TN: Tunisia
+TO: Tonga
+TR: Türkiye
+TT: Trinidad & Tobago
+TV: Tuvalu
+TW: Taiwan
+TZ: Tanzania
+UA: Ukraine
+UG: Uganda
+UM: U.S. Outlying Islands
+UN: United Nations
+US: United States
+UY: Uruguay
+UZ: Uzbekistan
+VA: Vatican City
+VC: St. Vincent & Grenadines
+VE: Venezuela
+VG: British Virgin Islands
+VI: U.S. Virgin Islands
+VN: Vietnam
+VU: Vanuatu
+WF: Wallis & Futuna
+WS: Samoa
+XK: Kosovo
+YE: Yemen
+YT: Mayotte
+ZA: South Africa
+ZM: Zambia
+ZW: Zimbabwe
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+:ok
+```
+
+```elixir
+# some territories contain other territories
+
+Cldr.Territory.children(:EU)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+{:ok,
+ [:AT, :BE, :CY, :CZ, :DE, :DK, :EE, :ES, :FI, :FR, :GR, :HR, :HU, :IE, :IT, :LT, :LU, :LV, :MT,
+  :NL, :PL, :PT, :SE, :SI, :SK, :BG, :RO]}
+```
+
+```elixir
+Cldr.Territory.children!(:EU)
+|> Enum.each(fn territory_code ->
+  {:ok, name} = Cldr.Territory.display_name(territory_code)
+  IO.puts("#{territory_code}: #{name}")
+end)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+AT: Austria
+BE: Belgium
+CY: Cyprus
+CZ: Czechia
+DE: Germany
+DK: Denmark
+EE: Estonia
+ES: Spain
+FI: Finland
+FR: France
+GR: Greece
+HR: Croatia
+HU: Hungary
+IE: Ireland
+IT: Italy
+LT: Lithuania
+LU: Luxembourg
+LV: Latvia
+MT: Malta
+NL: Netherlands
+PL: Poland
+PT: Portugal
+SE: Sweden
+SI: Slovenia
+SK: Slovakia
+BG: Bulgaria
+RO: Romania
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+:ok
+```
+
+```elixir
+# we can have a look at the sub-continent and continent that a particular territory belongs to
+
+Cldr.territory_chain(:IN)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+{:ok, [:IN, :"034", :"142", :"001"]}
+```
+
+```elixir
+{:ok, parents} = Cldr.territory_chain(:IN)
+
+parents
+|> Enum.each(fn territory_code ->
+  {:ok, name} = Cldr.Territory.display_name(territory_code)
+  IO.puts("#{territory_code}: #{name}")
+end)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+IN: India
+034: Southern Asia
+142: Asia
+001: world
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+:ok
+```
+
+```elixir
+# for most territories, additional info is available
+
+info = Cldr.Territory.info!(:BR)
+Map.keys(info)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+[:currency, :measurement_system, :language_population, :gdp, :literacy_percent, :population]
+```
+
+```elixir
+info
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+%{
+  currency: [
+    BRL: %{from: ~D[1994-07-01]},
+    BRR: %{from: ~D[1993-08-01], to: ~D[1994-07-01]},
+    BRE: %{from: ~D[1990-03-16], to: ~D[1993-08-01]},
+    BRN: %{from: ~D[1989-01-15], to: ~D[1990-03-16]},
+    BRC: %{from: ~D[1986-02-28], to: ~D[1989-01-15]},
+    BRB: %{from: ~D[1967-02-13], to: ~D[1986-02-28]},
+    BRZ: %{from: ~D[1942-11-01], to: ~D[1967-02-13]}
+  ],
+  measurement_system: %{default: :metric, paper_size: :a4, temperature: :metric},
+  language_population: %{
+    "de" => %{population_percent: 0.84},
+    "en" => %{population_percent: 8},
+    "es" => %{population_percent: 0.036},
+    "gub" => %{population_percent: 0.0084},
+    "it" => %{population_percent: 0.28},
+    "ja" => %{population_percent: 0.21},
+    "kgp" => %{population_percent: 0.024},
+    "ko" => %{population_percent: 0.021},
+    "pt" => %{population_percent: 91, official_status: "official"},
+    "vec" => %{population_percent: 0.24, official_status: "official_regional"},
+    "xav" => %{population_percent: 0.0047},
+    "yrl" => %{population_percent: 0.01}
+  },
+  gdp: 3248000000000,
+  literacy_percent: 90.4,
+  population: 211716000
+}
+```
+
+```elixir
+# but this is not the case for all territories
+
+Cldr.Territory.info(:"001")
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+{:ok, nil}
+```
+
+```elixir
+# territory info includes a 'language population' map 
+
+info[:language_population]
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+%{
+  "de" => %{population_percent: 0.84},
+  "en" => %{population_percent: 8},
+  "es" => %{population_percent: 0.036},
+  "gub" => %{population_percent: 0.0084},
+  "it" => %{population_percent: 0.28},
+  "ja" => %{population_percent: 0.21},
+  "kgp" => %{population_percent: 0.024},
+  "ko" => %{population_percent: 0.021},
+  "pt" => %{population_percent: 91, official_status: "official"},
+  "vec" => %{population_percent: 0.24, official_status: "official_regional"},
+  "xav" => %{population_percent: 0.0047},
+  "yrl" => %{population_percent: 0.01}
+}
+```
+
+```elixir
+# What is the name of the language?
+
+"pt-BR"
+|> Cldr.LanguageTag.parse!()
+|> DemoApp.Cldr.Language.to_string()
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+{:ok, "Portuguese"}
+```
+
+## Which languages have the most native speakers?
+
+First, we define some helper functions for aggregating the population data in CLDR.
+
+```elixir
+defmodule Helpers do
+  def round_to_nearest_million(number) when is_float(number) do
+    number
+    |> Decimal.from_float()
+    |> round_to_nearest_million()
+  end
+
+  def round_to_nearest_million(number) when is_integer(number) do
+    number
+    |> Decimal.new()
+    |> round_to_nearest_million()
+  end
+
+  def round_to_nearest_million(number) do
+    number
+    |> Decimal.round(-3)
+    |> Decimal.to_integer()
+    |> DemoApp.Cldr.Number.to_string!(locale: "en")
+  end
+
+  def language_name(territory_code, language_code) do
+    locale_string = "#{language_code}-#{territory_code}"
+    {:ok, language_tag} = Cldr.LanguageTag.parse(locale_string)
+
+    case DemoApp.Cldr.Language.to_string(language_tag) do
+      {:ok, name} -> name
+      _ -> locale_string
+    end
+  end
+
+  def languages_from_territory_info(%{language_population: language_map, population: population}) do
+    language_map
+    |> Enum.map(fn {language_code, %{population_percent: population_percent}} ->
+      {language_code, population_percent * 0.01 * population}
+    end)
+    |> Enum.sort(fn {_language_code_a, population_a}, {_language_code_b, population_b} ->
+      population_a > population_b
+    end)
+    |> Enum.filter(fn {_language_code, population} ->
+      population > 10_000_000
+    end)
+  end
+
+  def language_population_summary({territory_code, info}) do
+    languages_from_territory_info(info)
+    |> Enum.map(fn {language_code, population} ->
+      {round_to_nearest_million(population),
+       "#{language_code} (#{language_name(territory_code, language_code)})"}
+    end)
+  end
+end
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+{:module, Helpers, <<70, 79, 82, 49, 0, 0, 18, ...>>, {:language_population_summary, 1}}
+```
+
+Let's use these helpers to show a summary for an individual territory.
+
+```elixir
+code = :IN
+{:ok, name} = Cldr.Territory.display_name(code)
+{:ok, info} = Cldr.Territory.info(code)
+lang_populations = Helpers.language_population_summary({code, info})
+{name, lang_populations}
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+{"India",
+ [
+   {"543,697,000", "hi (Hindi)"},
+   {"251,957,000", "en (English)"},
+   {"107,413,000", "bn (Bangla)"},
+   {"95,478,000", "te (Telugu)"},
+   {"92,826,000", "mr (Marathi)"},
+   {"78,239,000", "ta (Tamil)"},
+   {"66,305,000", "ur (Urdu)"},
+   {"59,674,000", "gu (Gujarati)"},
+   {"49,065,000", "kn (Kannada)"},
+   {"42,435,000", "or (Odia)"},
+   {"42,435,000", "ml (Malayalam)"},
+   {"37,131,000", "pa (Punjabi)"},
+   {"30,500,000", "bho (Bhojpuri)"},
+   {"25,196,000", "awa (Awadhi)"},
+   {"17,239,000", "as (Assamese)"},
+   {"15,913,000", "mai (Maithili)"},
+   {"15,913,000", "bgc (Haryanvi)"},
+   {"15,913,000", "mag (Magahi)"},
+   {"15,913,000", "mwr (Marwari)"},
+   {"14,587,000", "hne (hne-IN)"},
+   {"13,128,000", "dcc (dcc-IN)"}
+ ]}
+```
+
+Or, we can loop through the known territories, sorting them by population, and summarize the languages spoken in the most populous ones.
+
+```elixir
+num_largest_territories = 10
+
+language_populations =
+  Cldr.known_territories()
+  |> Enum.map(fn territory_code ->
+    # load territory info map
+    {territory_code, Cldr.Territory.info!(territory_code)}
+  end)
+  |> Enum.filter(fn {_, info} ->
+    # filter territories with no related info
+    is_nil(info) == false
+  end)
+  |> Enum.sort(fn {_territory_code_a, info_a}, {_territory_code_b, info_b} ->
+    # sort the remaining entries by population
+    info_a.population > info_b.population
+  end)
+  # limit the number of territories
+  |> Enum.take(num_largest_territories)
+  |> Enum.map(fn {territory_code, info} ->
+    # summarise the language population info for each territory
+    {:ok, name} = Cldr.Territory.display_name(territory_code)
+
+    %{
+      name: name,
+      population: Helpers.round_to_nearest_million(info.population),
+      languages: Helpers.language_population_summary({territory_code, info})
+    }
+  end)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+[
+  %{
+    name: "China",
+    languages: [
+      {"1,254,618,000", "zh (Chinese)"},
+      {"83,641,000", "wuu (Wu Chinese)"},
+      {"72,489,000", "yue-Hans (Cantonese)"},
+      {"40,427,000", "hsn (Xiang Chinese)"},
+      {"32,062,000", "hak (Hakka Chinese)"},
+      {"26,486,000", "nan (Min Nan Chinese)"},
+      {"23,698,000", "gan (Gan Chinese)"}
+    ],
+    population: "1,394,020,000"
+  },
+  %{
+    name: "India",
+    languages: [
+      {"543,697,000", "hi (Hindi)"},
+      {"251,957,000", "en (English)"},
+      {"107,413,000", "bn (Bangla)"},
+      {"95,478,000", "te (Telugu)"},
+      {"92,826,000", "mr (Marathi)"},
+      {"78,239,000", "ta (Tamil)"},
+      {"66,305,000", "ur (Urdu)"},
+      {"59,674,000", "gu (Gujarati)"},
+      {"49,065,000", "kn (Kannada)"},
+      {"42,435,000", "or (Odia)"},
+      {"42,435,000", "ml (Malayalam)"},
+      {"37,131,000", "pa (Punjabi)"},
+      {"30,500,000", "bho (Bhojpuri)"},
+      {"25,196,000", "awa (Awadhi)"},
+      {"17,239,000", "as (Assamese)"},
+      {"15,913,000", "mai (Maithili)"},
+      {"15,913,000", "bgc (Haryanvi)"},
+      {"15,913,000", "mag (Magahi)"},
+      {"15,913,000", "mwr (Marwari)"},
+      {"14,587,000", "hne (hne-IN)"},
+      {"13,128,000", "dcc (dcc-IN)"}
+    ],
+    population: "1,326,090,000"
+  },
+  %{
+    name: "United States",
+    languages: [{"319,333,000", "en (English)"}, {"31,933,000", "es (Spanish)"}],
+    population: "332,639,000"
+  },
+  %{
+    name: "Indonesia",
+    languages: [
+      {"170,897,000", "id (Indonesian)"},
+      {"90,789,000", "jv (Javanese)"},
+      {"32,043,000", "su (Sundanese)"},
+      {"16,823,000", "mad (Madurese)"}
+    ],
+    population: "267,026,000"
+  },
+  %{
+    name: "Pakistan",
+    languages: [
+      {"221,826,000", "ur (Urdu)"},
+      {"163,451,000", "pa-Arab (Punjabi)"},
+      {"116,751,000", "en (English)"},
+      {"93,400,000", "lah (Western Panjabi)"},
+      {"37,360,000", "ps (Pashto)"},
+      {"35,025,000", "sd (Sindhi)"},
+      {"28,020,000", "skr (skr-PK)"}
+    ],
+    population: "233,501,000"
+  },
+  %{
+    name: "Nigeria",
+    languages: [
+      {"113,435,000", "en (English)"},
+      {"44,946,000", "pcm (Nigerian Pidgin)"},
+      {"27,824,000", "yo (Yoruba)"},
+      {"27,824,000", "ig (Igbo)"},
+      {"27,824,000", "ha (Hausa)"},
+      {"14,340,000", "fuv (fuv-NG)"}
+    ],
+    population: "214,028,000"
+  },
+  %{
+    name: "Brazil",
+    languages: [{"192,662,000", "pt (Portuguese)"}, {"16,937,000", "en (English)"}],
+    population: "211,716,000"
+  },
+  %{
+    name: "Bangladesh",
+    languages: [
+      {"159,398,000", "bn (Bangla)"},
+      {"29,277,000", "en (English)"},
+      {"10,572,000", "rkt (rkt-BD)"}
+    ],
+    population: "162,651,000"
+  },
+  %{name: "Russia", languages: [{"133,219,000", "ru (Russian)"}], population: "141,722,000"},
+  %{
+    name: "Mexico",
+    languages: [{"106,780,000", "es (Spanish)"}, {"16,725,000", "en (English)"}],
+    population: "128,650,000"
+  }
+]
+```
