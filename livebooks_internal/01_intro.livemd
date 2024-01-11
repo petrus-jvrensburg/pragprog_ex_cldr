@@ -1,0 +1,192 @@
+# Common Locale Data Repository - Introduction
+
+```elixir
+# Install dependencies
+Mix.install([
+  :ex_cldr,
+  :ex_cldr_numbers,
+  :ex_cldr_territories,
+  :ex_cldr_languages,
+  :jason
+])
+
+# Define a backend module
+defmodule DemoApp.Backend do
+  use Cldr,
+    locales: ["en"],
+    default_locale: "en",
+    providers: [Cldr.Number, Cldr.Territory, Cldr.Language],
+    json_library: Jason
+end
+
+# Set an app-wide default backend
+Application.put_env(:ex_cldr, :default_backend, DemoApp.Backend)
+```
+
+## What territory info is available?
+
+```elixir
+# CLDR defines a bunch of territories (including individual countries, regions, continents, etc.)
+
+known_territories = Cldr.known_territories()
+```
+
+```elixir
+# How many are there?
+
+Enum.count(known_territories)
+```
+
+```elixir
+# Cldr.Territory.display_name/1 gives a bit more context
+
+known_territories
+|> Enum.each(fn territory_code ->
+  {:ok, name} = Cldr.Territory.display_name(territory_code)
+  IO.puts("#{territory_code}: #{name}")
+end)
+```
+
+```elixir
+# some territories contain other territories
+
+Cldr.Territory.children(:EU)
+```
+
+```elixir
+# we can have a look at the hierarchy of territories that a particular territory belongs to
+
+Cldr.territory_chain(:SE)
+```
+
+```elixir
+# for most territories, additional info is available
+
+Cldr.Territory.info(:SE)
+```
+
+```elixir
+# but this is not the case for all territories
+
+Cldr.Territory.info(:"001")
+```
+
+## What language info is available?
+
+```elixir
+# territory info includes a 'language population' map 
+
+{:ok, info} = Cldr.Territory.info(:SE)
+info[:language_population]
+```
+
+```elixir
+# in general, CLDR knows about a lot of languages and language variants
+
+all_locales = Cldr.all_locale_names()
+```
+
+```elixir
+# How many are there?
+
+Enum.count(all_locales)
+```
+
+```elixir
+# What is the name of the language?
+
+"pt-BR"
+|> Cldr.LanguageTag.parse!()
+|> DemoApp.Backend.Language.to_string()
+```
+
+## Which languages have the most native speakers?
+
+First, we define some helper functions for aggregating the population data in CLDR.
+
+```elixir
+defmodule Helpers do
+  def round_to_nearest_million(number) when is_float(number) do
+    number
+    |> Decimal.from_float()
+    |> round_to_nearest_million()
+  end
+
+  def round_to_nearest_million(number) when is_integer(number) do
+    number
+    |> Decimal.new()
+    |> round_to_nearest_million()
+  end
+
+  def round_to_nearest_million(number) do
+    number
+    |> Decimal.round(-3)
+    |> Decimal.to_integer()
+    |> DemoApp.Backend.Number.to_string!(locale: "en")
+  end
+
+  def language_name(territory_code, language_code) do
+    locale_string = "#{language_code}-#{territory_code}"
+    {:ok, language_tag} = Cldr.LanguageTag.parse(locale_string)
+
+    case DemoApp.Backend.Language.to_string(language_tag) do
+      {:ok, name} -> name
+      _ -> locale_string
+    end
+  end
+
+  def languages_from_territory_info(%{language_population: language_map, population: population}) do
+    language_map
+    |> Enum.map(fn {language_code, %{population_percent: population_percent}} ->
+      {language_code, population_percent * 0.01 * population}
+    end)
+    |> Enum.sort(fn {_language_code_a, population_a}, {_language_code_b, population_b} ->
+      population_a > population_b
+    end)
+    |> Enum.filter(fn {_language_code, population} ->
+      population > 10_000_000
+    end)
+  end
+end
+```
+
+Now, we can loop through the known territories, aggregating language population data across all the territories.
+
+```elixir
+min_territory_population_threshold = 50_000_000
+
+language_populations =
+  Cldr.known_territories()
+  |> Enum.map(fn territory_code ->
+    # load territory info map
+    {territory_code, Cldr.Territory.info!(territory_code)}
+  end)
+  |> Enum.filter(fn {_, info} ->
+    # filter territories with no related info, or with small populations
+    is_nil(info) == false && info.population > min_territory_population_threshold
+  end)
+  |> Enum.sort(fn {_territory_code_a, info_a}, {_territory_code_b, info_b} ->
+    # sort the remaining entries by population
+    info_a.population > info_b.population
+  end)
+  |> Enum.map(fn {territory_code, info} ->
+    # summarise the language population info for each territory
+    {:ok, name} = Cldr.Territory.display_name(territory_code)
+
+    language_populations =
+      Helpers.languages_from_territory_info(info)
+      |> Enum.map(fn {language_code, population} ->
+        %{
+          population: Helpers.round_to_nearest_million(population),
+          name: Helpers.language_name(territory_code, language_code),
+          code: language_code
+        }
+      end)
+
+    %{
+      name: name,
+      population: Helpers.round_to_nearest_million(info.population),
+      languages: language_populations
+    }
+  end)
+```

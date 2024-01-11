@@ -1,0 +1,1827 @@
+<!-- livebook:{"persist_outputs":true} -->
+
+# Language populations
+
+```elixir
+# Install dependencies
+Mix.install([
+  :ex_cldr,
+  :ex_cldr_territories,
+  :ex_cldr_languages,
+  :ex_cldr_lists,
+  :ex_cldr_numbers,
+  :ex_cldr_dates_times,
+  :ex_money,
+  :jason,
+  :explorer,
+  :kino_explorer
+])
+
+# Define a backend module
+defmodule DemoApp.Backend do
+  use Cldr,
+    locales: [
+      "en",
+      "zh",
+      "hi",
+      "es",
+      "ar",
+      "ur",
+      "fr",
+      "bn",
+      "pt",
+      "ru",
+      "sw",
+      "id",
+      "pa-Arab",
+      "de",
+      "ja",
+      "te",
+      "mr",
+      "jv",
+      "vi",
+      "ta",
+      "gu",
+      "kn",
+      "fa",
+      "he",
+      "ug",
+      "ii",
+      "bo",
+      "ko",
+      "yue-Hans",
+      "mn-Mong"
+    ],
+    default_locale: "en",
+    providers: [
+      Cldr.List,
+      Cldr.Territory,
+      Cldr.Language,
+      Cldr.Number,
+      Cldr.Calendar,
+      Cldr.DateTime,
+      Money
+    ],
+    json_library: Jason
+end
+
+# Set an app-wide default backend
+Application.put_env(:ex_cldr, :default_backend, DemoApp.Backend)
+```
+
+## Helpers for working with CLDR territory info
+
+```elixir
+Cldr.put_locale(:ar)
+
+Money.new(:USD, "1234.50", locale: "en")
+|> Money.to_string()
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+{:ok, "‏١٬٢٣٤٫٥٠ US$"}
+```
+
+```elixir
+Cldr.get_locale() |> Cldr.to_string()
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+"ar-EG"
+```
+
+```elixir
+Cldr.known_locale_names()
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+[:ar, :bn, :bo, :de, :en, :es, :fa, :fr, :gu, :he, :hi, :id, :ii, :ja, :jv, :kn, :ko, :mn,
+ :"mn-Mong", :mr, :pa, :"pa-Arab", :pt, :ru, :sw, :ta, :te, :ug, :ur, :vi, :yue, :"yue-Hans", :zh]
+```
+
+```elixir
+String.to_atom("fr")
+|> Cldr.known_locale_name?()
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+true
+```
+
+```elixir
+Cldr.Territory.info(:pak)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+{:ok,
+ %{
+   currency: [PKR: %{from: ~D[1948-04-01]}, INR: %{from: ~D[1835-08-17], to: ~D[1947-08-15]}],
+   measurement_system: %{default: :metric, paper_size: :a4, temperature: :metric},
+   language_population: %{
+     "bal" => %{population_percent: 2.6},
+     "bft" => %{population_percent: 0.18},
+     "bgn" => %{population_percent: 0.57, writing_percent: 5},
+     "brh" => %{population_percent: 1.3},
+     "btv" => %{population_percent: 0.019},
+     "en" => %{population_percent: 50, official_status: "official"},
+     "fa" => %{population_percent: 0.66},
+     "gjk" => %{population_percent: 0.11},
+     "gju" => %{population_percent: 0.2},
+     "hnd" => %{population_percent: 0.41},
+     "hno" => %{population_percent: 1.7},
+     "khw" => %{population_percent: 0.15},
+     "ks" => %{population_percent: 0.069},
+     "kvx" => %{population_percent: 0.16},
+     "kxp" => %{population_percent: 0.11},
+     "lah" => %{population_percent: 40},
+     "mvy" => %{population_percent: 0.14},
+     "pa-Arab" => %{population_percent: 70},
+     "ps" => %{population_percent: 16},
+     "sd" => %{population_percent: 15},
+     "skr" => %{population_percent: 12, literacy_percent: 1},
+     "tg-Arab" => %{population_percent: 0.33},
+     "trw" => %{population_percent: 0.053},
+     "ur" => %{population_percent: 95, official_status: "official"}
+   },
+   gdp: 1061000000000,
+   literacy_percent: 54.9,
+   population: 233501000
+ }}
+```
+
+```elixir
+Cldr.available_locale_name?(:"pa-Arab")
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+true
+```
+
+```elixir
+~T[15:35:59]
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+~T[15:35:59]
+```
+
+```elixir
+Cldr.put_locale(:ar)
+Cldr.DateTime.to_string(~T[15:35:59], format: :hm)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+
+06:19:10.452 [warning] Transliteration from number system :latn to :arab requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+{:ok, "٣:٣٥ م"}
+```
+
+```elixir
+Cldr.DateTime.Format.common_date_time_format_names(DemoApp.Backend)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+[:Bh, :Bhm, :Bhms, :E, :EBhm, :EBhms, :EHm, :EHms, :Ed, :Ehm, :Ehms, :Gy, :GyMMM, :GyMMMEd, :GyMMMd,
+ :GyMd, :H, :Hm, :Hms, :Hmsv, :Hmv, :M, :MEd, :MMM, :MMMEd, :MMMMW, :MMMMd, :MMMd, :Md, :d, :h, :hm,
+ :hms, :hmsv, :hmv, :ms, :y, :yM, :yMEd, :yMMM, :yMMMEd, :yMMMM, :yMMMd, :yMd, :yQQQ, :yQQQQ, :yw]
+```
+
+```elixir
+Cldr.put_locale(:ar)
+Cldr.DateTime.to_string(~T[15:35:59], format: :Hm)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+
+06:19:10.455 [warning] Transliteration from number system :latn to :arab requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+{:ok, "١٥:٣٥"}
+```
+
+```elixir
+defmodule Helpers do
+  def prefix(lang_code) do
+    case lang_code do
+      "ar" -> "\\ar "
+      "bn" -> "\\bn "
+      "en" -> "\\en "
+      "ja" -> "\\ja "
+      "ko" -> "\\ko "
+      "pa-Arab" -> "\\ar "
+      "te" -> "\\te "
+      "ta" -> "\\ta "
+      "ur" -> "\\ur "
+      "zh" -> "\\zh "
+      _ -> "\\noto "
+    end
+  end
+
+  def rounded_millions(population) do
+    tmp =
+      (population / 1_000_000)
+      |> Float.round()
+      |> trunc()
+
+    DemoApp.Backend.Number.to_string!(tmp * 1_000_000, locale: "en")
+  end
+
+  def language_name_combined(language_code) do
+    name_en = language_name_en(language_code)
+    {:ok, language_tag} = Cldr.LanguageTag.parse(language_code)
+
+    case DemoApp.Backend.Language.to_string(language_tag) do
+      {:ok, name} ->
+        if name == name_en do
+          name
+        else
+          "#{name_en} (#{prefix(language_code)}#{name}#{prefix(language_code) && "\\en"})"
+        end
+
+      _ ->
+        name_en
+    end
+  end
+
+  def language_name_en("apc") do
+    "North Levantine Arabic"
+  end
+
+  def language_name_en(:apc) do
+    "North Levantine Arabic"
+  end
+
+  def language_name_en(language_code) do
+    {:ok, language_tag} = Cldr.LanguageTag.parse(language_code)
+
+    case DemoApp.Backend.Language.to_string(language_tag, locale: "en") do
+      {:ok, name_en} ->
+        name_en
+
+      {:error, _reason} ->
+        Atom.to_string(language_code)
+
+      :error ->
+        IO.puts("unexpected error: #{language_code}")
+        "#{language_code}"
+    end
+  end
+
+  def language_name_native(language_code) do
+    {:ok, language_tag} = Cldr.LanguageTag.parse(language_code)
+
+    case DemoApp.Backend.Language.to_string(language_tag) do
+      {:ok, name} ->
+        name
+
+      _ ->
+        "N/A"
+    end
+  end
+
+  def absolute_language_population_map(population, relative_language_population_map) do
+    relative_language_population_map
+    |> Enum.reduce(%{}, fn {language_code, %{population_percent: population_percent}}, acc ->
+      language_population =
+        (population * population_percent * 0.01)
+        |> round()
+        |> trunc()
+
+      Map.put(acc, language_code, language_population)
+    end)
+  end
+
+  def language_populations(territory_code_or_list) do
+    language_populations(territory_code_or_list, %{})
+  end
+
+  def language_populations(territory_code, language_population_map_acc)
+      when is_atom(territory_code) do
+    case Cldr.Territory.info(territory_code) do
+      {:ok, %{language_population: relative_language_population_map, population: population}} ->
+        absolute_language_population_map(population, relative_language_population_map)
+        |> Map.merge(language_population_map_acc, fn _k, v1, v2 ->
+          v1 + v2
+        end)
+
+      {:ok, nil} ->
+        Cldr.Territory.children!(territory_code)
+        |> language_populations(language_population_map_acc)
+    end
+  end
+
+  def language_populations(territory_list, language_population_map_acc)
+      when is_list(territory_list) do
+    Enum.reduce(territory_list, language_population_map_acc, fn territory_code, acc ->
+      language_populations(territory_code, acc)
+    end)
+  end
+
+  def sorted_language_populations(territory_code_or_list) do
+    language_populations(territory_code_or_list)
+    |> Enum.to_list()
+    |> Enum.sort(fn {_language_code_a, population_a}, {_language_code_b, population_b} ->
+      population_a > population_b
+    end)
+  end
+
+  def most_used_languages(territory_code_or_list, limit) do
+    sorted_language_populations(territory_code_or_list)
+    |> Enum.filter(fn {language_code, _population} ->
+      # discard languages that do not correspond to valid CLDR locales
+      Cldr.available_locale_name?(String.to_atom(language_code))
+    end)
+    |> Enum.take(limit)
+    |> Enum.map(fn {language_code, population} ->
+      if Cldr.known_locale_name(language_code) do
+        Cldr.put_locale(language_code)
+      else
+        Cldr.put_locale("en")
+      end
+
+      known_locale? =
+        String.to_atom(language_code)
+        |> Cldr.known_locale_name?()
+
+      sample_date = ~D[2035-12-20]
+      sample_time = ~T[15:35:59]
+
+      {money_sample, date, time} =
+        if known_locale? do
+          {:ok, date} = Cldr.Date.to_string(sample_date)
+          date = "#{prefix(language_code)}#{date}#{prefix(language_code) && "\\en "}"
+
+          {:ok, time} = Cldr.DateTime.to_string(sample_time, format: :hm)
+
+          time = "#{prefix(language_code)}#{time}#{prefix(language_code) && "\\en "}"
+          money = money_sample()
+          money = "#{prefix(language_code)}#{money}#{prefix(language_code) && "\\en "}"
+          {money, date, time}
+        else
+          {"N/A", "N/A", "N/A"}
+        end
+
+      script_direction = Cldr.Locale.script_direction_from_locale(language_code)
+
+      {language_code, language_name_en(language_code), language_name_combined(language_code),
+       language_name_native(language_code), rounded_millions(population), money_sample, date,
+       time, script_direction}
+    end)
+  end
+
+  def money_sample() do
+    case Money.new(:USD, "1234.50", locale: "en")
+         |> Money.to_string() do
+      {:ok, out} ->
+        String.replace(out, "$", "\\$")
+
+      foo ->
+        IO.inspect(foo, pretty: true)
+        "error"
+    end
+  end
+end
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+{:module, Helpers, <<70, 79, 82, 49, 0, 0, 41, ...>>, {:money_sample, 0}}
+```
+
+```elixir
+Cldr.Number.to_number_system(123, :hans)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+{:ok, "一百二十三"}
+```
+
+```elixir
+DemoApp.Backend.Language.to_string("en", locale: "fr")
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+{:ok, "anglais"}
+```
+
+```elixir
+Cldr.known_number_systems()
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+[:adlm, :ahom, :arab, :arabext, :armn, :armnlow, :bali, :beng, :bhks, :brah, :cakm, :cham, :cyrl,
+ :deva, :diak, :ethi, :fullwide, :geor, :gong, :gonm, :grek, :greklow, :gujr, :guru, :hanidays,
+ :hanidec, :hans, :hansfin, :hant, :hantfin, :hebr, :hmng, :hmnp, :java, :jpan, :jpanfin, :jpanyear,
+ :kali, :kawi, :khmr, :knda, :lana, :lanatham, :laoo, :latn, :lepc, :limb, :mathbold, :mathdbl,
+ :mathmono, ...]
+```
+
+```elixir
+Cldr.Number.to_number_system(12345, :latn)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+{:ok, "12345"}
+```
+
+```elixir
+Cldr.Number.System.number_system_from_locale("ur", DemoApp.Backend)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+:latn
+```
+
+```elixir
+Cldr.put_locale("ur")
+DemoApp.Backend.Number.to_string(12345)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+{:ok, "12,345"}
+```
+
+## Section
+
+```elixir
+Helpers.most_used_languages(:"001", 20)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+
+06:19:10.519 [warning] Transliteration from number system :latn to :arab requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+
+06:19:10.519 [warning] Transliteration from number system :latn to :arab requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+
+06:19:10.520 [warning] Transliteration from number system :latn to :beng requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+
+06:19:10.520 [warning] Transliteration from number system :latn to :beng requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+
+06:19:10.520 [warning] Transliteration from number system :latn to :arabext requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+
+06:19:10.520 [warning] Transliteration from number system :latn to :arabext requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+
+06:19:10.522 [warning] Transliteration from number system :latn to :deva requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+
+06:19:10.522 [warning] Transliteration from number system :latn to :deva requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+[
+  {"en", "English", "English", "English", "1,636,000,000", "\\en \\$1,234.50\\en ",
+   "\\en Dec 20, 2035\\en ", "\\en 3:35 PM\\en ", :ltr},
+  {"zh", "Chinese", "Chinese (\\zh 中文\\en)", "中文", "1,266,000,000",
+   "\\zh US\\$1,234.50\\en ", "\\zh 2035年12月20日\\en ", "\\zh 下午3:35\\en ", :ltr},
+  {"hi", "Hindi", "Hindi (\\noto हिन्दी\\en)", "हिन्दी", "546,000,000",
+   "\\noto \\$1,234.50\\en ", "\\noto 20 दिस॰ 2035\\en ", "\\noto 3:35 pm\\en ", :ltr},
+  {"es", "Spanish", "Spanish (\\noto español\\en)", "español", "494,000,000",
+   "\\noto 1234,50 US\\$\\en ", "\\noto 20 dic 2035\\en ", "\\noto 3:35 p. m.\\en ", :ltr},
+  {"ar", "Arabic", "Arabic (\\ar العربية\\en)", "العربية", "352,000,000",
+   "\\ar ‏١٬٢٣٤٫٥٠ US\\$\\en ", "\\ar ٢٠‏/١٢‏/٢٠٣٥\\en ",
+   "\\ar ٣:٣٥ م\\en ", :rtl},
+  {"ur", "Urdu", "Urdu (\\ur اردو\\en)", "اردو", "291,000,000", "\\ur \\$1,234.50\\en ",
+   "\\ur 20 دسمبر، 2035\\en ", "\\ur 3:35 PM\\en ", :rtl},
+  {"fr", "French", "French (\\noto français\\en)", "français", "279,000,000",
+   "\\noto 1 234,50 \\$US\\en ", "\\noto 20 déc. 2035\\en ", "\\noto 3:35 PM\\en ", :ltr},
+  {"bn", "Bangla", "Bangla (\\bn বাংলা\\en)", "বাংলা", "267,000,000",
+   "\\bn ১,২৩৪.৫০ US\\$\\en ", "\\bn ২০ ডিসে, ২০৩৫\\en ",
+   "\\bn ৩:৩৫ PM\\en ", :ltr},
+  {"pt", "Portuguese", "Portuguese (\\noto português\\en)", "português", "237,000,000",
+   "\\noto US\\$ 1.234,50\\en ", "\\noto 20 de dez. de 2035\\en ", "\\noto 3:35 PM\\en ", :ltr},
+  {"ru", "Russian", "Russian (\\noto русский\\en)", "русский", "196,000,000",
+   "\\noto 1 234,50 \\$\\en ", "\\noto 20 дек. 2035 г.\\en ", "\\noto 3:35 PM\\en ",
+   :ltr},
+  {"sw", "Swahili", "Swahili (\\noto Kiswahili\\en)", "Kiswahili", "172,000,000",
+   "\\noto US\\$ 1,234.50\\en ", "\\noto 20 Des 2035\\en ", "\\noto 3:35 PM\\en ", :ltr},
+  {"id", "Indonesian", "Indonesian (\\noto Indonesia\\en)", "Indonesia", "171,000,000",
+   "\\noto US\\$1.234,50\\en ", "\\noto 20 Des 2035\\en ", "\\noto 3.35 PM\\en ", :ltr},
+  {"pa-Arab", "Punjabi", "Punjabi (\\ar پنجابی\\en)", "پنجابی", "163,000,000",
+   "\\ar US\\$ ۱٬۲۳۴٫۵۰\\en ", "\\ar ۲۰ دسمبر ۲۰۳۵\\en ",
+   "\\ar ۳:۳۵ PM\\en ", :rtl},
+  {"de", "German", "German (\\noto Deutsch\\en)", "Deutsch", "136,000,000",
+   "\\noto 1.234,50 \\$\\en ", "\\noto 20.12.2035\\en ", "\\noto 3:35 PM\\en ", :ltr},
+  {"ja", "Japanese", "Japanese (\\ja 日本語\\en)", "日本語", "120,000,000",
+   "\\ja \\$1,234.50\\en ", "\\ja 2035/12/20\\en ", "\\ja 午後3:35\\en ", :ltr},
+  {"te", "Telugu", "Telugu (\\te తెలుగు\\en)", "తెలుగు", "95,000,000",
+   "\\te \\$1,234.50\\en ", "\\te 20 డిసెం, 2035\\en ", "\\te 3:35 PM\\en ", :ltr},
+  {"mr", "Marathi", "Marathi (\\noto मराठी\\en)", "मराठी", "93,000,000",
+   "\\noto \\$१,२३४.५०\\en ", "\\noto २० डिसें, २०३५\\en ",
+   "\\noto ३:३५ PM\\en ", :ltr},
+  {"jv", "Javanese", "Javanese (\\noto Jawa\\en)", "Jawa", "91,000,000",
+   "\\noto US\\$ 1.234,50\\en ", "\\noto 20 Des 2035\\en ", "\\noto 3:35 Wengi\\en ", :ltr},
+  {"vi", "Vietnamese", "Vietnamese (\\noto Tiếng Việt\\en)", "Tiếng Việt", "86,000,000",
+   "\\noto 1.234,50 US\\$\\en ", "\\noto 20 thg 12, 2035\\en ", "\\noto 3:35 CH\\en ", :ltr},
+  {"ta", "Tamil", "Tamil (\\ta தமிழ்\\en)", "தமிழ்", "86,000,000",
+   "\\ta \\$1,234.50\\en ", "\\ta 20 டிச., 2035\\en ",
+   "\\ta பிற்பகல் 3:35\\en ", :ltr}
+]
+```
+
+```elixir
+Helpers.sorted_language_populations(:"001")
+|> Enum.take(50)
+|> Enum.map(fn {lang_code, population_count} ->
+  {lang_code, Helpers.language_name_en(lang_code), Helpers.rounded_millions(population_count)}
+end)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+[
+  {"en", "English", "1,636,000,000"},
+  {"zh", "Chinese", "1,266,000,000"},
+  {"hi", "Hindi", "546,000,000"},
+  {"es", "Spanish", "494,000,000"},
+  {"ar", "Arabic", "352,000,000"},
+  {"ur", "Urdu", "291,000,000"},
+  {"fr", "French", "279,000,000"},
+  {"bn", "Bangla", "267,000,000"},
+  {"pt", "Portuguese", "237,000,000"},
+  {"ru", "Russian", "196,000,000"},
+  {"sw", "Swahili", "172,000,000"},
+  {"id", "Indonesian", "171,000,000"},
+  {"pa-Arab", "Punjabi", "163,000,000"},
+  {"de", "German", "136,000,000"},
+  {"ja", "Japanese", "120,000,000"},
+  {"te", "Telugu", "95,000,000"},
+  {"lah", "Western Panjabi", "93,000,000"},
+  {"mr", "Marathi", "93,000,000"},
+  {"jv", "Javanese", "91,000,000"},
+  {"vi", "Vietnamese", "86,000,000"},
+  {"ta", "Tamil", "86,000,000"},
+  {"fa", "Persian", "85,000,000"},
+  {"wuu", "Wu Chinese", "84,000,000"},
+  {"tr", "Turkish", "80,000,000"},
+  {"ko", "Korean", "78,000,000"},
+  {"yue-Hans", "Cantonese", "72,000,000"},
+  {"it", "Italian", "70,000,000"},
+  {"fil", "Filipino", "67,000,000"},
+  {"arz", "Egyptian Arabic", "67,000,000"},
+  {"gu", "Gujarati", "62,000,000"},
+  {"th", "Thai", "55,000,000"},
+  {"ps", "Pashto", "54,000,000"},
+  {"kn", "Kannada", "49,000,000"},
+  {"pcm", "Nigerian Pidgin", "45,000,000"},
+  {"ml", "Malayalam", "43,000,000"},
+  {"or", "Odia", "42,000,000"},
+  {"pl", "Polish", "41,000,000"},
+  {"hsn", "Xiang Chinese", "40,000,000"},
+  {"pa", "Punjabi", "40,000,000"},
+  {"apc", "North Levantine Arabic", "39,000,000"},
+  {"zh-Hant", "Chinese", "39,000,000"},
+  {"sd", "Sindhi", "38,000,000"},
+  {"ha", "Hausa", "37,000,000"},
+  {"my", "Burmese", "37,000,000"},
+  {"am", "Amharic", "36,000,000"},
+  {"arq", "Algerian Arabic", "36,000,000"},
+  {"om", "Oromo", "35,000,000"},
+  {"ms", "Malay", ...},
+  {"bho", ...},
+  {...}
+]
+```
+
+```elixir
+group_of_seven = [:US, :UK, :JP, :DE, :CA, :IT, :FR]
+Helpers.most_used_languages(group_of_seven, 5)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+[
+  {"en", "English", "English", "English", "515,000,000", "\\en \\$1,234.50\\en ",
+   "\\en Dec 20, 2035\\en ", "\\en 3:35 PM\\en ", :ltr},
+  {"ja", "Japanese", "Japanese (\\ja 日本語\\en)", "日本語", "119,000,000",
+   "\\ja \\$1,234.50\\en ", "\\ja 2035/12/20\\en ", "\\ja 午後3:35\\en ", :ltr},
+  {"fr", "French", "French (\\noto français\\en)", "français", "114,000,000",
+   "\\noto 1 234,50 \\$US\\en ", "\\noto 20 déc. 2035\\en ", "\\noto 3:35 PM\\en ", :ltr},
+  {"de", "German", "German (\\noto Deutsch\\en)", "Deutsch", "85,000,000",
+   "\\noto 1.234,50 \\$\\en ", "\\noto 20.12.2035\\en ", "\\noto 3:35 PM\\en ", :ltr},
+  {"it", "Italian", "Italian", "Italian", "68,000,000", "N/A", "N/A", "N/A",
+   {:error, {Cldr.UnknownLocaleError, "The locale \"it\" is not known."}}}
+]
+```
+
+```elixir
+Helpers.most_used_languages(:EU, 10)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+[
+  {"en", "English", "English", "English", "206,000,000", "\\en \\$1,234.50\\en ",
+   "\\en Dec 20, 2035\\en ", "\\en 3:35 PM\\en ", :ltr},
+  {"de", "German", "German (\\noto Deutsch\\en)", "Deutsch", "119,000,000",
+   "\\noto 1.234,50 \\$\\en ", "\\noto 20.12.2035\\en ", "\\noto 3:35 PM\\en ", :ltr},
+  {"fr", "French", "French (\\noto français\\en)", "français", "104,000,000",
+   "\\noto 1 234,50 \\$US\\en ", "\\noto 20 déc. 2035\\en ", "\\noto 3:35 PM\\en ", :ltr},
+  {"it", "Italian", "Italian", "Italian", "67,000,000", "N/A", "N/A", "N/A",
+   {:error, {Cldr.UnknownLocaleError, "The locale \"it\" is not known."}}},
+  {"es", "Spanish", "Spanish (\\noto español\\en)", "español", "66,000,000",
+   "\\noto 1234,50 US\\$\\en ", "\\noto 20 dic 2035\\en ", "\\noto 3:35 p. m.\\en ", :ltr},
+  {"pl", "Polish", "Polish", "Polish", "37,000,000", "N/A", "N/A", "N/A",
+   {:error, {Cldr.UnknownLocaleError, "The locale \"pl\" is not known."}}},
+  {"nl", "Dutch", "Dutch", "Dutch", "31,000,000", "N/A", "N/A", "N/A",
+   {:error, {Cldr.UnknownLocaleError, "The locale \"nl\" is not known."}}},
+  {"ro", "Romanian", "Romanian", "Romanian", "19,000,000", "N/A", "N/A", "N/A",
+   {:error, {Cldr.UnknownLocaleError, "The locale \"ro\" is not known."}}},
+  {"ru", "Russian", "Russian (\\noto русский\\en)", "русский", "17,000,000",
+   "\\noto 1 234,50 \\$\\en ", "\\noto 20 дек. 2035 г.\\en ", "\\noto 3:35 PM\\en ",
+   :ltr},
+  {"cs", "Czech", "Czech", "Czech", "13,000,000", "N/A", "N/A", "N/A",
+   {:error, {Cldr.UnknownLocaleError, "The locale \"cs\" is not known."}}}
+]
+```
+
+```elixir
+group_of_twenty = [
+  :AR,
+  :AU,
+  :BR,
+  :CN,
+  :IN,
+  :ID,
+  :MX,
+  :KR,
+  :RU,
+  :SA,
+  :ZA,
+  :TR,
+  :US,
+  :UK,
+  :JP,
+  :DE,
+  :CA,
+  :IT,
+  :FR
+]
+
+Helpers.most_used_languages(group_of_twenty, 10)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+
+06:19:10.536 [warning] Transliteration from number system :latn to :beng requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+
+06:19:10.536 [warning] Transliteration from number system :latn to :beng requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+[
+  {"zh", "Chinese", "Chinese (\\zh 中文\\en)", "中文", "1,255,000,000",
+   "\\zh US\\$1,234.50\\en ", "\\zh 2035年12月20日\\en ", "\\zh 下午3:35\\en ", :ltr},
+  {"en", "English", "English", "English", "860,000,000", "\\en \\$1,234.50\\en ",
+   "\\en Dec 20, 2035\\en ", "\\en 3:35 PM\\en ", :ltr},
+  {"hi", "Hindi", "Hindi (\\noto हिन्दी\\en)", "हिन्दी", "545,000,000",
+   "\\noto \\$1,234.50\\en ", "\\noto 20 दिस॰ 2035\\en ", "\\noto 3:35 pm\\en ", :ltr},
+  {"es", "Spanish", "Spanish (\\noto español\\en)", "español", "204,000,000",
+   "\\noto 1234,50 US\\$\\en ", "\\noto 20 dic 2035\\en ", "\\noto 3:35 p. m.\\en ", :ltr},
+  {"pt", "Portuguese", "Portuguese (\\noto português\\en)", "português", "194,000,000",
+   "\\noto US\\$ 1.234,50\\en ", "\\noto 20 de dez. de 2035\\en ", "\\noto 3:35 PM\\en ", :ltr},
+  {"id", "Indonesian", "Indonesian (\\noto Indonesia\\en)", "Indonesia", "171,000,000",
+   "\\noto US\\$1.234,50\\en ", "\\noto 20 Des 2035\\en ", "\\noto 3.35 PM\\en ", :ltr},
+  {"ru", "Russian", "Russian (\\noto русский\\en)", "русский", "139,000,000",
+   "\\noto 1 234,50 \\$\\en ", "\\noto 20 дек. 2035 г.\\en ", "\\noto 3:35 PM\\en ",
+   :ltr},
+  {"ja", "Japanese", "Japanese (\\ja 日本語\\en)", "日本語", "120,000,000",
+   "\\ja \\$1,234.50\\en ", "\\ja 2035/12/20\\en ", "\\ja 午後3:35\\en ", :ltr},
+  {"fr", "French", "French (\\noto français\\en)", "français", "114,000,000",
+   "\\noto 1 234,50 \\$US\\en ", "\\noto 20 déc. 2035\\en ", "\\noto 3:35 PM\\en ", :ltr},
+  {"bn", "Bangla", "Bangla (\\bn বাংলা\\en)", "বাংলা", "108,000,000",
+   "\\bn ১,২৩৪.৫০ US\\$\\en ", "\\bn ২০ ডিসে, ২০৩৫\\en ",
+   "\\bn ৩:৩৫ PM\\en ", :ltr}
+]
+```
+
+```elixir
+mena = [
+  {:DZ, "Algeria"},
+  {:BH, "Bahrain"},
+  {:DJ, "Djibouti"},
+  {:EG, "Egypt"},
+  {:IR, "Iran"},
+  {:IQ, "Iraq"},
+  {:IL, "Israel"},
+  {:JO, "Jordan"},
+  {:KW, "Kuwait"},
+  {:LB, "Lebanon"},
+  {:LY, "Libya"},
+  {:MR, "Mauritania"},
+  {:MA, "Morocco"},
+  {:OM, "Oman"},
+  {:PS, "Palestine"},
+  {:QA, "Qatar"},
+  {:SA, "Saudi Arabia"},
+  {:SO, "Somalia"},
+  {:SD, "Sudan"},
+  {:SY, "Syria"},
+  {:TN, "Tunisia"},
+  {:AE, "United Arab Emirates"},
+  {:YE, "Yemen"}
+]
+
+mena_codes = Enum.map(mena, fn {code, _foo} -> code end)
+
+Helpers.most_used_languages(mena_codes, 10)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+
+06:19:10.538 [warning] Transliteration from number system :latn to :arab requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+
+06:19:10.538 [warning] Transliteration from number system :latn to :arab requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+
+06:19:10.538 [warning] Transliteration from number system :latn to :arabext requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+
+06:19:10.538 [warning] Transliteration from number system :latn to :arabext requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+[
+  {"ar", "Arabic", "Arabic (\\ar العربية\\en)", "العربية", "343,000,000",
+   "\\ar ‏١٬٢٣٤٫٥٠ US\\$\\en ", "\\ar ٢٠‏/١٢‏/٢٠٣٥\\en ",
+   "\\ar ٣:٣٥ م\\en ", :rtl},
+  {"en", "English", "English", "English", "108,000,000", "\\en \\$1,234.50\\en ",
+   "\\en Dec 20, 2035\\en ", "\\en 3:35 PM\\en ", :ltr},
+  {"fa", "Persian", "Persian (\\noto فارسی\\en)", "فارسی", "65,000,000",
+   "\\noto ‎\\$۱٬۲۳۴٫۵۰\\en ", "\\noto ۲۰ دسامبر ۲۰۳۵\\en ",
+   "\\noto ۳:۳۵ ب.ظ.\\en ", :rtl},
+  {"apc", "North Levantine Arabic", "North Levantine Arabic", "N/A", "35,000,000", "N/A", "N/A",
+   "N/A", {:error, {Cldr.UnknownLocaleError, "The locale \"apc\" is not known."}}},
+  {"fr", "French", "French (\\noto français\\en)", "français", "26,000,000",
+   "\\noto 1 234,50 \\$US\\en ", "\\noto 20 déc. 2035\\en ", "\\noto 3:35 PM\\en ", :ltr},
+  {"az-Arab", "Azerbaijani", "Azerbaijani", "Azerbaijani", "21,000,000", "N/A", "N/A", "N/A",
+   {:error, {Cldr.UnknownLocaleError, "The locale \"az-Arab\" is not known."}}},
+  {"ckb", "Central Kurdish", "Central Kurdish", "Central Kurdish", "11,000,000", "N/A", "N/A",
+   "N/A", {:error, {Cldr.UnknownLocaleError, "The locale \"ckb\" is not known."}}},
+  {"so", "Somali", "Somali", "Somali", "10,000,000", "N/A", "N/A", "N/A",
+   {:error, {Cldr.UnknownLocaleError, "The locale \"so\" is not known."}}},
+  {"he", "Hebrew", "Hebrew (\\noto עברית\\en)", "עברית", "9,000,000",
+   "\\noto ‏1,234.50 ‏\\$\\en ", "\\noto 20 בדצמ׳ 2035\\en ",
+   "\\noto 3:35 אחה״צ\\en ", :rtl},
+  {"zgh", "Standard Moroccan Tamazight", "Standard Moroccan Tamazight",
+   "Standard Moroccan Tamazight", "8,000,000", "N/A", "N/A", "N/A",
+   {:error, {Cldr.UnknownLocaleError, "The locale \"zgh\" is not known."}}}
+]
+```
+
+```elixir
+brics = [
+  :br,
+  :ru,
+  :in,
+  :cn,
+  :za
+]
+
+Helpers.most_used_languages(brics, 10)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+
+06:19:10.541 [warning] Transliteration from number system :latn to :beng requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+
+06:19:10.541 [warning] Transliteration from number system :latn to :beng requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+
+06:19:10.541 [warning] Transliteration from number system :latn to :deva requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+
+06:19:10.541 [warning] Transliteration from number system :latn to :deva requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+[
+  {"zh", "Chinese", "Chinese (\\zh 中文\\en)", "中文", "1,255,000,000",
+   "\\zh US\\$1,234.50\\en ", "\\zh 2035年12月20日\\en ", "\\zh 下午3:35\\en ", :ltr},
+  {"hi", "Hindi", "Hindi (\\noto हिन्दी\\en)", "हिन्दी", "545,000,000",
+   "\\noto \\$1,234.50\\en ", "\\noto 20 दिस॰ 2035\\en ", "\\noto 3:35 pm\\en ", :ltr},
+  {"en", "English", "English", "English", "286,000,000", "\\en \\$1,234.50\\en ",
+   "\\en Dec 20, 2035\\en ", "\\en 3:35 PM\\en ", :ltr},
+  {"pt", "Portuguese", "Portuguese (\\noto português\\en)", "português", "193,000,000",
+   "\\noto US\\$ 1.234,50\\en ", "\\noto 20 de dez. de 2035\\en ", "\\noto 3:35 PM\\en ", :ltr},
+  {"ru", "Russian", "Russian (\\noto русский\\en)", "русский", "133,000,000",
+   "\\noto 1 234,50 \\$\\en ", "\\noto 20 дек. 2035 г.\\en ", "\\noto 3:35 PM\\en ",
+   :ltr},
+  {"bn", "Bangla", "Bangla (\\bn বাংলা\\en)", "বাংলা", "107,000,000",
+   "\\bn ১,২৩৪.৫০ US\\$\\en ", "\\bn ২০ ডিসে, ২০৩৫\\en ",
+   "\\bn ৩:৩৫ PM\\en ", :ltr},
+  {"te", "Telugu", "Telugu (\\te తెలుగు\\en)", "తెలుగు", "95,000,000",
+   "\\te \\$1,234.50\\en ", "\\te 20 డిసెం, 2035\\en ", "\\te 3:35 PM\\en ", :ltr},
+  {"mr", "Marathi", "Marathi (\\noto मराठी\\en)", "मराठी", "93,000,000",
+   "\\noto \\$१,२३४.५०\\en ", "\\noto २० डिसें, २०३५\\en ",
+   "\\noto ३:३५ PM\\en ", :ltr},
+  {"ta", "Tamil", "Tamil (\\ta தமிழ்\\en)", "தமிழ்", "78,000,000",
+   "\\ta \\$1,234.50\\en ", "\\ta 20 டிச., 2035\\en ",
+   "\\ta பிற்பகல் 3:35\\en ", :ltr},
+  {"yue-Hans", "Cantonese", "Cantonese (\\noto 粤语\\en)", "粤语", "72,000,000",
+   "\\noto US\\$1,234.50\\en ", "\\noto 2035年12月20日\\en ", "\\noto 下午3:35\\en ", :ltr}
+]
+```
+
+## Dataframes
+
+```elixir
+alias Explorer.DataFrame, as: DF
+require Explorer.DataFrame
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+Explorer.DataFrame
+```
+
+```elixir
+tmp = Helpers.most_used_languages(:"001", 20)
+
+language_code =
+  Enum.map(tmp, fn {language_code, _language_name_en, _language_name_combined,
+                    _language_name_native, _population, _money_sample, _date, _time,
+                    _direction} ->
+    language_code
+  end)
+
+population =
+  Enum.map(tmp, fn {_language_code, _language_name_en, _language_name_combined,
+                    _language_name_native, population, _money_sample, _date, _time, _direction} ->
+    population
+  end)
+
+language =
+  Enum.map(tmp, fn {_language_code, _language_name_en, _language_name_combined,
+                    language_name_native, _population, _money_sample, _date, _time, _direction} ->
+    language_name_native
+  end)
+
+language_combined =
+  Enum.map(tmp, fn {_language_code, _language_name_en, language_name_combined,
+                    _language_name_native, _population, _money_sample, _date, _time,
+                    _direction} ->
+    language_name_combined
+  end)
+
+money_value =
+  Enum.map(tmp, fn {_language_code, _language_name_en, _language_name_combined,
+                    _language_name_native, _population, money_sample, _date, _time, _direction} ->
+    money_sample
+  end)
+
+date =
+  Enum.map(tmp, fn {_language_code, _language_name_en, _language_name_combined,
+                    _language_name_native, _population, _money_sample, date, _time, _direction} ->
+    date
+  end)
+
+time =
+  Enum.map(tmp, fn {_language_code, _language_name_en, _language_name_combined,
+                    _language_name_native, _population, _money_sample, _date, time, _direction} ->
+    time
+  end)
+
+DF.new(
+  # language_code: language_code,
+  population: population,
+  language_combined: language_combined,
+  # language: language,
+  money: money_value,
+  date: date,
+  time: time
+)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+
+06:19:10.550 [warning] Transliteration from number system :latn to :arab requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+
+06:19:10.550 [warning] Transliteration from number system :latn to :arab requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+
+06:19:10.550 [warning] Transliteration from number system :latn to :beng requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+
+06:19:10.550 [warning] Transliteration from number system :latn to :beng requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+
+06:19:10.550 [warning] Transliteration from number system :latn to :arabext requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+
+06:19:10.550 [warning] Transliteration from number system :latn to :arabext requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+
+06:19:10.551 [warning] Transliteration from number system :latn to :deva requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+
+06:19:10.551 [warning] Transliteration from number system :latn to :deva requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+```
+
+## Latex tables
+
+```elixir
+defmodule LatexTable do
+  def render(keyword_list, label, caption) do
+    # Get the keys and values from the map
+    keys = Keyword.keys(keyword_list)
+    values = Keyword.values(keyword_list)
+
+    # Get the number of rows
+    num_rows = length(List.first(values))
+
+    # Create the header row
+    header =
+      keys
+      |> Enum.map(fn key ->
+        key |> Atom.to_string() |> String.upcase()
+      end)
+      |> Enum.join(" & ")
+
+    header = header <> " \\\\ \\hline"
+
+    # Create the table rows
+    table_rows =
+      0..(num_rows - 1)
+      |> Enum.map(fn row_index ->
+        Enum.map(values, fn col -> Enum.at(col, row_index) end)
+        |> Enum.join(" & ")
+        |> Kernel.<>(" \\\\")
+      end)
+      |> Enum.join("\n        ")
+
+    # Combine the header and table rows
+    IO.puts("\\begin{table}[h]")
+    IO.puts("    \\centering")
+
+    IO.puts("    \\begin{tabular}{#{String.duplicate("l ", length(keys))}}")
+    IO.puts("        " <> header)
+    IO.puts("        " <> table_rows)
+    IO.puts("    \\end{tabular}")
+    IO.puts("    \\caption{\\label{table:#{label}}#{caption}}")
+    IO.puts("\\end{table}")
+  end
+end
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+{:module, LatexTable, <<70, 79, 82, 49, 0, 0, 14, ...>>, {:render, 3}}
+```
+
+```elixir
+lang_population_001 = [
+  language: language_combined,
+  money: money_value,
+  date: date,
+  time: time
+]
+
+IO.inspect(
+  LatexTable.render(
+    lang_population_001,
+    "language-samples-001",
+    "Formatting samples for the most popular languages."
+  )
+)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+\begin{table}[h]
+    \centering
+    \begin{tabular}{l l l l }
+        LANGUAGE & MONEY & DATE & TIME \\ \hline
+        English & \en \$1,234.50\en  & \en Dec 20, 2035\en  & \en 3:35 PM\en  \\
+        Chinese (\zh 中文\en) & \zh US\$1,234.50\en  & \zh 2035年12月20日\en  & \zh 下午3:35\en  \\
+        Hindi (\noto हिन्दी\en) & \noto \$1,234.50\en  & \noto 20 दिस॰ 2035\en  & \noto 3:35 pm\en  \\
+        Spanish (\noto español\en) & \noto 1234,50 US\$\en  & \noto 20 dic 2035\en  & \noto 3:35 p. m.\en  \\
+        Arabic (\ar العربية\en) & \ar ‏١٬٢٣٤٫٥٠ US\$\en  & \ar ٢٠‏/١٢‏/٢٠٣٥\en  & \ar ٣:٣٥ م\en  \\
+        Urdu (\ur اردو\en) & \ur \$1,234.50\en  & \ur 20 دسمبر، 2035\en  & \ur 3:35 PM\en  \\
+        French (\noto français\en) & \noto 1 234,50 \$US\en  & \noto 20 déc. 2035\en  & \noto 3:35 PM\en  \\
+        Bangla (\bn বাংলা\en) & \bn ১,২৩৪.৫০ US\$\en  & \bn ২০ ডিসে, ২০৩৫\en  & \bn ৩:৩৫ PM\en  \\
+        Portuguese (\noto português\en) & \noto US\$ 1.234,50\en  & \noto 20 de dez. de 2035\en  & \noto 3:35 PM\en  \\
+        Russian (\noto русский\en) & \noto 1 234,50 \$\en  & \noto 20 дек. 2035 г.\en  & \noto 3:35 PM\en  \\
+        Swahili (\noto Kiswahili\en) & \noto US\$ 1,234.50\en  & \noto 20 Des 2035\en  & \noto 3:35 PM\en  \\
+        Indonesian (\noto Indonesia\en) & \noto US\$1.234,50\en  & \noto 20 Des 2035\en  & \noto 3.35 PM\en  \\
+        Punjabi (\ar پنجابی\en) & \ar US\$ ۱٬۲۳۴٫۵۰\en  & \ar ۲۰ دسمبر ۲۰۳۵\en  & \ar ۳:۳۵ PM\en  \\
+        German (\noto Deutsch\en) & \noto 1.234,50 \$\en  & \noto 20.12.2035\en  & \noto 3:35 PM\en  \\
+        Japanese (\ja 日本語\en) & \ja \$1,234.50\en  & \ja 2035/12/20\en  & \ja 午後3:35\en  \\
+        Telugu (\te తెలుగు\en) & \te \$1,234.50\en  & \te 20 డిసెం, 2035\en  & \te 3:35 PM\en  \\
+        Marathi (\noto मराठी\en) & \noto \$१,२३४.५०\en  & \noto २० डिसें, २०३५\en  & \noto ३:३५ PM\en  \\
+        Javanese (\noto Jawa\en) & \noto US\$ 1.234,50\en  & \noto 20 Des 2035\en  & \noto 3:35 Wengi\en  \\
+        Vietnamese (\noto Tiếng Việt\en) & \noto 1.234,50 US\$\en  & \noto 20 thg 12, 2035\en  & \noto 3:35 CH\en  \\
+        Tamil (\ta தமிழ்\en) & \ta \$1,234.50\en  & \ta 20 டிச., 2035\en  & \ta பிற்பகல் 3:35\en  \\
+    \end{tabular}
+    \caption{\label{table:language-samples-001}Formatting samples for the most popular languages.}
+\end{table}
+:ok
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+:ok
+```
+
+```elixir
+lang_population_001 = [
+  rank: Enum.to_list(1..20),
+  code: language_code,
+  language: language_combined,
+  population: population
+]
+
+IO.inspect(
+  LatexTable.render(
+    lang_population_001,
+    "language-population-001",
+    "Language-population estimates, from the CLDR, aggregated across all territories in the dataset."
+  )
+)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+\begin{table}[h]
+    \centering
+    \begin{tabular}{l l l l }
+        RANK & CODE & LANGUAGE & POPULATION \\ \hline
+        1 & en & English & 1,636,000,000 \\
+        2 & zh & Chinese (\zh 中文\en) & 1,266,000,000 \\
+        3 & hi & Hindi (\noto हिन्दी\en) & 546,000,000 \\
+        4 & es & Spanish (\noto español\en) & 494,000,000 \\
+        5 & ar & Arabic (\ar العربية\en) & 352,000,000 \\
+        6 & ur & Urdu (\ur اردو\en) & 291,000,000 \\
+        7 & fr & French (\noto français\en) & 279,000,000 \\
+        8 & bn & Bangla (\bn বাংলা\en) & 267,000,000 \\
+        9 & pt & Portuguese (\noto português\en) & 237,000,000 \\
+        10 & ru & Russian (\noto русский\en) & 196,000,000 \\
+        11 & sw & Swahili (\noto Kiswahili\en) & 172,000,000 \\
+        12 & id & Indonesian (\noto Indonesia\en) & 171,000,000 \\
+        13 & pa-Arab & Punjabi (\ar پنجابی\en) & 163,000,000 \\
+        14 & de & German (\noto Deutsch\en) & 136,000,000 \\
+        15 & ja & Japanese (\ja 日本語\en) & 120,000,000 \\
+        16 & te & Telugu (\te తెలుగు\en) & 95,000,000 \\
+        17 & mr & Marathi (\noto मराठी\en) & 93,000,000 \\
+        18 & jv & Javanese (\noto Jawa\en) & 91,000,000 \\
+        19 & vi & Vietnamese (\noto Tiếng Việt\en) & 86,000,000 \\
+        20 & ta & Tamil (\ta தமிழ்\en) & 86,000,000 \\
+    \end{tabular}
+    \caption{\label{table:language-population-001}Language-population estimates, from the CLDR, aggregated across all territories in the dataset.}
+\end{table}
+:ok
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+:ok
+```
+
+* 001: world
+* 002: Africa
+* 003: North America
+* 005: South America
+* 009: Oceania
+* 011: Western Africa
+* 013: Central America
+* 014: Eastern Africa
+* 015: Northern Africa
+* 017: Middle Africa
+* 018: Southern Africa
+* 019: Americas
+* 021: Northern America
+* 029: Caribbean
+* 030: Eastern Asia
+* 034: Southern Asia
+* 035: Southeast Asia
+* 039: Southern Europe
+* 053: Australasia
+* 054: Melanesia
+* 057: Micronesian Region
+* 061: Polynesia
+* 142: Asia
+* 143: Central Asia
+* 145: Western Asia
+* 150: Europe
+* 151: Eastern Europe
+* 154: Northern Europe
+* 155: Western Europe
+* 202: Sub-Saharan Africa
+* 419: Latin America
+
+```elixir
+foo = Helpers.most_used_languages(mena_codes, 10)
+label = "language-population-mena"
+country_list = Enum.map(mena, fn {_code, name} -> name end)
+
+caption =
+  "Middle East and North Africa (MENA), including " <>
+    DemoApp.Backend.List.to_string!(country_list, locale: "en")
+
+# _language_code, _language_name_en, _language_name_combined, _language_name_native, population, _money_sample, _date, _time
+
+bar = [
+  rank: Enum.to_list(1..10),
+  code: Enum.map(foo, fn {language_code, _, _, _, _, _, _, _, _} -> language_code end),
+  language:
+    Enum.map(foo, fn {_, _, language_name_combined, _, _, _, _, _, _} ->
+      language_name_combined
+    end),
+  population: Enum.map(foo, fn {_, _, _, _, population, _, _, _, _} -> population end)
+]
+
+IO.inspect(LatexTable.render(bar, label, caption))
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+
+06:19:10.647 [warning] Transliteration from number system :latn to :arab requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+
+06:19:10.647 [warning] Transliteration from number system :latn to :arab requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+
+06:19:10.647 [warning] Transliteration from number system :latn to :arabext requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+
+06:19:10.648 [warning] Transliteration from number system :latn to :arabext requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+\begin{table}[h]
+    \centering
+    \begin{tabular}{l l l l }
+        RANK & CODE & LANGUAGE & POPULATION \\ \hline
+        1 & ar & Arabic (\ar العربية\en) & 343,000,000 \\
+        2 & en & English & 108,000,000 \\
+        3 & fa & Persian (\noto فارسی\en) & 65,000,000 \\
+        4 & apc & North Levantine Arabic & 35,000,000 \\
+        5 & fr & French (\noto français\en) & 26,000,000 \\
+        6 & az-Arab & Azerbaijani & 21,000,000 \\
+        7 & ckb & Central Kurdish & 11,000,000 \\
+        8 & so & Somali & 10,000,000 \\
+        9 & he & Hebrew (\noto עברית\en) & 9,000,000 \\
+        10 & zgh & Standard Moroccan Tamazight & 8,000,000 \\
+    \end{tabular}
+    \caption{\label{table:language-population-mena}Middle East and North Africa (MENA), including Algeria, Bahrain, Djibouti, Egypt, Iran, Iraq, Israel, Jordan, Kuwait, Lebanon, Libya, Mauritania, Morocco, Oman, Palestine, Qatar, Saudi Arabia, Somalia, Sudan, Syria, Tunisia, United Arab Emirates, and Yemen}
+\end{table}
+:ok
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+:ok
+```
+
+```elixir
+foo = Helpers.most_used_languages(:"202", 10)
+label = "language-population-202"
+
+caption =
+  "Sub-Saharan Africa"
+
+# _language_code, _language_name_en, _language_name_combined, _language_name_native, population, _money_sample, _date, _time
+
+bar = [
+  rank: Enum.to_list(1..10),
+  code: Enum.map(foo, fn {language_code, _, _, _, _, _, _, _, _} -> language_code end),
+  language:
+    Enum.map(foo, fn {_, _, language_name_combined, _, _, _, _, _, _} ->
+      language_name_combined
+    end),
+  population: Enum.map(foo, fn {_, _, _, _, population, _, _, _, _} -> population end)
+]
+
+IO.inspect(LatexTable.render(bar, label, caption))
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+\begin{table}[h]
+    \centering
+    \begin{tabular}{l l l l }
+        RANK & CODE & LANGUAGE & POPULATION \\ \hline
+        1 & en & English & 294,000,000 \\
+        2 & sw & Swahili (\noto Kiswahili\en) & 172,000,000 \\
+        3 & fr & French (\noto français\en) & 117,000,000 \\
+        4 & pcm & Nigerian Pidgin & 45,000,000 \\
+        5 & ha & Hausa & 37,000,000 \\
+        6 & am & Amharic & 36,000,000 \\
+        7 & om & Oromo & 35,000,000 \\
+        8 & pt & Portuguese (\noto português\en) & 32,000,000 \\
+        9 & yo & Yoruba & 29,000,000 \\
+        10 & ig & Igbo & 28,000,000 \\
+    \end{tabular}
+    \caption{\label{table:language-population-202}Sub-Saharan Africa}
+\end{table}
+:ok
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+:ok
+```
+
+```elixir
+foo = Helpers.most_used_languages(:"419", 10)
+label = "language-population-419"
+
+caption = "Latin America"
+
+# _language_code, _language_name_en, _language_name_combined, _language_name_native, population, _money_sample, _date, _time
+
+bar = [
+  rank: Enum.to_list(1..10),
+  code: Enum.map(foo, fn {language_code, _, _, _, _, _, _, _, _} -> language_code end),
+  language:
+    Enum.map(foo, fn {_, _, language_name_combined, _, _, _, _, _, _} ->
+      language_name_combined
+    end),
+  population: Enum.map(foo, fn {_, _, _, _, population, _, _, _, _} -> population end)
+]
+
+IO.inspect(LatexTable.render(bar, label, caption))
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+\begin{table}[h]
+    \centering
+    \begin{tabular}{l l l l }
+        RANK & CODE & LANGUAGE & POPULATION \\ \hline
+        1 & es & Spanish (\noto español\en) & 353,000,000 \\
+        2 & pt & Portuguese (\noto português\en) & 193,000,000 \\
+        3 & en & English & 47,000,000 \\
+        4 & qu & Quechua & 11,000,000 \\
+        5 & gn & Guarani & 6,000,000 \\
+        6 & de & German (\noto Deutsch\en) & 2,000,000 \\
+        7 & fr & French (\noto français\en) & 2,000,000 \\
+        8 & quc & Kʼicheʼ & 1,000,000 \\
+        9 & nl & Dutch & 1,000,000 \\
+        10 & it & Italian & 1,000,000 \\
+    \end{tabular}
+    \caption{\label{table:language-population-419}Latin America}
+\end{table}
+:ok
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+:ok
+```
+
+```elixir
+usmca = [:us, :mx, :ca]
+foo = Helpers.most_used_languages(usmca, 10)
+label = "us-mexico-canada"
+
+caption = "US, Mexico \\& Canada"
+
+# _language_code, _language_name_en, _language_name_combined, _language_name_native, population, _money_sample, _date, _time
+
+bar = [
+  rank: Enum.to_list(1..10),
+  code: Enum.map(foo, fn {language_code, _, _, _, _, _, _, _, _} -> language_code end),
+  language:
+    Enum.map(foo, fn {_, _, language_name_combined, _, _, _, _, _, _} ->
+      language_name_combined
+    end),
+  population: Enum.map(foo, fn {_, _, _, _, population, _, _, _, _} -> population end)
+]
+
+IO.inspect(LatexTable.render(bar, label, caption))
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+\begin{table}[h]
+    \centering
+    \begin{tabular}{l l l l }
+        RANK & CODE & LANGUAGE & POPULATION \\ \hline
+        1 & en & English & 368,000,000 \\
+        2 & es & Spanish (\noto español\en) & 139,000,000 \\
+        3 & fr & French (\noto français\en) & 13,000,000 \\
+        4 & zh-Hant & Chinese & 2,000,000 \\
+        5 & fil & Filipino & 2,000,000 \\
+        6 & de & German (\noto Deutsch\en) & 2,000,000 \\
+        7 & it & Italian & 1,000,000 \\
+        8 & vi & Vietnamese (\noto Tiếng Việt\en) & 1,000,000 \\
+        9 & ko & Korean (\noto 한국어\en) & 1,000,000 \\
+        10 & ru & Russian (\noto русский\en) & 1,000,000 \\
+    \end{tabular}
+    \caption{\label{table:us-mexico-canada}US, Mexico \& Canada}
+\end{table}
+:ok
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+:ok
+```
+
+```elixir
+foo = Helpers.most_used_languages(group_of_seven, 10)
+label = "language-population-g7"
+
+caption = "G7 countries (US, UK, Japan, Germany, France, Italy, Canada)"
+
+# _language_code, _language_name_en, _language_name_combined, _language_name_native, population, _money_sample, _date, _time
+
+bar = [
+  rank: Enum.to_list(1..10),
+  code: Enum.map(foo, fn {language_code, _, _, _, _, _, _, _, _} -> language_code end),
+  language:
+    Enum.map(foo, fn {_, _, language_name_combined, _, _, _, _, _, _} ->
+      language_name_combined
+    end),
+  population: Enum.map(foo, fn {_, _, _, _, population, _, _, _, _} -> population end)
+]
+
+IO.inspect(LatexTable.render(bar, label, caption))
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+\begin{table}[h]
+    \centering
+    \begin{tabular}{l l l l }
+        RANK & CODE & LANGUAGE & POPULATION \\ \hline
+        1 & en & English & 515,000,000 \\
+        2 & ja & Japanese (\ja 日本語\en) & 119,000,000 \\
+        3 & fr & French (\noto français\en) & 114,000,000 \\
+        4 & de & German (\noto Deutsch\en) & 85,000,000 \\
+        5 & it & Italian & 68,000,000 \\
+        6 & es & Spanish (\noto español\en) & 51,000,000 \\
+        7 & nds & Low German & 10,000,000 \\
+        8 & nl & Dutch & 7,000,000 \\
+        9 & ru & Russian (\noto русский\en) & 6,000,000 \\
+        10 & lmo & Lombard & 4,000,000 \\
+    \end{tabular}
+    \caption{\label{table:language-population-g7}G7 countries (US, UK, Japan, Germany, France, Italy, Canada)}
+\end{table}
+:ok
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+:ok
+```
+
+```elixir
+foo = Helpers.most_used_languages(group_of_twenty, 10)
+label = "language-population-g20"
+
+caption =
+  "G20 countries, including Argentinia, Australia, Brazil, China, India, Indonesia, Mexico, South Korea, Russia, Audi Arabia, South Africa, Türkiye, and the G7 countries in Table \\ref{table:language-population-g7}"
+
+# _language_code, _language_name_en, _language_name_combined, _language_name_native, population, _money_sample, _date, _time
+
+bar = [
+  rank: Enum.to_list(1..10),
+  code: Enum.map(foo, fn {language_code, _, _, _, _, _, _, _, _} -> language_code end),
+  language:
+    Enum.map(foo, fn {_, _, language_name_combined, _, _, _, _, _, _} ->
+      language_name_combined
+    end),
+  population: Enum.map(foo, fn {_, _, _, _, population, _, _, _, _} -> population end)
+]
+
+IO.inspect(LatexTable.render(bar, label, caption))
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+
+06:19:10.661 [warning] Transliteration from number system :latn to :beng requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+
+06:19:10.661 [warning] Transliteration from number system :latn to :beng requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+\begin{table}[h]
+    \centering
+    \begin{tabular}{l l l l }
+        RANK & CODE & LANGUAGE & POPULATION \\ \hline
+        1 & zh & Chinese (\zh 中文\en) & 1,255,000,000 \\
+        2 & en & English & 860,000,000 \\
+        3 & hi & Hindi (\noto हिन्दी\en) & 545,000,000 \\
+        4 & es & Spanish (\noto español\en) & 204,000,000 \\
+        5 & pt & Portuguese (\noto português\en) & 194,000,000 \\
+        6 & id & Indonesian (\noto Indonesia\en) & 171,000,000 \\
+        7 & ru & Russian (\noto русский\en) & 139,000,000 \\
+        8 & ja & Japanese (\ja 日本語\en) & 120,000,000 \\
+        9 & fr & French (\noto français\en) & 114,000,000 \\
+        10 & bn & Bangla (\bn বাংলা\en) & 108,000,000 \\
+    \end{tabular}
+    \caption{\label{table:language-population-g20}G20 countries, including Argentinia, Australia, Brazil, China, India, Indonesia, Mexico, South Korea, Russia, Audi Arabia, South Africa, Türkiye, and the G7 countries in Table \ref{table:language-population-g7}}
+\end{table}
+:ok
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+:ok
+```
+
+```elixir
+foo = Helpers.most_used_languages(:EU, 10)
+label = "language-population-eu"
+
+caption = "The European Union"
+
+# _language_code, _language_name_en, _language_name_combined, _language_name_native, population, _money_sample, _date, _time
+
+bar = [
+  rank: Enum.to_list(1..10),
+  code: Enum.map(foo, fn {language_code, _, _, _, _, _, _, _, _} -> language_code end),
+  language:
+    Enum.map(foo, fn {_, _, language_name_combined, _, _, _, _, _, _} ->
+      language_name_combined
+    end),
+  population: Enum.map(foo, fn {_, _, _, _, population, _, _, _, _} -> population end)
+]
+
+IO.inspect(LatexTable.render(bar, label, caption))
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+\begin{table}[h]
+    \centering
+    \begin{tabular}{l l l l }
+        RANK & CODE & LANGUAGE & POPULATION \\ \hline
+        1 & en & English & 206,000,000 \\
+        2 & de & German (\noto Deutsch\en) & 119,000,000 \\
+        3 & fr & French (\noto français\en) & 104,000,000 \\
+        4 & it & Italian & 67,000,000 \\
+        5 & es & Spanish (\noto español\en) & 66,000,000 \\
+        6 & pl & Polish & 37,000,000 \\
+        7 & nl & Dutch & 31,000,000 \\
+        8 & ro & Romanian & 19,000,000 \\
+        9 & ru & Russian (\noto русский\en) & 17,000,000 \\
+        10 & cs & Czech & 13,000,000 \\
+    \end{tabular}
+    \caption{\label{table:language-population-eu}The European Union}
+\end{table}
+:ok
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+:ok
+```
+
+```elixir
+foo = Helpers.most_used_languages(:EZ, 10)
+label = "language-population-ez"
+
+caption = "The Eurozone"
+
+# _language_code, _language_name_en, _language_name_combined, _language_name_native, population, _money_sample, _date, _time
+
+bar = [
+  rank: Enum.to_list(1..10),
+  code: Enum.map(foo, fn {language_code, _, _, _, _, _, _, _, _} -> language_code end),
+  language:
+    Enum.map(foo, fn {_, _, language_name_combined, _, _, _, _, _, _} ->
+      language_name_combined
+    end),
+  population: Enum.map(foo, fn {_, _, _, _, population, _, _, _, _} -> population end)
+]
+
+IO.inspect(LatexTable.render(bar, label, caption))
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+\begin{table}[h]
+    \centering
+    \begin{tabular}{l l l l }
+        RANK & CODE & LANGUAGE & POPULATION \\ \hline
+        1 & en & English & 164,000,000 \\
+        2 & de & German (\noto Deutsch\en) & 105,000,000 \\
+        3 & fr & French (\noto français\en) & 100,000,000 \\
+        4 & it & Italian & 67,000,000 \\
+        5 & es & Spanish (\noto español\en) & 64,000,000 \\
+        6 & nl & Dutch & 31,000,000 \\
+        7 & el & Greek & 12,000,000 \\
+        8 & nds & Low German & 12,000,000 \\
+        9 & pt & Portuguese (\noto português\en) & 11,000,000 \\
+        10 & ca & Catalan & 9,000,000 \\
+    \end{tabular}
+    \caption{\label{table:language-population-eu}The Eurozone}
+\end{table}
+:ok
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+:ok
+```
+
+```elixir
+foo = Helpers.most_used_languages(:"035", 10)
+label = "language-population-south-east-asia"
+
+caption = "South-East Asia"
+
+# _language_code, _language_name_en, _language_name_combined, _language_name_native, population, _money_sample, _date, _time
+
+bar = [
+  rank: Enum.to_list(1..10),
+  code: Enum.map(foo, fn {language_code, _, _, _, _, _, _, _, _} -> language_code end),
+  language:
+    Enum.map(foo, fn {_, _, language_name_combined, _, _, _, _, _, _} ->
+      language_name_combined
+    end),
+  population: Enum.map(foo, fn {_, _, _, _, population, _, _, _, _} -> population end)
+]
+
+IO.inspect(LatexTable.render(bar, label, caption))
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+\begin{table}[h]
+    \centering
+    \begin{tabular}{l l l l }
+        RANK & CODE & LANGUAGE & POPULATION \\ \hline
+        1 & id & Indonesian (\noto Indonesia\en) & 171,000,000 \\
+        2 & en & English & 101,000,000 \\
+        3 & jv & Javanese (\noto Jawa\en) & 91,000,000 \\
+        4 & vi & Vietnamese (\noto Tiếng Việt\en) & 85,000,000 \\
+        5 & fil & Filipino & 66,000,000 \\
+        6 & th & Thai & 55,000,000 \\
+        7 & my & Burmese & 36,000,000 \\
+        8 & ms & Malay & 35,000,000 \\
+        9 & es & Spanish (\noto español\en) & 34,000,000 \\
+        10 & su & Sundanese & 32,000,000 \\
+    \end{tabular}
+    \caption{\label{table:language-population-south-east-asia}South-East Asia}
+\end{table}
+:ok
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+:ok
+```
+
+```elixir
+foo = Helpers.most_used_languages(:cn, 7)
+label = "language-population-china"
+
+caption = "China"
+
+# _language_code, _language_name_en, _language_name_combined, _language_name_native, population, _money_sample, _date, _time
+
+bar = [
+  rank: Enum.to_list(1..7),
+  code: Enum.map(foo, fn {language_code, _, _, _, _, _, _, _, _} -> language_code end),
+  language:
+    Enum.map(foo, fn {_, _, language_name_combined, _, _, _, _, _, _} ->
+      language_name_combined
+    end),
+  population: Enum.map(foo, fn {_, _, _, _, population, _, _, _, _} -> population end)
+]
+
+IO.inspect(LatexTable.render(bar, label, caption))
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+\begin{table}[h]
+    \centering
+    \begin{tabular}{l l l l }
+        RANK & CODE & LANGUAGE & POPULATION \\ \hline
+        1 & zh & Chinese (\zh 中文\en) & 1,255,000,000 \\
+        2 & yue-Hans & Cantonese (\noto 粤语\en) & 72,000,000 \\
+        3 & ii & Sichuan Yi (\noto ꆈꌠꉙ\en) & 8,000,000 \\
+        4 & ug & Uyghur (\noto ئۇيغۇرچە\en) & 8,000,000 \\
+        5 & mn-Mong & Mongolian & 4,000,000 \\
+        6 & bo & Tibetan (\noto བོད་སྐད་\en) & 3,000,000 \\
+        7 & ko & Korean (\noto 한국어\en) & 2,000,000 \\
+    \end{tabular}
+    \caption{\label{table:language-population-china}China}
+\end{table}
+:ok
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+:ok
+```
+
+```elixir
+indian_subcontinent = [
+  {:BD, "Bangladesh"},
+  {:BT, "Bhutan"},
+  {:IN, "India"},
+  {:MV, "Maldives"},
+  {:NP, "Nepal"},
+  {:PK, "Pakistan"},
+  {:LK, "Sri Lanka"}
+]
+
+sub_codes = Enum.map(indian_subcontinent, fn {code, _name} -> code end)
+country_list = Enum.map(indian_subcontinent, fn {_code, name} -> name end)
+
+caption =
+  "Indian subcontinent, including " <> DemoApp.Backend.List.to_string!(country_list, locale: "en")
+
+foo = Helpers.most_used_languages(sub_codes, 10)
+label = "language-population-indian-subcontinent"
+
+# _language_code, _language_name_en, _language_name_combined, _language_name_native, population, _money_sample, _date, _time
+
+bar = [
+  rank: Enum.to_list(1..10),
+  code: Enum.map(foo, fn {language_code, _, _, _, _, _, _, _, _} -> language_code end),
+  language:
+    Enum.map(foo, fn {_, _, language_name_combined, _, _, _, _, _, _} ->
+      language_name_combined
+    end),
+  population: Enum.map(foo, fn {_, _, _, _, population, _, _, _, _} -> population end)
+]
+
+IO.inspect(LatexTable.render(bar, label, caption))
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+
+06:19:10.674 [warning] Transliteration from number system :latn to :beng requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+
+06:19:10.674 [warning] Transliteration from number system :latn to :beng requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+
+06:19:10.674 [warning] Transliteration from number system :latn to :arabext requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+
+06:19:10.675 [warning] Transliteration from number system :latn to :arabext requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+
+06:19:10.675 [warning] Transliteration from number system :latn to :deva requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+
+06:19:10.675 [warning] Transliteration from number system :latn to :deva requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+\begin{table}[h]
+    \centering
+    \begin{tabular}{l l l l }
+        RANK & CODE & LANGUAGE & POPULATION \\ \hline
+        1 & hi & Hindi (\noto हिन्दी\en) & 544,000,000 \\
+        2 & en & English & 402,000,000 \\
+        3 & ur & Urdu (\ur اردو\en) & 288,000,000 \\
+        4 & bn & Bangla (\bn বাংলা\en) & 267,000,000 \\
+        5 & pa-Arab & Punjabi (\ar پنجابی\en) & 163,000,000 \\
+        6 & te & Telugu (\te తెలుగు\en) & 95,000,000 \\
+        7 & mr & Marathi (\noto मराठी\en) & 93,000,000 \\
+        8 & ta & Tamil (\ta தமிழ்\en) & 82,000,000 \\
+        9 & gu & Gujarati (\noto ગુજરાતી\en) & 60,000,000 \\
+        10 & kn & Kannada (\noto ಕನ್ನಡ\en) & 49,000,000 \\
+    \end{tabular}
+    \caption{\label{table:language-population-indian-subcontinent}Indian subcontinent, including Bangladesh, Bhutan, India, Maldives, Nepal, Pakistan, and Sri Lanka}
+\end{table}
+:ok
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+:ok
+```
+
+```elixir
+brics = [
+  {:BR, "Brazil"},
+  {:RU, "Russia"},
+  {:IN, "India"},
+  {:CN, "China"},
+  {:ZA, "South Africa"}
+]
+
+codes = Enum.map(brics, fn {code, _name} -> code end)
+country_list = Enum.map(brics, fn {_code, name} -> name end)
+
+caption =
+  "BRICS countries, including " <> DemoApp.Backend.List.to_string!(country_list, locale: "en")
+
+foo = Helpers.most_used_languages(codes, 10)
+label = "language-population-brics"
+
+# _language_code, _language_name_en, _language_name_combined, _language_name_native, population, _money_sample, _date, _time
+
+bar = [
+  rank: Enum.to_list(1..10),
+  code: Enum.map(foo, fn {language_code, _, _, _, _, _, _, _, _} -> language_code end),
+  language:
+    Enum.map(foo, fn {_, _, language_name_combined, _, _, _, _, _, _} ->
+      language_name_combined
+    end),
+  population: Enum.map(foo, fn {_, _, _, _, population, _, _, _, _} -> population end)
+]
+
+IO.inspect(LatexTable.render(bar, label, caption))
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+
+06:19:10.678 [warning] Transliteration from number system :latn to :beng requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+
+06:19:10.678 [warning] Transliteration from number system :latn to :beng requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+
+06:19:10.678 [warning] Transliteration from number system :latn to :deva requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+
+06:19:10.678 [warning] Transliteration from number system :latn to :deva requires dynamic generation of a transliteration map for each function call which is slow. Please consider configuring this transliteration pair. See `Cldr.Number.Transliteration` for further information.
+\begin{table}[h]
+    \centering
+    \begin{tabular}{l l l l }
+        RANK & CODE & LANGUAGE & POPULATION \\ \hline
+        1 & zh & Chinese (\zh 中文\en) & 1,255,000,000 \\
+        2 & hi & Hindi (\noto हिन्दी\en) & 545,000,000 \\
+        3 & en & English & 286,000,000 \\
+        4 & pt & Portuguese (\noto português\en) & 193,000,000 \\
+        5 & ru & Russian (\noto русский\en) & 133,000,000 \\
+        6 & bn & Bangla (\bn বাংলা\en) & 107,000,000 \\
+        7 & te & Telugu (\te తెలుగు\en) & 95,000,000 \\
+        8 & mr & Marathi (\noto मराठी\en) & 93,000,000 \\
+        9 & ta & Tamil (\ta தமிழ்\en) & 78,000,000 \\
+        10 & yue-Hans & Cantonese (\noto 粤语\en) & 72,000,000 \\
+    \end{tabular}
+    \caption{\label{table:language-population-brics}BRICS countries, including Brazil, Russia, India, China, and South Africa}
+\end{table}
+:ok
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+:ok
+```

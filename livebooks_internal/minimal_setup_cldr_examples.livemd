@@ -1,0 +1,131 @@
+# CLDR examples
+
+```elixir
+Mix.install([
+  :ex_cldr,
+  :jason
+])
+
+defmodule DemoApp.Backend do
+  use Cldr,
+    locales: ["en"],
+    default_locale: "en",
+    providers: [],
+    json_library: Jason
+end
+```
+
+## Define a minimal CLDR backend module
+
+```elixir
+defmodule DemoApp.Backend do
+  use Cldr,
+    locales: ["en"],
+    default_locale: "en",
+    providers: [],
+    json_library: Jason
+end
+
+# defmodule DemoApp.Backend do
+#   use Cldr,
+#     locales: ["en", "en-AU", "fr", "ja", "he", "ar", "zh-Hans", "zh-Hant"],
+#     default_locale: "en",
+#     providers: [Cldr.Number, Cldr.DateTime, Cldr.Unit, Cldr.List, Cldr.LocaleDisplay, Money]
+# end
+```
+
+```elixir
+# Set an app-wide default backend
+Application.put_env(:ex_cldr, :default_backend, DemoApp.Backend)
+```
+
+```elixir
+{:ok, locale} = Cldr.validate_locale(:en)
+```
+
+```elixir
+{:ok, locale} = Cldr.validate_locale("en")
+```
+
+```elixir
+Cldr.all_locale_names()
+```
+
+```elixir
+Cldr.available_locale_name?(:fr)
+```
+
+```elixir
+Cldr.known_locale_names()
+```
+
+```elixir
+Cldr.known_gettext_locale_names()
+```
+
+```elixir
+Cldr.the_world()
+```
+
+```elixir
+Cldr.known_territories()
+```
+
+```elixir
+Cldr.Locale.territory_from_locale("zh-Hans")
+```
+
+```elixir
+Cldr.Locale.territory_from_locale(:za)
+```
+
+```elixir
+DemoApp.Backend.Locale.territory_from_locale(:"zh-Hans")
+```
+
+```elixir
+Cldr.known_locale_names() == DemoApp.Backend.known_locale_names()
+```
+
+```elixir
+{:ok, locale} = Cldr.validate_locale("zh-Hans")
+locale |> Cldr.display_name()
+```
+
+```elixir
+Cldr.LocaleDisplay.display_name(locale)
+```
+
+```elixir
+locale
+|> DemoApp.Backend.LocaleDisplay.display_name()
+```
+
+```elixir
+locale
+|> DemoApp.Backend.LocaleDisplay.display_name!()
+```
+
+```elixir
+Cldr.get_locale()
+```
+
+```elixir
+Cldr.known_locale_names()
+```
+
+```elixir
+Cldr.LanguageTag.to_string(locale)
+```
+
+```elixir
+Cldr.Locale.new!(:"zh-Hant", DemoApp.Backend)
+```
+
+```elixir
+DemoApp.Backend.Locale.new!(:"zh-Hant")
+```
+
+```elixir
+Cldr.default_backend!()
+```
