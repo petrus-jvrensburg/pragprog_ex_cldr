@@ -23,6 +23,18 @@
     <year>2014</year>
     <publisher ref="pub.pp"/>
   </book>
+  <book tag="pp:7mframe">
+    <authors>
+      <author>
+        <given>Kyle</given>
+        <family>Boon</family>
+      </author>
+    </authors>
+    <title>Seven Messaging Frameworks in Seven Weeks</title>
+    <isbn>pending</isbn>
+    <year>2024</year>
+    <publisher ref="pub.pp"/>
+  </book>
   <book tag="pp:7web">
     <authors>
       <author>
@@ -151,6 +163,18 @@
     <year>2014</year>
     <publisher ref="pub.pp"/>
   </book>
+  <book tag="pp:a-jragile">
+    <authors>
+      <author>
+        <given>Jonathan</given>
+        <family>Rasmusson</family>
+      </author>
+    </authors>
+    <title>Competing with Unicorns</title>
+    <isbn/>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
   <book tag="pp:a-jragm">
     <authors>
       <author>
@@ -227,6 +251,18 @@
     <year>2017</year>
     <publisher ref="pub.pp"/>
   </book>
+  <book tag="pp:a-lmmlops">
+    <authors>
+      <author>
+        <given>Lauren</given>
+        <family>Maffeo</family>
+      </author>
+    </authors>
+    <title>Designing Data Governance from the Ground Up</title>
+    <isbn/>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
   <book tag="pp:a-snfocus">
     <authors>
       <author>
@@ -270,9 +306,9 @@
         <family>Atkinson</family>
       </author>
     </authors>
-    <title>High Performance Rails on PostgreSQL</title>
-    <isbn>pending</isbn>
-    <year>2023</year>
+    <title>High Performance PostgreSQL for Rails</title>
+    <isbn>9798888650387</isbn>
+    <year>2024</year>
     <publisher ref="pub.pp"/>
   </book>
   <book tag="pp:abtest">
@@ -500,8 +536,8 @@
       </author>
     </authors>
     <title>C++ Brain Teasers</title>
-    <isbn>pending</isbn>
-    <year>2023</year>
+    <isbn>9798888650516</isbn>
+    <year>2024</year>
     <publisher ref="pub.pp"/>
   </book>
   <book tag="pp:algh">
@@ -589,7 +625,7 @@
     </authors>
     <title>Your Code as a Crime Scene, Second Edition</title>
     <isbn>9798888650325</isbn>
-    <year>2023</year>
+    <year>2024</year>
     <publisher ref="pub.pp"/>
   </book>
   <book tag="pp:atevol">
@@ -1005,8 +1041,8 @@
       </author>
     </authors>
     <title>C Brain Teasers</title>
-    <isbn>pending</isbn>
-    <year>2023</year>
+    <isbn>9798888650486</isbn>
+    <year>2024</year>
     <publisher ref="pub.pp"/>
   </book>
   <book tag="pp:cdc-elixir">
@@ -1216,6 +1252,18 @@
     <title>Dart 1 for Everyone (out of print)</title>
     <isbn>9781941222256</isbn>
     <year>2014</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:csharpbt">
+    <authors>
+      <author>
+        <given>Steve</given>
+        <family>Love</family>
+      </author>
+    </authors>
+    <title>C# Brain Teasers</title>
+    <isbn>pending</isbn>
+    <year>2024</year>
     <publisher ref="pub.pp"/>
   </book>
   <book tag="pp:csjava">
@@ -1558,6 +1606,18 @@
     <year>2015</year>
     <publisher ref="pub.pp"/>
   </book>
+  <book tag="pp:d-jrsic">
+    <authors>
+      <author>
+        <given>Johanna</given>
+        <family>Rothman</family>
+      </author>
+    </authors>
+    <title>Successful Independent Consulting</title>
+    <isbn>9781943487288</isbn>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
   <book tag="pp:d-jryourself">
     <authors>
       <author>
@@ -1801,7 +1861,7 @@
         <family>Schwaber</family>
       </author>
     </authors>
-    <title>Agile Retrospectives</title>
+    <title>Agile Retrospectives (out of print)</title>
     <isbn>9780977616640</isbn>
     <year>2006</year>
     <publisher ref="pub.pp"/>
@@ -1814,8 +1874,8 @@
       </author>
     </authors>
     <title>Agile Retrospectives, Second Edition</title>
-    <isbn>pending</isbn>
-    <year>2022</year>
+    <isbn>9798888650370</isbn>
+    <year>2024</year>
     <publisher ref="pub.pp"/>
   </book>
   <book tag="pp:dmpython">
@@ -1864,6 +1924,18 @@
     <title>Build Chatbot Interactions</title>
     <isbn>9781680506327</isbn>
     <year>2019</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:dsapitest">
+    <authors>
+      <author>
+        <given>Dalvin</given>
+        <family>Sejour</family>
+      </author>
+    </authors>
+    <title>End to End API Testing in JavaScript with Polly Js and Jest</title>
+    <isbn>pending</isbn>
+    <year>2024</year>
     <publisher ref="pub.pp"/>
   </book>
   <book tag="pp:dscpq">
@@ -2129,6 +2201,18 @@
     <year>2013</year>
     <publisher ref="pub.pp"/>
   </book>
+  <book tag="pp:ec101di2">
+    <authors>
+      <author>
+        <given>Eewei</given>
+        <family>Chen</family>
+      </author>
+    </authors>
+    <title>101 Design Ingredients to Solve Big Tech Problems, Second Edition</title>
+    <isbn>pending</isbn>
+    <year>2024</year>
+    <publisher ref="pub.pp"/>
+  </book>
   <book tag="pp:egmicro">
     <authors>
       <author>
@@ -2332,6 +2416,18 @@
     <title>Text Processing with JavaScript</title>
     <isbn>9798888650332</isbn>
     <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:fkjsbrain">
+    <authors>
+      <author>
+        <given>Faraz</given>
+        <family>Kelhini</family>
+      </author>
+    </authors>
+    <title>JavaScript Brain Teasers</title>
+    <isbn>9798888650523</isbn>
+    <year>2024</year>
     <publisher ref="pub.pp"/>
   </book>
   <book tag="pp:fr_arr">
@@ -2546,32 +2642,20 @@
     <year>2015</year>
     <publisher ref="pub.pp"/>
   </book>
-  <book tag="pp:godot">
-    <authors>
-      <author>
-        <given>Paris Buttfield-Addison, Jon Manning, Tim</given>
-        <family>Nugent</family>
-      </author>
-    </authors>
-    <title>Game Development with Godot</title>
-    <isbn>pending</isbn>
-    <year>2023</year>
-    <publisher ref="pub.pp"/>
-  </book>
   <book tag="pp:gohome">
     <authors>
-      <author>
-        <given>Mike</given>
-        <family>Riley</family>
-      </author>
       <author>
         <given>Ricardo</given>
         <family>Gerardi</family>
       </author>
+      <author>
+        <given>Mike</given>
+        <family>Riley</family>
+      </author>
     </authors>
-    <title>Go Home</title>
-    <isbn>pending</isbn>
-    <year>2023</year>
+    <title>Automate Your Home Using Go</title>
+    <isbn>9798888650509</isbn>
+    <year>2024</year>
     <publisher ref="pub.pp"/>
   </book>
   <book tag="pp:gsdgis">
@@ -2948,6 +3032,18 @@
     <year>2013</year>
     <publisher ref="pub.pp"/>
   </book>
+  <book tag="pp:jkthp2">
+    <authors>
+      <author>
+        <given>Joe</given>
+        <family>Kutner</family>
+      </author>
+    </authors>
+    <title>The Healthy Programmer, Second Edition</title>
+    <isbn>pending</isbn>
+    <year>2024</year>
+    <publisher ref="pub.pp"/>
+  </book>
   <book tag="pp:jkwatch">
     <authors>
       <author>
@@ -2982,6 +3078,18 @@
     <title>Test-Drive ASP.NET MVC (out of print)</title>
     <isbn>9781934356531</isbn>
     <year>2010</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jmturbo">
+    <authors>
+      <author>
+        <given>Joe</given>
+        <family>Masilotti</family>
+      </author>
+    </authors>
+    <title>Turbo Native for Rails Developers</title>
+    <isbn>pending</isbn>
+    <year>2025</year>
     <publisher ref="pub.pp"/>
   </book>
   <book tag="pp:jptios">
@@ -3130,6 +3238,18 @@
     <title>Design Accessible Web Sites (out of print)</title>
     <isbn>9781934356029</isbn>
     <year>2007</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:jsenglb">
+    <authors>
+      <author>
+        <given>James</given>
+        <family>Stanier</family>
+      </author>
+    </authors>
+    <title>The Engineering Leadership Blueprint</title>
+    <isbn>pending</isbn>
+    <year>2024</year>
     <publisher ref="pub.pp"/>
   </book>
   <book tag="pp:jsengman">
@@ -3309,7 +3429,7 @@
     </authors>
     <title>A Common-Sense Guide to Data Structures and Algorithms in Python, Volume 1</title>
     <isbn>9798888650356</isbn>
-    <year>2024</year>
+    <year>2023</year>
     <publisher ref="pub.pp"/>
   </book>
   <book tag="pp:jwpython2">
@@ -3417,7 +3537,7 @@
     </authors>
     <title>Programming WebRTC</title>
     <isbn>9781680509038</isbn>
-    <year>2023</year>
+    <year>2024</year>
     <publisher ref="pub.pp"/>
   </book>
   <book tag="pp:ktios">
@@ -3467,6 +3587,18 @@
     <title>Ubuntu Kung Fu (out of print)</title>
     <isbn>9781934356227</isbn>
     <year>2008</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:lfideas">
+    <authors>
+      <author>
+        <given>Lee</given>
+        <family>Felsenstein</family>
+      </author>
+    </authors>
+    <title>Me and My Big Ideas</title>
+    <isbn>pending</isbn>
+    <year>2024</year>
     <publisher ref="pub.pp"/>
   </book>
   <book tag="pp:lfreact">
@@ -3534,7 +3666,7 @@
     </authors>
     <title>Programming Phoenix LiveView</title>
     <isbn>9781680508215</isbn>
-    <year>2023</year>
+    <year>2024</year>
     <publisher ref="pub.pp"/>
   </book>
   <book tag="pp:lmelixir">
@@ -3813,6 +3945,22 @@
     <year>2015</year>
     <publisher ref="pub.pp"/>
   </book>
+  <book tag="pp:mmteams2">
+    <authors>
+      <author>
+        <given>Sandy</given>
+        <family>Mamoli</family>
+      </author>
+      <author>
+        <given>David</given>
+        <family>Mole</family>
+      </author>
+    </authors>
+    <title>Creating Great Teams, Second Edition</title>
+    <isbn>pending</isbn>
+    <year>2024</year>
+    <publisher ref="pub.pp"/>
+  </book>
   <book tag="pp:mnee">
     <authors>
       <author>
@@ -4013,9 +4161,21 @@
         <family>Tebeka</family>
       </author>
     </authors>
-    <title>The Go Cookbook</title>
+    <title>Effective Go Recipes</title>
     <isbn>9781680508468</isbn>
-    <year>2022</year>
+    <year>2024</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:mtgooph">
+    <authors>
+      <author>
+        <given>Miki</given>
+        <family>Tebeka</family>
+      </author>
+    </authors>
+    <title>Go Optimization Handbook</title>
+    <isbn>pending</isbn>
+    <year>2024</year>
     <publisher ref="pub.pp"/>
   </book>
   <book tag="pp:mwjsember">
@@ -4547,6 +4707,18 @@
     <year>2017</year>
     <publisher ref="pub.pp"/>
   </book>
+  <book tag="pp:ppbab">
+    <authors>
+      <author>
+        <given>Paolo</given>
+        <family>Perrotta</family>
+      </author>
+    </authors>
+    <title>Building a Brain</title>
+    <isbn>pending</isbn>
+    <year>2024</year>
+    <publisher ref="pub.pp"/>
+  </book>
   <book tag="pp:pplearn">
     <authors>
       <author>
@@ -5059,9 +5231,9 @@
         <family>Thomas</family>
       </author>
     </authors>
-    <title>Programming Ruby 3.2 (5th Edition)</title>
+    <title>Programming Ruby 3.3 (5th Edition)</title>
     <isbn>9781680509823</isbn>
-    <year>2023</year>
+    <year>2024</year>
     <publisher ref="pub.pp"/>
   </book>
   <book tag="pp:rwdata">
@@ -5125,7 +5297,7 @@
     </authors>
     <title>From Ruby to Elixir</title>
     <isbn>9798888650318</isbn>
-    <year>2023</year>
+    <year>2024</year>
     <publisher ref="pub.pp"/>
   </book>
   <book tag="pp:sbsockets">
@@ -5138,6 +5310,18 @@
     <title>Real-Time Phoenix</title>
     <isbn>9781680507195</isbn>
     <year>2020</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:sckotlin">
+    <authors>
+      <author>
+        <given>Sam</given>
+        <family>Cooper</family>
+      </author>
+    </authors>
+    <title>Kotlin Coroutines</title>
+    <isbn>pending</isbn>
+    <year>2024</year>
     <publisher ref="pub.pp"/>
   </book>
   <book tag="pp:scwas">
@@ -5349,9 +5533,9 @@
         <family>Moriarity</family>
       </author>
     </authors>
-    <title>Machine Learning Elixir</title>
+    <title>Machine Learning in Elixir</title>
     <isbn>9798888650349</isbn>
-    <year>2022</year>
+    <year>2024</year>
     <publisher ref="pub.pp"/>
   </book>
   <book tag="pp:smgaelixir">
@@ -5534,6 +5718,18 @@
     <year>2008</year>
     <publisher ref="pub.pp"/>
   </book>
+  <book tag="pp:stresseq">
+    <authors>
+      <author>
+        <given>Marcus</given>
+        <family>Lagré</family>
+      </author>
+    </authors>
+    <title>The Stress Equation</title>
+    <isbn>pending</isbn>
+    <year>2024</year>
+    <publisher ref="pub.pp"/>
+  </book>
   <book tag="pp:svn">
     <authors>
       <author>
@@ -5679,6 +5875,18 @@
     <year>2021</year>
     <publisher ref="pub.pp"/>
   </book>
+  <book tag="pp:tcplayer">
+    <authors>
+      <author>
+        <given>Tammy</given>
+        <family>Coron</family>
+      </author>
+    </authors>
+    <title>From Players to Protagonists</title>
+    <isbn>pending</isbn>
+    <year>2024</year>
+    <publisher ref="pub.pp"/>
+  </book>
   <book tag="pp:tcswift">
     <authors>
       <author>
@@ -5689,6 +5897,18 @@
     <title>Apple Game Frameworks and Technologies</title>
     <isbn>9781680507843</isbn>
     <year>2021</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:tdnai">
+    <authors>
+      <author>
+        <given>Bruce Tate, Sophie DeBenedetto, Steven</given>
+        <family>Nunez</family>
+      </author>
+    </authors>
+    <title>AI for Programmers</title>
+    <isbn>pending</isbn>
+    <year>2024</year>
     <publisher ref="pub.pp"/>
   </book>
   <book tag="pp:testing">
@@ -5800,7 +6020,19 @@
     </authors>
     <title>Distributed Services with Go</title>
     <isbn>pending</isbn>
-    <year/>
+    <year>2023</year>
+    <publisher ref="pub.pp"/>
+  </book>
+  <book tag="pp:tmbodies">
+    <authors>
+      <author>
+        <given>Thomas</given>
+        <family>Mahon</family>
+      </author>
+    </authors>
+    <title>Charged Bodies</title>
+    <isbn>pending</isbn>
+    <year>2024</year>
     <publisher ref="pub.pp"/>
   </book>
   <book tag="pp:tpantlr">
@@ -6339,9 +6571,9 @@
         <family>Brasseur</family>
       </author>
     </authors>
-    <title>FOSS + Biz</title>
-    <isbn>pending</isbn>
-    <year>2022</year>
+    <title>Business Success with Open Source</title>
+    <isbn>9798888650493</isbn>
+    <year>2024</year>
     <publisher ref="pub.pp"/>
   </book>
   <book tag="pp:vbopens">
@@ -6400,6 +6632,22 @@
     <year>2015</year>
     <publisher ref="pub.pp"/>
   </book>
+  <book tag="pp:vrcelixirbb">
+    <authors>
+      <author>
+        <given>Petrus Janse van</given>
+        <family>Rensburg</family>
+      </author>
+      <author>
+        <given>Kip</given>
+        <family>Cole</family>
+      </author>
+    </authors>
+    <title>Elixir Beyond Borders</title>
+    <isbn>pending</isbn>
+    <year>2024</year>
+    <publisher ref="pub.pp"/>
+  </book>
   <book tag="pp:vscajava">
     <authors>
       <author>
@@ -6409,7 +6657,7 @@
     </authors>
     <title>Cruising Along with Java</title>
     <isbn>9781680509816</isbn>
-    <year>2023</year>
+    <year>2024</year>
     <publisher ref="pub.pp"/>
   </book>
   <book tag="pp:vsdsl">

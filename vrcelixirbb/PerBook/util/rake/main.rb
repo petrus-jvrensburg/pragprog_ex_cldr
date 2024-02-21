@@ -1,4 +1,5 @@
 # encoding: utf-8
+require 'rake/clean'
 
 
 # Check that we're running the PragProg jruby, and not some system
@@ -74,7 +75,11 @@ require 'common'
 require 'yaml_to_pml.rb'
 require 'includer'
 
-Preprocessor.add_internal('includer', "Includer")
+Preprocessor.add_internal('includer',       "Includer")
+# Preprocessor.add_internal('generic-blocks', "GenericBlocks")
+# Preprocessor.add_internal("PipeDumper")
+
+# Preprocessor.add_internal('markdown',       "Markdown")
 
 if defined?(USE_PMLCODE)
   Preprocessor.add_final(PML_CODE,'PmlCode')
@@ -182,6 +187,7 @@ rule ".xml" => [".pml" ] do |t|  #  , *Preprocessors::dependencies ] do |t|
   Preprocessor.preprocess(t.source, t.name)
   puts_in_bold "Validating #{t.name}"
   cmd = %{java -cp "#{VALIDATOR_CLASSPATH}" PMLValidator #{t.name}}
+  STDERR.puts cmd
   safe_sh(cmd, err_ok: true) do
     puts_in_bold("\nBuild failed…\n\n")
     exit(1)
@@ -190,12 +196,18 @@ end
 
 # book.xml has an additonal dependency on all pml files.
 if File.exist?("book.yml")
-  file "book.pml" => "book.yml" do
+  CLEAN << "book.pml"
+  file "book.pml" => [ "book.yml" ] do #, "../bookinfo.yml" ] do
     create_book_pml_from_yaml("book.yml")
+  end
+elsif File.exist?("book.yaml")
+  CLEAN << "book.pml"
+  file "book.pml" => ["book.yaml" ] do #, "../bookinfo.yaml"] do
+    create_book_pml_from_yaml("book.yaml")
   end
 end
 
-file "book.pml" => FileList['*.pml'].exclude("book.pml")
+file "book.pml" => FileList['**/*.pml', '**/*.md'].exclude("book.pml")
 
 
 
@@ -252,21 +264,21 @@ end
 # Remove Markdown
 # ==================
 
-desc "Remove Markdown from a .pml file"
-task "demarkify" do
-  file = ENV['PML'] or fail("Missing PML=<filename>")
-  fail "PML=xxx should be a .pml file" unless File.extname(file) == ".pml"
-  old_file = file.sub(/pml$/, 'old_pml')
-  FileUtils.cp file, old_file, :verbose => true
-
-  Preprocessor.remove_all
-  Preprocessor.add_internal('includer', "Includer")
-  Preprocessor.add_internal("markdown", "Markdown")
-  Preprocessor.preprocess(old_file, file)
-  puts "\n\nMarkdown in #{file} has been converted to pure PML"
-  puts "The previous version of #{file} is in #{old_file}"
-end
-
+# desc "Remove Markdown from a .pml file"
+# task "demarkify" do
+#   file = ENV['PML'] or fail("Missing PML=<filename>")
+#   fail "PML=xxx should be a .pml file" unless File.extname(file) == ".pml"
+#   old_file = file.sub(/pml$/, 'old_pml')
+#   FileUtils.cp file, old_file, :verbose => true
+#
+#   Preprocessor.remove_all
+#   Preprocessor.add_internal('includer', "Includer")
+#   Preprocessor.add_internal("markdown", "Markdown")
+#   Preprocessor.preprocess(old_file, file)
+#   puts "\n\nMarkdown in #{file} has been converted to pure PML"
+#   puts "The previous version of #{file} is in #{old_file}"
+# end
+#
 
 # Not documented
 task "remove-index" do

@@ -59,6 +59,9 @@ COPY PerBook/util/rake /home/runner/PerBook/util/rake
 COPY PerBook/util/third_party /home/runner/PerBook/util/third_party
 COPY PerBook/util/xml /home/runner/PerBook/util/xml
 
+COPY Common/ThirdPartyTools/jruby-9.1.15.0/bin /home/runner/Common/ThirdPartyTools/jruby-9.1.15.0/bin
+COPY Common/ThirdPartyTools/jruby-9.1.15.0/lib /home/runner/Common/ThirdPartyTools/jruby-9.1.15.0/lib
+
 # imagemagick restricts GS files. Fix it
 RUN sed -Ei \
   's$<policy domain="coder" rights="none" pattern="PDF" />$<policy domain="coder" rights="read|write" pattern="PDF" />$' \

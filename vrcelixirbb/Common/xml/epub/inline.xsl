@@ -216,9 +216,9 @@
       <xsl:if test="string-length($protocol) = 0">
         <xsl:choose>
           <xsl:when test="string-length(@protocol) &gt; 0">
-            <xsl:value-of select="@protocol"/>
+            <xsl:value-of select="@protocol"/><xsl:text>://</xsl:text>
           </xsl:when>
-          <xsl:otherwise>http://</xsl:otherwise>
+          <xsl:otherwise>https://</xsl:otherwise>
         </xsl:choose>
       </xsl:if>
     </xsl:variable>

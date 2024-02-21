@@ -55,7 +55,8 @@ def create_cover(dest_dir, profile_name)
     puts "images/cover.jpg\n\n "
     exit
   end
-  sh %{convert images/cover.jpg -colorspace RGB -depth 8  -resample 100x100 -units PixelsPerInch -alpha Off -background white -flatten "#{File.join(dest_dir, "images", "cover.jpg")}"}
+  #DT 2024/2/14 sh %{convert images/cover.jpg -colorspace RGB -depth 8  -resample 100x100 -units PixelsPerInch -alpha Off -background white -flatten "#{File.join(dest_dir, "images", "cover.jpg")}"}
+  sh %{convert images/cover.jpg -colorspace RGB -density 100x100 -units PixelsPerInch -alpha Off -background white -flatten "#{File.join(dest_dir, "images", "cover.jpg")}"}
 end
 
 

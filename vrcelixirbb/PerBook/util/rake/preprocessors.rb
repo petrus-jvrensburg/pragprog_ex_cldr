@@ -213,7 +213,7 @@ class Preprocessor
     @output.puts(nil) unless @output.kind_of?(IO) || @output.kind_of?(StringIO)
     log("Ending") if $DEBUG
   rescue Exception => e
-    fatal_error("#{e.message}\n\n")  # {e.backtrace[0..3].join("\n")}")
+    fatal_error("#{e.message}", e.backtrace)  # {e.backtrace[0..3].join("\n")}")
   end
 
   def process(input, output)
@@ -238,17 +238,36 @@ class Preprocessor
     mark_line_number
   end
 
-  def fatal_error(msg)
+  def fatal_error(msg, backtrace=[])
     log
     log
-    log highlight_error("[#{@input.location}] #{msg}")
+    report_msg @input.location, msg
+    if ENV["THIS_IS_THE_REAL_ME"] == "dave"
+      prefix_path = File.expand_path("../../..", File.dirname(__FILE__))
+      prefix = Regexp.new("^" + prefix_path)
+      backtrace[0..3].each do |bt|
+        log highlight_debug(bt.sub(prefix, "..."))
+      end
+    end
     exit!(99)
   end
 
   def error(msg)
     log
-    log highlight_error("[#{@input.location}] #{msg}")
+     report_msg @input.location, msg
     log
+  end
+
+  def report_msg(location, msg)
+    log highlight_error("[#{@input.location}]")
+    msgs = msg.split(/\n+/)
+    msgs.each.with_index do |m, i|
+      if i == msgs.length - 1
+        log highlight_info("┗  #{m}")
+      else
+        log highlight_info("┣  #{m}")
+      end
+    end
   end
 
   def log(msg=nil)
@@ -315,6 +334,11 @@ private
       #   STDERR.puts result.encoding.inspect
       # end
       result
+    end
+    def queue.putm(lines)
+      lines.each do |line|
+        self << line
+      end
     end
     def queue.puts(line)
       self << line

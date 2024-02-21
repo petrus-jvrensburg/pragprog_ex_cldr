@@ -19,34 +19,36 @@ class Markdown < Preprocessor
     end
   end
 
-  def process(*)
+def process(*)
 
-    markdown = nil
+  markdown = nil
+  nesting  = 0
 
-    while line = gets
-
-      if markdown.nil?
-        if line =~ /^\s*<markdown>\s*$/
-          markdown = []
-        else
-          puts line
-        end
-
-      else
-        if line =~ %r{^\s*</markdown>\s*$}
-          markdown.shift if markdown.first =~ /<!\[CDATA\[/
-          markdown.pop   if markdown.last  =~ /]]>/
-          record_line_numbers do
-            dump(markdown.join("\n"))
-          end
-          markdown = nil
-        else
-          markdown << line.sub(/markdown!>/, 'markdown>')
-        end
+  while line = gets
+    if line =~ /^\s*<markdown>\s*$/
+      nesting += 1
+      markdown ||= []
+    elsif line =~ %r{\s*</markdown>\s*$}
+      if nesting < 1
+        fail "Extra '</markdown>' tag found"
       end
-
+      nesting -= 1
+      if nesting.zero?
+        markdown.shift if markdown.first =~ /<!\[CDATA\[/
+        markdown.pop   if markdown.last  =~ /]]>/
+        record_line_numbers do
+          dump(markdown.join("\n"))
+        end
+        markdown = nil
+      end
+    else
+      if markdown
+        markdown << line.sub(/markdown!>/, 'markdown>')
+      else 
+        puts line
+      end
     end
-
+    end 
     fail "Unterminated <markdown>" if markdown
   end
 

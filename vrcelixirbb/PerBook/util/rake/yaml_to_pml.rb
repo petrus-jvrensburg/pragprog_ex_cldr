@@ -1,10 +1,11 @@
+require_relative "./helpers"
 
 def create_book_pml_from_yaml(yaml_file)
   require 'yaml'
   require 'nokogiri'
 
-  structure = YAML.load(File.read(yaml_file))
   File.open("book.pml", "w") do |f|
+    structure = YAML.load(File.read(yaml_file))
     f.puts(yaml_to_xml(structure))
   end
 end
@@ -23,7 +24,8 @@ def yaml_to_xml(structure)
   end
 
   # Hate it, but I can't get the internal_subset call above to work
-  builder.to_xml.sub(/\n/, %{\n<!DOCTYPE book SYSTEM "local/xml/markup.dtd">\n})
+  dtd = "local/xml/markup.dtd"
+  builder.to_xml.sub(/\n/, %{\n<!DOCTYPE book SYSTEM "#{dtd}">\n})
 end
 
 
@@ -31,7 +33,14 @@ def do_options(structure, xml)
   if options = structure["options"]
     xml.options do
       options.each do |k, v|
-        xml.send(k, v)
+        case k
+        when "recipetitle"
+          xml.recipetitle(name: v)
+        when "recipesect1"
+          xml.recipesect1()
+        else
+          xml.send(k, v)
+        end
       end
     end
   end
@@ -42,7 +51,7 @@ def do_metadata(structure, xml)
   fail "Missing 'metadata:' in book.yml" unless bookinfo_name
   bookinfo_name << ".yml" unless bookinfo_name =~ /\.yml$/
   book_info = YAML.load(File.read(bookinfo_name))
-  xml.bookinfo(:booktype => "book", :code => File.basename(File.dirname(Dir.pwd)).downcase) do
+  xml.bookinfo(do_bookinfo_args(book_info["production"])) do
     xml.booktitle(book_info["title"])
     xml.booksubtitle(book_info["subtitle"]) if book_info["subtitle"]
     do_authors(book_info["authors"], xml)
@@ -51,6 +60,16 @@ def do_metadata(structure, xml)
     do_printing(book_info["versions"], xml)
     do_team(book_info["team"], xml)
   end
+end
+
+def do_bookinfo_args(info)
+  return {} unless info
+  result = {
+    :code => info["code"] || File.basename(File.dirname(Dir.pwd)).downcase,
+    :booktype =>     info["booktype"] || "book",
+    :"in-beta" => info["in-beta"] || "no",
+    :"production-status" => info["status"] || "initial-development"
+  }
 end
 
 def do_authors(authors, xml)
@@ -103,16 +122,39 @@ def do_major_section(name, structure, xml)
 end
 
 def do_include(files, xml)
-  files.each do |file|
-    xml['pml'].include(:file => file)
+  case files
+  when String
+    files = files.split(/\s+/)
+  when Enumerable
+    files.each do |file|
+      xml['pml'].include(:file => file)
+    end
+  else
+    highlight_info("Missing a 'include:'")
   end
 end
 
 def do_part(content, xml)
   xml.part do
-    xml.title(content["title"])
-    if intro = content["intro"]
-      xml.partintro do
+    title = content["title"]
+    # if !title
+    #   fail("Missing 'title:' in part")
+    #   return
+    # end
+    #
+    lines = title.split(/<newline\/>/)
+
+    xml.title do
+      while line = lines.shift
+        xml.text(line)
+        if lines.length > 0 
+          xml.newline()
+        end
+      end
+    end
+    if intro = content["intro"] || content["intro-wide"]
+      option = content["intro-wide"] ? { width: "wide"} : {} 
+      xml.partintro(option) do
         if intro.kind_of?(String)
           intro.split(/\n\s*\n/).each {|paragraph| xml.p(paragraph) }
         else
@@ -120,7 +162,7 @@ def do_part(content, xml)
         end
       end
     end
-    do_include(content["include"].split(/\s+/), xml)
+    do_include(content["include"], xml)
   end
 end
 
@@ -128,9 +170,11 @@ def do_content(content, xml)
   content.each do |name, value|
     case name
     when "include"
-      do_include(value.split(/\s+/), xml)
+        do_include(value, xml)
+
     when "part"
       do_part(value, xml)
+
     else
       fail "Unknown content: #{name}"
     end

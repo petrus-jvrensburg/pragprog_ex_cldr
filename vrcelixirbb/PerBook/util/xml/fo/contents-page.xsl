@@ -23,6 +23,7 @@
             <fo:block space-after="{$space-after-contents-heading}" space-before.conditionality="retain" space-before="{$space-before-contents-heading}" text-align="right">
               <xsl:call-template name="draw-underlined-heading">
                 <xsl:with-param name="title">Contents</xsl:with-param>
+                <xsl:with-param name="extra"/>
               </xsl:call-template>
             </fo:block>
           </xsl:if>

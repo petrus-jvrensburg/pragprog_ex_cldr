@@ -455,6 +455,7 @@ class Chunker
         parse("<html>#{c}</html>", doc)
       rescue Exception => e
         STDERR.puts c
+        File.open("bad.html", "w") {|f| f.puts c}
         raise
       end
       doc.ids.each {|id| id_location[id] = i}

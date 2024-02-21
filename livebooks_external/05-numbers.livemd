@@ -32,20 +32,6 @@ DemoApp.Backend.put_locale("en-US")
 :ok
 ```
 
-<!-- livebook:{"output":true} -->
-
-```
-
-12:12:33.675 [info] Downloaded locale :"en-GB"
-Generating DemoApp.Backend for 3 locales named [:en, :"en-GB", :und] with a default locale named :en
-```
-
-<!-- livebook:{"output":true} -->
-
-```
-:ok
-```
-
 ## Decimals, delimeters and predefined formats
 
 ```elixir

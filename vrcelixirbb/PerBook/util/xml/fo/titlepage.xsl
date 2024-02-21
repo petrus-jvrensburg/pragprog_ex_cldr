@@ -328,6 +328,7 @@ line-height="100%"
   | copyeditor 
   | editor
   | executiveeditor
+  | founders
   | indexer
   | managingeditor
   | producer

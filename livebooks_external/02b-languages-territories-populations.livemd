@@ -25,18 +25,6 @@ end
 Application.put_env(:ex_cldr, :default_backend, DemoApp.Cldr)
 ```
 
-<!-- livebook:{"output":true} -->
-
-```
-Generating DemoApp.Cldr for 2 locales named [:en, :und] with a default locale named :en
-```
-
-<!-- livebook:{"output":true} -->
-
-```
-:ok
-```
-
 ## Let's check that everything works
 
 ```elixir

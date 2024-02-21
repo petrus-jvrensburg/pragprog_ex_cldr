@@ -247,6 +247,10 @@ module Kramdown
         #  output << close_sections_up_to(1) << "\n"
         #end
 
+        if tag == "recipe"
+          output << close_sections_up_to(1)
+        end
+
         res = inner(el, indent)
         if el.options[:category] == :span
           output <<
@@ -258,7 +262,12 @@ module Kramdown
           if !res.empty? && el.options[:content_model] != :block
             output << ">#{res}</#{tag}>"
           elsif !res.empty?
-            output << ">\n#{res.chomp}\n" << " " * indent << "</#{tag}>"
+            output << ">\n#{res.chomp}\n" << " " * indent 
+            if tag == 'recipe'
+              output << close_sections_up_to(2)
+              @level = 1
+            end
+            output << "</#{tag}>"
           elsif HTML_TAGS_WITH_BODY.include?(tag)
             output << "></#{tag}>"
           else

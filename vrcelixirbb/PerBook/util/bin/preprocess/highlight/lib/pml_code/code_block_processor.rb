@@ -60,6 +60,7 @@ class PmlCode
         line << newline
       end
 
+      fail line
       line =~ /<([-\w]+)/
       @closing_tag = $1
 
@@ -67,6 +68,13 @@ class PmlCode
 
       options['language'] = 'ruby' if @closing_tag == 'ruby'
 
+      possible_language = options["class"]  # for fenced code blocks from Kramdown
+      if possible_language && possible_language =! /language-(.*)/
+        options["language"] = $1
+        options["class"] = nil
+      end
+
+      STDERR.puts "-----\n\n\n#{line}\n\n\n-----"
       if line =~ %r{^(\s*)<(nested-code|code|result|ruby|interact)\s+(.*)/?>}m
         arg_text = $3
         arg_text.scan(/([-\w]+)=(["'])(.*?)\2/) do |name, unused, val|

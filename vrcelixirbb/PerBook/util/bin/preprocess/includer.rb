@@ -61,33 +61,62 @@ class Includer < Preprocessor
   #   process_includes(content)
   # end
 
+  def full_with_extension_given(filename)
+    fullname = File.expand_path(filename, BASE_DIR)
+    missing_file(filename) unless case_sensitive_file_exist?(fullname)
+    [ fullname, filename =~ /\.md$/i ]
+  end
+
+  def try_adding_extension(basename, ext, is_markdown)
+    fullname = File.expand_path(basename + ext, BASE_DIR)
+    if case_sensitive_file_exist?(fullname)
+      [ fullname, is_markdown ]
+    else
+      false
+    end
+  end
+
+  def find_markup_for(filename)
+    markdown = false
+    markup = filename
+    if filename =~ /\.\w+$/
+      full_with_extension_given(filename)
+    else
+      try_adding_extension(filename, ".md", true) || try_adding_extension(filename, ".pml", false) || missing_file(filename)
+    end
+  end
+
   def include(file, record_location = true)
     log file
-    #    pml = File.basename(file)
-    pml = file
-    pml += ".pml" unless pml =~ /\.\w+$/
-    pml = File.expand_path(pml, BASE_DIR)
-    missing_file(pml) unless case_sensitive_file_exist?(pml)
 
-    content = File.readlines(pml)
+    markup_file, is_markdown = find_markup_for(file)
+
+    content = File.readlines(markup_file)
 
     line_no = 0
     line = nil
 
+    # strip off DOCTYPE
     until content.empty?
       line = content.shift
       line_no += 1
       break unless line =~ /(<\?xml)|(<!DOCTYPE)|(-*- xml -*-)/
     end
 
-    mark_file_and_line_number(pml, line_no) if record_location
+    content.unshift(line)
 
-    handle(line) if line
+    if is_markdown 
+      content.unshift("<markdown>")
+      content.push("</markdown>")
+    end
+
+    mark_file_and_line_number(markup_file, line_no) if record_location
 
     until content.empty?
       line = content.shift
       handle(line)
     end
+   
   end
 
   def handle(line)
@@ -109,18 +138,21 @@ class Includer < Preprocessor
   ######################################################################
 
   def process(*)
+    seen_doctype = false
+
     while line = gets
-      if line =~ %r{<!DOCTYPE.*local/xml/markup\.dtd} # only match the first DOCTYPE
+      if !seen_doctype && (line =~ %r{<!DOCTYPE.*local/xml/markup\.dtd}) # only match the first DOCTYPE
         handle(line.sub(%r{local/xml/markup\.dtd}, File.join(BOOK_DIR, "local/xml/markup.dtd")))
-        break
+        seen_doctype = true
+        mark_line_number
+      else
+        handle(line)
       end
-      handle(line)
     end
 
-    mark_line_number
 
-    while line = gets
-      handle(line)
-    end
+    # while line = gets
+    #   handle(line)
+    # end
   end
 end

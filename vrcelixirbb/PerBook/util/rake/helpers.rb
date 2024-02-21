@@ -140,3 +140,19 @@ def highlight_error(msg)
     "\033[1;31m#{msg}\033[0m"
   end
 end
+
+def highlight_info(msg)
+  if RUBY_PLATFORM =~ /mswin32/ || RUBY_DESCRIPTION =~ /windows/i
+    msg
+  else
+    "\033[1;32m#{msg}\033[0m"
+  end
+end
+
+def highlight_debug(msg)
+  if RUBY_PLATFORM =~ /mswin32/ || RUBY_DESCRIPTION =~ /windows/i
+    msg
+  else
+    "\033[1;35m#{msg}\033[0m"
+  end
+end

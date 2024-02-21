@@ -27,31 +27,37 @@
 
   <xsl:template name="draw-underlined-heading">
     <xsl:param name="title"/>
+    <xsl:param name="extra"/>
     <xsl:variable name="backup-line-height">
       <xsl:text>-</xsl:text>
       <xsl:value-of select="$line-height*$body.font.master"/>
       <xsl:text>pt</xsl:text>
     </xsl:variable>
 
-    <fo:block
-	font-weight="normal" 
-	font-family="{$sans.font.family}" 
-	font-size="30pt"
-	font-stretch="condensed"
-	space-after="0pt"
-        margin-bottom="13pt"
-        >
-      <xsl:if test="@line!='no'">
-        <xsl:attribute name="border-bottom">2pt solid</xsl:attribute>
-        <xsl:attribute name="border-bottom-color">
-          <xsl:value-of select="$color.heading-underline"/>
-        </xsl:attribute>
-        <xsl:attribute name="padding-bottom">
-          <xsl:value-of select="$backup-line-height"/>
-        </xsl:attribute>
-      </xsl:if>
-      <xsl:copy-of select="$title"/>
-    </fo:block>
+    <fo:block font-weight="normal" 
+    font-family="{$sans.font.family}" 
+    font-size="30pt"
+    font-stretch="condensed"
+    space-after="0pt"
+    >
+    <xsl:if test="@line!='no'">
+      <xsl:attribute name="border-bottom">2pt solid</xsl:attribute>
+      <xsl:attribute name="border-bottom-color">
+        <xsl:value-of select="$color.heading-underline"/>
+      </xsl:attribute>
+      <xsl:attribute name="padding-bottom">
+        <xsl:value-of select="$backup-line-height"/>
+      </xsl:attribute>
+    </xsl:if>
+    <xsl:copy-of select="$title"/>
+    <xsl:if test="$extra">
+      <fo:block font-size="20pt">
+        <xsl:copy-of select="$extra"/>
+      </fo:block>
+    </xsl:if>
+
+    <fo:block margin-bottom="13pt"/>
+  </fo:block>
   </xsl:template>
 
   <xsl:template name="add-or-generate-id">

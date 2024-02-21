@@ -195,6 +195,9 @@
             <xsl:with-param name="name">
               <xsl:apply-templates select="title" mode="force"/>
             </xsl:with-param>
+            <xsl:with-param name="extra">
+              <xsl:apply-templates select="title/p" mode="force"/>
+            </xsl:with-param>
           </xsl:call-template>
 
           <xsl:choose>
@@ -234,6 +237,9 @@
           <xsl:with-param name="name">
             <xsl:apply-templates select="title" mode="force"/>
           </xsl:with-param>
+            <xsl:with-param name="extra">
+              <xsl:apply-templates select="title/p" mode="force"/>
+            </xsl:with-param>
         </xsl:call-template>
         <xsl:if test="@stubout='yes'">
           <fo:block>Content to be supplied later.</fo:block>
@@ -755,6 +761,7 @@
     <xsl:param name="type"/>
     <xsl:param name="number"/>
     <xsl:param name="name"/>
+    <xsl:param name="extra"/>
 
     <fo:block color="white" line-height="0pt">
 
@@ -849,6 +856,9 @@
                 <xsl:call-template name="draw-underlined-heading">
                   <xsl:with-param name="title">
                     <xsl:copy-of select="$name"/>
+                  </xsl:with-param>
+                  <xsl:with-param name="extra">
+                    <xsl:copy-of select="$extra"/>
                   </xsl:with-param>
                 </xsl:call-template>
               </fo:block>
@@ -974,6 +984,7 @@
           <xsl:with-param name="type"/>
           <xsl:with-param name="number"/>
           <xsl:with-param name="name">Bibliography</xsl:with-param>
+          <xsl:with-param name="extra"/>
         </xsl:call-template>
         <xsl:apply-templates/>
       </fo:flow>

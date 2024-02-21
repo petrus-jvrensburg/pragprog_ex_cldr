@@ -67,11 +67,11 @@ class RougeCode
                                              @preprocessor)
       code = highlighter.to_pml
 
+      # START: yielding
       yield "#{start_processed_code}\n"
-
       yield code.force_encoding("utf-8");
-
       yield "</processedcode>\n"
+      # END: yielding
     end
 
 
@@ -103,6 +103,12 @@ class RougeCode
       if line =~ tag
         arg_text = $3
         arg_text.scan(/([-\w]+)=(["'])(.*?)\2/) do |name, unused, val|
+          # hack because Kramdown passed the fenced block language as a class
+          if name == "class" && val =~ /^language-(.*)/
+            name = "language"
+            val = $1
+          end
+
           unless DEFAULT_ARGS.has_key?(name)
             fail "Invalid argument to [code]: '#{name}'\n in '#{line}'"
           end
@@ -219,7 +225,7 @@ class RougeCode
 
 
     def read_code_from_file(filename)
-      fail("Code file '#{filename}' is not in the code/ directory") unless filename =~ %r{^code/}
+      fail("Code file '#{filename}' is not in the code/ directory") unless filename =~ %r{^(\./|code/)}
 
       File.open(filename) {|f| content = f.readlines; f.close; content }
     rescue Exception => e
