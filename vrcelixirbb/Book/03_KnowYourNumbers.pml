@@ -29,6 +29,12 @@ Where are we going next, and how does this fit in?
         values <variable>1000000</variable> and <variable>10000000</variable> may be very difficult to tell apart, even though they
         differ by a very large amount... there's a whole order of magnitude between them!
     </p>
+
+    <figure id="stats_before">
+        <imagedata fileref="images/03_KnowYourNumbers/stats_before.png" align="center" width="90%" />
+        <p>Usage statistics from an admin interface, without good number formatting.</p>
+    </figure>
+
     <p>
         So in your own software, you might be tempted to write a quick function for adding 
         delimiters to numbers in order to display them as <variable>1,000,000</variable> or <variable>10,000,000</variable> 
@@ -39,17 +45,17 @@ Where are we going next, and how does this fit in?
         We'll explain the reasons for this in the section on delimeters.
     </p>
 
-    <figure id="stats_before">
-        <imagedata fileref="images/03_KnowYourNumbers/stats_before.png" align="center" width="90%" />
-        <p>Usage statistics from an admin interface, without good number formatting.</p>
-    </figure>
-
     <p>
         In this chapter you'll learn how to 
         display numbers correctly for different audiences, 
         using the appropriate delimiters and decimals. The <inlinecode>ex_cldr_numbers</inlinecode> package
         makes this surprisingly simple.
     </p>
+
+    <figure id="stats_after">
+        <imagedata fileref="images/03_KnowYourNumbers/stats_after.png" align="center" width="90%" />
+        <p>After adding delimiters and symbols in the appropriate places, the numbers are easier to interpret at a glance.</p>
+    </figure>
 
     <p>
         We'll take a quick look at the underlying number systems themselves, and show how you 
@@ -59,11 +65,6 @@ Where are we going next, and how does this fit in?
         interfaces. And we'll pay special attention to monetary values and phone numbers 
         specifically, for which we'll get some help from packages unrelated to the CLDR.
     </p>
-
-    <figure id="stats_after">
-        <imagedata fileref="images/03_KnowYourNumbers/stats_after.png" align="center" width="90%" />
-        <p>After adding delimiters and symbols in the appropriate places, the numbers are easier to interpret at a glance.</p>
-    </figure>
 
     <p>
         Next we'll cover ordinal values (e.g. <variable>1st</variable>, <variable>2nd</variable> and <variable>3rd</variable>), Roman numerals and show 
@@ -75,7 +76,7 @@ Where are we going next, and how does this fit in?
         Finally, to make this even more useful, you'll learn how to use formatted numbers 
         in your markup. By wrapping the different parts of a number, like the numeric value 
         and the symbols around it, in your own code, you can style them individually like 
-        we've done <xref linkend="stats_after">here</xref>.
+        we've done <xref linkend="stats_after">in this figure</xref>.
     </p>
 </sect1>
 </chapter>
