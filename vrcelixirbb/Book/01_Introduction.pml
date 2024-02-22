@@ -22,42 +22,45 @@ Where are we going next, and how does this fit in?
   <title>
     Installing Livebook
   </title>
-  <markdown>
-  If you are new to Livebook, we recommend using the desktop installer. It's the fastest way to get up &amp; running, even if you don't have Elixir installed on your machine.
+  <p>
+    If you are new to Livebook, we recommend using the desktop installer. It's the fastest way to get up &amp; running, even if you don't have Elixir installed on your machine.
+  </p>
+  <p>
+    Alternatively, if you already have Elixir set up locally, it's also really easy to run the latest Livebook directly from source:
+  </p>
+  
+  <code language="session">
+    git clone https://github.com/livebook-dev/livebook.git
+    cd livebook
+    mix deps.get --only prod
 
-  Alternatively, if you already have Elixir set up locally, it's also really easy to run the latest Livebook directly from source:
-  </markdown>
-
-  <code>
-  git clone https://github.com/livebook-dev/livebook.git
-  cd livebook
-  mix deps.get --only prod
-
-  # Run the Livebook server
-  MIX_ENV=prod mix phx.server
+    # Run the Livebook server
+    MIX_ENV=prod mix phx.server
   </code>
   
-  <markdown>
-  Once you have Livebook running, take a few moments to click through the sample 
-  livebooks in the _Learn_ section. Specifically, the _Welcome to Livebook_
-  examples will give you more than you need for running the code that's shipped 
-  with this book.
+  <p>
+    Once you have Livebook running, take a few moments to click through the sample 
+    livebooks in the <emph>Learn</emph> section. Specifically, the <emph>Welcome to Livebook</emph>
+    examples will give you more than you need for running the code that's shipped 
+    with this book.
+  </p>
 
-  At their core, the notebooks that we'll work with in Livebook are just Markdown 
-  files[^fn-eg] which are annotated in a special way to distinguish between different types of "cells", 
-  like prose, code, diagrams or a wide array of other "smart cells" defined using the 
-  Kino library. The cells can all be edited directly from your browser, and you can execute them all 
-  sequentially to see their output. 
+  <p>
+    At their core, the notebooks that we'll work with in Livebook are just Markdown 
+    files<footnote><p>Livebook uses the <fileextension>livemd</fileextension> extension to denote a subset of Markdown.</p></footnote> which are annotated in a special way to distinguish between different types of cells, 
+    like prose, code, diagrams or a wide array of other "smart cells" defined using the 
+    Kino library. The cells can all be edited directly from your browser, and you can execute them all 
+    sequentially to see their output. 
+  </p>
 
-  [^fn-eg]: Livebook uses the _.livemd_ extension to denote a subset of Markdown.
-
-  So in a certain sense, coding in Livebook is like coding in the terminal, but on steroids: you are working with
-  high-level UI components that leverage the functionality that a browser interface 
-  brings to the table, like file-uploads, image previews, etc. 
-  And you can save your work easily, and jump around between cells, without losing context, 
-  since they hang on to their state between execution runs. All of this while 
-  retaining full control over the code and the data that you're working with.
-  </markdown>
+  <p>
+    So in a certain sense, coding in Livebook is like coding in the terminal, but on steroids: you are working with
+    high-level UI components that leverage the functionality that a browser interface 
+    brings to the table, like file-uploads, image previews, etc. 
+    And you can save your work easily, and jump around between cells, without losing context, 
+    since they hang on to their state between execution runs. All of this while 
+    retaining full control over the code and the data that you're working with.
+  </p>
 </sect1>
 
 <sect1>
