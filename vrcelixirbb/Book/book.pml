@@ -18,8 +18,8 @@
     <pml:include file="03_KnowYourNumbers"/>
     <pml:include file="04_DatesAndTimes"/>
     <pml:include file="05_UnitsOfMeasure"/>
-    <pml:include file="06_Advanced"/>
-    <pml:include file="07_UserGeneratedContent"/>
+    <pml:include file="06_UserGeneratedContent"/>
+    <pml:include file="07_Advanced"/>
     <pml:ignore file="Bibliography"/>
   </mainmatter>
   
