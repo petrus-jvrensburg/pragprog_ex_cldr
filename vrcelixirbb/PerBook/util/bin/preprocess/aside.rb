@@ -32,7 +32,7 @@ class Aside < Preprocessor
                <imagedata fileref="../PerBook/util/images/aside-icons/#{icon}.png"
                           width="100%"/>
              </col>
-             <col valign="middle">\n}
+             <col valign="middle" markdown="block">\n}
         else
           output.puts line.chomp
         end
