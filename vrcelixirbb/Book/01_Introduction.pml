@@ -166,10 +166,9 @@ relying on them where appropriate.
 
       <p> A few calendars are built-in, e.g. the default Gregorian calendar used through most
         countries, as well as the ISO week calendar<footnote>
-          <p>https://en.wikipedia.org/wiki/ISO_week_date</p>
-        </footnote> and the US's
-        National Retail Federation calendar<footnote>
-          <p>https://nrf.com/resources/4-5-4-calendar</p>
+          <p><url>https://en.wikipedia.org/wiki/ISO_week_date</url></p>
+        </footnote> and the US's National Retail Federation calendar<footnote>
+          <p><url>https://nrf.com/resources/4-5-4-calendar</url></p>
         </footnote>, together with Fiscal
         calendars for many territories. But we can also use <inlinecode>Cldr.Calendar.new/3</inlinecode>
         to configure our own month-based, or week-based calendars. </p>
