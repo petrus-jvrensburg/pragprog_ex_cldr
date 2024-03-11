@@ -7,4 +7,6 @@ JRUBY_OPTS=--1.8
 unset GEM_HOME
 unset GEM_PATH
 
+EXTRA_FONTS = [:arabic, :devanagari, :unicode_symbols]
+
 $JRUBY_BIN/jruby -S $JRUBY_BIN/rake $*

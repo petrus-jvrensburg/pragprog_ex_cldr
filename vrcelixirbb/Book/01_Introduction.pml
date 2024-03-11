@@ -156,7 +156,7 @@ relying on them where appropriate.
       <p> A great use-case for this would be a reporting dashboard, where <inlinecode>
         ex_cldr_calendars</inlinecode> makes it easy for us to calculate the dates that we need for
         performing aggregate queries on the database, for comparing the <emph>current quarter</emph>
-        to the \textit{previous quarter}, or any other range of interest: like the current week,
+        to the <emph>previous quarter</emph>, or any other range of interest: like the current week,
         month or year. </p>
 
       <p> Then, using the functions defined in <inlinecode>Cldr.Calendar.Kday</inlinecode>, we can
