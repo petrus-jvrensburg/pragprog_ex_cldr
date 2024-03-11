@@ -5,13 +5,14 @@
 ```elixir
 Mix.install([
   :ex_cldr,
-  :ex_cldr_dates_times
+  :ex_cldr_dates_times,
+  :ex_money
 ])
 
 # define a CLDR backend module
 defmodule DemoApp.Backend do
   use Cldr,
-    locales: ["en", "de", "pt", "hi"],
+    locales: ["en", "en-GB", "de", "pt", "hi"],
     default_locale: "en",
     providers: [Cldr.Number, Cldr.Calendar, Cldr.DateTime]
 end
@@ -22,7 +23,7 @@ Application.put_env(:ex_cldr, :default_backend, DemoApp.Backend)
 
 ## Dates & times
 
-Let's look at the timetamp of the first commit in the Elixir git repo at 
+Let's look at the timestamp of the first commit to the Elixir git repo at 
 https://github.com/elixir-lang/elixir
 
 ```bash
@@ -46,8 +47,52 @@ first_commit = ~U[2011-01-09 08:46:08Z]
 ```
 
 ```elixir
-# Later-on we'll see how to display dates and times correctly for specific locales (eg. UK-english).
-# But to display a timestamp in the default (medium length) format.
+# how long ago was that first commit made?
+
+now = DateTime.utc_now()
+Cldr.DateTime.Relative.to_string!(first_commit, relative_to: now)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+"13 years ago"
+```
+
+Here we are dealing with the timestamps in a relative sense, i.e. as a _duration_. Without relying on the CLDR, this could have added a lot of complexity to our code. But luckily for us, _ex_cldr_ reduces that complexity to a single call to `Cldr.DateTime.Relative.to_string!/3`.
+
+<!-- livebook:{"break_markdown":true} -->
+
+Note that this same function works for any length of duration, both positive and negative:
+
+```elixir
+durations_in_seconds = [
+  -30,
+  -300,
+  -30_000,
+  -300_000,
+  -3_000_000,
+  -30_000_000,
+  -300_000_000,
+  300_000_000
+]
+
+Enum.map(durations_in_seconds, fn duration ->
+  Cldr.DateTime.Relative.to_string!(DateTime.add(now, duration, :second), relative_to: now)
+end)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+["30 seconds ago", "5 minutes ago", "8 hours ago", "3 days ago", "last month", "11 months ago",
+ "10 years ago", "in 10 years"]
+```
+
+Later-on we'll see how to display dates and times correctly for specific locales (eg. UK-english). But to display a timestamp in the default US-English is also a single function call.
+
+```elixir
+# US-English medium length format
 
 Cldr.DateTime.to_string!(first_commit)
 ```
@@ -83,7 +128,7 @@ Cldr.DateTime.to_string!(first_commit, format: :short)
 ```
 
 ```elixir
-# But we can use format strings to specify the exact desired output when needed,
+# and we can use format strings when we want to have more control,
 # see https://hexdocs.pm/ex_cldr_dates_times/readme.html#format-strings
 
 Cldr.DateTime.to_string!(first_commit, format: "dd-MM-yyyy hh:mm")
@@ -96,62 +141,55 @@ Cldr.DateTime.to_string!(first_commit, format: "dd-MM-yyyy hh:mm")
 ```
 
 ```elixir
-# The same aporach that works for DateTime variables can also be used for Date variables:
+# The same approach that works for DateTime variables also extends to Date and Time variables
+# respectively, e.g:
 
-~D[2011-01-09]
-|> Cldr.Date.to_string!()
+[Cldr.Date.to_string!(~D[2011-01-09]), Cldr.Time.to_string!(~T[08:46:08])]
 ```
 
 <!-- livebook:{"output":true} -->
 
 ```
-"Jan 9, 2011"
+["Jan 9, 2011", "8:46:08 AM"]
+```
+
+## Numbers and currencies
+
+In the interfaces that we build, it's often useful to format numbers to make them more legible. We could do that the hard way, or we can let _ex_cldr_ take care of it for us:
+
+```elixir
+big_number = 91_825_808.102384
+
+Cldr.Number.to_string!(big_number)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+"91,825,808.102"
 ```
 
 ```elixir
-# And the same goes for Time variables:
-
-~T[08:46:08]
-|> Cldr.Time.to_string!()
+Cldr.Number.to_string!(big_number, round_nearest: 1_000_000)
 ```
 
 <!-- livebook:{"output":true} -->
 
 ```
-"8:46:08 AM"
+"92,000,000"
 ```
 
-## Durations
+And the same approach that works for regular numbers, also works for currencies. Here we use the _ex_money_ package that builds on top of _ex_cldr_:
 
 ```elixir
-# how long ago was that first commit made?
-
-now = DateTime.utc_now()
-Cldr.DateTime.Relative.to_string!(first_commit, relative_to: now)
+Money.new(:USD, "123.45")
+|> Money.to_string!()
 ```
 
 <!-- livebook:{"output":true} -->
 
 ```
-"13 years ago"
-```
-
-```elixir
-# Note that this same function works for any length of duration, both positive and negative:
-[
-  DateTime.add(now, -30, :second),
-  DateTime.add(now, -300, :second),
-  DateTime.add(now, -30_000, :second),
-  DateTime.add(now, -300_000, :second),
-  DateTime.add(now, 300_000, :second)
-]
-|> Enum.map(fn datetime -> Cldr.DateTime.Relative.to_string!(datetime, relative_to: now) end)
-```
-
-<!-- livebook:{"output":true} -->
-
-```
-["30 seconds ago", "5 minutes ago", "8 hours ago", "3 days ago", "in 3 days"]
+"$123.45"
 ```
 
 ## Configuring locales
@@ -160,75 +198,96 @@ Now the magic happens.
 
 We saw above how simple it is to display a dates or times in the 
 default locale (en-US). Now, by just configuring a few more locales, and specifying which 
-one we want, we can use exaclty the same conde form above to display dates and times 
+one we want, we can use exaclty the same code from above to display dates and times 
 to individual users in the locale that they might expect.
 
 In the _Notebook dependencies and setup_ section at the top, you'll notice that we added a 
-few more interesting locales.
+few more interesting locales. We'll configure this livebook's Elixir process to each of those locales, to see how the variables in the examples above would be formatted.
+
+We'll start by wrapping some of the examples above in a function:
 
 ```elixir
-# Now let's see them in action, e.g. for German:
+defmodule Helper do
+  def variable_formatting_samples() do
+    first_commit = ~U[2011-01-09 08:46:08Z]
 
-Cldr.put_locale("de")
-
-[
-  Cldr.DateTime.to_string!(first_commit),
-  Cldr.DateTime.to_string!(first_commit, format: :long),
-  Cldr.DateTime.to_string!(first_commit, format: :short),
-  Cldr.DateTime.Relative.to_string!(first_commit, relative_to: now)
-]
+    [
+      Cldr.DateTime.Relative.to_string!(first_commit, relative_to: DateTime.utc_now()),
+      Cldr.DateTime.to_string!(first_commit),
+      Cldr.DateTime.to_string!(first_commit, format: :long),
+      Cldr.DateTime.to_string!(first_commit, format: :short),
+      Cldr.Date.to_string!(~D[2011-01-09]),
+      Cldr.Time.to_string!(~T[08:46:08]),
+      Cldr.Number.to_string!(91_825_808.102384, round_nearest: 1_000_000),
+      Money.to_string!(Money.new(:USD, "123.45"))
+    ]
+  end
+end
 ```
 
 <!-- livebook:{"output":true} -->
 
 ```
-["09.01.2011, 08:46:08", "9. Januar 2011, 08:46:08 UTC", "09.01.11, 08:46", "vor 13 Jahren"]
+{:module, Helper, <<70, 79, 82, 49, 0, 0, 11, ...>>, {:variable_formatting_samples, 0}}
 ```
 
 ```elixir
-# or Portuguese
-
-Cldr.put_locale("pt")
-
-[
-  Cldr.DateTime.to_string!(first_commit),
-  Cldr.DateTime.to_string!(first_commit, format: :long),
-  Cldr.DateTime.to_string!(first_commit, format: :short),
-  Cldr.DateTime.Relative.to_string!(first_commit, relative_to: now)
-]
-```
-
-<!-- livebook:{"output":true} -->
-
-```
-["9 de jan. de 2011 08:46:08", "9 de janeiro de 2011 08:46:08 UTC", "09/01/2011 08:46",
- "há 13 anos"]
-```
-
-```elixir
-# or Hindo
-
+# Now, we configure the current Elixir process as it might be set up for a Hindi user:
 Cldr.put_locale("hi")
 
-[
-  Cldr.DateTime.to_string!(first_commit),
-  Cldr.DateTime.to_string!(first_commit, format: :long),
-  Cldr.DateTime.to_string!(first_commit, format: :short),
-  Cldr.DateTime.Relative.to_string!(first_commit, relative_to: now)
-]
+# And just like that, all of the variables display exactly as the user would expect them to:
+Helper.variable_formatting_samples()
 ```
 
 <!-- livebook:{"output":true} -->
 
 ```
-["9 जन॰ 2011, 8:46:08 am", "9 जनवरी 2011, 8:46:08 am UTC", "9/1/11, 8:46 am",
- "13 वर्ष पहले"]
+["13 वर्ष पहले", "9 जन॰ 2011, 8:46:08 am",
+ "9 जनवरी 2011, 8:46:08 am UTC", "9/1/11, 8:46 am", "9 जन॰ 2011", "8:46:08 am",
+ "9,20,00,000", "$123.45"]
 ```
-
-Notice here that the code stayed exaclty the same. The only thing that changed is that we specified a locale (for the current Elixir process) usiing `CLDR.put_locale/1`. And _ex_cldr_ was able to display all of the variables in the expected format for each of the locales that was configured in the _Notebook dependencies and setup_ section.
-
-## Territories, languages, and other reference entities
 
 ```elixir
+# similarly for German users:
+Cldr.put_locale("de")
+
+Helper.variable_formatting_samples()
+```
+
+<!-- livebook:{"output":true} -->
 
 ```
+["vor 13 Jahren", "09.01.2011, 08:46:08", "9. Januar 2011, 08:46:08 UTC", "09.01.11, 08:46",
+ "09.01.2011", "08:46:08", "92.000.000", "12.345,00 $"]
+```
+
+```elixir
+# or (Brazilian) Portuguese:
+Cldr.put_locale("pt")
+
+Helper.variable_formatting_samples()
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+["há 13 anos", "9 de jan. de 2011 08:46:08", "9 de janeiro de 2011 08:46:08 UTC",
+ "09/01/2011 08:46", "9 de jan. de 2011", "08:46:08", "92.000.000", "US$ 12.345,00"]
+```
+
+```elixir
+# Even for UK-English
+
+Cldr.put_locale("en-GB")
+
+Helper.variable_formatting_samples()
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+["13 years ago", "9 Jan 2011, 08:46:08", "9 January 2011, 08:46:08 UTC", "09/01/2011, 08:46",
+ "9 Jan 2011", "08:46:08", "92,000,000", "US$123.45"]
+```
+
+Notice here that our code stayed exaclty the same for each of these users. The only thing that changed is that we specified a locale (for the current Elixir process) using `CLDR.put_locale/1`, and _ex_cldr_ was able to display all of the variables in the expected format for each of the locales that was configured in the _Notebook dependencies and setup_ section.

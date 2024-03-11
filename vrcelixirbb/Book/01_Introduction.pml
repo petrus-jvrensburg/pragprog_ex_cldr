@@ -81,31 +81,210 @@ relying on them where appropriate.
     <title>
       Up &amp; Running
     </title>
-    <p>TODO</p>
+    <p>Now fire-up the first livebook<footnote>
+        <p><url>
+      https://github.com/petrus-jvrensburg/pragprog_ex_cldr/blob/main/livebooks_external/01-up-and-running.livemd</url></p>
+      </footnote>
+      so that we can get started.</p>
     <sect2>
       <title>
         Example: Displaying dates and times
       </title>
-      <p>TODO</p>
+
+      <p>Let's look at the timestamp of the first commit to the Elixir git repo at <url>
+        https://github.com/elixir-lang/elixir</url></p>
+
+      <code language="session">
+        % git log --reverse commit 337c3f2d569a42ebd5fcab6fef18c5e012f9be5b
+        Author: José Valim <jose.valim@gmail.com>
+        Date: Sun Jan 9 09:46:08 2011 +0100
+        
+            First commit.
+      </code>
+
+      <p>So, how long ago was that first commit made?</p>
+
+      <code language="elixir">
+        > first_commit = ~U[2011-01-09 08:46:08Z]
+        > now = DateTime.utc_now()
+        > Cldr.DateTime.Relative.to_string!(first_commit, relative_to: now)
+
+        "13 years ago"
+      </code>
+
+      <p> Here we are dealing with the timestamps in a relative sense, i.e. as a <emph>duration</emph>. Without
+        relying on the CLDR, this could have added a lot of complexity to our code. But luckily for
+        us, <inlinecode>ex_cldr</inlinecode> reduces that complexity to a single call to <inlinecode>
+        Cldr.DateTime.Relative.to_string!/3</inlinecode>. </p>
+
+      <p>
+        Note that this same function works for any length of duration, both positive and negative:
+</p>
+
+      <code language="elixir">
+        > durations_in_seconds = [
+        -30,
+        -300,
+        -30_000,
+        -300_000,
+        -3_000_000,
+        -30_000_000,
+        -300_000_000,
+        300_000_000
+        ]
+        > Enum.map(durations_in_seconds, fn duration ->
+        Cldr.DateTime.Relative.to_string!(DateTime.add(now, duration, :second), relative_to: now)
+        end)
+
+        ["30 seconds ago", "5 minutes ago", "8 hours ago", "3 days ago", "last month", "11 months
+        ago",
+        "10 years ago", "in 10 years"]
+</code>
+
+      <p>
+        Later-on we'll see how to display dates and times correctly for specific locales (eg.
+        UK-english). But to display a timestamp in the default US-English is also a single function
+        call.
+</p>
+      <code language="elixir">
+        > Cldr.DateTime.to_string!(first_commit)
+        "Jan 9, 2011, 8:46:08 AM"
+        > Cldr.DateTime.to_string!(first_commit, format: :long)
+        "January 9, 2011, 8:46:08 AM UTC"
+        > Cldr.DateTime.to_string!(first_commit, format: :short)
+        "1/9/11, 8:46 AM"
+</code>
+
+      <p>And we can use format strings<footnote>
+          <p><url>https://hexdocs.pm/ex_cldr_dates_times/readme.html#format-strings</url></p>
+        </footnote>
+        when we want to have more control:</p>
+      <code language="elixir">
+        > Cldr.DateTime.to_string!(first_commit, format: "dd-MM-yyyy hh:mm")
+        "09-01-2011 08:46"
+</code>
+
+      <p>
+        The same approach that works for DateTime variables also extends to Date and Time variables
+        respectively, e.g:
+</p>
+      <code language="elixir">
+        > Cldr.Date.to_string!(~D[2011-01-09])
+        "Jan 9, 2011"
+        > Cldr.Time.to_string!(~T[08:46:08])
+        "8:46:08 AM"
+</code>
+
     </sect2>
     <sect2>
       <title>
-        Example: Displaying durations
+        Example: Numbers and currencies
       </title>
-      <p>TODO</p>
+      <p>
+        In the interfaces that we build, it's often useful to format numbers to make them more
+        legible. We could do that the hard way, or we can let _ex_cldr_ take care of it for us:
+</p>
+      <code language="elixir">
+        > big_number = 91_825_808.102384
+        > Cldr.Number.to_string!(big_number)
+        "91,825,808.102"
+        > Cldr.Number.to_string!(big_number, round_nearest: 1_000_000)
+        "92,000,000"
+</code>
+
+      <p>
+        And the same approach that works for regular numbers, also works for currencies. Here we use
+        the <inlinecode>ex_money</inlinecode> package that builds on top of <inlinecode>ex_cldr</inlinecode>:
+</p>
+
+      <code language="elixir">
+        > Money.to_string!(Money.new(:USD, "123.45"))
+        "$123.45"
+      </code>
     </sect2>
     <sect2>
       <title>
         Example: Configuring locales
       </title>
-      <p>TODO</p>
+      <p>Now the magic happens.</p>
+
+      <p>We saw above how simple it is to display a dates or times in the
+        default locale (en-US). Now, by just configuring a few more locales, and specifying which
+        one we want, we can use exaclty the same code from above to display dates and times
+        to individual users in the locale that they might expect.</p>
+
+      <p>In the <emph>Notebook dependencies and setup</emph> section at the top, you'll notice that we added a
+        few more interesting locales. We'll configure this livebook's Elixir process to each of
+        those locales, to see how the variables in the examples above would be formatted.
+      </p>
+      <p>
+        We'll start by wrapping some of the examples above in a function:
+      </p>
+      <code language="elixir">
+        defmodule Helper do
+          def variable_formatting_samples() do
+            first_commit = ~U[2011-01-09 08:46:08Z]
+
+            [
+              Cldr.DateTime.Relative.to_string!(first_commit, relative_to: DateTime.utc_now()),
+              Cldr.DateTime.to_string!(first_commit),
+              Cldr.DateTime.to_string!(first_commit, format: :long),
+              Cldr.DateTime.to_string!(first_commit, format: :short),
+              Cldr.Date.to_string!(~D[2011-01-09]),
+              Cldr.Time.to_string!(~T[08:46:08]),
+              Cldr.Number.to_string!(91_825_808.102384, round_nearest: 1_000_000),
+              Money.to_string!(Money.new(:USD, "123.45"))
+            ]
+          end
+        end
+</code>
+
+      <p>Now, we configure the current Elixir process as it might be set up for a Hindi user:</p>
+      <code language="elixir">
+        > Cldr.put_locale("hi")
+</code>
+
+      <p>And just like that, all of the variables display exactly as the user would expect them to:
+      </p>
+
+      <code language="elixir">
+        > Helper.variable_formatting_samples()
+        ["13 वर्ष पहले", "9 जन॰ 2011, 8:46:08 am",
+        "9 जनवरी 2011, 8:46:08 am UTC", "9/1/11, 8:46 am", "9 जन॰ 2011", "8:46:08 am",
+        "9,20,00,000", "$123.45"]
+</code>
+
+      <p>Similarly for German, (Brazilian) Portuguese, or even UK English users:</p>
+      <code language="elixir">
+        > Cldr.put_locale("de")
+        > Helper.variable_formatting_samples()
+        ["vor 13 Jahren", "09.01.2011, 08:46:08", "9. Januar 2011, 08:46:08 UTC", "09.01.11, 08:46",
+        "09.01.2011", "08:46:08", "92.000.000", "12.345,00 $"]
+        > Cldr.put_locale("pt")
+        > Helper.variable_formatting_samples()
+        ["há 13 anos", "9 de jan. de 2011 08:46:08", "9 de janeiro de 2011 08:46:08 UTC",
+        "09/01/2011 08:46", "9 de jan. de 2011", "08:46:08", "92.000.000", "US$ 12.345,00"]
+        > Cldr.put_locale("en-GB")
+        > Helper.variable_formatting_samples()
+        ["13 years ago", "9 Jan 2011, 08:46:08", "9 January 2011, 08:46:08 UTC", "09/01/2011,
+        08:46",
+        "9 Jan 2011", "08:46:08", "92,000,000", "US$123.45"]
+</code>
+
+      <p>
+        Notice here that our code stayed exaclty the same for each of these users. The only thing
+        that changed is that we specified a locale (for the current Elixir process) using
+        <inlinecode>CLDR.put_locale/1</inlinecode>, and <inlinecode>ex_cldr</inlinecode> was able to display all of the variables in the expected
+        format for each of the locales that was configured in the <emph>Notebook dependencies and setup</emph>
+        section.
+</p>
     </sect2>
-    <sect2>
+    <!-- <sect2>
       <title>
         Example: Territories, languages, and other reference entities
       </title>
       <p>TODO</p>
-    </sect2>
+    </sect2> -->
   </sect1>
 
   <sect1>
@@ -166,12 +345,17 @@ relying on them where appropriate.
 
       <p> A few calendars are built-in, e.g. the default Gregorian calendar used through most
         countries, as well as the ISO week calendar<footnote>
-          <p><url>https://en.wikipedia.org/wiki/ISO_week_date</url></p>
-        </footnote> and the US's National Retail Federation calendar<footnote>
-          <p><url>https://nrf.com/resources/4-5-4-calendar</url></p>
-        </footnote>, together with Fiscal
-        calendars for many territories. But we can also use <inlinecode>Cldr.Calendar.new/3</inlinecode>
-        to configure our own month-based, or week-based calendars. </p>
+          <p>
+            <url>https://en.wikipedia.org/wiki/ISO_week_date</url>
+          </p>
+        </footnote>
+        and the US's National Retail Federation calendar<footnote>
+          <p>
+            <url>https://nrf.com/resources/4-5-4-calendar</url>
+          </p>
+        </footnote>,
+        together with Fiscal calendars for many territories. But we can also use <inlinecode>
+        Cldr.Calendar.new/3</inlinecode> to configure our own month-based, or week-based calendars. </p>
 
       <p>
         Additionally, dedicated packages exist for more specific
