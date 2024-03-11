@@ -79,33 +79,33 @@ relying on them where appropriate.
 
   <sect1>
     <title>
-      Using ex_cldr libraries at runtime
+      Up &amp; Running
     </title>
     <p>TODO</p>
-    <!-- <sect2>
+    <sect2>
       <title>
-        durations
+        Example: Displaying dates and times
       </title>
       <p>TODO</p>
     </sect2>
     <sect2>
       <title>
-        dates
+        Example: Displaying durations
       </title>
       <p>TODO</p>
     </sect2>
     <sect2>
       <title>
-        numbers
+        Example: Configuring locales
       </title>
       <p>TODO</p>
     </sect2>
     <sect2>
       <title>
-        currencies (with ex_money)
+        Example: Territories, languages, and other reference entities
       </title>
       <p>TODO</p>
-    </sect2> -->
+    </sect2>
   </sect1>
 
   <sect1>
@@ -113,6 +113,11 @@ relying on them where appropriate.
       What's included in the ex_cldr ecosystem?
     </title>
     <p>TODO</p>
+    <figure id="ex_cldr_dependency_tree">
+        <imagedata fileref="images/01_Introduction/deps_tree.png" align="center"
+            width="80%" />
+        <p>CLDR-related packages and the dependencies between them.</p>
+    </figure>
   </sect1>
 
   <sect1>

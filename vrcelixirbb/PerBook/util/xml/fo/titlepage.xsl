@@ -333,6 +333,7 @@ line-height="100%"
   | managingeditor
   | producer
   | publisher
+  | series-editor
   | supervisingeditor
   | support
   | typesetter
@@ -367,6 +368,7 @@ line-height="100%"
 <xsl:template match="managingeditor"     mode="job-role">Managing Editor</xsl:template>
 <xsl:template match="producer"           mode="job-role">Producer</xsl:template> <!-- legacy -->
 <xsl:template match="publisher"          mode="job-role">Publisher</xsl:template>
+<xsl:template match="series-editor"      mode="job-role">Series Editor</xsl:template>
 <xsl:template match="supervisingeditor"  mode="job-role">Supervising Editor</xsl:template>
 <xsl:template match="support"            mode="job-role">Support</xsl:template>  <!-- legacy -->
 <xsl:template match="typesetter"         mode="job-role">Layout</xsl:template>
@@ -378,15 +380,15 @@ line-height="100%"
 
 <xsl:template match="rights"/>
 
-<xsl:template match="series-editor">
-  <xsl:if test="string-length(.) &gt; 0">
-    <fo:block>
-      <xsl:value-of select="'Series Editor'"/>
-      <xsl:text>: </xsl:text>
-      <xsl:apply-templates />
-    </fo:block>
-  </xsl:if>
-</xsl:template>
+<!-- <xsl:template match="series-editor"> -->
+<!--   <xsl:if test="string-length(.) &gt; 0"> -->
+<!--     <fo:block> -->
+<!--       <xsl:value-of select="'Series Editor'"/> -->
+<!--       <xsl:text>: </xsl:text> -->
+<!--       <xsl:apply-templates /> -->
+<!--     </fo:block> -->
+<!--   </xsl:if> -->
+<!-- </xsl:template> -->
 
 <xsl:template name="do-dedication-page">
   <fo:page-sequence format="i"

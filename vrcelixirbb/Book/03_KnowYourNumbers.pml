@@ -35,7 +35,7 @@ you'll likely have bumped into yourself: dates and times.
 
         <figure id="stats_before">
             <imagedata fileref="images/03_KnowYourNumbers/stats_before.png" align="center"
-                width="90%" />
+                width="80%" />
             <p>Usage statistics from an admin interface, without good number formatting.</p>
         </figure>
 
@@ -54,7 +54,7 @@ you'll likely have bumped into yourself: dates and times.
 
         <figure id="stats_after">
             <imagedata fileref="images/03_KnowYourNumbers/stats_after.png" align="center"
-                width="90%" />
+                width="80%" />
             <p>After adding delimiters and symbols in the appropriate places, the numbers are easier
                 to interpret at a glance.</p>
         </figure>
